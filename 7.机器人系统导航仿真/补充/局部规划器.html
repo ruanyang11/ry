@@ -1,0 +1,640 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>局部规划器 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../8.机器人系统导航实体/机器人系统导航.html" />
+    
+    
+    <link rel="prev" href="全局规划器.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    课程简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                <a href="../../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                    
+                    1. ROS概述和环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../2.ROS通信机制/ROS通信机制.html">
+            
+                <a href="../../2.ROS通信机制/ROS通信机制.html">
+            
+                    
+                    2. ROS通信机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../3.ROS通信机制进阶/ROS通信机制进阶.html">
+            
+                <a href="../../3.ROS通信机制进阶/ROS通信机制进阶.html">
+            
+                    
+                    3. ROS通信机制进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../4.ROS运行管理/ROS运行管理.html">
+            
+                <a href="../../4.ROS运行管理/ROS运行管理.html">
+            
+                    
+                    4. ROS运行管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../5.ROS常用组件/ROS常用组件.html">
+            
+                <a href="../../5.ROS常用组件/ROS常用组件.html">
+            
+                    
+                    5. ROS常用组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 实战篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../6.机器人系统仿真/机器人系统仿真.html">
+            
+                <a href="../../6.机器人系统仿真/机器人系统仿真.html">
+            
+                    
+                    6. 机器人系统仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 导航篇</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../机器人系统导航.html">
+            
+                <a href="../机器人系统导航.html">
+            
+                    
+                    7. 机器人系统导航仿真
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="全局规划器.html">
+            
+                <a href="全局规划器.html">
+            
+                    
+                    全局规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.2" data-path="局部规划器.html">
+            
+                <a href="局部规划器.html">
+            
+                    
+                    局部规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../8.机器人系统导航实体/机器人系统导航.html">
+            
+                <a href="../../8.机器人系统导航实体/机器人系统导航.html">
+            
+                    
+                    8. 机器人系统导航实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 进阶篇</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../10.ROS进阶/ROS进阶.html">
+            
+                <a href="../../10.ROS进阶/ROS进阶.html">
+            
+                    
+                    9. ROS进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >局部规划器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <font size="6">&#x5C40;&#x90E8;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x5668;</font>
+
+<blockquote>
+<p>Date&#xFF1A;2025.07.30</p>
+</blockquote>
+<h3 id="&#x1F4CC;-&#x5C40;&#x90E8;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x5668;&#x7EC8;&#x6781;&#x5BF9;&#x6BD4;&#x8868;">&#x1F4CC; <strong>&#x5C40;&#x90E8;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x5668;&#x7EC8;&#x6781;&#x5BF9;&#x6BD4;&#x8868;</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>&#x89C4;&#x5212;&#x5668;</strong></th>
+<th><strong>&#x7B97;&#x6CD5;&#x673A;&#x5236;</strong></th>
+<th><strong>&#x673A;&#x5668;&#x4EBA;&#x652F;&#x6301;</strong></th>
+<th><strong>&#x52A8;&#x6001;&#x907F;&#x969C;</strong></th>
+<th><strong>&#x8DEF;&#x5F84;&#x5E73;&#x6ED1;&#x6027;</strong></th>
+<th><strong>&#x8BA1;&#x7B97;&#x5F00;&#x9500;</strong></th>
+<th><strong>&#x90E8;&#x7F72;&#x96BE;&#x5EA6;</strong></th>
+<th><strong>&#x5178;&#x578B;&#x573A;&#x666F;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TrajectoryPlannerROS</strong></td>
+<td>&#x8F68;&#x8FF9;&#x8BC4;&#x5206;&#x4F18;&#x5316;</td>
+<td>&#x5DEE;&#x901F;/&#x5168;&#x5411;</td>
+<td>&#x2B50;&#x2606;&#x2606;&#x2606;&#x2606; (&#x5F31;)</td>
+<td>&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2606;</td>
+<td>&#x4E2D;</td>
+<td>&#x6613; (apt&#x5B89;&#x88C5;)</td>
+<td>&#x9759;&#x6001;&#x73AF;&#x5883;&#x3001;&#x6559;&#x5B66;&#x6F14;&#x793A;</td>
+</tr>
+<tr>
+<td><strong>DWA</strong></td>
+<td>&#x52A8;&#x6001;&#x7A97;&#x53E3;&#x91C7;&#x6837;</td>
+<td>&#x5DEE;&#x901F;/&#x5168;&#x5411;</td>
+<td>&#x2B50;&#x2B50;&#x2606;&#x2606;&#x2606; (&#x4E2D;)</td>
+<td>&#x2B50;&#x2B50;&#x2B50;&#x2606;&#x2606;</td>
+<td><strong>&#x4F4E;</strong></td>
+<td>&#x6613; (apt&#x5B89;&#x88C5;)</td>
+<td>&#x5BA4;&#x5185;&#x7B80;&#x5355;&#x573A;&#x666F;&#x3001;&#x8D44;&#x6E90;&#x53D7;&#x9650;&#x7CFB;&#x7EDF;</td>
+</tr>
+<tr>
+<td><strong>TEB</strong></td>
+<td>&#x65F6;&#x95F4;&#x5F39;&#x6027;&#x5E26;&#x4F18;&#x5316;</td>
+<td>&#x5DEE;&#x901F;/&#x5168;&#x5411;/<strong>&#x963F;&#x514B;&#x66FC;</strong></td>
+<td>&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2606; (&#x5F3A;)</td>
+<td>&#x2B50;&#x2B50;&#x2606;&#x2606;&#x2606;</td>
+<td>&#x9AD8;</td>
+<td>&#x4E2D; (&#x6E90;&#x7801;&#x7F16;&#x8BD1;)</td>
+<td><strong>&#x52A8;&#x6001;&#x73AF;&#x5883;</strong>&#x3001;&#x65E0;&#x4EBA;&#x8F66;</td>
+</tr>
+<tr>
+<td><strong>MPC</strong></td>
+<td>&#x6A21;&#x578B;&#x9884;&#x6D4B;&#x63A7;&#x5236;</td>
+<td>&#x5DEE;&#x901F;/<strong>&#x963F;&#x514B;&#x66FC;</strong></td>
+<td>&#x2B50;&#x2B50;&#x2B50;&#x2606;&#x2606;</td>
+<td>&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+<td><strong>&#x6781;&#x9AD8;</strong></td>
+<td>&#x96BE; (&#x6E90;&#x7801;+&#x8C03;&#x53C2;)</td>
+<td>&#x9AD8;&#x901F;&#x65E0;&#x4EBA;&#x8F66;&#x3001;&#x63A7;&#x5236;&#x7CBE;&#x5EA6;&#x8981;&#x6C42;&#x9AD8;</td>
+</tr>
+<tr>
+<td><strong>CMU localPlanner</strong></td>
+<td>&#x8DEF;&#x5F84;&#x91C7;&#x6837;+&#x906E;&#x6321;&#x5254;&#x9664;</td>
+<td>&#x901A;&#x7528;&#x8F6E;&#x5F0F;</td>
+<td>&#x2B50;&#x2B50;&#x2B50;&#x2606;&#x2606;</td>
+<td>&#x2B50;&#x2B50;&#x2606;&#x2606;&#x2606;</td>
+<td>&#x4E2D;</td>
+<td>&#x4E2D; (&#x6E90;&#x7801;&#x96C6;&#x6210;)</td>
+<td>&#x5BA4;&#x5916;&#x975E;&#x7ED3;&#x6784;&#x5316;&#x5730;&#x5F62;&#x63A2;&#x7D22;</td>
+</tr>
+<tr>
+<td><strong>ViPlanner</strong></td>
+<td>&#x8BED;&#x4E49;&#x5730;&#x56FE;+&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;</td>
+<td>&#x8DB3;&#x5F0F;/&#x8F6E;&#x5F0F;&#x590D;&#x6742;&#x5730;&#x5F62;</td>
+<td>&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2606;</td>
+<td>&#x2B50;&#x2B50;&#x2B50;&#x2606;&#x2606;</td>
+<td>&#x6781;&#x9AD8; (&#x9700;GPU)</td>
+<td><strong>&#x6781;&#x96BE;</strong></td>
+<td>&#x91CE;&#x5916;&#x591A;&#x8BED;&#x4E49;&#x5730;&#x5F62;&#xFF08;&#x6C34;&#x9762;&#x3001;&#x697C;&#x68AF;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="&#x1F50D;-&#x6838;&#x5FC3;&#x7279;&#x6027;&#x63D0;&#x70BC;">&#x1F50D; <strong>&#x6838;&#x5FC3;&#x7279;&#x6027;&#x63D0;&#x70BC;</strong></h3>
+<ol>
+<li><p><strong>&#x4F20;&#x7EDF;&#x6D3E;</strong>  </p>
+<ul>
+<li><strong><code>TrajectoryPlannerROS</code></strong>&#xFF1A;  <ul>
+<li>ROS&#x5BFC;&#x822A;&#x6808;<strong>&#x539F;&#x59CB;&#x9ED8;&#x8BA4;&#x89C4;&#x5212;&#x5668;</strong>&#xFF0C;&#x4E25;&#x683C;&#x8DDF;&#x8E2A;&#x5168;&#x5C40;&#x8DEF;&#x5F84;  </li>
+<li><strong>&#x7F3A;&#x70B9;</strong>&#xFF1A;&#x52A8;&#x6001;&#x907F;&#x969C;&#x80FD;&#x529B;&#x6781;&#x5F31;&#xFF0C;&#x53C2;&#x6570;&#x8C03;&#x8282;&#x590D;&#x6742;&#xFF08;&#x5DF2;&#x9010;&#x6E10;&#x88AB;&#x6DD8;&#x6C70;&#xFF09;  </li>
+</ul>
+</li>
+<li><strong><code>DWA</code></strong>&#xFF1A;  <ul>
+<li><strong>&#x8F7B;&#x91CF;&#x7EA7;&#x5B9E;&#x65F6;&#x89C4;&#x5212;</strong>&#x7684;&#x4EE3;&#x8868;&#xFF0C;&#x9002;&#x5408;&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;  </li>
+<li><strong>&#x77ED;&#x677F;</strong>&#xFF1A;&#x524D;&#x77BB;&#x6027;&#x4E0D;&#x8DB3;&#xFF0C;&#x6613;&#x9677;&#x5165;&#x5C40;&#x90E8;&#x6700;&#x4F18;  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x73B0;&#x4EE3;&#x4E3B;&#x6D41;</strong>  </p>
+<ul>
+<li><strong><code>TEB</code></strong>&#xFF1A;  <ul>
+<li><strong>&#x52A8;&#x6001;&#x907F;&#x969C;&#x6027;&#x80FD;&#x6700;&#x4F18;</strong>&#xFF0C;&#x652F;&#x6301;&#x963F;&#x514B;&#x66FC;&#x8F6C;&#x5411;&#x7EA6;&#x675F;  </li>
+<li><strong>&#x95EE;&#x9898;</strong>&#xFF1A;&#x8DEF;&#x5F84;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x6296;&#x52A8;&#xFF08;&#x9700;&#x8C03;&#x53C2;&#x6291;&#x5236;&#xFF09;  </li>
+</ul>
+</li>
+<li><strong><code>MPC</code></strong>&#xFF1A;  <ul>
+<li><strong>&#x63A7;&#x5236;&#x7CBE;&#x5EA6;&#x4E4B;&#x738B;</strong>&#xFF0C;&#x5E73;&#x7A33;&#x6027;&#x8FDC;&#x8D85;&#x5176;&#x4ED6;&#x89C4;&#x5212;&#x5668;  </li>
+<li><strong>&#x4EE3;&#x4EF7;</strong>&#xFF1A;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x6D88;&#x8017;&#x5927;&#xFF0C;&#x5B9E;&#x65F6;&#x6027;&#x8981;&#x6C42;&#x9AD8;&#x7684;&#x573A;&#x666F;&#x614E;&#x7528;  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x524D;&#x6CBF;&#x63A2;&#x7D22;</strong>  </p>
+<ul>
+<li><strong><code>CMU localPlanner</code></strong>&#xFF1A;  <ul>
+<li>&#x5BA4;&#x5916;<strong>&#x975E;&#x7ED3;&#x6784;&#x5316;&#x5730;&#x5F62;</strong>&#x7684;&#x5B9E;&#x65F6;&#x63A2;&#x7D22;&#x5229;&#x5668;&#xFF08;&#x5982;AGV&#x91CE;&#x5916;&#x4F5C;&#x4E1A;&#xFF09;  </li>
+</ul>
+</li>
+<li><strong><code>ViPlanner</code></strong>&#xFF1A;  <ul>
+<li><strong>&#x8BED;&#x4E49;&#x5BFC;&#x822A;</strong>&#x7684;&#x672A;&#x6765;&#x65B9;&#x5411;&#xFF0C;&#x7406;&#x89E3;&#x5730;&#x5F62;&#x7269;&#x7406;&#x5C5E;&#x6027;&#xFF08;&#x5982;&#x6C34;&#x6DF1;&#x3001;&#x53F0;&#x9636;&#x9AD8;&#x5EA6;&#xFF09;  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="&#x2699;&#xFE0F;-&#x9009;&#x578B;&#x51B3;&#x7B56;&#x6307;&#x5357;">&#x2699;&#xFE0F; <strong>&#x9009;&#x578B;&#x51B3;&#x7B56;&#x6307;&#x5357;</strong></h3>
+<h4 id="&#x6839;&#x636E;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x9009;&#x62E9;"><strong>&#x6839;&#x636E;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x9009;&#x62E9;</strong></h4>
+<table>
+<thead>
+<tr>
+<th><strong>&#x673A;&#x5668;&#x4EBA;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x9996;&#x9009;&#x89C4;&#x5212;&#x5668;</strong></th>
+<th><strong>&#x5907;&#x9009;&#x65B9;&#x6848;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5DEE;&#x901F;/&#x5168;&#x5411;&#x8F6E;&#x5F0F;</td>
+<td>TEB</td>
+<td>DWA</td>
+</tr>
+<tr>
+<td>&#x963F;&#x514B;&#x66FC;&#x8F66;&#x578B;&#xFF08;&#x65E0;&#x4EBA;&#x8F66;&#xFF09;</td>
+<td><strong>MPC</strong></td>
+<td>TEB</td>
+</tr>
+<tr>
+<td>&#x8DB3;&#x5F0F;&#x673A;&#x5668;&#x4EBA;/&#x590D;&#x6742;&#x5730;&#x5F62;</td>
+<td>ViPlanner</td>
+<td>CMU localPlanner</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x6839;&#x636E;&#x573A;&#x666F;&#x9700;&#x6C42;&#x9009;&#x62E9;"><strong>&#x6839;&#x636E;&#x573A;&#x666F;&#x9700;&#x6C42;&#x9009;&#x62E9;</strong></h4>
+<table>
+<thead>
+<tr>
+<th><strong>&#x573A;&#x666F;&#x7279;&#x5F81;</strong></th>
+<th><strong>&#x63A8;&#x8350;&#x89C4;&#x5212;&#x5668;</strong></th>
+<th><strong>&#x539F;&#x56E0;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x9AD8;&#x52A8;&#x6001;&#x969C;&#x788D;&#x7269;&#xFF08;&#x4EBA;&#x6D41;&#x5BC6;&#x96C6;&#xFF09;</td>
+<td><strong>TEB</strong></td>
+<td>&#x5F39;&#x6027;&#x5E26;&#x4F18;&#x5316;&#x5FEB;&#x901F;&#x54CD;&#x5E94;&#x52A8;&#x6001;&#x969C;&#x788D;</td>
+</tr>
+<tr>
+<td>&#x63A7;&#x5236;&#x5E73;&#x7A33;&#x6027;&#x8981;&#x6C42;&#x9AD8;&#xFF08;&#x7269;&#x6D41;AGV&#xFF09;</td>
+<td><strong>MPC</strong></td>
+<td>&#x9884;&#x6D4B;&#x63A7;&#x5236;&#x51CF;&#x5C11;&#x6025;&#x505C;&#x6025;&#x8F6C;</td>
+</tr>
+<tr>
+<td>&#x6781;&#x5EA6;&#x53D7;&#x9650;&#x7684;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;</td>
+<td><strong>DWA</strong></td>
+<td>&#x91C7;&#x6837;&#x8BC4;&#x4EF7;&#x8BA1;&#x7B97;&#x91CF;&#x6781;&#x4F4E;</td>
+</tr>
+<tr>
+<td>&#x672A;&#x77E5;&#x91CE;&#x5916;&#x73AF;&#x5883;&#x63A2;&#x7D22;</td>
+<td><strong>CMU localPlanner</strong></td>
+<td>&#x5B9E;&#x65F6;&#x5254;&#x9664;&#x906E;&#x6321;&#x8DEF;&#x5F84;&#xFF0C;&#x9AD8;&#x6548;&#x63A2;&#x7D22;</td>
+</tr>
+<tr>
+<td>&#x9700;&#x533A;&#x5206;&#x5730;&#x5F62;&#x8BED;&#x4E49;&#xFF08;&#x6C34;/&#x6C99;/&#x697C;&#x68AF;&#xFF09;</td>
+<td><strong>ViPlanner</strong></td>
+<td>&#x878D;&#x5408;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x4E0E;&#x51E0;&#x4F55;&#x907F;&#x969C;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="&#x1F4A1;-&#x8C03;&#x4F18;&#x4E0E;&#x90E8;&#x7F72;&#x5EFA;&#x8BAE;">&#x1F4A1; <strong>&#x8C03;&#x4F18;&#x4E0E;&#x90E8;&#x7F72;&#x5EFA;&#x8BAE;</strong></h3>
+<ol>
+<li><p><strong>&#x901A;&#x7528;&#x8C03;&#x53C2;&#x539F;&#x5219;</strong>&#xFF1A;  </p>
+<ul>
+<li><strong>&#x63D0;&#x9AD8;&#x5B9E;&#x65F6;&#x6027;</strong>&#xFF1A;&#x51CF;&#x5C0F;<code>sim_time</code>&#xFF08;&#x6A21;&#x62DF;&#x65F6;&#x957F;&#xFF09;&#x3001;<code>samples</code>&#xFF08;&#x91C7;&#x6837;&#x6570;&#xFF09;  </li>
+<li><strong>&#x589E;&#x5F3A;&#x907F;&#x969C;</strong>&#xFF1A;&#x589E;&#x5927;<code>inflation_radius</code>&#xFF08;&#x81A8;&#x80C0;&#x534A;&#x5F84;&#xFF09;&#x3001;<code>cost_scaling_factor</code>&#xFF08;&#x4EE3;&#x4EF7;&#x7CFB;&#x6570;&#xFF09;  </li>
+<li><strong>&#x5E73;&#x6ED1;&#x8DEF;&#x5F84;</strong>&#xFF1A;&#x589E;&#x52A0;<code>acc_lim</code>&#xFF08;&#x52A0;&#x901F;&#x5EA6;&#x9650;&#x5236;&#xFF09;&#x3001;<code>resolution</code>&#xFF08;&#x8F68;&#x8FF9;&#x70B9;&#x5BC6;&#x5EA6;&#xFF09;  </li>
+</ul>
+</li>
+<li><p><strong>&#x90E8;&#x7F72;&#x6D41;&#x7A0B;</strong>&#xFF1A;  </p>
+<pre><code>graph LR
+A[&#x786E;&#x5B9A;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;] --&gt; B[&#x5206;&#x6790;&#x73AF;&#x5883;&#x52A8;&#x6001;&#x6027;]
+B --&gt; C{&#x662F;&#x5426;&#x8D44;&#x6E90;&#x53D7;&#x9650;&#xFF1F;}
+C --&gt;|&#x662F;| D[&#x9009;&#x62E9;DWA]
+C --&gt;|&#x5426;| E{&#x662F;&#x5426;&#x963F;&#x514B;&#x66FC;&#x8F66;&#x578B;&#xFF1F;}
+E --&gt;|&#x662F;| F[&#x9009;&#x62E9;MPC/TEB]
+E --&gt;|&#x5426;| G[&#x9009;&#x62E9;TEB]
+G --&gt; H[&#x5B89;&#x88C5;&#x89C4;&#x5212;&#x5668;]
+H --&gt; I[&#x57FA;&#x7840;&#x53C2;&#x6570;&#x8C03;&#x8BD5;]
+I --&gt; J[&#x907F;&#x969C;&#x6D4B;&#x8BD5;]
+J --&gt; K[&#x5E73;&#x6ED1;&#x6027;&#x4F18;&#x5316;]
+</code></pre><p>```</p>
+</li>
+<li><p><strong>&#x6027;&#x80FD;&#x538B;&#x6D4B;&#x5DE5;&#x5177;</strong>&#xFF1A;  </p>
+<ul>
+<li><strong>&#x5BFC;&#x822A;&#x6D4B;&#x8BD5;</strong>&#xFF1A;<code>turtlebot3_navigation</code> + Gazebo&#x52A8;&#x6001;&#x969C;&#x788D;&#x573A;&#x666F;  </li>
+<li><strong>&#x5B9E;&#x65F6;&#x6027;&#x76D1;&#x63A7;</strong>&#xFF1A;<code>rqt_top</code>&#x67E5;&#x770B;CPU&#x5360;&#x7528;&#x7387;  </li>
+<li><strong>&#x8F68;&#x8FF9;&#x5206;&#x6790;</strong>&#xFF1A;<code>rqt_plot /cmd_vel</code>&#x89C2;&#x5BDF;&#x901F;&#x5EA6;&#x8DF3;&#x53D8;  </li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="&#x1F48E;-&#x7EC8;&#x6781;&#x7ED3;&#x8BBA;">&#x1F48E; <strong>&#x7EC8;&#x6781;&#x7ED3;&#x8BBA;</strong></h3>
+<blockquote>
+<p>&#x2705; <strong>&#x5DE5;&#x4E1A;&#x7EA7;&#x9996;&#x9009;</strong>&#xFF1A;<strong><code>TEB</code></strong>&#xFF08;&#x5E73;&#x8861;&#x6027;&#x80FD;&#x4E0E;&#x9002;&#x5E94;&#x6027;&#xFF09;<br>&#x2705; <strong>&#x6781;&#x81F4;&#x63A7;&#x5236;</strong>&#xFF1A;<strong><code>MPC</code></strong>&#xFF08;&#x9AD8;&#x901F;&#x65E0;&#x4EBA;&#x8F66;/&#x7CBE;&#x5BC6;&#x63A7;&#x5236;&#xFF09;<br>&#x2705; <strong>&#x8F7B;&#x91CF;&#x5D4C;&#x5165;&#x5F0F;</strong>&#xFF1A;<strong><code>DWA</code></strong>&#xFF08;ROS&#x5BFC;&#x822A;&#x6700;&#x7B80;&#x65B9;&#x6848;&#xFF09;<br>&#x26A0;&#xFE0F; <strong>&#x4F20;&#x7EDF;&#x65B9;&#x6848;</strong>&#xFF1A;<code>TrajectoryPlannerROS</code><strong>&#x4EC5;&#x7528;&#x4E8E;&#x517C;&#x5BB9;&#x65E7;&#x7CFB;&#x7EDF;</strong><br>&#x1F680; <strong>&#x5B66;&#x672F;&#x524D;&#x6CBF;</strong>&#xFF1A;<code>ViPlanner</code>&#x4EE3;&#x8868;&#x8BED;&#x4E49;&#x5BFC;&#x822A;&#x672A;&#x6765;&#xFF0C;&#x4F46;&#x843D;&#x5730;&#x96BE;&#x5EA6;&#x9AD8;  </p>
+</blockquote>
+<p><strong>&#x9009;&#x578B;&#x53E3;&#x8BC0;</strong>&#xFF1A;  </p>
+<blockquote>
+<p>&#x5DEE;&#x52A8;&#x73AF;&#x5883;&#x7528;TEB&#xFF0C;<br>&#x65E0;&#x4EBA;&#x8F66;&#x8F86;MPC&#xFF0C;<br>&#x8D44;&#x6E90;&#x4E0D;&#x591F;DWA&#x9876;&#xFF0C;<br>&#x91CE;&#x5916;&#x63A2;&#x7D22;CMU&#xFF0C;<br>&#x8BED;&#x4E49;&#x5730;&#x5F62;ViPlanner&#xFF01;
+```</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="全局规划器.html" class="navigation navigation-prev " aria-label="Previous page: 全局规划器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../8.机器人系统导航实体/机器人系统导航.html" class="navigation navigation-next " aria-label="Next page: 8. 机器人系统导航实体">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"局部规划器","level":"4.1.2","depth":2,"next":{"title":"8. 机器人系统导航实体","level":"4.2","depth":1,"path":"8.机器人系统导航实体/机器人系统导航.md","ref":"8.机器人系统导航实体/机器人系统导航.md","articles":[]},"previous":{"title":"全局规划器","level":"4.1.1","depth":2,"path":"7.机器人系统导航仿真/补充/全局规划器.md","ref":"7.机器人系统导航仿真/补充/全局规划器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"7.机器人系统导航仿真/补充/局部规划器.md","mtime":"2026-06-22T02:23:44.255Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-22T02:30:21.080Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

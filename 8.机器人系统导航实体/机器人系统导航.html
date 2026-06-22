@@ -1,0 +1,1014 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8. 机器人系统导航实体 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../10.ROS进阶/ROS进阶.html" />
+    
+    
+    <link rel="prev" href="../7.机器人系统导航仿真/补充/局部规划器.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    课程简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                <a href="../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                    
+                    1. ROS概述和环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../2.ROS通信机制/ROS通信机制.html">
+            
+                <a href="../2.ROS通信机制/ROS通信机制.html">
+            
+                    
+                    2. ROS通信机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../3.ROS通信机制进阶/ROS通信机制进阶.html">
+            
+                <a href="../3.ROS通信机制进阶/ROS通信机制进阶.html">
+            
+                    
+                    3. ROS通信机制进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../4.ROS运行管理/ROS运行管理.html">
+            
+                <a href="../4.ROS运行管理/ROS运行管理.html">
+            
+                    
+                    4. ROS运行管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../5.ROS常用组件/ROS常用组件.html">
+            
+                <a href="../5.ROS常用组件/ROS常用组件.html">
+            
+                    
+                    5. ROS常用组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 实战篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../6.机器人系统仿真/机器人系统仿真.html">
+            
+                <a href="../6.机器人系统仿真/机器人系统仿真.html">
+            
+                    
+                    6. 机器人系统仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 导航篇</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../7.机器人系统导航仿真/机器人系统导航.html">
+            
+                <a href="../7.机器人系统导航仿真/机器人系统导航.html">
+            
+                    
+                    7. 机器人系统导航仿真
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../7.机器人系统导航仿真/补充/全局规划器.html">
+            
+                <a href="../7.机器人系统导航仿真/补充/全局规划器.html">
+            
+                    
+                    全局规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../7.机器人系统导航仿真/补充/局部规划器.html">
+            
+                <a href="../7.机器人系统导航仿真/补充/局部规划器.html">
+            
+                    
+                    局部规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="机器人系统导航.html">
+            
+                <a href="机器人系统导航.html">
+            
+                    
+                    8. 机器人系统导航实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 进阶篇</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../10.ROS进阶/ROS进阶.html">
+            
+                <a href="../10.ROS进阶/ROS进阶.html">
+            
+                    
+                    9. ROS进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8. 机器人系统导航实体</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-9-&#x7AE0;-&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x5B9E;&#x4F53;">&#x7B2C; 9 &#x7AE0; &#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;(&#x5B9E;&#x4F53;)</h1>
+<p>&#x7B2C;7&#x7AE0;&#x5185;&#x5BB9;&#x4ECB;&#x7ECD;&#x4E86;&#x5728;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#xFF0C;&#x7B2C;8&#x7AE0;&#x5185;&#x5BB9;&#x4ECB;&#x7ECD;&#x4E86;&#x4E24;&#x8F6E;&#x5DEE;&#x901F;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x8F6F;&#x786C;&#x4EF6;&#x5B9E;&#x73B0;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x6309;&#x7167;&#x7B2C;8&#x7AE0;&#x5185;&#x5BB9;&#x6784;&#x5EFA;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x5E73;&#x53F0;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x5C06;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x8FC1;&#x79FB;&#x5230;&#x673A;&#x5668;&#x4EBA;&#x5B9E;&#x4F53;&#x4E86;&#xFF0C;&#x672C;&#x7AE0;&#x5C31;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x8BE5;&#x8FC1;&#x79FB;&#x8FC7;&#x7A0B;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5B66;&#x4E60;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x6BD4;&#x8F83;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0E;&#x771F;&#x5B9E;&#x73AF;&#x5883;&#x7684;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x4ECB;&#x7ECD;VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x7684;&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#x3002;</li>
+</ul>
+<p>&#x9884;&#x671F;&#x8FBE;&#x6210;&#x5B66;&#x4E60;&#x76EE;&#x6807;&#xFF1A;</p>
+<ul>
+<li>&#x4E86;&#x89E3;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0E;&#x771F;&#x5B9E;&#x73AF;&#x5883;&#x4E0B;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#x7684;&#x533A;&#x522B;&#xFF1B;</li>
+<li>&#x80FD;&#x591F;&#x642D;&#x5EFA;VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF1B;</li>
+<li>&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x5EFA;&#x56FE;&#x4E0E;&#x5BFC;&#x822A;&#x3002;</li>
+</ul>
+<h2 id="91-&#x6982;&#x8FF0;">9.1 &#x6982;&#x8FF0;</h2>
+<p>&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x4E0E;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5BFC;&#x822A;&#x6838;&#x5FC3;&#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x4E00;&#x81F4;&#xFF0C;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#x4E4B;&#x524D;&#xFF0C;&#x57FA;&#x672C;&#x73AF;&#x5883;&#x7684;&#x642D;&#x5EFA;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF0C;&#x6BD4;&#x5982;:&#x5BFC;&#x822A;&#x573A;&#x666F;&#x3001;&#x4F20;&#x611F;&#x5668;&#x3001;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x7B49;&#xFF0C;&#x5927;&#x81F4;&#x533A;&#x522B;&#x5982;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left"><strong>&#x4EFF;&#x771F;&#x73AF;&#x5883;</strong></th>
+<th style="text-align:left"><strong>&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>&#x5BFC;&#x822A;&#x573A;&#x666F;</strong></td>
+<td style="text-align:left">&#x4F9D;&#x8D56;&#x4E8E;gazebo&#x642D;&#x5EFA;&#x7684;&#x4EFF;&#x771F;&#x73AF;&#x5883;</td>
+<td style="text-align:left">&#x4F9D;&#x8D56;&#x4E8E;&#x73B0;&#x5B9E;&#x73AF;&#x5883;</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>&#x4F20;&#x611F;&#x5668;</strong></td>
+<td style="text-align:left">&#x5728;gazebo&#x4E2D;&#x901A;&#x8FC7;&#x63D2;&#x4EF6;&#x6765;&#x6A21;&#x62DF;&#x4E00;&#x4E9B;&#x5217;&#x4F20;&#x611F;&#x5668;&#xFF0C;&#x6BD4;&#x5982;:&#x96F7;&#x8FBE;&#x3001;&#x6444;&#x50CF;&#x5934;&#x3001;&#x7F16;&#x7801;&#x5668;....</td>
+<td style="text-align:left">&#x4F7F;&#x7528;&#x7684;&#x662F;&#x771F;&#x5B9E;&#x7684;&#x4F20;&#x611F;&#x5668;</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;</strong></td>
+<td style="text-align:left">&#x4F9D;&#x8D56;&#x4E8E;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#xFF0C;&#x4EE5;&#x5B9E;&#x73B0;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x663E;&#x793A;&#xFF0C;&#x901A;&#x8FC7;robot_state_publisher&#x3001;joint_state_publisher&#x5B9E;&#x73B0;&#x673A;&#x5668;&#x4EBA;&#x5404;&#x90E8;&#x4EF6;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;&#x3002;</td>
+<td style="text-align:left">&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x673A;&#x5668;&#x4EBA;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;static_transform_publisher&#x53D1;&#x5E03;&#x5BFC;&#x822A;&#x5FC5;&#x987B;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;&#xFF1B;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x4E5F;&#x53EF;&#x4EE5;&#x501F;&#x52A9; robot_state_publisher&#x3001;joint_state_publisher &#x53D1;&#x5E03;&#x5750;&#x6807;&#x53D8;&#x6362;&#xFF0C;&#x5F53;&#x7136;&#x540E;&#x8005;&#x53EF;&#x4EE5;&#x5728;rviz&#x4E2D;&#x663E;&#x793A;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#xFF0C;&#x66F4;&#x53CB;&#x597D;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x603B;&#x4F53;&#x800C;&#x8A00;&#xFF0C;&#x5728;&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x8131;&#x79BB; gazebo&#xFF0C;&#x800C;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x662F;&#x5426;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x9700;&#x9009;&#x62E9;&#x3002;</p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x7684;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x4E5F;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;&#xFF0C;&#x7A0B;&#x5E8F;&#x6700;&#x7EC8;&#x9700;&#x8981;&#x88AB;&#x90E8;&#x7F72;&#x5728;&#x673A;&#x5668;&#x4EBA;&#x7AEF;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x5F00;&#x53D1;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;ssh&#x4E0A;&#x4F20;&#x81F3;&#x673A;&#x5668;&#x4EBA;&#xFF0C;&#x6216;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;VScode&#x7684;&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x63D2;&#x4EF6;&#x76F4;&#x63A5;&#x5728;&#x673A;&#x5668;&#x4EBA;&#x7AEF;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#x3002;</p>
+<h2 id="92-vscode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;">9.2 VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;</h2>
+<p>&#x5728;&#x7B2C;8&#x7AE0;&#xFF0C;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x4E86;ssh&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x501F;&#x52A9;&#x4E8E;&#x4E8E;ssh&#x53EF;&#x4EE5;&#x8FDC;&#x7A0B;&#x64CD;&#x4F5C;&#x6811;&#x8393;&#x6D3E;&#x7AEF;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x5B58;&#x5728;&#x8BF8;&#x591A;&#x4E0D;&#x4FBF;&#xFF0C;&#x6BD4;&#x5982;:&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;vi&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x4E14;&#x5728;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#x5185;&#xFF0C;&#x65E0;&#x6CD5;&#x540C;&#x65F6;&#x7F16;&#x8F91;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x672C;&#x8282;&#x5C06;&#x4ECB;&#x7ECD;&#x4E00;&#x8F83;&#x4E3A;&#x5B9E;&#x7528;&#x7684;&#x529F;&#x80FD;&#x2014;&#x2014;VSCode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;VScode&#x4E2D;&#x4EE5;&#x56FE;&#x5F62;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#x5728;&#x6811;&#x8393;&#x6D3E;&#x4E0A;&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x7A0B;&#x5E8F;&#xFF0C;&#x6BD4;ssh&#x7684;&#x4F7F;&#x7528;&#x66F4;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#xFF0C;&#x53EF;&#x4EE5;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x3002;</p>
+<h4 id="1&#x51C6;&#x5907;&#x5DE5;&#x4F5C;">1.&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h4>
+<p>VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x4F9D;&#x8D56;&#x4E8E;ssh&#xFF0C;&#x8BF7;&#x9996;&#x5148;&#x6309;&#x7167;8.5.3&#x5185;&#x5BB9;&#x914D;&#x7F6E;ssh&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x3002;</p>
+<h4 id="2&#x4E3A;vscode&#x5B89;&#x88C5;&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x63D2;&#x4EF6;">2.&#x4E3A;VScode&#x5B89;&#x88C5;&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x63D2;&#x4EF6;</h4>
+<p>&#x542F;&#x52A8;VScode&#xFF0C;&#x9996;&#x5148;&#x70B9;&#x51FB;&#x4FA7;&#x8FB9;&#x680F;&#x7684;&#x6269;&#x5C55;&#x6309;&#x94AE;&#xFF0C;&#x7136;&#x540E;&#x5728;<code>&#x6269;&#x5C55;&#xFF1A;&#x5546;&#x5E97;</code>&#x7684;&#x641C;&#x7D22;&#x680F;&#x8F93;&#x5165;<code>Remote Development</code>&#x5E76;&#x70B9;&#x51FB;&#x540C;&#x540D;&#x63D2;&#x4EF6;&#xFF0C;&#x6700;&#x540E;&#x5728;&#x53F3;&#x4FA7;&#x663E;&#x793A;&#x533A;&#x4E2D;&#x70B9;&#x51FB;<code>&#x5B89;&#x88C5;</code>&#x3002;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x914D;&#x7F6E;1.PNG" alt="img"></p>
+<h4 id="3&#x914D;&#x7F6E;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;">3.&#x914D;&#x7F6E;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;</h4>
+<p>&#x6B65;&#x9AA4;1&#xFF1A;&#x4F7F;&#x7528;&#x5FEB;&#x6377;&#x952E;<code>ctrl + shift + p</code>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x8F93;&#x5165;&#x7A97;&#x53E3;&#xFF0C;&#x5E76;&#x8F93;&#x5165;<code>Remote-SSH:Connect to Host...</code>&#xFF0C;&#x5F39;&#x51FA;&#x5217;&#x8868;&#x4E2D;&#x9009;&#x62E9;&#x4E0E;&#x4E4B;&#x540C;&#x540D;&#x7684;&#x9009;&#x9879;&#x3002;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x914D;&#x7F6E;2.PNG" alt="img"></p>
+<p>&#x6B65;&#x9AA4;2&#xFF1A;&#x6B65;&#x9AA4;1&#x5B8C;&#x6210;&#x5C06;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x547D;&#x4EE4;&#x7A97;&#x53E3;&#x5982;&#x4E0B;&#xFF0C;&#x9009;&#x62E9;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x4E2D;&#x7684; <code>Add New SSH Host</code>&#x3002;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x914D;&#x7F6E;3.PNG" alt="img"></p>
+<p>&#x6B65;&#x9AA4;3&#xFF1A;&#x6B65;&#x9AA4;2&#x5B8C;&#x6210;&#x53C8;&#x5C06;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x547D;&#x4EE4;&#x7A97;&#x53E3;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x8F93;&#x5165;&#xFF1A;<code>ssh ubuntu@192.168.43.164</code>&#xFF0C;&#x5176;&#x4E2D;&#xFF0C;<code>ubuntu</code>&#x9700;&#x8981;&#x66FF;&#x6362;&#x4E3A;&#x4F60;&#x7684;&#x767B;&#x5F55;&#x8D26;&#x53F7;&#xFF0C;<code>192.18.43.164</code> &#x5219;&#x66FF;&#x6362;&#x4E3A;&#x4F60;&#x7684;&#x6811;&#x8393;&#x6D3E;&#x7684;ip&#x5730;&#x5740;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111943993.png" alt="img"></p>
+<p>&#x6B65;&#x9AA4;4&#xFF1A;&#x9009;&#x62E9;&#x6B65;&#x9AA4;3&#x5B8C;&#x6210;&#x540E;&#x7684;&#x5F39;&#x7A97;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x9009;&#x9879;(&#x6216;&#x76F4;&#x63A5;&#x56DE;&#x8F66;)&#xFF0C;&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x914D;&#x7F6E;&#xFF0C;&#x914D;&#x7F6E;&#x6210;&#x679C;&#x540E;&#x4F1A;&#x6709;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x914D;&#x7F6E;5.PNG" alt="img"></p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x914D;&#x7F6E;6.PNG" alt="img"></p>
+<h4 id="4&#x4F7F;&#x7528;">4.&#x4F7F;&#x7528;</h4>
+<p>&#x6B65;&#x9AA4;1&#xFF1A;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#x5FEB;&#x6377;&#x952E;<code>ctrl + shift + p</code>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x8F93;&#x5165;&#x7A97;&#x53E3;&#xFF0C;&#x5E76;&#x8F93;&#x5165;<code>Remote-SSH:Connect to Host...</code>&#xFF0C;&#x6B64;&#x65F6;&#x5217;&#x8868;&#x4E2D;&#x5C06;&#x663E;&#x793A;&#x6B65;&#x9AA4;3&#x4E2D;&#x914D;&#x7F6E;&#x7684;ip&#x5730;&#x5740;&#xFF0C;&#x76F4;&#x63A5;&#x9009;&#x62E9;&#xFF0C;&#x9009;&#x62E9;&#x540E;&#xFF0C;VScode&#x5C06;&#x6253;&#x5361;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7A97;&#x53E3;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111943280.png" alt="img"></p>
+<p>&#x6216;&#x8005;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x4FA7;&#x8FB9;&#x680F;&#x7684;<code>&#x8FDC;&#x7A0B;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;</code>&#xFF0C;&#x5728;&#x5F39;&#x51FA;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5217;&#x8868;&#x4E2D;&#x9009;&#x62E9;&#x8981;&#x8FDE;&#x63A5;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x53F3;&#x51FB;&#xFF0C;&#x9009;&#x62E9;&#x5728;&#x672C;&#x7A97;&#x53E3;&#x6216;&#x65B0;&#x7A97;&#x53E3;&#x4E2D;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x3002;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x914D;&#x7F6E;9.PNG" alt="img"></p>
+<p>&#x6B65;&#x9AA4;2&#xFF1A;&#x9009;&#x62E9;&#x83DC;&#x5355;&#x680F;&#x7684;<code>&#x6587;&#x4EF6;</code>&#x4E0B;&#x7684;<code>&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x5939;</code>&#xFF0C;&#x5728;&#x5F39;&#x7A97;&#x5217;&#x8868;&#x4E2D;&#x9009;&#x62E9;&#x9700;&#x8981;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x5E76;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&#x5373;&#x53EF;&#x3002;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/VScode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x914D;&#x7F6E;8.PNG" alt="img"></p>
+<p>&#x6700;&#x7EC8;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x50CF;&#x64CD;&#x4F5C;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x4E00;&#x6837;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x4E86;&#x3002;</p>
+<h2 id="93-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;">9.3 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;</h2>
+<p>&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x7684;&#x57FA;&#x672C;&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;&#x3002;&#x8BE5;&#x6D41;&#x7A0B;&#x5B9E;&#x73B0;&#x4E0E;7.2&#x8282;&#x5185;&#x5BB9;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x4ECD;&#x7136;&#x96C6;&#x4E2D;&#x5728;SLAM&#x3001;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x3001;&#x5B9A;&#x4F4D;&#x4E0E;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#xFF0C;&#x672C;&#x8282;&#x5185;&#x5BB9;&#x4E0D;&#x518D;&#x91CD;&#x590D;&#x4ECB;&#x7ECD;7.2&#x8282;&#x4E2D;&#x5404;&#x4E2A;&#x77E5;&#x8BC6;&#x70B9;&#x7684;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#xFF0C;&#x800C;&#x662F;&#x6CE8;&#x91CD;&#x77E5;&#x8BC6;&#x70B9;&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;:</p>
+<ol>
+<li>&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#xFF1B;</li>
+<li>SLAM&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x5730;&#x56FE;&#x670D;&#x52A1;&#xFF1B;</li>
+<li>&#x5B9A;&#x4F4D;&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#xFF1B;</li>
+</ol>
+<p>&#x672C;&#x8282;&#x6700;&#x540E;&#x8FD8;&#x4F1A;&#x5C06;&#x5BFC;&#x822A;&#x4E0E;SLAM&#x7ED3;&#x5408;&#xFF0C;&#x5B9E;&#x73B0;&#x81EA;&#x4E3B;&#x79FB;&#x52A8;&#x7684;SLAM&#x5EFA;&#x56FE;&#x3002;</p>
+<h3 id="931-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;01&#x51C6;&#x5907;&#x5DE5;&#x4F5C;">9.3.1 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;01_&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h3>
+<h4 id="11&#x5206;&#x5E03;&#x5F0F;&#x67B6;&#x6784;">1.1&#x5206;&#x5E03;&#x5F0F;&#x67B6;&#x6784;</h4>
+<p>&#x5206;&#x5E03;&#x5F0F;&#x67B6;&#x6784;&#x642D;&#x5EFA;&#x5B8C;&#x6BD5;&#x4E14;&#x80FD;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x5728;PC&#x7AEF;&#x53EF;&#x4EE5;&#x8FDC;&#x7A0B;&#x767B;&#x9646;&#x673A;&#x5668;&#x4EBA;&#x7AEF;&#x3002;</p>
+<h4 id="12&#x529F;&#x80FD;&#x5305;&#x5B89;&#x88C5;">1.2&#x529F;&#x80FD;&#x5305;&#x5B89;&#x88C5;</h4>
+<p>&#x5728;&#x673A;&#x5668;&#x4EBA;&#x7AEF;&#x5B89;&#x88C5;&#x5BFC;&#x822A;&#x6240;&#x9700;&#x529F;&#x80FD;&#x5305;&#xFF1A;</p>
+<ul>
+<li>&#x5B89;&#x88C5; gmapping &#x5305;(&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x5730;&#x56FE;):<code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-gmapping</code></li>
+<li>&#x5B89;&#x88C5;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5305;(&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x4E0E;&#x8BFB;&#x53D6;&#x5730;&#x56FE;):<code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-map-server</code></li>
+<li>&#x5B89;&#x88C5; navigation &#x5305;(&#x7528;&#x4E8E;&#x5B9A;&#x4F4D;&#x4EE5;&#x53CA;&#x8DEF;&#x5F84;&#x89C4;&#x5212;):<code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-navigation</code></li>
+</ul>
+<p>&#x65B0;&#x5EFA;&#x529F;&#x80FD;&#xFF08;&#x5305;&#x540D;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;nav&#xFF09;&#xFF0C;&#x5E76;&#x5BFC;&#x5165;&#x4F9D;&#x8D56;: gmapping map_server amcl move_base</p>
+<h4 id="13&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x4EE5;&#x53CA;&#x5750;&#x6807;&#x53D8;&#x6362;">1.3&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x4EE5;&#x53CA;&#x5750;&#x6807;&#x53D8;&#x6362;</h4>
+<p>&#x673A;&#x5668;&#x4EBA;&#x7684;&#x4E0D;&#x540C;&#x90E8;&#x4EF6;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x5750;&#x6807;&#x7CFB;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E9B;&#x5750;&#x6807;&#x7CFB;&#x96C6;&#x6210;&#x8FDB;&#x540C;&#x4E00;&#x5750;&#x6807;&#x6811;&#xFF0C;&#x5B9E;&#x73B0;&#x65B9;&#x6848;&#x6709;&#x4E24;&#x79CD;&#xFF1A;</p>
+<ol>
+<li>&#x4E0D;&#x540C;&#x7684;&#x90E8;&#x4EF6;&#x76F8;&#x5BF9;&#x4E8E;&#x673A;&#x5668;&#x4EBA;&#x5E95;&#x76D8;&#x5176;&#x4F4D;&#x7F6E;&#x90FD;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53D1;&#x5E03;&#x9759;&#x6001;&#x5750;&#x6807;&#x53D8;&#x6362;&#x4EE5;&#x5B9E;&#x73B0;&#x96C6;&#x6210;&#xFF1B;</li>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x52A0;&#x8F7D;&#x673A;&#x5668;&#x4EBA;URDF&#x6587;&#x4EF6;&#x7ED3;&#x5408; robot_state_publisher&#x3001;joint_state_publisher&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x5750;&#x6807;&#x7CFB;&#x7684;&#x96C6;&#x6210;&#x3002;</li>
+</ol>
+<p>&#x65B9;&#x6848;1&#x5728;&#x4E0A;&#x4E00;&#x7AE0;&#x4E2D;&#x5DF2;&#x505A;&#x6F14;&#x793A;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x4ECB;&#x7ECD;&#x65B9;&#x6848;2&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<h5 id="131-&#x521B;&#x5EFA;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x76F8;&#x5173;&#x7684;&#x529F;&#x80FD;&#x5305;">1.3.1 &#x521B;&#x5EFA;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x76F8;&#x5173;&#x7684;&#x529F;&#x80FD;&#x5305;</h5>
+<p>&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;:<code>catkin_create_pkg mycar_description urdf xacro</code>&#x3002;</p>
+<h5 id="132-&#x51C6;&#x5907;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x6587;&#x4EF6;">1.3.2 &#x51C6;&#x5907;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x6587;&#x4EF6;</h5>
+<p>&#x5728;&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x65B0;&#x5EFA; urdf &#x76EE;&#x5F55;&#xFF0C;&#x7F16;&#x5199;&#x5177;&#x4F53;&#x7684; urdf &#x6587;&#x4EF6;&#xFF08;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x76F8;&#x5173;URDF&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x5199;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x7B2C;6&#x7AE0;&#x5185;&#x5BB9;&#xFF09;&#xFF0C;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x6587;&#x4EF6;car.urdf.xacro&#x7528;&#x4E8E;&#x96C6;&#x6210;&#x4E0D;&#x540C;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x90E8;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">robot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mycar&quot;</span> <span class="hljs-attr">xmlns:xacro</span>=<span class="hljs-string">&quot;http://wiki.ros.org/xacro&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:include</span> <span class="hljs-attr">filename</span>=<span class="hljs-string">&quot;car_base.urdf.xacro&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:include</span> <span class="hljs-attr">filename</span>=<span class="hljs-string">&quot;car_camera.urdf.xacro&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:include</span> <span class="hljs-attr">filename</span>=<span class="hljs-string">&quot;car_laser.urdf.xacro&quot;</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">robot</span>&gt;</span>
+</code></pre>
+<p>&#x6587;&#x4EF6;car_base.urdf.xacro&#x673A;&#x5668;&#x4EBA;&#x5E95;&#x76D8;&#x5B9E;&#x73B0;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">robot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mycar&quot;</span> <span class="hljs-attr">xmlns:xacro</span>=<span class="hljs-string">&quot;http://wiki.ros.org/xacro&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;footprint_radius&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.001&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_footprint&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">visual</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">geometry</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">sphere</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">&quot;${footprint_radius}&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">geometry</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">visual</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">link</span>&gt;</span>
+
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_radius&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_length&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.08&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lidi&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.015&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_joint_z&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${base_length / 2 + lidi}&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_link&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">visual</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">geometry</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">cylinder</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">&quot;0.1&quot;</span> <span class="hljs-attr">length</span>=<span class="hljs-string">&quot;0.08&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">geometry</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> /&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">material</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;baselink_color&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">color</span> <span class="hljs-attr">rgba</span>=<span class="hljs-string">&quot;1.0 0.5 0.2 0.5&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">material</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">visual</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">link</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">joint</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;link2footprint&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;fixed&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">parent</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;base_footprint&quot;</span>  /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">child</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;base_link&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;0 0 0.055&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">joint</span>&gt;</span>
+
+
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;wheel_radius&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.0325&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;wheel_length&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.015&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;PI&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;3.1415927&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;wheel_joint_z&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${(base_length / 2 + lidi - wheel_radius) * -1}&quot;</span> /&gt;</span>
+
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:macro</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;wheel_func&quot;</span> <span class="hljs-attr">params</span>=<span class="hljs-string">&quot;wheel_name flag&quot;</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;${wheel_name}_wheel&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">visual</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">geometry</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">cylinder</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">&quot;${wheel_radius}&quot;</span> <span class="hljs-attr">length</span>=<span class="hljs-string">&quot;${wheel_length}&quot;</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">geometry</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;${PI / 2} 0 0&quot;</span> /&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">material</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;wheel_color&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">color</span> <span class="hljs-attr">rgba</span>=<span class="hljs-string">&quot;0 0 0 0.3&quot;</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">material</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">visual</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">link</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">joint</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;${wheel_name}2link&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;continuous&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">parent</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;base_link&quot;</span>  /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">child</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;${wheel_name}_wheel&quot;</span> /&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;0 ${0.1 * flag} ${wheel_joint_z}&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">axis</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;0 1 0&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">joint</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">xacro:macro</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:wheel_func</span> <span class="hljs-attr">wheel_name</span>=<span class="hljs-string">&quot;left&quot;</span> <span class="hljs-attr">flag</span>=<span class="hljs-string">&quot;1&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:wheel_func</span> <span class="hljs-attr">wheel_name</span>=<span class="hljs-string">&quot;right&quot;</span> <span class="hljs-attr">flag</span>=<span class="hljs-string">&quot;-1&quot;</span> /&gt;</span>
+
+
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;small_wheel_radius&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.0075&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;small_joint_z&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${(base_length / 2 + lidi - small_wheel_radius) * -1}&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:macro</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;small_wheel_func&quot;</span> <span class="hljs-attr">params</span>=<span class="hljs-string">&quot;small_wheel_name flag&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;${small_wheel_name}_wheel&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">visual</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">geometry</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">sphere</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">&quot;${small_wheel_radius}&quot;</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">geometry</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> /&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">material</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;wheel_color&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">color</span> <span class="hljs-attr">rgba</span>=<span class="hljs-string">&quot;0 0 0 0.3&quot;</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">material</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">visual</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">link</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">joint</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;${small_wheel_name}2link&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;continuous&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">parent</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;base_link&quot;</span>  /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">child</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;${small_wheel_name}_wheel&quot;</span> /&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;${0.08 * flag} 0 ${small_joint_z}&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">axis</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;0 1 0&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">joint</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">xacro:macro</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:small_wheel_func</span> <span class="hljs-attr">small_wheel_name</span>=<span class="hljs-string">&quot;front&quot;</span> <span class="hljs-attr">flag</span>=<span class="hljs-string">&quot;1&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:small_wheel_func</span> <span class="hljs-attr">small_wheel_name</span>=<span class="hljs-string">&quot;back&quot;</span> <span class="hljs-attr">flag</span>=<span class="hljs-string">&quot;-1&quot;</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">robot</span>&gt;</span>
+</code></pre>
+<p>&#x6587;&#x4EF6;car_camera.urdf.xacro&#x673A;&#x5668;&#x4EBA;&#x6444;&#x50CF;&#x5934;&#x5B9E;&#x73B0;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">robot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mycar&quot;</span> <span class="hljs-attr">xmlns:xacro</span>=<span class="hljs-string">&quot;http://wiki.ros.org/xacro&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;camera_length&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.02&quot;</span> /&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;camera_width&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span> /&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;camera_height&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span> /&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_camera_x&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.08&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_camera_y&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_camera_z&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${base_length / 2 + camera_height / 2}&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;camera&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">visual</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">geometry</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">box</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;${camera_length} ${camera_width} ${camera_height}&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">geometry</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">material</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;black&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">color</span> <span class="hljs-attr">rgba</span>=<span class="hljs-string">&quot;0 0 0 0.8&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">material</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">visual</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">link</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">joint</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;camera2base&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;fixed&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">parent</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;base_link&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">child</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;camera&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;${joint_camera_x} ${joint_camera_y} ${joint_camera_z}&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">joint</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">robot</span>&gt;</span>
+</code></pre>
+<p>&#x6587;&#x4EF6;car_laser.urdf.xacro&#x673A;&#x5668;&#x4EBA;&#x96F7;&#x8FBE;&#x5B9E;&#x73B0;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">robot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mycar&quot;</span> <span class="hljs-attr">xmlns:xacro</span>=<span class="hljs-string">&quot;http://wiki.ros.org/xacro&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;support_radius&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.01&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;support_length&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.15&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_radius&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.03&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_length&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_support_x&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_support_y&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_support_z&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${base_length / 2 + support_length / 2}&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_laser_x&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_laser_y&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xacro:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_laser_z&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;${support_length / 2 + laser_length / 2}&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;support&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">visual</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">geometry</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">cylinder</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">&quot;${support_radius}&quot;</span> <span class="hljs-attr">length</span>=<span class="hljs-string">&quot;${support_length}&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">geometry</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">material</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;yellow&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">color</span> <span class="hljs-attr">rgba</span>=<span class="hljs-string">&quot;0.8 0.5 0.0 0.5&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">material</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">visual</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">link</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">joint</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;support2base&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;fixed&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">parent</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;base_link&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">child</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;support&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;${joint_support_x} ${joint_support_y} ${joint_support_z}&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">joint</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">visual</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">geometry</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">cylinder</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">&quot;${laser_radius}&quot;</span> <span class="hljs-attr">length</span>=<span class="hljs-string">&quot;${laser_length}&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">geometry</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">material</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;black&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">color</span> <span class="hljs-attr">rgba</span>=<span class="hljs-string">&quot;0 0 0 0.5&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">material</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">visual</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">link</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">joint</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser2support&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;fixed&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">parent</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;support&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">child</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&quot;laser&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">origin</span> <span class="hljs-attr">xyz</span>=<span class="hljs-string">&quot;${joint_laser_x} ${joint_laser_y} ${joint_laser_z}&quot;</span> <span class="hljs-attr">rpy</span>=<span class="hljs-string">&quot;0 0 0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">joint</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">robot</span>&gt;</span>
+</code></pre>
+<h5 id="133-&#x5728;launch&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;">1.3.3 &#x5728;launch&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;</h5>
+<p>launch &#x6587;&#x4EF6;&#xFF08;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;car.launch&#xFF09;&#x5185;&#x5BB9;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;robot_description&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;$(find xacro)/xacro $(find mycar_description)/urdf/car.urdf.xacro&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;joint_state_publisher&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_state_publisher&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;joint_state_publisher&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;robot_state_publisher&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;robot_state_publisher&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;robot_state_publisher&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x4F7F;&#x7528;&#x65B9;&#x4FBF;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5C06;&#x8BE5;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x8FDB;&#x542F;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x7684;launch&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find ros_arduino_python)/launch/arduino.launch&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find usb_cam)/launch/usb_cam-test.launch&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find rplidar_ros)/launch/rplidar.launch&quot;</span> /&gt;</span>
+        <span class="hljs-comment">&lt;!-- &#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x52A0;&#x8F7D;&#x6587;&#x4EF6; --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find mycar_description)/launch/car.launch&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<h4 id="14&#x7ED3;&#x679C;&#x6F14;&#x793A;">1.4&#x7ED3;&#x679C;&#x6F14;&#x793A;</h4>
+<p>&#x4E0D;&#x4F7F;&#x7528;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x65F6;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x7AEF;&#x542F;&#x52A8;&#x673A;&#x5668;&#x4EBA;(&#x4F7F;&#x7528;&#x5305;&#x542B;TF&#x5750;&#x6807;&#x6362;&#x7684;launch&#x6587;&#x4EF6;)&#xFF0C;&#x4ECE;&#x673A;&#x7AEF;&#x542F;&#x52A8;rviz&#xFF0C;&#x5728;rviz&#x4E2D;&#x6DFB;&#x52A0;RobotModel&#x4E0E;TF&#x7EC4;&#x4EF6;&#xFF0C;rviz&#x4E2D;&#x7ED3;&#x679C;(&#x6B64;&#x65F6;&#x663E;&#x793A;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x5F02;&#x5E38;&#xFF0C;&#x4E14;TF&#x4E2D;&#x53EA;&#x6709;&#x4EE3;&#x7801;&#x4E2D;&#x53D1;&#x5E03;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;):</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111943550.png" alt="img"></p>
+<p>&#x4F7F;&#x7528;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x65F6;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x7AEF;&#x52A0;&#x8F7D;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#xFF08;&#x6267;&#x884C;&#x4E0A;&#x4E00;&#x6B65;&#x7684;launch&#x6587;&#x4EF6;&#xFF09;&#x4E14;&#x542F;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#xFF0C;&#x4ECE;&#x673A;&#x7AEF;&#x542F;&#x52A8;rviz&#xFF0C;&#xFF0C;&#x5728;rviz&#x4E2D;&#x6DFB;&#x52A0;RobotModel&#x4E0E;TF&#x7EC4;&#x4EF6;rviz&#x4E2D;&#x7ED3;&#x679C;(&#x6B64;&#x65F6;&#x663E;&#x793A;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#xFF0C;&#x4E14;TF&#x5750;&#x6807;&#x53D8;&#x6362;&#x6B63;&#x5E38;):</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/TF&#x5750;&#x6807;&#x53D8;&#x6362;_&#x6A21;&#x578B;.PNG" alt="img"></p>
+<p>&#x540E;&#x7EED;&#xFF0C;&#x5728;&#x5BFC;&#x822A;&#x65F6;&#x4F7F;&#x7528;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x3002;</p>
+<h3 id="932-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;02slam&#x5EFA;&#x56FE;">9.3.2 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;02_SLAM&#x5EFA;&#x56FE;</h3>
+<p>&#x5173;&#x4E8E;&#x5EFA;&#x56FE;&#x5B9E;&#x73B0;&#xFF0C;&#x4ECD;&#x7136;&#x9009;&#x7528;&#x7B2C;7&#x7AE0;&#x4E2D;&#x5B66;&#x4E60;&#x7684;&#xFF1A;gmapping&#xFF0C;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<h4 id="21&#x7F16;&#x5199;gmapping&#x8282;&#x70B9;&#x76F8;&#x5173;launch&#x6587;&#x4EF6;">2.1&#x7F16;&#x5199;gmapping&#x8282;&#x70B9;&#x76F8;&#x5173;launch&#x6587;&#x4EF6;</h4>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x8282;&#x521B;&#x5EFA;&#x7684;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x4E2D;&#x65B0;&#x5EFA; launch &#x76EE;&#x5F55;&#xFF0C;&#x5E76;&#x65B0;&#x5EFA;launch&#x6587;&#x4EF6;&#xFF08;&#x6587;&#x4EF6;&#x540D;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A; gmapping.launch&#xFF09;&#xFF0C;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;gmapping&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;slam_gmapping&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;slam_gmapping&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">remap</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;scan&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;scan&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_frame&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;base_footprint&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!--&#x5E95;&#x76D8;&#x5750;&#x6807;&#x7CFB;--&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_frame&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;odom&quot;</span>/&gt;</span> <span class="hljs-comment">&lt;!--&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;--&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_update_interval&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;5.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;maxUrange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;16.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sigma&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;kernelSize&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lstep&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;astep&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;iterations&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;5&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lsigma&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.075&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ogain&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;3.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lskip&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;srr&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;srt&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;str&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;stt&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;linearUpdate&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;angularUpdate&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;temporalUpdate&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;3.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;resampleThreshold&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;particles&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;30&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;xmin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;-50.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ymin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;-50.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;xmax&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;50.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ymax&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;50.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;delta&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;llsamplerange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.01&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;llsamplestep&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.01&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lasamplerange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.005&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lasamplestep&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.005&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<p>&#x5173;&#x952E;&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">remap</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;scan&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;scan&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x96F7;&#x8FBE;&#x8BDD;&#x9898; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_frame&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;base_footprint&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!--&#x5E95;&#x76D8;&#x5750;&#x6807;&#x7CFB;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_frame&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;odom&quot;</span>/&gt;</span> <span class="hljs-comment">&lt;!--&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;--&gt;</span>
+</code></pre>
+<h4 id="22&#x6267;&#x884C;">2.2&#x6267;&#x884C;</h4>
+<p>1.&#x6267;&#x884C;&#x76F8;&#x5173;launch&#x6587;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x5E76;&#x52A0;&#x8F7D;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#xFF1A;<code>roslaunch mycar_start start.launch</code>&#xFF1B;</p>
+<p>2.&#x542F;&#x52A8;&#x5730;&#x56FE;&#x7ED8;&#x5236;&#x7684; launch &#x6587;&#x4EF6;&#xFF1A;<code>roslaunch nav gmapping.launch</code>&#xFF1B;</p>
+<p>3.&#x542F;&#x52A8;&#x952E;&#x76D8;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#x5EFA;&#x56FE;&#xFF1A;<code>rosrun teleop_twist_keyboard teleop_twist_keyboard.py</code></p>
+<p>4.&#x5728; rviz &#x4E2D;&#x6DFB;&#x52A0;&#x5730;&#x56FE;&#x663E;&#x793A;&#x7EC4;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x5728;rviz&#x4E2D;&#x53EF;&#x4EE5;&#x663E;&#x793A;gmapping&#x53D1;&#x5E03;&#x7684;&#x6805;&#x683C;&#x5730;&#x56FE;&#x6570;&#x636E;&#x4E86;&#xFF0C;&#x8BE5;&#x663E;&#x793A;&#x7ED3;&#x679C;&#x4E0E;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x7C7B;&#x4F3C;&#x3002;&#x4E0B;&#x4E00;&#x6B65;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5C06;&#x5730;&#x56FE;&#x5355;&#x72EC;&#x4FDD;&#x5B58;&#x3002;</p>
+<h3 id="933-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;03&#x5730;&#x56FE;&#x670D;&#x52A1;">9.3.3 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;03_&#x5730;&#x56FE;&#x670D;&#x52A1;</h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; map_server &#x5B9E;&#x73B0;&#x5730;&#x56FE;&#x7684;&#x4FDD;&#x5B58;&#x4E0E;&#x8BFB;&#x53D6;&#x3002;</p>
+<h4 id="31&#x5730;&#x56FE;&#x4FDD;&#x5B58;launch&#x6587;&#x4EF6;">3.1&#x5730;&#x56FE;&#x4FDD;&#x5B58;launch&#x6587;&#x4EF6;</h4>
+<p>&#x9996;&#x5148;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x65B0;&#x5EFA; map &#x76EE;&#x5F55;&#xFF0C;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x751F;&#x6210;&#x7684;&#x5730;&#x56FE;&#x6570;&#x636E;&#x3002;&#x5730;&#x56FE;&#x4FDD;&#x5B58;&#x7684;&#x8BED;&#x6CD5;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x7F16;&#x5199;&#x4E00;&#x4E2A;launch&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;filename&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(find nav)/map/nav&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_save&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;map_saver&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;-f $(arg filename)&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x901A;&#x8FC7; filename &#x6307;&#x5B9A;&#x4E86;&#x5730;&#x56FE;&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#x4EE5;&#x53CA;&#x4FDD;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x3002;</p>
+<p>SLAM&#x5EFA;&#x56FE;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x8BE5;launch&#x6587;&#x4EF6;&#x5373;&#x53EF;&#x3002;</p>
+<p><strong>&#x6D4B;&#x8BD5;:</strong></p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x53C2;&#x8003;&#x4E0A;&#x4E00;&#x8282;&#xFF0C;&#x4F9D;&#x6B21;&#x542F;&#x52A8;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#xFF0C;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x4E0E;SLAM&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#x5E76;&#x7ED8;&#x56FE;&#xFF1B;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x5730;&#x56FE;&#x4FDD;&#x5B58;&#x65B9;&#x5F0F;&#x4FDD;&#x5B58;&#x5730;&#x56FE;&#x3002;</p>
+<p>&#x7ED3;&#x679C;&#xFF1A;&#x5728;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x4E0B;&#x4F1A;&#x751F;&#x6210;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;xxx.pgm &#x4E0E; xxx.yaml</p>
+<h4 id="32&#x5730;&#x56FE;&#x8BFB;&#x53D6;">3.2&#x5730;&#x56FE;&#x8BFB;&#x53D6;</h4>
+<p>&#x901A;&#x8FC7; map_server &#x7684; map_server &#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x6805;&#x683C;&#x5730;&#x56FE;&#x6570;&#x636E;&#xFF0C;&#x7F16;&#x5199; launch &#x6587;&#x4EF6;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;nav.yaml&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x8F7D;&#x8BBE;&#x7F6E;&#x7684;&#x5730;&#x56FE;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;$(find mycar_nav)/map/$(arg map)&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x53C2;&#x6570;&#x662F;&#x5730;&#x56FE;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x7684;&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF0C;&#x6267;&#x884C;&#x8BE5;launch&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x8282;&#x70B9;&#x4F1A;&#x53D1;&#x5E03;&#x8BDD;&#x9898;:map(nav_msgs/OccupancyGrid)&#xFF0C;&#x6700;&#x540E;&#xFF0C;&#x5728; rviz &#x4E2D;&#x4F7F;&#x7528; map &#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x6805;&#x683C;&#x5730;&#x56FE;&#x3002;</p>
+<h3 id="934-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;04&#x5B9A;&#x4F4D;">9.3.4 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;04_&#x5B9A;&#x4F4D;</h3>
+<p>&#x5728;ROS&#x7684;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;navigation&#x4E2D;&#x63D0;&#x4F9B;&#x4E86; amcl &#x529F;&#x80FD;&#x5305;&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#x4E2D;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x5B9A;&#x4F4D;&#x3002;</p>
+<h4 id="41&#x7F16;&#x5199;amcl&#x8282;&#x70B9;&#x76F8;&#x5173;&#x7684;launch&#x6587;&#x4EF6;">4.1&#x7F16;&#x5199;amcl&#x8282;&#x70B9;&#x76F8;&#x5173;&#x7684;launch&#x6587;&#x4EF6;</h4>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;amcl&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;amcl&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;amcl&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Publish scans from best pose at a max of 10 Hz --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_model_type&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;diff&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x91CC;&#x7A0B;&#x8BA1;&#x6A21;&#x5F0F;&#x4E3A;&#x5DEE;&#x5206; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha5&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;transform_tolerance&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gui_publish_rate&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;10.0&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_max_beams&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;30&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;min_particles&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;500&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;max_particles&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;5000&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;kld_err&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;kld_z&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.99&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha1&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha2&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- translation std dev, m --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha3&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.8&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha4&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_z_hit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_z_short&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_z_max&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_z_rand&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_sigma_hit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_lambda_short&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_lambda_short&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_model_type&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;likelihood_field&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- &lt;param name=&quot;laser_model_type&quot; value=&quot;beam&quot;/&gt; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_likelihood_max_dist&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;2.0&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;update_min_d&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;update_min_a&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_frame_id&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;odom&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_frame_id&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;base_footprint&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x6DFB;&#x52A0;&#x673A;&#x5668;&#x4EBA;&#x57FA;&#x5750;&#x6807;&#x7CFB; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;global_frame_id&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;map&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x6DFB;&#x52A0;&#x5730;&#x56FE;&#x5750;&#x6807;&#x7CFB; --&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<h4 id="42&#x7F16;&#x5199;&#x6D4B;&#x8BD5;launch&#x6587;&#x4EF6;">4.2&#x7F16;&#x5199;&#x6D4B;&#x8BD5;launch&#x6587;&#x4EF6;</h4>
+<p>amcl&#x8282;&#x70B9;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x8FD0;&#x884C; amcl &#x8282;&#x70B9;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x52A0;&#x8F7D;&#x5168;&#x5C40;&#x5730;&#x56FE;&#xFF0C;&#x7136;&#x540E;&#x542F;&#x52A8; rviz &#x663E;&#x793A;&#x5B9A;&#x4F4D;&#x7ED3;&#x679C;&#xFF0C;&#x4E0A;&#x8FF0;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x96C6;&#x6210;&#x8FDB;launch&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;nav.yaml&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x8F7D;&#x8BBE;&#x7F6E;&#x7684;&#x5730;&#x56FE;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;$(find nav)/map/$(arg map)&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x542F;&#x52A8;AMCL&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/launch/amcl.launch&quot;</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<p>&#x5F53;&#x7136;&#xFF0C;launch&#x6587;&#x4EF6;&#x4E2D;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x8282;&#x70B9;&#x548C;amcl&#x8282;&#x70B9;&#x4E2D;&#x7684;&#x5305;&#x540D;&#x3001;&#x6587;&#x4EF6;&#x540D;&#x9700;&#x8981;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x8BBE;&#x7F6E;&#x4FEE;&#x6539;&#x3002;</p>
+<h4 id="43&#x6267;&#x884C;">4.3&#x6267;&#x884C;</h4>
+<p>1.&#x6267;&#x884C;&#x76F8;&#x5173;launch&#x6587;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x5E76;&#x52A0;&#x8F7D;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#xFF1A;<code>roslaunch mycar_start start.launch</code>&#xFF1B;</p>
+<p>2.&#x542F;&#x52A8;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF1A;<code>rosrun teleop_twist_keyboard teleop_twist_keyboard.py</code>&#xFF1B;</p>
+<p>3.&#x542F;&#x52A8;&#x4E0A;&#x4E00;&#x6B65;&#x4E2D;&#x96C6;&#x6210;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x3001;amcl &#x7684; launch &#x6587;&#x4EF6;&#xFF1A;<code>roslaunch nav test_amcl.launch</code>&#xFF1B;</p>
+<p>4.&#x542F;&#x52A8;rviz&#x5E76;&#x6DFB;&#x52A0;RobotModel&#x3001;Map&#x7EC4;&#x4EF6;&#xFF0C;&#x5206;&#x522B;&#x663E;&#x793A;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x4E0E;&#x5730;&#x56FE;&#xFF0C;&#x6DFB;&#x52A0; posearray &#x63D2;&#x4EF6;&#xFF0C;&#x8BBE;&#x7F6E;topic&#x4E3A;particlecloud&#x6765;&#x663E;&#x793A; amcl &#x9884;&#x4F30;&#x7684;&#x5F53;&#x524D;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x4F4D;&#x59FF;&#xFF0C;&#x7BAD;&#x5934;&#x8D8A;&#x662F;&#x5BC6;&#x96C6;&#xFF0C;&#x8BF4;&#x660E;&#x5F53;&#x524D;&#x673A;&#x5668;&#x4EBA;&#x5904;&#x4E8E;&#x6B64;&#x4F4D;&#x7F6E;&#x7684;&#x6982;&#x7387;&#x8D8A;&#x9AD8;&#xFF1B;</p>
+<p>5.&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0; posearray &#x4E5F;&#x968F;&#x4E4B;&#x800C;&#x6539;&#x53D8;&#x3002;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E0E;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x7C7B;&#x4F3C;&#x3002;</p>
+<h3 id="935-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;05&#x8DEF;&#x5F84;&#x89C4;&#x5212;">9.3.5 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;05_&#x8DEF;&#x5F84;&#x89C4;&#x5212;</h3>
+<p>&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4ECD;&#x7136;&#x4F7F;&#x7528; navigation &#x529F;&#x80FD;&#x5305;&#x96C6;&#x4E2D;&#x7684; move_base &#x529F;&#x80FD;&#x5305;&#x3002;</p>
+<h4 id="51&#x7F16;&#x5199;launch&#x6587;&#x4EF6;">5.1&#x7F16;&#x5199;launch&#x6587;&#x4EF6;</h4>
+<p>&#x5173;&#x4E8E;move_base&#x8282;&#x70B9;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x6A21;&#x677F;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;move_base&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;move_base&quot;</span> <span class="hljs-attr">respawn</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;move_base&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span> <span class="hljs-attr">clear_params</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/param/costmap_common_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> <span class="hljs-attr">ns</span>=<span class="hljs-string">&quot;global_costmap&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/param/costmap_common_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> <span class="hljs-attr">ns</span>=<span class="hljs-string">&quot;local_costmap&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/param/local_costmap_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/param/global_costmap_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/param/base_local_planner_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<h4 id="52&#x7F16;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">5.2&#x7F16;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<p>&#x53EF;&#x53C2;&#x8003;&#x4EFF;&#x771F;&#x5B9E;&#x73B0;&#x3002;</p>
+<h5 id="1costmapcommonparamsyaml">1.costmap_common_params.yaml</h5>
+<p>&#x8BE5;&#x6587;&#x4EF6;&#x662F;move_base &#x5728;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4E0E;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x901A;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x5305;&#x62EC;:&#x673A;&#x5668;&#x4EBA;&#x7684;&#x5C3A;&#x5BF8;&#x3001;&#x8DDD;&#x79BB;&#x969C;&#x788D;&#x7269;&#x7684;&#x5B89;&#x5168;&#x8DDD;&#x79BB;&#x3001;&#x4F20;&#x611F;&#x5668;&#x4FE1;&#x606F;&#x7B49;&#x3002;&#x914D;&#x7F6E;&#x53C2;&#x8003;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-yaml"><span class="hljs-comment">#&#x673A;&#x5668;&#x4EBA;&#x51E0;&#x4F55;&#x53C2;&#xFF0C;&#x5982;&#x679C;&#x673A;&#x5668;&#x4EBA;&#x662F;&#x5706;&#x5F62;&#xFF0C;&#x8BBE;&#x7F6E; robot_radius,&#x5982;&#x679C;&#x662F;&#x5176;&#x4ED6;&#x5F62;&#x72B6;&#x8BBE;&#x7F6E; footprint</span>
+<span class="hljs-attr">robot_radius:</span> <span class="hljs-number">0.12</span> <span class="hljs-comment">#&#x5706;&#x5F62;</span>
+<span class="hljs-comment"># footprint: [[-0.12, -0.12], [-0.12, 0.12], [0.12, 0.12], [0.12, -0.12]] #&#x5176;&#x4ED6;&#x5F62;&#x72B6;</span>
+
+<span class="hljs-attr">obstacle_range:</span> <span class="hljs-number">3.0</span> <span class="hljs-comment"># &#x7528;&#x4E8E;&#x969C;&#x788D;&#x7269;&#x63A2;&#x6D4B;&#xFF0C;&#x6BD4;&#x5982;: &#x503C;&#x4E3A; 3.0&#xFF0C;&#x610F;&#x5473;&#x7740;&#x68C0;&#x6D4B;&#x5230;&#x8DDD;&#x79BB;&#x5C0F;&#x4E8E; 3 &#x7C73;&#x7684;&#x969C;&#x788D;&#x7269;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x5F15;&#x5165;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;</span>
+<span class="hljs-attr">raytrace_range:</span> <span class="hljs-number">3.5</span> <span class="hljs-comment"># &#x7528;&#x4E8E;&#x6E05;&#x9664;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x503C;&#x4E3A; 3.5&#xFF0C;&#x610F;&#x5473;&#x7740;&#x6E05;&#x9664;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x4E2D; 3.5 &#x7C73;&#x4EE5;&#x5916;&#x7684;&#x969C;&#x788D;&#x7269;</span>
+
+
+<span class="hljs-comment">#&#x81A8;&#x80C0;&#x534A;&#x5F84;&#xFF0C;&#x6269;&#x5C55;&#x5728;&#x78B0;&#x649E;&#x533A;&#x57DF;&#x4EE5;&#x5916;&#x7684;&#x4EE3;&#x4EF7;&#x533A;&#x57DF;&#xFF0C;&#x4F7F;&#x5F97;&#x673A;&#x5668;&#x4EBA;&#x89C4;&#x5212;&#x8DEF;&#x5F84;&#x907F;&#x5F00;&#x969C;&#x788D;&#x7269;</span>
+<span class="hljs-attr">inflation_radius:</span> <span class="hljs-number">0.2</span>
+<span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x6BD4;&#x4F8B;&#x7CFB;&#x6570;&#xFF0C;&#x8D8A;&#x5927;&#x5219;&#x4EE3;&#x4EF7;&#x503C;&#x8D8A;&#x5C0F;</span>
+<span class="hljs-attr">cost_scaling_factor:</span> <span class="hljs-number">3.0</span>
+
+<span class="hljs-comment">#&#x5730;&#x56FE;&#x7C7B;&#x578B;</span>
+<span class="hljs-attr">map_type:</span> costmap
+<span class="hljs-comment">#&#x5BFC;&#x822A;&#x5305;&#x6240;&#x9700;&#x8981;&#x7684;&#x4F20;&#x611F;&#x5668;</span>
+<span class="hljs-attr">observation_sources:</span> scan
+<span class="hljs-comment">#&#x5BF9;&#x4F20;&#x611F;&#x5668;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x548C;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;&#x8FD9;&#x4E2A;&#x4E5F;&#x4F1A;&#x7528;&#x4E8E;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x6DFB;&#x52A0;&#x548C;&#x6E05;&#x9664;&#x969C;&#x788D;&#x7269;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x4F20;&#x611F;&#x5668;&#x7528;&#x4E8E;&#x5728;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x6DFB;&#x52A0;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x518D;&#x6DFB;&#x52A0;kinect&#x7528;&#x4E8E;&#x5BFC;&#x822A;&#x548C;&#x6E05;&#x9664;&#x969C;&#x788D;&#x7269;&#x3002;</span>
+<span class="hljs-attr">scan:</span> {sensor_frame: laser, data_type: LaserScan, topic: scan, marking: <span class="hljs-literal">true</span>, clearing: <span class="hljs-literal">true</span>}
+</code></pre>
+<h5 id="2globalcostmapparamsyaml">2.global_costmap_params.yaml</h5>
+<p>&#x8BE5;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x5168;&#x5C40;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">global_costmap:</span>
+<span class="hljs-attr">  global_frame:</span> map <span class="hljs-comment">#&#x5730;&#x56FE;&#x5750;&#x6807;&#x7CFB;</span>
+<span class="hljs-attr">  robot_base_frame:</span> base_footprint <span class="hljs-comment">#&#x673A;&#x5668;&#x4EBA;&#x5750;&#x6807;&#x7CFB;</span>
+  <span class="hljs-comment"># &#x4EE5;&#x6B64;&#x5B9E;&#x73B0;&#x5750;&#x6807;&#x53D8;&#x6362;</span>
+
+<span class="hljs-attr">  update_frequency:</span> <span class="hljs-number">1.0</span> <span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x66F4;&#x65B0;&#x9891;&#x7387;</span>
+<span class="hljs-attr">  publish_frequency:</span> <span class="hljs-number">1.0</span> <span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x7684;&#x53D1;&#x5E03;&#x9891;&#x7387;</span>
+<span class="hljs-attr">  transform_tolerance:</span> <span class="hljs-number">0.5</span> <span class="hljs-comment">#&#x7B49;&#x5F85;&#x5750;&#x6807;&#x53D8;&#x6362;&#x53D1;&#x5E03;&#x4FE1;&#x606F;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</span>
+
+<span class="hljs-attr">  static_map:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># &#x662F;&#x5426;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5730;&#x56FE;&#x6216;&#x8005;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5668;&#x6765;&#x521D;&#x59CB;&#x5316;&#x5168;&#x5C40;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x5730;&#x56FE;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;false.</span>
+</code></pre>
+<h5 id="3localcostmapparamsyaml">3.local_costmap_params.yaml</h5>
+<p>&#x8BE5;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x5C40;&#x90E8;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">local_costmap:</span>
+<span class="hljs-attr">  global_frame:</span> odom <span class="hljs-comment">#&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;</span>
+<span class="hljs-attr">  robot_base_frame:</span> base_footprint <span class="hljs-comment">#&#x673A;&#x5668;&#x4EBA;&#x5750;&#x6807;&#x7CFB;</span>
+
+<span class="hljs-attr">  update_frequency:</span> <span class="hljs-number">10.0</span> <span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x66F4;&#x65B0;&#x9891;&#x7387;</span>
+<span class="hljs-attr">  publish_frequency:</span> <span class="hljs-number">10.0</span> <span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x7684;&#x53D1;&#x5E03;&#x9891;&#x7387;</span>
+<span class="hljs-attr">  transform_tolerance:</span> <span class="hljs-number">0.5</span> <span class="hljs-comment">#&#x7B49;&#x5F85;&#x5750;&#x6807;&#x53D8;&#x6362;&#x53D1;&#x5E03;&#x4FE1;&#x606F;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</span>
+
+<span class="hljs-attr">  static_map:</span> <span class="hljs-literal">false</span>  <span class="hljs-comment">#&#x4E0D;&#x9700;&#x8981;&#x9759;&#x6001;&#x5730;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x5347;&#x5BFC;&#x822A;&#x6548;&#x679C;</span>
+<span class="hljs-attr">  rolling_window:</span> <span class="hljs-literal">true</span> <span class="hljs-comment">#&#x662F;&#x5426;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x7A97;&#x53E3;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;false&#xFF0C;&#x5728;&#x9759;&#x6001;&#x7684;&#x5168;&#x5C40;&#x5730;&#x56FE;&#x4E2D;&#xFF0C;&#x5730;&#x56FE;&#x4E0D;&#x4F1A;&#x53D8;&#x5316;</span>
+<span class="hljs-attr">  width:</span> <span class="hljs-number">3</span> <span class="hljs-comment"># &#x5C40;&#x90E8;&#x5730;&#x56FE;&#x5BBD;&#x5EA6; &#x5355;&#x4F4D;&#x662F; m</span>
+<span class="hljs-attr">  height:</span> <span class="hljs-number">3</span> <span class="hljs-comment"># &#x5C40;&#x90E8;&#x5730;&#x56FE;&#x9AD8;&#x5EA6; &#x5355;&#x4F4D;&#x662F; m</span>
+<span class="hljs-attr">  resolution:</span> <span class="hljs-number">0.05</span> <span class="hljs-comment"># &#x5C40;&#x90E8;&#x5730;&#x56FE;&#x5206;&#x8FA8;&#x7387; &#x5355;&#x4F4D;&#x662F; m&#xFF0C;&#x4E00;&#x822C;&#x4E0E;&#x9759;&#x6001;&#x5730;&#x56FE;&#x5206;&#x8FA8;&#x7387;&#x4FDD;&#x6301;&#x4E00;&#x81F4;</span>
+</code></pre>
+<h5 id="4baselocalplannerparams">4.base_local_planner_params</h5>
+<p>&#x57FA;&#x672C;&#x7684;&#x5C40;&#x90E8;&#x89C4;&#x5212;&#x5668;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#xFF0C;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BBE;&#x5B9A;&#x4E86;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x6700;&#x5927;&#x548C;&#x6700;&#x5C0F;&#x901F;&#x5EA6;&#x9650;&#x5236;&#x503C;&#xFF0C;&#x4E5F;&#x8BBE;&#x5B9A;&#x4E86;&#x52A0;&#x901F;&#x5EA6;&#x7684;&#x9608;&#x503C;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">TrajectoryPlannerROS:</span>
+
+<span class="hljs-comment"># Robot Configuration Parameters</span>
+<span class="hljs-attr">  max_vel_x:</span> <span class="hljs-number">0.5</span> <span class="hljs-comment"># X &#x65B9;&#x5411;&#x6700;&#x5927;&#x901F;&#x5EA6;</span>
+<span class="hljs-attr">  min_vel_x:</span> <span class="hljs-number">0.1</span> <span class="hljs-comment"># X &#x65B9;&#x5411;&#x6700;&#x5C0F;&#x901F;&#x901F;</span>
+
+<span class="hljs-attr">  max_vel_theta:</span>  <span class="hljs-number">1.0</span> <span class="hljs-comment"># </span>
+<span class="hljs-attr">  min_vel_theta:</span> <span class="hljs-bullet">-1.0</span>
+<span class="hljs-attr">  min_in_place_vel_theta:</span> <span class="hljs-number">1.0</span>
+
+<span class="hljs-attr">  acc_lim_x:</span> <span class="hljs-number">1.0</span> <span class="hljs-comment"># X &#x52A0;&#x901F;&#x9650;&#x5236;</span>
+<span class="hljs-attr">  acc_lim_y:</span> <span class="hljs-number">0.0</span> <span class="hljs-comment"># Y &#x52A0;&#x901F;&#x9650;&#x5236;</span>
+<span class="hljs-attr">  acc_lim_theta:</span> <span class="hljs-number">0.6</span> <span class="hljs-comment"># &#x89D2;&#x901F;&#x5EA6;&#x52A0;&#x901F;&#x9650;&#x5236;</span>
+
+<span class="hljs-comment"># Goal Tolerance Parameters&#xFF0C;&#x76EE;&#x6807;&#x516C;&#x5DEE;</span>
+<span class="hljs-attr">  xy_goal_tolerance:</span> <span class="hljs-number">0.10</span>
+<span class="hljs-attr">  yaw_goal_tolerance:</span> <span class="hljs-number">0.05</span>
+
+<span class="hljs-comment"># Differential-drive robot configuration</span>
+<span class="hljs-comment"># &#x662F;&#x5426;&#x662F;&#x5168;&#x5411;&#x79FB;&#x52A8;&#x673A;&#x5668;&#x4EBA;</span>
+<span class="hljs-attr">  holonomic_robot:</span> <span class="hljs-literal">false</span>
+
+<span class="hljs-comment"># Forward Simulation Parameters&#xFF0C;&#x524D;&#x8FDB;&#x6A21;&#x62DF;&#x53C2;&#x6570;</span>
+<span class="hljs-attr">  sim_time:</span> <span class="hljs-number">0.8</span>
+<span class="hljs-attr">  vx_samples:</span> <span class="hljs-number">18</span>
+<span class="hljs-attr">  vtheta_samples:</span> <span class="hljs-number">20</span>
+<span class="hljs-attr">  sim_granularity:</span> <span class="hljs-number">0.05</span>
+</code></pre>
+<h4 id="53launch&#x6587;&#x4EF6;&#x96C6;&#x6210;">5.3launch&#x6587;&#x4EF6;&#x96C6;&#x6210;</h4>
+<p>&#x5982;&#x679C;&#x8981;&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#xFF0C;&#x9700;&#x8981;&#x96C6;&#x6210;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x3001;amcl &#x3001;move_base &#x7B49;&#xFF0C;&#x96C6;&#x6210;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;nav.yaml&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x8F7D;&#x8BBE;&#x7F6E;&#x7684;&#x5730;&#x56FE;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;$(find nav)/map/$(arg map)&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x542F;&#x52A8;AMCL&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/launch/amcl.launch&quot;</span> /&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;move_base&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/launch/move_base.launch&quot;</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<h4 id="54&#x6D4B;&#x8BD5;">5.4&#x6D4B;&#x8BD5;</h4>
+<p>1.&#x6267;&#x884C;&#x76F8;&#x5173;launch&#x6587;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x5E76;&#x52A0;&#x8F7D;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#xFF1A;<code>roslaunch mycar_start start.launch</code>&#xFF1B;</p>
+<p>2.&#x542F;&#x52A8;&#x5BFC;&#x822A;&#x76F8;&#x5173;&#x7684; launch &#x6587;&#x4EF6;&#xFF1A;<code>roslaunch nav nav.launch</code>&#xFF1B;</p>
+<p>3.&#x6DFB;&#x52A0;Rviz&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#xFF08;&#x53C2;&#x8003;&#x4EFF;&#x771F;&#x5B9E;&#x73B0;&#xFF09;&#x3002;</p>
+<h3 id="936-&#x5BFC;&#x822A;&#x4E0E;slam&#x5EFA;&#x56FE;">9.3.6 &#x5BFC;&#x822A;&#x4E0E;SLAM&#x5EFA;&#x56FE;</h3>
+<p>&#x4E0E;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x673A;&#x5668;&#x4EBA;&#x81EA;&#x4E3B;&#x79FB;&#x52A8;&#x7684;SLAM&#x5EFA;&#x56FE;&#xFF0C;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x7F16;&#x5199;launch&#x6587;&#x4EF6;&#xFF0C;&#x96C6;&#x6210;SLAM&#x4E0E;move_base&#x76F8;&#x5173;&#x8282;&#x70B9;&#xFF1B;</li>
+<li>&#x6267;&#x884C;launch&#x6587;&#x4EF6;&#x5E76;&#x6D4B;&#x8BD5;&#x3002;</li>
+</ol>
+<h4 id="61&#x7F16;&#x5199;launc&#x6587;&#x4EF6;">6.1&#x7F16;&#x5199;launc&#x6587;&#x4EF6;</h4>
+<p>&#x5F53;&#x524D;launch&#x6587;&#x4EF6;&#xFF08;&#x540D;&#x79F0;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;auto_slam.launch&#xFF09;&#x5B9E;&#x73B0;&#xFF0C;&#x65E0;&#x9700;&#x8C03;&#x7528;map_server&#x7684;&#x76F8;&#x5173;&#x8282;&#x70B9;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x542F;&#x52A8;SLAM&#x8282;&#x70B9;&#x4E0E;move_base&#x8282;&#x70B9;&#xFF0C;&#x793A;&#x4F8B;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x542F;&#x52A8;SLAM&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/launch/gmapping.launch&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;move_base&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find nav)/launch/move_base.launch&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<h4 id="62&#x6D4B;&#x8BD5;">6.2&#x6D4B;&#x8BD5;</h4>
+<p>1.&#x6267;&#x884C;&#x76F8;&#x5173;launch&#x6587;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x5E76;&#x52A0;&#x8F7D;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#xFF1A;<code>roslaunch mycar_start start.launch</code>&#xFF1B;</p>
+<p>2.&#x7136;&#x540E;&#x6267;&#x884C;&#x5F53;&#x524D;launch&#x6587;&#x4EF6;&#xFF1A;<code>roslaunch nav auto_slam.launch</code>&#xFF1B;</p>
+<p>3.&#x5728;rviz&#x4E2D;&#x901A;&#x8FC7;2D Nav Goal&#x8BBE;&#x7F6E;&#x76EE;&#x6807;&#x70B9;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x5F00;&#x59CB;&#x81EA;&#x4E3B;&#x79FB;&#x52A8;&#x5E76;&#x5EFA;&#x56FE;&#x4E86;&#xFF1B;</p>
+<p>4.&#x6700;&#x540E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; map_server &#x4FDD;&#x5B58;&#x5730;&#x56FE;&#x3002;</p>
+<h2 id="94-&#x672C;&#x7AE0;&#x5C0F;&#x7ED3;">9.4 &#x672C;&#x7AE0;&#x5C0F;&#x7ED3;</h2>
+<p>&#x672C;&#x7AE0;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x5173;&#x4E8E;&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0E;&#x771F;&#x5B9E;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x533A;&#x522B;&#xFF1B;</li>
+<li>VSCode&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x7684;&#x642D;&#x5EFA;&#xFF1B;</li>
+<li>&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#x3002;</li>
+</ul>
+<p>&#x6574;&#x4F53;&#x800C;&#x8A00;&#xFF0C;&#x5C06;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x8FC1;&#x79FB;&#x5230;&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x5E76;&#x4E0D;&#x590D;&#x6742;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728;&#x5B9E;&#x9645;&#x8FC1;&#x79FB;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x6574;&#x5BFC;&#x822A;&#x76F8;&#x5173;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../7.机器人系统导航仿真/补充/局部规划器.html" class="navigation navigation-prev " aria-label="Previous page: 局部规划器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../10.ROS进阶/ROS进阶.html" class="navigation navigation-next " aria-label="Next page: 9. ROS进阶">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8. 机器人系统导航实体","level":"4.2","depth":1,"next":{"title":"9. ROS进阶","level":"5.1","depth":1,"path":"10.ROS进阶/ROS进阶.md","ref":"10.ROS进阶/ROS进阶.md","articles":[]},"previous":{"title":"局部规划器","level":"4.1.2","depth":2,"path":"7.机器人系统导航仿真/补充/局部规划器.md","ref":"7.机器人系统导航仿真/补充/局部规划器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8.机器人系统导航实体/机器人系统导航.md","mtime":"2026-06-22T02:23:44.261Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-22T02:30:21.080Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
