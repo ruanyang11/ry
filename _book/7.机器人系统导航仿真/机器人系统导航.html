@@ -1,0 +1,1545 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7. 机器人系统导航仿真 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="补充/全局规划器.html" />
+    
+    
+    <link rel="prev" href="../6.机器人系统仿真/机器人系统仿真.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    课程简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                <a href="../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                    
+                    1. ROS概述和环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../2.ROS通信机制/ROS通信机制.html">
+            
+                <a href="../2.ROS通信机制/ROS通信机制.html">
+            
+                    
+                    2. ROS通信机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../3.ROS通信机制进阶/ROS通信机制进阶.html">
+            
+                <a href="../3.ROS通信机制进阶/ROS通信机制进阶.html">
+            
+                    
+                    3. ROS通信机制进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../4.ROS运行管理/ROS运行管理.html">
+            
+                <a href="../4.ROS运行管理/ROS运行管理.html">
+            
+                    
+                    4. ROS运行管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../5.ROS常用组件/ROS常用组件.html">
+            
+                <a href="../5.ROS常用组件/ROS常用组件.html">
+            
+                    
+                    5. ROS常用组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 实战篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../6.机器人系统仿真/机器人系统仿真.html">
+            
+                <a href="../6.机器人系统仿真/机器人系统仿真.html">
+            
+                    
+                    6. 机器人系统仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 导航篇</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="机器人系统导航.html">
+            
+                <a href="机器人系统导航.html">
+            
+                    
+                    7. 机器人系统导航仿真
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="补充/全局规划器.html">
+            
+                <a href="补充/全局规划器.html">
+            
+                    
+                    全局规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="补充/局部规划器.html">
+            
+                <a href="补充/局部规划器.html">
+            
+                    
+                    局部规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../8.机器人系统导航实体/机器人系统导航.html">
+            
+                <a href="../8.机器人系统导航实体/机器人系统导航.html">
+            
+                    
+                    8. 机器人系统导航实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 进阶篇</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../10.ROS进阶/ROS进阶.html">
+            
+                <a href="../10.ROS进阶/ROS进阶.html">
+            
+                    
+                    9. ROS进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7. 机器人系统导航仿真</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-7-&#x7AE0;-&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x4EFF;&#x771F;">&#x7B2C; 7 &#x7AE0; &#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;(&#x4EFF;&#x771F;)</h1>
+<p>&#x5BFC;&#x822A;&#x662F;&#x673A;&#x5668;&#x4EBA;&#x7CFB;&#x7EDF;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x6A21;&#x5757;&#x4E4B;&#x4E00;&#xFF0C;&#x6BD4;&#x5982;&#x73B0;&#x5728;&#x8F83;&#x4E3A;&#x6D41;&#x884C;&#x7684;&#x670D;&#x52A1;&#x578B;&#x5BA4;&#x5185;&#x673A;&#x5668;&#x4EBA;&#xFF0C;&#x5C31;&#x662F;&#x4F9D;&#x8D56;&#x4E8E;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x6765;&#x5B9E;&#x73B0;&#x5BA4;&#x5185;&#x81EA;&#x4E3B;&#x79FB;&#x52A8;&#x7684;&#xFF0C;&#x672C;&#x7AE0;&#x4E3B;&#x8981;&#x5C31;&#x662F;&#x4ECB;&#x7ECD;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#xFF0C;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x6709;:</p>
+<ul>
+<li>&#x5BFC;&#x822A;&#x76F8;&#x5173;&#x6982;&#x5FF5;</li>
+<li>&#x5BFC;&#x822A;&#x5B9E;&#x73B0;:&#x673A;&#x5668;&#x4EBA;&#x5EFA;&#x56FE;(SLAM)&#x3001;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x3001;&#x5B9A;&#x4F4D;&#x3001;&#x8DEF;&#x5F84;&#x89C4;&#x5212;....&#x4EE5;&#x53EF;&#x89C6;&#x5316;&#x64CD;&#x4F5C;&#x4E3A;&#x4E3B;&#x3002;</li>
+<li>&#x5BFC;&#x822A;&#x6D88;&#x606F;:&#x4E86;&#x89E3;&#x5730;&#x56FE;&#x3001;&#x91CC;&#x7A0B;&#x8BA1;&#x3001;&#x96F7;&#x8FBE;&#x3001;&#x6444;&#x50CF;&#x5934;&#x7B49;&#x76F8;&#x5173;&#x6D88;&#x606F;&#x683C;&#x5F0F;&#x3002;</li>
+</ul>
+<p>&#x9884;&#x671F;&#x8FBE;&#x6210;&#x7684;&#x5B66;&#x4E60;&#x76EE;&#x6807;:</p>
+<ul>
+<li>&#x4E86;&#x89E3;&#x5BFC;&#x822A;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x6982;&#x5FF5;</li>
+<li>&#x80FD;&#x591F;&#x5728;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x72EC;&#x7ACB;&#x5B8C;&#x6210;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;</li>
+</ul>
+<p><strong>&#x6848;&#x4F8B;&#x6F14;&#x793A;:</strong></p>
+<p>SLAM&#x5EFA;&#x56FE;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202606181352313.gif" alt="SLAM"></p>
+<p>&#x5B9A;&#x4F4D;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111927385.gif" alt="img"></p>
+<p>&#x5BFC;&#x822A;&#x5B9E;&#x73B0;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111927453.gif" alt="img"></p>
+<h2 id="71-&#x6982;&#x8FF0;">7.1 &#x6982;&#x8FF0;</h2>
+<p><strong>1.&#x6982;&#x5FF5;</strong></p>
+<p>&#x5728;ROS&#x4E2D;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;(Navigation)&#x7531;&#x591A;&#x4E2A;&#x529F;&#x80FD;&#x5305;&#x7EC4;&#x5408;&#x5B9E;&#x73B0;&#xFF0C;ROS &#x4E2D;&#x53C8;&#x79F0;&#x4E4B;&#x4E3A;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;&#xFF0C;&#x5173;&#x4E8E;&#x5BFC;&#x822A;&#x6A21;&#x5757;&#xFF0C;&#x5B98;&#x65B9;&#x4ECB;&#x7ECD;&#x5982;&#x4E0B;:</p>
+<pre><code>&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x5BFC;&#x822A;&#x5806;&#x6808;&#xFF0C;&#x5B83;&#x63A5;&#x6536;&#x6765;&#x81EA;&#x91CC;&#x7A0B;&#x8BA1;&#x3001;&#x4F20;&#x611F;&#x5668;&#x6D41;&#x548C;&#x76EE;&#x6807;&#x59FF;&#x6001;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x53D1;&#x9001;&#x5230;&#x79FB;&#x52A8;&#x5E95;&#x76D8;&#x7684;&#x5B89;&#x5168;&#x901F;&#x5EA6;&#x547D;&#x4EE4;&#x3002;
+Copy
+</code></pre><p>&#x66F4;&#x901A;&#x4FD7;&#x7684;&#x8BB2;: &#x5BFC;&#x822A;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x673A;&#x5668;&#x4EBA;&#x81EA;&#x4E3B;&#x7684;&#x4ECE; A &#x70B9;&#x79FB;&#x52A8;&#x5230; B &#x70B9;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111928813.png" alt="img"></p>
+<p><strong>2.&#x4F5C;&#x7528;</strong></p>
+<p>&#x79C9;&#x7740;&quot;&#x4E0D;&#x91CD;&#x590D;&#x53D1;&#x660E;&#x8F6E;&#x5B50;&quot;&#x7684;&#x539F;&#x5219;&#xFF0C;ROS &#x4E2D;&#x5BFC;&#x822A;&#x76F8;&#x5173;&#x7684;&#x529F;&#x80FD;&#x5305;&#x96C6;&#x4E3A;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;&#x901A;&#x7528;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x4E8E;&#x5BFC;&#x822A;&#x7B97;&#x6CD5;&#x3001;&#x786C;&#x4EF6;&#x4EA4;&#x4E92;... &#x7B49;&#x504F;&#x590D;&#x6742;&#x3001;&#x504F;&#x5E95;&#x5C42;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B9E;&#x73B0;&#x90FD;&#x7531;&#x66F4;&#x4E13;&#x4E1A;&#x7684;&#x7814;&#x53D1;&#x4EBA;&#x5458;&#x7BA1;&#x7406;&#x3001;&#x8FED;&#x4EE3;&#x548C;&#x7EF4;&#x62A4;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x66F4;&#x4E13;&#x6CE8;&#x4E8E;&#x4E0A;&#x5C42;&#x529F;&#x80FD;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x673A;&#x5668;&#x4EBA;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x5408;&#x7406;&#x8BBE;&#x7F6E;&#x5404;&#x6A21;&#x5757;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5373;&#x53EF;&#xFF0C;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5FC5;&#x8981;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x73B0;&#x6709;&#x7684;&#x529F;&#x80FD;&#x5305;&#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#x5B9E;&#x73B0;&#x4E00;&#x4E9B;&#x5B9A;&#x5236;&#x5316;&#x9700;&#x6C42;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x7814;&#x53D1;&#x6548;&#x7387;&#xFF0C;&#x7F29;&#x77ED;&#x4EA7;&#x54C1;&#x843D;&#x5730;&#x65F6;&#x95F4;&#x3002;&#x603B;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x822C;&#x5F00;&#x53D1;&#x8005;&#x800C;&#x8A00;&#xFF0C;ROS &#x7684;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;&#x4F18;&#x52BF;&#x5982;&#x4E0B;:</p>
+<ul>
+<li>&#x5B89;&#x5168;: &#x7531;&#x4E13;&#x4E1A;&#x56E2;&#x961F;&#x5F00;&#x53D1;&#x548C;&#x7EF4;&#x62A4;</li>
+<li>&#x529F;&#x80FD;: &#x529F;&#x80FD;&#x66F4;&#x7A33;&#x5B9A;&#x4E14;&#x5168;&#x9762;</li>
+<li>&#x9AD8;&#x6548;: &#x89E3;&#x653E;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x66F4;&#x4E13;&#x6CE8;&#x4E8E;&#x4E0A;&#x5C42;&#x529F;&#x80FD;&#x5B9E;&#x73B0;</li>
+</ul>
+<hr>
+<p><strong>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</strong></p>
+<ul>
+<li><a href="http://wiki.ros.org/navigation" target="_blank">http://wiki.ros.org/navigation</a></li>
+</ul>
+<h3 id="711&#x5BFC;&#x822A;&#x6A21;&#x5757;&#x7B80;&#x4ECB;">7.1.1&#x5BFC;&#x822A;&#x6A21;&#x5757;&#x7B80;&#x4ECB;</h3>
+<p>&#x673A;&#x5668;&#x4EBA;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#x7684;&#x5462;&#xFF1F;&#x6216;&#x6362;&#x8A00;&#x4E4B;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x662F;&#x5982;&#x4F55;&#x4ECE; A &#x70B9;&#x79FB;&#x52A8;&#x5230; B &#x70B9;&#x5462;&#xFF1F;ROS &#x5B98;&#x65B9;&#x4E3A;&#x4E86;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5F20;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;&#x7684;&#x56FE;&#x793A;,&#x8BE5;&#x56FE;&#x4E2D;&#x56CA;&#x62EC;&#x4E86; ROS &#x5BFC;&#x822A;&#x7684;&#x4E00;&#x4E9B;&#x5173;&#x952E;&#x6280;&#x672F;:<img src="https://gitee.com/ry2001/img1/raw/master/202507111928070.png" alt="img"></p>
+<p>&#x5047;&#x5B9A;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x4EE5;&#x7279;&#x5B9A;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#x673A;&#x5668;&#x4EBA;&#xFF0C;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;&#x5C06;&#x4F7F;&#x5176;&#x53EF;&#x4EE5;&#x8FD0;&#x52A8;&#x3002;&#x4E0A;&#x56FE;&#x6982;&#x8FF0;&#x4E86;&#x8FD9;&#x79CD;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#x3002;&#x767D;&#x8272;&#x7684;&#x90E8;&#x5206;&#x662F;&#x5FC5;&#x987B;&#x4E14;&#x5DF2;&#x5B9E;&#x73B0;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x7070;&#x8272;&#x7684;&#x90E8;&#x5206;&#x662F;&#x53EF;&#x9009;&#x4E14;&#x5DF2;&#x5B9E;&#x73B0;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x84DD;&#x8272;&#x7684;&#x90E8;&#x5206;&#x662F;&#x5FC5;&#x987B;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x4EBA;&#x5E73;&#x53F0;&#x521B;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x603B;&#x7ED3;&#x4E0B;&#x6765;&#xFF0C;&#x6D89;&#x53CA;&#x7684;&#x5173;&#x952E;&#x6280;&#x672F;&#x6709;&#x5982;&#x4E0B;&#x4E94;&#x70B9;:</p>
+<ol>
+<li>&#x5168;&#x5C40;&#x5730;&#x56FE;</li>
+<li>&#x81EA;&#x8EAB;&#x5B9A;&#x4F4D;</li>
+<li>&#x8DEF;&#x5F84;&#x89C4;&#x5212;</li>
+<li>&#x8FD0;&#x52A8;&#x63A7;&#x5236;</li>
+<li>&#x73AF;&#x5883;&#x611F;&#x77E5;</li>
+</ol>
+<p>&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#x4E0E;&#x65E0;&#x4EBA;&#x9A7E;&#x9A76;&#x7C7B;&#x4F3C;&#xFF0C;&#x5173;&#x952E;&#x6280;&#x672F;&#x4E5F;&#x662F;&#x7531;&#x4E0A;&#x8FF0;&#x4E94;&#x70B9;&#x7EC4;&#x6210;&#xFF0C;&#x53EA;&#x662F;&#x65E0;&#x4EBA;&#x9A7E;&#x9A76;&#x662F;&#x57FA;&#x4E8E;&#x5BA4;&#x5916;&#x7684;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x5F53;&#x524D;&#x4ECB;&#x7ECD;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x66F4;&#x591A;&#x662F;&#x57FA;&#x4E8E;&#x5BA4;&#x5185;&#x7684;&#x3002;</p>
+<h4 id="1&#x5168;&#x5C40;&#x5730;&#x56FE;">1.&#x5168;&#x5C40;&#x5730;&#x56FE;</h4>
+<p>&#x5728;&#x73B0;&#x5B9E;&#x751F;&#x6D3B;&#x4E2D;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x9996;&#x5148;&#x53C2;&#x8003;&#x4E00;&#x5F20;&#x5168;&#x5C40;&#x6027;&#x8D28;&#x7684;&#x5730;&#x56FE;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x5730;&#x56FE;&#x6765;&#x786E;&#x5B9A;&#x81EA;&#x8EAB;&#x7684;&#x4F4D;&#x7F6E;&#x3001;&#x76EE;&#x7684;&#x5730;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x4E5F;&#x4F1A;&#x6839;&#x636E;&#x5730;&#x56FE;&#x663E;&#x793A;&#x6765;&#x89C4;&#x5212;&#x4E00;&#x6761;&#x5927;&#x81F4;&#x7684;&#x8DEF;&#x7EBF;.... &#x5BF9;&#x4E8E;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x800C;&#x8A00;&#xFF0C;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x5728;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x4E2D;&#x5730;&#x56FE;&#x662F;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x7EC4;&#x6210;&#x5143;&#x7D20;&#xFF0C;&#x5F53;&#x7136;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528;&#x5730;&#x56FE;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x7ED8;&#x5236;&#x5730;&#x56FE;&#x3002;&#x5173;&#x4E8E;&#x5730;&#x56FE;&#x5EFA;&#x6A21;&#x6280;&#x672F;&#x4E0D;&#x65AD;&#x6D8C;&#x73B0;&#xFF0C;&#x8FD9;&#x5176;&#x4E2D;&#x6709;&#x4E00;&#x95E8;&#x79F0;&#x4E4B;&#x4E3A; SLAM &#x7684;&#x7406;&#x8BBA;&#x8131;&#x9896;&#x800C;&#x51FA;:</p>
+<ol>
+<li><strong>SLAM</strong>(simultaneous localization and mapping),&#x4E5F;&#x79F0;&#x4E3A;CML (Concurrent Mapping and Localization), &#x5373;&#x65F6;&#x5B9A;&#x4F4D;&#x4E0E;&#x5730;&#x56FE;&#x6784;&#x5EFA;&#xFF0C;&#x6216;&#x5E76;&#x53D1;&#x5EFA;&#x56FE;&#x4E0E;&#x5B9A;&#x4F4D;&#x3002;SLAM&#x95EE;&#x9898;&#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x4E3A;: &#x673A;&#x5668;&#x4EBA;&#x5728;&#x672A;&#x77E5;&#x73AF;&#x5883;&#x4E2D;&#x4ECE;&#x4E00;&#x4E2A;&#x672A;&#x77E5;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x79FB;&#x52A8;,&#x5728;&#x79FB;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x6839;&#x636E;&#x4F4D;&#x7F6E;&#x4F30;&#x8BA1;&#x548C;&#x5730;&#x56FE;&#x8FDB;&#x884C;&#x81EA;&#x8EAB;&#x5B9A;&#x4F4D;&#xFF0C;&#x540C;&#x65F6;&#x5728;&#x81EA;&#x8EAB;&#x5B9A;&#x4F4D;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x5EFA;&#x9020;&#x589E;&#x91CF;&#x5F0F;&#x5730;&#x56FE;&#xFF0C;&#x4EE5;&#x7ED8;&#x5236;&#x51FA;&#x5916;&#x90E8;&#x73AF;&#x5883;&#x7684;&#x5B8C;&#x5168;&#x5730;&#x56FE;&#x3002;</li>
+<li>&#x5728; ROS &#x4E2D;&#xFF0C;&#x8F83;&#x4E3A;&#x5E38;&#x7528;&#x7684; SLAM &#x5B9E;&#x73B0;&#x4E5F;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x6BD4;&#x5982;: gmapping&#x3001;hector_slam&#x3001;cartographer&#x3001;rgbdslam&#x3001;ORB_SLAM ....</li>
+<li>&#x5F53;&#x7136;&#x5982;&#x679C;&#x8981;&#x5B8C;&#x6210; SLAM &#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x5FC5;&#x987B;&#x8981;&#x5177;&#x5907;&#x611F;&#x77E5;&#x5916;&#x754C;&#x73AF;&#x5883;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x8981;&#x5177;&#x5907;&#x83B7;&#x53D6;&#x5468;&#x56F4;&#x73AF;&#x5883;&#x6DF1;&#x5EA6;&#x4FE1;&#x606F;&#x7684;&#x80FD;&#x529B;&#x3002;&#x611F;&#x77E5;&#x7684;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E8E;&#x4F20;&#x611F;&#x5668;&#xFF0C;&#x6BD4;&#x5982;: &#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x3001;&#x6444;&#x50CF;&#x5934;&#x3001;RGB-D&#x6444;&#x50CF;&#x5934;...</li>
+<li>SLAM &#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5730;&#x56FE;&#x751F;&#x6210;&#xFF0C;&#x800C;&#x751F;&#x6210;&#x7684;&#x5730;&#x56FE;&#x8FD8;&#x9700;&#x8981;&#x88AB;&#x4FDD;&#x5B58;&#x4EE5;&#x5F85;&#x540E;&#x7EED;&#x4F7F;&#x7528;&#xFF0C;&#x5728; ROS &#x4E2D;&#x4FDD;&#x5B58;&#x5730;&#x56FE;&#x7684;&#x529F;&#x80FD;&#x5305;&#x662F; map_server</li>
+</ol>
+<p>&#x53E6;&#x5916;&#x6CE8;&#x610F;: SLAM &#x867D;&#x7136;&#x662F;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x7684;&#x91CD;&#x8981;&#x6280;&#x672F;&#x4E4B;&#x4E00;&#xFF0C;&#x4F46;&#x662F; &#x4E8C;&#x8005;&#x5E76;&#x4E0D;&#x7B49;&#x4EF7;&#xFF0C;&#x786E;&#x5207;&#x7684;&#x8BB2;&#xFF0C;SLAM &#x53EA;&#x662F;&#x5B9E;&#x73B0;&#x5730;&#x56FE;&#x6784;&#x5EFA;&#x548C;&#x5373;&#x65F6;&#x5B9A;&#x4F4D;&#x3002;</p>
+<h4 id="2&#x81EA;&#x8EAB;&#x5B9A;&#x4F4D;">2.&#x81EA;&#x8EAB;&#x5B9A;&#x4F4D;</h4>
+<p>&#x5BFC;&#x822A;&#x4F0A;&#x59CB;&#x548C;&#x5BFC;&#x822A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x90FD;&#x9700;&#x8981;&#x786E;&#x5B9A;&#x5F53;&#x524D;&#x81EA;&#x8EAB;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x5BA4;&#x5916;&#xFF0C;&#x90A3;&#x4E48; GPS &#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x9519;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x800C;&#x5982;&#x679C;&#x5BA4;&#x5185;&#x3001;&#x96A7;&#x9053;&#x3001;&#x5730;&#x4E0B;&#x6216;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x5C4F;&#x853D; GPS &#x4FE1;&#x53F7;&#x7684;&#x533A;&#x57DF;&#xFF0C;&#x7531;&#x4E8E; GPS &#x4FE1;&#x53F7;&#x5F31;&#x5316;&#x751A;&#x81F3;&#x5B8C;&#x5168;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5FC5;&#x987B;&#x53E6;&#x8F9F;&#x8E4A;&#x5F84;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x524D;&#x9762;&#x7684; SLAM &#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x81EA;&#x8EAB;&#x5B9A;&#x4F4D;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;ROS &#x4E2D;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5B9A;&#x4F4D;&#x7684;&#x529F;&#x80FD;&#x5305;: amcl</p>
+<p><strong>amcl</strong>(adaptiveMonteCarloLocalization)&#x81EA;&#x9002;&#x5E94;&#x7684;&#x8499;&#x7279;&#x5361;&#x6D1B;&#x5B9A;&#x4F4D;,&#x662F;&#x7528;&#x4E8E;2D&#x79FB;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x6982;&#x7387;&#x5B9A;&#x4F4D;&#x7CFB;&#x7EDF;&#x3002;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#x81EA;&#x9002;&#x5E94;&#xFF08;&#x6216;KLD&#x91C7;&#x6837;&#xFF09;&#x8499;&#x7279;&#x5361;&#x6D1B;&#x5B9A;&#x4F4D;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x7C92;&#x5B50;&#x8FC7;&#x6EE4;&#x5668;&#x6839;&#x636E;&#x5DF2;&#x77E5;&#x5730;&#x56FE;&#x8DDF;&#x8E2A;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x59FF;&#x6001;&#x3002;</p>
+<h4 id="3&#x8DEF;&#x5F84;&#x89C4;&#x5212;">3.&#x8DEF;&#x5F84;&#x89C4;&#x5212;</h4>
+<p>&#x5BFC;&#x822A;&#x5C31;&#x662F;&#x673A;&#x5668;&#x4EBA;&#x4ECE;A&#x70B9;&#x8FD0;&#x52A8;&#x81F3;B&#x70B9;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5728;&#x8FD9;&#x4E00;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x9700;&#x8981;&#x6839;&#x636E;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x8BA1;&#x7B97;&#x5168;&#x5C40;&#x8FD0;&#x52A8;&#x8DEF;&#x7EBF;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x8FD0;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x65F6;&#x65F6;&#x6839;&#x636E;&#x51FA;&#x73B0;&#x7684;&#x4E00;&#x4E9B;&#x52A8;&#x6001;&#x969C;&#x788D;&#x7269;&#x8C03;&#x6574;&#x8FD0;&#x52A8;&#x8DEF;&#x7EBF;&#xFF0C;&#x76F4;&#x81F3;&#x5230;&#x8FBE;&#x76EE;&#x6807;&#x70B9;&#xFF0C;&#x8BE5;&#x8FC7;&#x7A0B;&#x5C31;&#x79F0;&#x4E4B;&#x4E3A;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x3002;&#x5728; ROS &#x4E2D;&#x63D0;&#x4F9B;&#x4E86; move_base &#x5305;&#x6765;&#x5B9E;&#x73B0;&#x8DEF;&#x5F84;&#x89C4;&#x5219;,&#x8BE5;&#x529F;&#x80FD;&#x5305;&#x4E3B;&#x8981;&#x7531;&#x4E24;&#x5927;&#x89C4;&#x5212;&#x5668;&#x7EC4;&#x6210;:</p>
+<ol>
+<li><p>&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;(gloable_planner)</p>
+<p> &#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x76EE;&#x6807;&#x70B9;&#x548C;&#x5168;&#x5C40;&#x5730;&#x56FE;&#x5B9E;&#x73B0;&#x603B;&#x4F53;&#x7684;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#xFF0C;&#x4F7F;&#x7528; Dijkstra &#x6216; A* &#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#xFF0C;&#x8BA1;&#x7B97;&#x6700;&#x4F18;&#x8DEF;&#x7EBF;&#xFF0C;&#x4F5C;&#x4E3A;&#x5168;&#x5C40;&#x8DEF;&#x7EBF;</p>
+</li>
+<li><p>&#x672C;&#x5730;&#x65F6;&#x65F6;&#x89C4;&#x5212;(local_planner)</p>
+<p> &#x5728;&#x5B9E;&#x9645;&#x5BFC;&#x822A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x6309;&#x7167;&#x7ED9;&#x5B9A;&#x7684;&#x5168;&#x5C40;&#x6700;&#x4F18;&#x8DEF;&#x7EBF;&#x8FD0;&#x884C;&#xFF0C;&#x6BD4;&#x5982;:&#x673A;&#x5668;&#x4EBA;&#x5728;&#x8FD0;&#x884C;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x968F;&#x65F6;&#x51FA;&#x73B0;&#x4E00;&#x5B9A;&#x7684;&#x969C;&#x788D;&#x7269;... &#x672C;&#x5730;&#x89C4;&#x5212;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x4E00;&#x5B9A;&#x7B97;&#x6CD5;(Dynamic Window Approaches) &#x6765;&#x5B9E;&#x73B0;&#x969C;&#x788D;&#x7269;&#x7684;&#x89C4;&#x907F;&#xFF0C;&#x5E76;&#x9009;&#x53D6;&#x5F53;&#x524D;&#x6700;&#x4F18;&#x8DEF;&#x5F84;&#x4EE5;&#x5C3D;&#x91CF;&#x7B26;&#x5408;&#x5168;&#x5C40;&#x6700;&#x4F18;&#x8DEF;&#x5F84;</p>
+</li>
+</ol>
+<p>&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4E0E;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x662F;&#x76F8;&#x5BF9;&#x7684;&#xFF0C;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4FA7;&#x91CD;&#x4E8E;&#x5168;&#x5C40;&#x3001;&#x5B8F;&#x89C2;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4FA7;&#x91CD;&#x4E0E;&#x5F53;&#x524D;&#x3001;&#x5FAE;&#x89C2;&#x5B9E;&#x73B0;&#x3002;</p>
+<h4 id="4&#x8FD0;&#x52A8;&#x63A7;&#x5236;">4.&#x8FD0;&#x52A8;&#x63A7;&#x5236;</h4>
+<p>&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;&#x5047;&#x5B9A;&#x5B83;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BDD;&#x9898;&quot;cmd_vel&quot;&#x53D1;&#x5E03;<code>geometry_msgs/Twist</code>&#x7C7B;&#x578B;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x57FA;&#x4E8E;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x57FA;&#x5EA7;&#x5750;&#x6807;&#x7CFB;&#xFF0C;&#x5B83;&#x4F20;&#x9012;&#x7684;&#x662F;&#x8FD0;&#x52A8;&#x547D;&#x4EE4;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x8BA2;&#x9605;&quot;cmd_vel&quot;&#x8BDD;&#x9898;&#xFF0C; &#x5C06;&#x8BE5;&#x8BDD;&#x9898;&#x4E0A;&#x7684;&#x901F;&#x5EA6;&#x547D;&#x4EE4;&#x8F6C;&#x6362;&#x4E3A;&#x7535;&#x673A;&#x547D;&#x4EE4;&#x5E76;&#x53D1;&#x9001;&#x3002;</p>
+<h4 id="5&#x73AF;&#x5883;&#x611F;&#x77E5;">5.&#x73AF;&#x5883;&#x611F;&#x77E5;</h4>
+<p>&#x611F;&#x77E5;&#x5468;&#x56F4;&#x73AF;&#x5883;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;: &#x6444;&#x50CF;&#x5934;&#x3001;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x3001;&#x7F16;&#x7801;&#x5668;...&#xFF0C;&#x6444;&#x50CF;&#x5934;&#x3001;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x611F;&#x77E5;&#x5916;&#x754C;&#x73AF;&#x5883;&#x7684;&#x6DF1;&#x5EA6;&#x4FE1;&#x606F;&#xFF0C;&#x7F16;&#x7801;&#x5668;&#x53EF;&#x4EE5;&#x611F;&#x77E5;&#x7535;&#x673A;&#x7684;&#x8F6C;&#x901F;&#x4FE1;&#x606F;&#xFF0C;&#x8FDB;&#x800C;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x901F;&#x5EA6;&#x4FE1;&#x606F;&#x5E76;&#x751F;&#x6210;&#x91CC;&#x7A0B;&#x8BA1;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5728;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;&#x4E2D;&#xFF0C;&#x73AF;&#x5883;&#x611F;&#x77E5;&#x4E5F;&#x662F;&#x4E00;&#x91CD;&#x8981;&#x6A21;&#x5757;&#x5B9E;&#x73B0;&#xFF0C;&#x5B83;&#x4E3A;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E86;&#x652F;&#x6301;&#x3002;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#x8BF8;&#x5982;: SLAM&#x3001;amcl&#x3001;move_base &#x90FD;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E8E;&#x73AF;&#x5883;&#x611F;&#x77E5;&#x3002;</p>
+<h3 id="712-&#x5BFC;&#x822A;&#x4E4B;&#x5750;&#x6807;&#x7CFB;">7.1.2 &#x5BFC;&#x822A;&#x4E4B;&#x5750;&#x6807;&#x7CFB;</h3>
+<h4 id="1&#x7B80;&#x4ECB;">1.&#x7B80;&#x4ECB;</h4>
+<p>&#x5B9A;&#x4F4D;&#x662F;&#x5BFC;&#x822A;&#x4E2D;&#x7684;&#x91CD;&#x8981;&#x5B9E;&#x73B0;&#x4E4B;&#x4E00;&#xFF0C;&#x6240;&#x8C13;&#x5B9A;&#x4F4D;&#xFF0C;&#x5C31;&#x662F;&#x53C2;&#x8003;&#x67D0;&#x4E2A;&#x5750;&#x6807;&#x7CFB;(&#x6BD4;&#x5982;:&#x4EE5;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x51FA;&#x53D1;&#x70B9;&#x4E3A;&#x539F;&#x70B9;&#x521B;&#x5EFA;&#x5750;&#x6807;&#x7CFB;)&#x5728;&#x8BE5;&#x5750;&#x6807;&#x7CFB;&#x4E2D;&#x6807;&#x6CE8;&#x673A;&#x5668;&#x4EBA;&#x3002;&#x5B9A;&#x4F4D;&#x539F;&#x7406;&#x770B;&#x4F3C;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x8FD9;&#x4E2A;&#x5750;&#x6807;&#x7CFB;&#x4E0D;&#x662F;&#x5BA2;&#x89C2;&#x5B58;&#x5728;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x65E0;&#x6CD5;&#x4EE5;&#x4E0A;&#x5E1D;&#x89C6;&#x89D2;&#x786E;&#x5B9A;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x4F4D;&#x59FF;&#xFF0C;&#x5B9A;&#x4F4D;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E8E;&#x673A;&#x5668;&#x4EBA;&#x81EA;&#x8EAB;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x9700;&#x8981;&#x9006;&#x5411;&#x63A8;&#x5BFC;&#x53C2;&#x8003;&#x7CFB;&#x539F;&#x70B9;&#x5E76;&#x8BA1;&#x7B97;&#x5750;&#x6807;&#x7CFB;&#x76F8;&#x5BF9;&#x5173;&#x7CFB;&#xFF0C;&#x8BE5;&#x8FC7;&#x7A0B;&#x5B9E;&#x73B0;&#x5E38;&#x7528;&#x65B9;&#x5F0F;&#x6709;&#x4E24;&#x79CD;:</p>
+<ul>
+<li>&#x901A;&#x8FC7;&#x91CC;&#x7A0B;&#x8BA1;&#x5B9A;&#x4F4D;:&#x65F6;&#x65F6;&#x6536;&#x96C6;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x901F;&#x5EA6;&#x4FE1;&#x606F;&#x8BA1;&#x7B97;&#x5E76;&#x53D1;&#x5E03;&#x673A;&#x5668;&#x4EBA;&#x5750;&#x6807;&#x7CFB;&#x4E0E;&#x7236;&#x7EA7;&#x53C2;&#x8003;&#x7CFB;&#x7684;&#x76F8;&#x5BF9;&#x5173;&#x7CFB;&#x3002;</li>
+<li>&#x901A;&#x8FC7;&#x4F20;&#x611F;&#x5668;&#x5B9A;&#x4F4D;:&#x901A;&#x8FC7;&#x4F20;&#x611F;&#x5668;&#x6536;&#x96C6;&#x5916;&#x754C;&#x73AF;&#x5883;&#x4FE1;&#x606F;&#x901A;&#x8FC7;&#x5339;&#x914D;&#x8BA1;&#x7B97;&#x5E76;&#x53D1;&#x5E03;&#x673A;&#x5668;&#x4EBA;&#x5750;&#x6807;&#x7CFB;&#x4E0E;&#x7236;&#x7EA7;&#x53C2;&#x8003;&#x7CFB;&#x7684;&#x76F8;&#x5BF9;&#x5173;&#x7CFB;&#x3002;</li>
+</ul>
+<p>&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5728;&#x5BFC;&#x822A;&#x4E2D;&#x90FD;&#x4F1A;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x3002;</p>
+<h4 id="2&#x7279;&#x70B9;">2.&#x7279;&#x70B9;</h4>
+<p>&#x4E24;&#x79CD;&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;&#x90FD;&#x6709;&#x5404;&#x81EA;&#x7684;&#x4F18;&#x7F3A;&#x70B9;&#x3002;</p>
+<p>&#x91CC;&#x7A0B;&#x8BA1;&#x5B9A;&#x4F4D;:</p>
+<ul>
+<li>&#x4F18;&#x70B9;:&#x91CC;&#x7A0B;&#x8BA1;&#x5B9A;&#x4F4D;&#x4FE1;&#x606F;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x79BB;&#x6563;&#x7684;&#x8DF3;&#x8DC3;&#x3002;</li>
+<li>&#x7F3A;&#x70B9;:&#x91CC;&#x7A0B;&#x8BA1;&#x5B58;&#x5728;&#x7D2F;&#x8BA1;&#x8BEF;&#x5DEE;&#xFF0C;&#x4E0D;&#x5229;&#x4E8E;&#x957F;&#x8DDD;&#x79BB;&#x6216;&#x957F;&#x671F;&#x5B9A;&#x4F4D;&#x3002;</li>
+</ul>
+<p>&#x4F20;&#x611F;&#x5668;&#x5B9A;&#x4F4D;:</p>
+<ul>
+<li>&#x4F18;&#x70B9;:&#x6BD4;&#x91CC;&#x7A0B;&#x8BA1;&#x5B9A;&#x4F4D;&#x66F4;&#x7CBE;&#x51C6;&#xFF1B;</li>
+<li>&#x7F3A;&#x70B9;:&#x4F20;&#x611F;&#x5668;&#x5B9A;&#x4F4D;&#x4F1A;&#x51FA;&#x73B0;&#x8DF3;&#x53D8;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4E14;&#x4F20;&#x611F;&#x5668;&#x5B9A;&#x4F4D;&#x5728;&#x6807;&#x5FD7;&#x7269;&#x8F83;&#x5C11;&#x7684;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x5176;&#x5B9A;&#x4F4D;&#x7CBE;&#x5EA6;&#x4F1A;&#x5927;&#x6253;&#x6298;&#x6263;&#x3002;</li>
+</ul>
+<p>&#x4E24;&#x79CD;&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;&#x4F18;&#x7F3A;&#x70B9;&#x4E92;&#x8865;&#xFF0C;&#x5E94;&#x7528;&#x65F6;&#x4E00;&#x822C;&#x4E8C;&#x8005;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x3002;</p>
+<h4 id="3&#x5750;&#x6807;&#x7CFB;&#x53D8;&#x6362;">3.&#x5750;&#x6807;&#x7CFB;&#x53D8;&#x6362;</h4>
+<p>&#x4E0A;&#x8FF0;&#x4E24;&#x79CD;&#x5B9A;&#x4F4D;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x5750;&#x6807;&#x7CFB;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x4E2D;&#x7684;&#x6839;&#x5750;&#x6807;&#x7CFB;(base_link &#x6216; base_footprint)&#xFF0C;&#x91CC;&#x7A0B;&#x8BA1;&#x5B9A;&#x4F4D;&#x65F6;&#xFF0C;&#x7236;&#x7EA7;&#x5750;&#x6807;&#x7CFB;&#x4E00;&#x822C;&#x79F0;&#x4E4B;&#x4E3A; odom&#xFF0C;&#x5982;&#x679C;&#x901A;&#x8FC7;&#x4F20;&#x611F;&#x5668;&#x5B9A;&#x4F4D;&#xFF0C;&#x7236;&#x7EA7;&#x53C2;&#x8003;&#x7CFB;&#x4E00;&#x822C;&#x79F0;&#x4E4B;&#x4E3A; map&#x3002;&#x5F53;&#x4E8C;&#x8005;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;map &#x548C; odom &#x90FD;&#x662F;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x6839;&#x5750;&#x6807;&#x7CFB;&#x7684;&#x7236;&#x7EA7;&#xFF0C;&#x8FD9;&#x662F;&#x4E0D;&#x7B26;&#x5408;&#x5750;&#x6807;&#x53D8;&#x6362;&#x4E2D;&quot;&#x5355;&#x7EE7;&#x627F;&quot;&#x7684;&#x539F;&#x5219;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x5C06;&#x8F6C;&#x6362;&#x5173;&#x7CFB;&#x8BBE;&#x7F6E;&#x4E3A;: map -&gt; doom -&gt; base_link &#x6216; base_footprint&#x3002;</p>
+<hr>
+<p>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</p>
+<ul>
+<li><a href="https://www.ros.org/reps/rep-0105.html" target="_blank">https://www.ros.org/reps/rep-0105.html</a></li>
+</ul>
+<h2 id="72-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;">7.2 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;</h2>
+<p>&#x672C;&#x8282;&#x5185;&#x5BB9;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x5BFC;&#x822A;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x5B9E;&#x73B0;&#xFF0C;&#x65E8;&#x5728;&#x638C;&#x63E1;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;&#xFF0C;&#x8BE5;&#x7AE0;&#x6D89;&#x53CA;&#x7684;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<ul>
+<li>SLAM&#x5EFA;&#x56FE;(&#x9009;&#x7528;&#x8F83;&#x4E3A;&#x5E38;&#x89C1;&#x7684;gmapping)</li>
+<li>&#x5730;&#x56FE;&#x670D;&#x52A1;(&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x548C;&#x91CD;&#x73B0;&#x5730;&#x56FE;)</li>
+<li>&#x673A;&#x5668;&#x4EBA;&#x5B9A;&#x4F4D;</li>
+<li>&#x8DEF;&#x5F84;&#x89C4;&#x5212;</li>
+<li>&#x4E0A;&#x8FF0;&#x6D41;&#x7A0B;&#x4ECB;&#x7ECD;&#x5B8C;&#x6BD5;&#xFF0C;&#x8FD8;&#x4F1A;&#x5BF9;&#x529F;&#x80FD;&#x8FDB;&#x4E00;&#x6B65;&#x96C6;&#x6210;&#x5B9E;&#x73B0;&#x63A2;&#x7D22;&#x5F0F;&#x7684;SLAM&#x5EFA;&#x56FE;&#x3002;</li>
+</ul>
+<hr>
+<p><strong>&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</strong></p>
+<p>&#x8BF7;&#x5148;&#x5B89;&#x88C5;&#x76F8;&#x5173;&#x7684;ROS&#x529F;&#x80FD;&#x5305;:</p>
+<ul>
+<li>&#x5B89;&#x88C5; gmapping &#x5305;(&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x5730;&#x56FE;):<code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-gmapping</code></li>
+<li>&#x5B89;&#x88C5;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5305;(&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x4E0E;&#x8BFB;&#x53D6;&#x5730;&#x56FE;):<code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-map-server</code></li>
+<li>&#x5B89;&#x88C5; navigation &#x5305;(&#x7528;&#x4E8E;&#x5B9A;&#x4F4D;&#x4EE5;&#x53CA;&#x8DEF;&#x5F84;&#x89C4;&#x5212;):<code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-navigation</code></li>
+</ul>
+<p>&#x65B0;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#xFF0C;&#x5E76;&#x5BFC;&#x5165;&#x4F9D;&#x8D56;: gmapping map_server amcl move_base</p>
+<h3 id="721-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;01slam&#x5EFA;&#x56FE;">7.2.1 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;01_SLAM&#x5EFA;&#x56FE;</h3>
+<p>SLAM&#x7B97;&#x6CD5;&#x6709;&#x591A;&#x79CD;&#xFF0C;&#x5F53;&#x524D;&#x6211;&#x4EEC;&#x9009;&#x7528;gmapping&#xFF0C;&#x540E;&#x7EED;&#x4F1A;&#x518D;&#x4ECB;&#x7ECD;&#x5176;&#x4ED6;&#x51E0;&#x79CD;&#x5E38;&#x7528;&#x7684;SLAM&#x5B9E;&#x73B0;&#x3002;</p>
+<h4 id="1gmapping&#x7B80;&#x4ECB;">1.gmapping&#x7B80;&#x4ECB;</h4>
+<p>gmapping &#x662F;ROS&#x5F00;&#x6E90;&#x793E;&#x533A;&#x4E2D;&#x8F83;&#x4E3A;&#x5E38;&#x7528;&#x4E14;&#x6BD4;&#x8F83;&#x6210;&#x719F;&#x7684;SLAM&#x7B97;&#x6CD5;&#x4E4B;&#x4E00;&#xFF0C;gmapping&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x79FB;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x91CC;&#x7A0B;&#x8BA1;&#x6570;&#x636E;&#x548C;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x6570;&#x636E;&#x6765;&#x7ED8;&#x5236;&#x4E8C;&#x7EF4;&#x7684;&#x6805;&#x683C;&#x5730;&#x56FE;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;gmapping&#x5BF9;&#x786C;&#x4EF6;&#x4E5F;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x8981;&#x6C42;:</p>
+<ul>
+<li>&#x8BE5;&#x79FB;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x53EF;&#x4EE5;&#x53D1;&#x5E03;&#x91CC;&#x7A0B;&#x8BA1;&#x6D88;&#x606F;</li>
+<li>&#x673A;&#x5668;&#x4EBA;&#x9700;&#x8981;&#x53D1;&#x5E03;&#x96F7;&#x8FBE;&#x6D88;&#x606F;(&#x8BE5;&#x6D88;&#x606F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6C34;&#x5E73;&#x56FA;&#x5B9A;&#x5B89;&#x88C5;&#x7684;&#x96F7;&#x8FBE;&#x53D1;&#x5E03;&#xFF0C;&#x6216;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x6D88;&#x606F;&#x8F6C;&#x6362;&#x6210;&#x96F7;&#x8FBE;&#x6D88;&#x606F;)</li>
+</ul>
+<p>&#x5173;&#x4E8E;&#x91CC;&#x7A0B;&#x8BA1;&#x4E0E;&#x96F7;&#x8FBE;&#x6570;&#x636E;&#xFF0C;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E2D;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x83B7;&#x53D6;&#x7684;&#xFF0C;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#xFF0C;&#x6805;&#x683C;&#x5730;&#x56FE;&#x5982;&#x6848;&#x4F8B;&#x6240;&#x793A;&#x3002;</p>
+<p>gmapping &#x5B89;&#x88C5;&#x524D;&#x9762;&#x4E5F;&#x6709;&#x4ECB;&#x7ECD;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;:</p>
+<blockquote>
+<pre><code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-gmapping
+</code></pre></blockquote>
+<h4 id="2gmapping&#x8282;&#x70B9;&#x8BF4;&#x660E;">2.gmapping&#x8282;&#x70B9;&#x8BF4;&#x660E;</h4>
+<p>gmapping &#x529F;&#x80FD;&#x5305;&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x8282;&#x70B9;&#x662F;:slam_gmapping&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8C03;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x4E86;&#x89E3;&#x8BE5;&#x8282;&#x70B9;&#x8BA2;&#x9605;&#x7684;&#x8BDD;&#x9898;&#x3001;&#x53D1;&#x5E03;&#x7684;&#x8BDD;&#x9898;&#x3001;&#x670D;&#x52A1;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x3002;</p>
+<h5 id="21&#x8BA2;&#x9605;&#x7684;topic">2.1&#x8BA2;&#x9605;&#x7684;Topic</h5>
+<p>tf (tf/tfMessage)</p>
+<ul>
+<li>&#x7528;&#x4E8E;&#x96F7;&#x8FBE;&#x3001;&#x5E95;&#x76D8;&#x4E0E;&#x91CC;&#x7A0B;&#x8BA1;&#x4E4B;&#x95F4;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;&#x6D88;&#x606F;&#x3002;</li>
+</ul>
+<p>scan(sensor_msgs/LaserScan)</p>
+<ul>
+<li>SLAM&#x6240;&#x9700;&#x7684;&#x96F7;&#x8FBE;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+<h5 id="22&#x53D1;&#x5E03;&#x7684;topic">2.2&#x53D1;&#x5E03;&#x7684;Topic</h5>
+<p>map_metadata(nav_msgs/MapMetaData)</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC;&#x5730;&#x56FE;&#x7684;&#x5BBD;&#x5EA6;&#x3001;&#x9AD8;&#x5EA6;&#x3001;&#x5206;&#x8FA8;&#x7387;&#x7B49;&#xFF0C;&#x8BE5;&#x6D88;&#x606F;&#x4F1A;&#x56FA;&#x5B9A;&#x66F4;&#x65B0;&#x3002;</li>
+</ul>
+<p>map(nav_msgs/OccupancyGrid)</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x6805;&#x683C;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x5728;rviz&#x4E2D;&#x4EE5;&#x56FE;&#x5F62;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x3002;</li>
+</ul>
+<p>~entropy(std_msgs/Float64)</p>
+<ul>
+<li>&#x673A;&#x5668;&#x4EBA;&#x59FF;&#x6001;&#x5206;&#x5E03;&#x71B5;&#x4F30;&#x8BA1;(&#x503C;&#x8D8A;&#x5927;&#xFF0C;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x8D8A;&#x5927;)&#x3002;</li>
+</ul>
+<h5 id="23&#x670D;&#x52A1;">2.3&#x670D;&#x52A1;</h5>
+<p>dynamic_map(nav_msgs/GetMap)</p>
+<ul>
+<li>&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5730;&#x56FE;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<h5 id="24&#x53C2;&#x6570;">2.4&#x53C2;&#x6570;</h5>
+<p>~base_frame(string, default:&quot;base_link&quot;)</p>
+<ul>
+<li>&#x673A;&#x5668;&#x4EBA;&#x57FA;&#x5750;&#x6807;&#x7CFB;&#x3002;</li>
+</ul>
+<p>~map_frame(string, default:&quot;map&quot;)</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x5750;&#x6807;&#x7CFB;&#x3002;</li>
+</ul>
+<p>~odom_frame(string, default:&quot;odom&quot;)</p>
+<ul>
+<li>&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;&#x3002;</li>
+</ul>
+<p>~map_update_interval(float, default: 5.0)</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x66F4;&#x65B0;&#x9891;&#x7387;&#xFF0C;&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7684;&#x503C;&#x8BBE;&#x8BA1;&#x66F4;&#x65B0;&#x95F4;&#x9694;&#x3002;</li>
+</ul>
+<p>~maxUrange(float, default: 80.0)</p>
+<ul>
+<li>&#x6FC0;&#x5149;&#x63A2;&#x6D4B;&#x7684;&#x6700;&#x5927;&#x53EF;&#x7528;&#x8303;&#x56F4;(&#x8D85;&#x51FA;&#x6B64;&#x9608;&#x503C;&#xFF0C;&#x88AB;&#x622A;&#x65AD;)&#x3002;</li>
+</ul>
+<p>~maxRange(float)</p>
+<ul>
+<li>&#x6FC0;&#x5149;&#x63A2;&#x6D4B;&#x7684;&#x6700;&#x5927;&#x8303;&#x56F4;&#x3002;</li>
+</ul>
+<p>.... &#x53C2;&#x6570;&#x8F83;&#x591A;&#xFF0C;&#x4E0A;&#x8FF0;&#x662F;&#x51E0;&#x4E2A;&#x8F83;&#x4E3A;&#x5E38;&#x7528;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x4ECB;&#x7ECD;&#x53EF;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#x3002;</p>
+<h5 id="25&#x6240;&#x9700;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;">2.5&#x6240;&#x9700;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;</h5>
+<p>&#x96F7;&#x8FBE;&#x5750;&#x6807;&#x7CFB;&#x2192;&#x57FA;&#x5750;&#x6807;&#x7CFB;</p>
+<ul>
+<li>&#x4E00;&#x822C;&#x7531; robot_state_publisher &#x6216; static_transform_publisher &#x53D1;&#x5E03;&#x3002;</li>
+</ul>
+<p>&#x57FA;&#x5750;&#x6807;&#x7CFB;&#x2192;&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;</p>
+<ul>
+<li>&#x4E00;&#x822C;&#x7531;&#x91CC;&#x7A0B;&#x8BA1;&#x8282;&#x70B9;&#x53D1;&#x5E03;&#x3002;</li>
+</ul>
+<h5 id="26&#x53D1;&#x5E03;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;">2.6&#x53D1;&#x5E03;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;</h5>
+<p>&#x5730;&#x56FE;&#x5750;&#x6807;&#x7CFB;&#x2192;&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x5230;&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;&#x4E4B;&#x95F4;&#x7684;&#x53D8;&#x6362;&#x3002;</li>
+</ul>
+<h4 id="3gmapping&#x4F7F;&#x7528;">3.gmapping&#x4F7F;&#x7528;</h4>
+<h5 id="31&#x7F16;&#x5199;gmapping&#x8282;&#x70B9;&#x76F8;&#x5173;launch&#x6587;&#x4EF6;">3.1&#x7F16;&#x5199;gmapping&#x8282;&#x70B9;&#x76F8;&#x5173;launch&#x6587;&#x4EF6;</h5>
+<p>launch&#x6587;&#x4EF6;&#x7F16;&#x5199;&#x53EF;&#x4EE5;&#x53C2;&#x8003; github &#x7684;&#x6F14;&#x793A; launch&#x6587;&#x4EF6;&#xFF1A;<a href="https://github.com/ros-perception/slam_gmapping/blob/melodic-devel/gmapping/launch/slam_gmapping_pr2.launch" target="_blank">https://github.com/ros-perception/slam_gmapping/blob/melodic-devel/gmapping/launch/slam_gmapping_pr2.launch</a></p>
+<p>&#x590D;&#x5236;&#x5E76;&#x4FEE;&#x6539;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;use_sim_time&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;gmapping&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;slam_gmapping&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;slam_gmapping&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">remap</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;scan&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;scan&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_frame&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;base_footprint&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!--&#x5E95;&#x76D8;&#x5750;&#x6807;&#x7CFB;--&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_frame&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;odom&quot;</span>/&gt;</span> <span class="hljs-comment">&lt;!--&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;--&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_update_interval&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;5.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;maxUrange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;16.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sigma&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;kernelSize&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lstep&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;astep&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;iterations&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;5&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lsigma&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.075&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ogain&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;3.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lskip&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;srr&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;srt&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;str&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;stt&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;linearUpdate&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;angularUpdate&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;temporalUpdate&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;3.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;resampleThreshold&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;particles&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;30&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;xmin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;-50.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ymin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;-50.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;xmax&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;50.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ymax&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;50.0&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;delta&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;llsamplerange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.01&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;llsamplestep&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.01&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lasamplerange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.005&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lasamplestep&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.005&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;joint_state_publisher&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;joint_state_publisher&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;joint_state_publisher&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;robot_state_publisher&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;robot_state_publisher&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;robot_state_publisher&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;rviz&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x53EF;&#x4EE5;&#x4FDD;&#x5B58; rviz &#x914D;&#x7F6E;&#x5E76;&#x540E;&#x671F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;--&gt;</span>
+    <span class="hljs-comment">&lt;!--
+    &lt;node pkg=&quot;rviz&quot; type=&quot;rviz&quot; name=&quot;rviz&quot; args=&quot;-d $(find my_nav_sum)/rviz/gmapping.rviz&quot;/&gt;
+    --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<p>&#x5173;&#x952E;&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">remap</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;scan&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;scan&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x96F7;&#x8FBE;&#x8BDD;&#x9898; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_frame&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;base_footprint&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!--&#x5E95;&#x76D8;&#x5750;&#x6807;&#x7CFB;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_frame&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;odom&quot;</span>/&gt;</span> <span class="hljs-comment">&lt;!--&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;--&gt;</span>
+</code></pre>
+<h5 id="32&#x6267;&#x884C;">3.2&#x6267;&#x884C;</h5>
+<p>1.&#x5148;&#x542F;&#x52A8; Gazebo &#x4EFF;&#x771F;&#x73AF;&#x5883;(&#x6B64;&#x8FC7;&#x7A0B;&#x7565;)</p>
+<p>2.&#x7136;&#x540E;&#x518D;&#x542F;&#x52A8;&#x5730;&#x56FE;&#x7ED8;&#x5236;&#x7684; launch &#x6587;&#x4EF6;:</p>
+<pre><code class="lang-perl">roslaunch &#x5305;&#x540D; launch&#x6587;&#x4EF6;&#x540D;
+</code></pre>
+<p>3.&#x542F;&#x52A8;&#x952E;&#x76D8;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#x5EFA;&#x56FE;</p>
+<pre><code class="lang-perl">rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+</code></pre>
+<p>4.&#x5728; rviz &#x4E2D;&#x6DFB;&#x52A0;&#x7EC4;&#x4EF6;&#xFF0C;&#x663E;&#x793A;&#x6805;&#x683C;&#x5730;&#x56FE;<img src="https://gitee.com/ry2001/img1/raw/master/202507111929428.png" alt="img">&#x6700;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x63A7;&#x5236;gazebo&#x4E2D;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x5728;rviz&#x4E2D;&#x53EF;&#x4EE5;&#x663E;&#x793A;gmapping&#x53D1;&#x5E03;&#x7684;&#x6805;&#x683C;&#x5730;&#x56FE;&#x6570;&#x636E;&#x4E86;&#xFF0C;&#x4E0B;&#x4E00;&#x6B65;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5C06;&#x5730;&#x56FE;&#x5355;&#x72EC;&#x4FDD;&#x5B58;&#x3002;</p>
+<hr>
+<p><strong>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</strong></p>
+<ul>
+<li><a href="http://wiki.ros.org/gmapping" target="_blank">http://wiki.ros.org/gmapping</a></li>
+</ul>
+<h3 id="722-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;02&#x5730;&#x56FE;&#x670D;&#x52A1;">7.2.2 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;02_&#x5730;&#x56FE;&#x670D;&#x52A1;</h3>
+<p>&#x4E0A;&#x4E00;&#x8282;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x901A;&#x8FC7;gmapping&#x7684;&#x6784;&#x5EFA;&#x5730;&#x56FE;&#x5E76;&#x5728;rviz&#x4E2D;&#x663E;&#x793A;&#x4E86;&#x5730;&#x56FE;&#xFF0C;&#x4E0D;&#x8FC7;&#xFF0C;&#x4E0A;&#x4E00;&#x8282;&#x4E2D;&#x5730;&#x56FE;&#x6570;&#x636E;&#x662F;&#x4FDD;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#xFF0C;&#x5F53;&#x8282;&#x70B9;&#x5173;&#x95ED;&#x65F6;&#xFF0C;&#x6570;&#x636E;&#x4E5F;&#x4F1A;&#x88AB;&#x4E00;&#x5E76;&#x91CA;&#x653E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x6805;&#x683C;&#x5730;&#x56FE;&#x5E8F;&#x5217;&#x5316;&#x5230;&#x7684;&#x78C1;&#x76D8;&#x4EE5;&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#xFF0C;&#x540E;&#x671F;&#x8FD8;&#x8981;&#x901A;&#x8FC7;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x8BFB;&#x53D6;&#x78C1;&#x76D8;&#x7684;&#x5730;&#x56FE;&#x6570;&#x636E;&#x518D;&#x6267;&#x884C;&#x540E;&#x7EED;&#x64CD;&#x4F5C;&#x3002;&#x5728;ROS&#x4E2D;&#xFF0C;&#x5730;&#x56FE;&#x6570;&#x636E;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x4E0E;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; map_server &#x529F;&#x80FD;&#x5305;&#x5B9E;&#x73B0;&#x3002;</p>
+<h4 id="1mapserver&#x7B80;&#x4ECB;">1.map_server&#x7B80;&#x4ECB;</h4>
+<p>map_server&#x529F;&#x80FD;&#x5305;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x8282;&#x70B9;: map_saver &#x548C; map_server&#xFF0C;&#x524D;&#x8005;&#x7528;&#x4E8E;&#x5C06;&#x6805;&#x683C;&#x5730;&#x56FE;&#x4FDD;&#x5B58;&#x5230;&#x78C1;&#x76D8;&#xFF0C;&#x540E;&#x8005;&#x8BFB;&#x53D6;&#x78C1;&#x76D8;&#x7684;&#x6805;&#x683C;&#x5730;&#x56FE;&#x5E76;&#x4EE5;&#x670D;&#x52A1;&#x7684;&#x65B9;&#x5F0F;&#x63D0;&#x4F9B;&#x51FA;&#x53BB;&#x3002;</p>
+<p>map_server&#x5B89;&#x88C5;&#x524D;&#x9762;&#x4E5F;&#x6709;&#x4ECB;&#x7ECD;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;:</p>
+<blockquote>
+<pre><code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-map-server
+</code></pre></blockquote>
+<h4 id="2mapserver&#x4F7F;&#x7528;&#x4E4B;&#x5730;&#x56FE;&#x4FDD;&#x5B58;&#x8282;&#x70B9;mapsaver">2.map_server&#x4F7F;&#x7528;&#x4E4B;&#x5730;&#x56FE;&#x4FDD;&#x5B58;&#x8282;&#x70B9;(map_saver)</h4>
+<h5 id="21mapsaver&#x8282;&#x70B9;&#x8BF4;&#x660E;">2.1map_saver&#x8282;&#x70B9;&#x8BF4;&#x660E;</h5>
+<p><strong>&#x8BA2;&#x9605;&#x7684;topic:</strong></p>
+<p>map(nav_msgs/OccupancyGrid)</p>
+<ul>
+<li>&#x8BA2;&#x9605;&#x6B64;&#x8BDD;&#x9898;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x5730;&#x56FE;&#x6587;&#x4EF6;&#x3002;</li>
+</ul>
+<h5 id="22&#x5730;&#x56FE;&#x4FDD;&#x5B58;launch&#x6587;&#x4EF6;">2.2&#x5730;&#x56FE;&#x4FDD;&#x5B58;launch&#x6587;&#x4EF6;</h5>
+<p>&#x5730;&#x56FE;&#x4FDD;&#x5B58;&#x7684;&#x8BED;&#x6CD5;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x7F16;&#x5199;&#x4E00;&#x4E2A;launch&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;filename&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(find mycar_nav)/map/nav&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_save&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;map_saver&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;-f $(arg filename)&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+Copy
+</code></pre>
+<p>&#x5176;&#x4E2D; mymap &#x662F;&#x6307;&#x5730;&#x56FE;&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#x4EE5;&#x53CA;&#x4FDD;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x3002;</p>
+<p>SLAM&#x5EFA;&#x56FE;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x8BE5;launch&#x6587;&#x4EF6;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x6D4B;&#x8BD5;:</p>
+<blockquote>
+<p>&#x9996;&#x5148;&#xFF0C;&#x53C2;&#x8003;&#x4E0A;&#x4E00;&#x8282;&#xFF0C;&#x4F9D;&#x6B21;&#x542F;&#x52A8;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#xFF0C;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x4E0E;SLAM&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#x5E76;&#x7ED8;&#x56FE;&#xFF1B;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x5730;&#x56FE;&#x4FDD;&#x5B58;&#x65B9;&#x5F0F;&#x4FDD;&#x5B58;&#x5730;&#x56FE;&#x3002;</p>
+<p>&#x7ED3;&#x679C;&#xFF1A;&#x5728;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x4E0B;&#x4F1A;&#x751F;&#x6210;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;xxx.pgm &#x4E0E; xxx.yaml</p>
+</blockquote>
+<h5 id="23-&#x4FDD;&#x5B58;&#x7ED3;&#x679C;&#x89E3;&#x91CA;">2.3 &#x4FDD;&#x5B58;&#x7ED3;&#x679C;&#x89E3;&#x91CA;</h5>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111930170.png" alt="img"></p>
+<p>xxx.pgm &#x672C;&#x8D28;&#x662F;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x56FE;&#x7247;&#x67E5;&#x770B;&#x7A0B;&#x5E8F;&#x5373;&#x53EF;&#x6253;&#x5F00;&#x3002;</p>
+<p>xxx.yaml &#x4FDD;&#x5B58;&#x7684;&#x662F;&#x5730;&#x56FE;&#x7684;&#x5143;&#x6570;&#x636E;&#x4FE1;&#x606F;&#xFF0C;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x56FE;&#x7247;&#xFF0C;&#x5185;&#x5BB9;&#x683C;&#x5F0F;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">image:</span> /home/rosmelodic/ws02_nav/src/mycar_nav/map/nav.pgm
+<span class="hljs-attr">resolution:</span> <span class="hljs-number">0.050000</span>
+<span class="hljs-attr">origin:</span> [<span class="hljs-bullet">-50.000000</span>, <span class="hljs-bullet">-50.000000</span>, <span class="hljs-number">0.000000</span>]
+<span class="hljs-attr">negate:</span> <span class="hljs-number">0</span>
+<span class="hljs-attr">occupied_thresh:</span> <span class="hljs-number">0.65</span>
+<span class="hljs-attr">free_thresh:</span> <span class="hljs-number">0.196</span>
+Copy
+</code></pre>
+<p>&#x89E3;&#x91CA;:</p>
+<ul>
+<li><strong>image</strong>:&#x88AB;&#x63CF;&#x8FF0;&#x7684;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</li>
+<li><strong>resolution</strong>: &#x56FE;&#x7247;&#x5206;&#x7247;&#x7387;(&#x5355;&#x4F4D;: m/&#x50CF;&#x7D20;)&#x3002;</li>
+<li><strong>origin</strong>: &#x5730;&#x56FE;&#x4E2D;&#x5DE6;&#x4E0B;&#x50CF;&#x7D20;&#x7684;&#x4E8C;&#x7EF4;&#x59FF;&#x52BF;&#xFF0C;&#x4E3A;&#xFF08;x&#xFF0C;y&#xFF0C;&#x504F;&#x822A;&#xFF09;&#xFF0C;&#x504F;&#x822A;&#x4E3A;&#x9006;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#xFF08;&#x504F;&#x822A;= 0&#x8868;&#x793A;&#x65E0;&#x65CB;&#x8F6C;&#xFF09;&#x3002;</li>
+<li><strong>occupied_thresh</strong>: &#x5360;&#x7528;&#x6982;&#x7387;&#x5927;&#x4E8E;&#x6B64;&#x9608;&#x503C;&#x7684;&#x50CF;&#x7D20;&#x88AB;&#x89C6;&#x4E3A;&#x5B8C;&#x5168;&#x5360;&#x7528;&#x3002;</li>
+<li><strong>free_thresh</strong>: &#x5360;&#x7528;&#x7387;&#x5C0F;&#x4E8E;&#x6B64;&#x9608;&#x503C;&#x7684;&#x50CF;&#x7D20;&#x88AB;&#x89C6;&#x4E3A;&#x5B8C;&#x5168;&#x7A7A;&#x95F2;&#x3002;</li>
+<li><strong>negate</strong>: &#x662F;&#x5426;&#x5E94;&#x8BE5;&#x98A0;&#x5012;&#x767D;&#x8272;/&#x9ED1;&#x8272;&#x81EA;&#x7531;/&#x5360;&#x7528;&#x7684;&#x8BED;&#x4E49;&#x3002;</li>
+</ul>
+<p>map_server &#x4E2D;&#x969C;&#x788D;&#x7269;&#x8BA1;&#x7B97;&#x89C4;&#x5219;:</p>
+<ol>
+<li>&#x5730;&#x56FE;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#x53D6;&#x503C;&#x5728; [0,255] &#x4E4B;&#x95F4;&#xFF0C;&#x767D;&#x8272;&#x4E3A; 255&#xFF0C;&#x9ED1;&#x8272;&#x4E3A; 0&#xFF0C;&#x8BE5;&#x503C;&#x8BBE;&#x4E3A; x&#xFF1B;</li>
+<li>map_server &#x4F1A;&#x5C06;&#x50CF;&#x7D20;&#x503C;&#x4F5C;&#x4E3A;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x969C;&#x788D;&#x7269;&#x7684;&#x4F9D;&#x636E;&#xFF0C;&#x9996;&#x5148;&#x8BA1;&#x7B97;&#x6BD4;&#x4F8B;: p = (255 - x) / 255.0&#xFF0C;&#x767D;&#x8272;&#x4E3A;0&#xFF0C;&#x9ED1;&#x8272;&#x4E3A;1(negate&#x4E3A;true&#xFF0C;&#x5219;p = x / 255.0)&#xFF1B;</li>
+<li>&#x6839;&#x636E;&#x6B65;&#x9AA4;2&#x8BA1;&#x7B97;&#x7684;&#x6BD4;&#x4F8B;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x5982;&#x679C; p &gt; occupied_thresh &#x90A3;&#x4E48;&#x89C6;&#x4E3A;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x5982;&#x679C; p &lt; free_thresh &#x90A3;&#x4E48;&#x89C6;&#x4E3A;&#x65E0;&#x7269;&#x3002;</li>
+</ol>
+<p>&#x5907;&#x6CE8;:</p>
+<ul>
+<li>&#x56FE;&#x7247;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x6C42;&#x7F16;&#x8F91;&#x3002;</li>
+</ul>
+<h4 id="3mapserver&#x4F7F;&#x7528;&#x4E4B;&#x5730;&#x56FE;&#x670D;&#x52A1;mapserver">3.map_server&#x4F7F;&#x7528;&#x4E4B;&#x5730;&#x56FE;&#x670D;&#x52A1;(map_server)</h4>
+<h5 id="31mapserver&#x8282;&#x70B9;&#x8BF4;&#x660E;">3.1map_server&#x8282;&#x70B9;&#x8BF4;&#x660E;</h5>
+<p><strong>&#x53D1;&#x5E03;&#x7684;&#x8BDD;&#x9898;</strong></p>
+<p>map_metadata&#xFF08;nav_msgs / MapMetaData&#xFF09;</p>
+<ul>
+<li>&#x53D1;&#x5E03;&#x5730;&#x56FE;&#x5143;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p>map&#xFF08;nav_msgs / OccupancyGrid&#xFF09;</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p><strong>&#x670D;&#x52A1;</strong></p>
+<p>static_map&#xFF08;nav_msgs / GetMap&#xFF09;</p>
+<ul>
+<li>&#x901A;&#x8FC7;&#x6B64;&#x670D;&#x52A1;&#x83B7;&#x53D6;&#x5730;&#x56FE;&#x3002;</li>
+</ul>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<p>&#x301C;frame_id&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x201C;map&#x201D;&#xFF09;</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x5750;&#x6807;&#x7CFB;&#x3002;</li>
+</ul>
+<h5 id="32&#x5730;&#x56FE;&#x8BFB;&#x53D6;">3.2&#x5730;&#x56FE;&#x8BFB;&#x53D6;</h5>
+<p>&#x901A;&#x8FC7; map_server &#x7684; map_server &#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x6805;&#x683C;&#x5730;&#x56FE;&#x6570;&#x636E;&#xFF0C;&#x7F16;&#x5199; launch &#x6587;&#x4EF6;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;nav.yaml&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x8F7D;&#x8BBE;&#x7F6E;&#x7684;&#x5730;&#x56FE;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;$(find mycar_nav)/map/$(arg map)&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x53C2;&#x6570;&#x662F;&#x5730;&#x56FE;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x7684;&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF0C;&#x6267;&#x884C;&#x8BE5;launch&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x8282;&#x70B9;&#x4F1A;&#x53D1;&#x5E03;&#x8BDD;&#x9898;:map(nav_msgs/OccupancyGrid)</p>
+<h5 id="33&#x5730;&#x56FE;&#x663E;&#x793A;">3.3&#x5730;&#x56FE;&#x663E;&#x793A;</h5>
+<p>&#x5728; rviz &#x4E2D;&#x4F7F;&#x7528; map &#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x6805;&#x683C;&#x5730;&#x56FE;&#xFF1A;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/&#x5730;&#x56FE;&#x663E;&#x793A;.PNG" alt="img"></p>
+<hr>
+<p>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</p>
+<ul>
+<li><a href="http://wiki.ros.org/map_server" target="_blank">http://wiki.ros.org/map_server</a></li>
+</ul>
+<h3 id="723-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;03&#x5B9A;&#x4F4D;">7.2.3 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;03_&#x5B9A;&#x4F4D;</h3>
+<p>&#x6240;&#x8C13;&#x5B9A;&#x4F4D;&#x5C31;&#x662F;&#x63A8;&#x7B97;&#x673A;&#x5668;&#x4EBA;&#x81EA;&#x8EAB;&#x5728;&#x5168;&#x5C40;&#x5730;&#x56FE;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5F53;&#x7136;&#xFF0C;SLAM&#x4E2D;&#x4E5F;&#x5305;&#x542B;&#x5B9A;&#x4F4D;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#xFF0C;&#x4E0D;&#x8FC7;SLAM&#x7684;&#x5B9A;&#x4F4D;&#x662F;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x5168;&#x5C40;&#x5730;&#x56FE;&#x7684;&#xFF0C;&#x662F;&#x5C5E;&#x4E8E;&#x5BFC;&#x822A;&#x5F00;&#x59CB;&#x4E4B;&#x524D;&#x7684;&#x9636;&#x6BB5;&#xFF0C;&#x800C;&#x5F53;&#x524D;&#x5B9A;&#x4F4D;&#x662F;&#x7528;&#x4E8E;&#x5BFC;&#x822A;&#x4E2D;&#xFF0C;&#x5BFC;&#x822A;&#x4E2D;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x9700;&#x8981;&#x6309;&#x7167;&#x8BBE;&#x5B9A;&#x7684;&#x8DEF;&#x7EBF;&#x8FD0;&#x52A8;&#xFF0C;&#x901A;&#x8FC7;&#x5B9A;&#x4F4D;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x5B9E;&#x9645;&#x8F68;&#x8FF9;&#x662F;&#x5426;&#x7B26;&#x5408;&#x9884;&#x671F;&#x3002;&#x5728;ROS&#x7684;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;navigation&#x4E2D;&#x63D0;&#x4F9B;&#x4E86; amcl &#x529F;&#x80FD;&#x5305;&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#x4E2D;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x5B9A;&#x4F4D;&#x3002;</p>
+<h4 id="1amcl&#x7B80;&#x4ECB;">1.amcl&#x7B80;&#x4ECB;</h4>
+<p>AMCL(adaptive Monte Carlo Localization) &#x662F;&#x7528;&#x4E8E;2D&#x79FB;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x6982;&#x7387;&#x5B9A;&#x4F4D;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#x81EA;&#x9002;&#x5E94;&#xFF08;&#x6216;KLD&#x91C7;&#x6837;&#xFF09;&#x8499;&#x7279;&#x5361;&#x6D1B;&#x5B9A;&#x4F4D;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5DF2;&#x6709;&#x5730;&#x56FE;&#x4F7F;&#x7528;&#x7C92;&#x5B50;&#x6EE4;&#x6CE2;&#x5668;&#x63A8;&#x7B97;&#x673A;&#x5668;&#x4EBA;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>amcl&#x5DF2;&#x7ECF;&#x88AB;&#x96C6;&#x6210;&#x5230;&#x4E86;navigation&#x5305;&#xFF0C;navigation&#x5B89;&#x88C5;&#x524D;&#x9762;&#x4E5F;&#x6709;&#x4ECB;&#x7ECD;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;:</p>
+<blockquote>
+<pre><code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-navigation
+</code></pre></blockquote>
+<h4 id="2amcl&#x8282;&#x70B9;&#x8BF4;&#x660E;">2.amcl&#x8282;&#x70B9;&#x8BF4;&#x660E;</h4>
+<p>amcl &#x529F;&#x80FD;&#x5305;&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x8282;&#x70B9;&#x662F;:amcl&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8C03;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x4E86;&#x89E3;&#x8BE5;&#x8282;&#x70B9;&#x8BA2;&#x9605;&#x7684;&#x8BDD;&#x9898;&#x3001;&#x53D1;&#x5E03;&#x7684;&#x8BDD;&#x9898;&#x3001;&#x670D;&#x52A1;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x3002;</p>
+<h5 id="31&#x8BA2;&#x9605;&#x7684;topic">3.1&#x8BA2;&#x9605;&#x7684;Topic</h5>
+<p>scan(sensor_msgs/LaserScan)</p>
+<ul>
+<li>&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p>tf(tf/tfMessage)</p>
+<ul>
+<li>&#x5750;&#x6807;&#x53D8;&#x6362;&#x6D88;&#x606F;&#x3002;</li>
+</ul>
+<p>initialpose(geometry_msgs/PoseWithCovarianceStamped)</p>
+<ul>
+<li>&#x7528;&#x6765;&#x521D;&#x59CB;&#x5316;&#x7C92;&#x5B50;&#x6EE4;&#x6CE2;&#x5668;&#x7684;&#x5747;&#x503C;&#x548C;&#x534F;&#x65B9;&#x5DEE;&#x3002;</li>
+</ul>
+<p>map(nav_msgs/OccupancyGrid)</p>
+<ul>
+<li>&#x83B7;&#x53D6;&#x5730;&#x56FE;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<h5 id="32&#x53D1;&#x5E03;&#x7684;topic">3.2&#x53D1;&#x5E03;&#x7684;Topic</h5>
+<p>amcl_pose(geometry_msgs/PoseWithCovarianceStamped)</p>
+<ul>
+<li>&#x673A;&#x5668;&#x4EBA;&#x5728;&#x5730;&#x56FE;&#x4E2D;&#x7684;&#x4F4D;&#x59FF;&#x4F30;&#x8BA1;&#x3002;</li>
+</ul>
+<p>particlecloud(geometry_msgs/PoseArray)</p>
+<ul>
+<li>&#x4F4D;&#x59FF;&#x4F30;&#x8BA1;&#x96C6;&#x5408;&#xFF0C;rviz&#x4E2D;&#x53EF;&#x4EE5;&#x88AB; PoseArray &#x8BA2;&#x9605;&#x7136;&#x540E;&#x56FE;&#x5F62;&#x5316;&#x663E;&#x793A;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x4F4D;&#x59FF;&#x4F30;&#x8BA1;&#x96C6;&#x5408;&#x3002;</li>
+</ul>
+<p>tf(tf/tfMessage)</p>
+<ul>
+<li>&#x53D1;&#x5E03;&#x4ECE; odom &#x5230; map &#x7684;&#x8F6C;&#x6362;&#x3002;</li>
+</ul>
+<h5 id="33&#x670D;&#x52A1;">3.3&#x670D;&#x52A1;</h5>
+<p>global_localization(std_srvs/Empty)</p>
+<ul>
+<li>&#x521D;&#x59CB;&#x5316;&#x5168;&#x5C40;&#x5B9A;&#x4F4D;&#x7684;&#x670D;&#x52A1;&#x3002;</li>
+</ul>
+<p>request_nomotion_update(std_srvs/Empty)</p>
+<ul>
+<li>&#x624B;&#x52A8;&#x6267;&#x884C;&#x66F4;&#x65B0;&#x548C;&#x53D1;&#x5E03;&#x66F4;&#x65B0;&#x7684;&#x7C92;&#x5B50;&#x7684;&#x670D;&#x52A1;&#x3002;</li>
+</ul>
+<p>set_map(nav_msgs/SetMap)</p>
+<ul>
+<li>&#x624B;&#x52A8;&#x8BBE;&#x7F6E;&#x65B0;&#x5730;&#x56FE;&#x548C;&#x59FF;&#x6001;&#x7684;&#x670D;&#x52A1;&#x3002;</li>
+</ul>
+<h5 id="34&#x8C03;&#x7528;&#x7684;&#x670D;&#x52A1;">3.4&#x8C03;&#x7528;&#x7684;&#x670D;&#x52A1;</h5>
+<p>static_map(nav_msgs/GetMap)</p>
+<ul>
+<li>&#x8C03;&#x7528;&#x6B64;&#x670D;&#x52A1;&#x83B7;&#x53D6;&#x5730;&#x56FE;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<h5 id="35&#x53C2;&#x6570;">3.5&#x53C2;&#x6570;</h5>
+<p>~odom_model_type(string, default:&quot;diff&quot;)</p>
+<ul>
+<li>&#x91CC;&#x7A0B;&#x8BA1;&#x6A21;&#x578B;&#x9009;&#x62E9;: &quot;diff&quot;,&quot;omni&quot;,&quot;diff-corrected&quot;,&quot;omni-corrected&quot; (diff &#x5DEE;&#x901F;&#x3001;omni &#x5168;&#x5411;&#x8F6E;)</li>
+</ul>
+<p>~odom_frame_id(string, default:&quot;odom&quot;)</p>
+<ul>
+<li>&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;&#x3002;</li>
+</ul>
+<p>~base_frame_id(string, default:&quot;base_link&quot;)</p>
+<ul>
+<li>&#x673A;&#x5668;&#x4EBA;&#x6781;&#x5750;&#x6807;&#x7CFB;&#x3002;</li>
+</ul>
+<p>~global_frame_id(string, default:&quot;map&quot;)</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x5750;&#x6807;&#x7CFB;&#x3002;</li>
+</ul>
+<p>.... &#x53C2;&#x6570;&#x8F83;&#x591A;&#xFF0C;&#x4E0A;&#x8FF0;&#x662F;&#x51E0;&#x4E2A;&#x8F83;&#x4E3A;&#x5E38;&#x7528;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x4ECB;&#x7ECD;&#x53EF;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#x3002;</p>
+<h5 id="36&#x5750;&#x6807;&#x53D8;&#x6362;">3.6&#x5750;&#x6807;&#x53D8;&#x6362;</h5>
+<p>&#x91CC;&#x7A0B;&#x8BA1;&#x672C;&#x8EAB;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x534F;&#x52A9;&#x673A;&#x5668;&#x4EBA;&#x5B9A;&#x4F4D;&#x7684;&#xFF0C;&#x4E0D;&#x8FC7;&#x91CC;&#x7A0B;&#x8BA1;&#x5B58;&#x5728;&#x7D2F;&#x8BA1;&#x8BEF;&#x5DEE;&#x4E14;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x65F6;(&#x8F66;&#x8F6E;&#x6253;&#x6ED1;)&#x4F1A;&#x51FA;&#x73B0;&#x5B9A;&#x4F4D;&#x9519;&#x8BEF;&#x7684;&#x60C5;&#x51B5;&#xFF0C;amcl &#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F30;&#x7B97;&#x673A;&#x5668;&#x4EBA;&#x5728;&#x5730;&#x56FE;&#x5750;&#x6807;&#x7CFB;&#x4E0B;&#x7684;&#x59FF;&#x6001;&#xFF0C;&#x518D;&#x7ED3;&#x5408;&#x91CC;&#x7A0B;&#x8BA1;&#x63D0;&#x9AD8;&#x5B9A;&#x4F4D;&#x51C6;&#x786E;&#x5EA6;&#x3002;</p>
+<ul>
+<li>&#x91CC;&#x7A0B;&#x8BA1;&#x5B9A;&#x4F4D;:&#x53EA;&#x662F;&#x901A;&#x8FC7;&#x91CC;&#x7A0B;&#x8BA1;&#x6570;&#x636E;&#x5B9E;&#x73B0; /odom_frame &#x4E0E; /base_frame &#x4E4B;&#x95F4;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;&#x3002;</li>
+<li>amcl&#x5B9A;&#x4F4D;: &#x53EF;&#x4EE5;&#x63D0;&#x4F9B; /map_frame &#x3001;/odom_frame &#x4E0E; /base_frame &#x4E4B;&#x95F4;&#x7684;&#x5750;&#x6807;&#x53D8;&#x6362;&#x3002;</li>
+</ul>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111930973.png" alt="img"></p>
+<h4 id="3amcl&#x4F7F;&#x7528;">3.amcl&#x4F7F;&#x7528;</h4>
+<h5 id="31&#x7F16;&#x5199;amcl&#x8282;&#x70B9;&#x76F8;&#x5173;&#x7684;launch&#x6587;&#x4EF6;">3.1&#x7F16;&#x5199;amcl&#x8282;&#x70B9;&#x76F8;&#x5173;&#x7684;launch&#x6587;&#x4EF6;</h5>
+<p>&#x5173;&#x4E8E;launch&#x6587;&#x4EF6;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5728;amcl&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x7684;example&#x76EE;&#x5F55;&#x5DF2;&#x7ECF;&#x7ED9;&#x51FA;&#x4E86;&#x793A;&#x4F8B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x53C2;&#x8003;&#xFF0C;&#x5177;&#x4F53;&#x5B9E;&#x73B0;:</p>
+<pre><code class="lang-perl">roscd amcl
+ls examples
+</code></pre>
+<p>&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x4F1A;&#x5217;&#x51FA;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;: amcl_diff.launch &#x548C; amcl_omni.launch &#x6587;&#x4EF6;&#xFF0C;&#x524D;&#x8005;&#x9002;&#x7528;&#x4E8E;&#x5DEE;&#x5206;&#x79FB;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#xFF0C;&#x540E;&#x8005;&#x9002;&#x7528;&#x4E8E;&#x5168;&#x5411;&#x79FB;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x9700;&#x9009;&#x62E9;&#xFF0C;&#x6B64;&#x5904;&#x53C2;&#x8003;&#x524D;&#x8005;&#xFF0C;&#x65B0;&#x5EFA; launch &#x6587;&#x4EF6;&#xFF0C;&#x590D;&#x5236; amcl_diff.launch &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5E76;&#x4FEE;&#x6539;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;amcl&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;amcl&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;amcl&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Publish scans from best pose at a max of 10 Hz --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_model_type&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;diff&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x91CC;&#x7A0B;&#x8BA1;&#x6A21;&#x5F0F;&#x4E3A;&#x5DEE;&#x5206; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha5&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;transform_tolerance&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gui_publish_rate&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;10.0&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_max_beams&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;30&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;min_particles&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;500&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;max_particles&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;5000&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;kld_err&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;kld_z&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.99&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha1&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha2&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- translation std dev, m --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha3&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.8&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_alpha4&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_z_hit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_z_short&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_z_max&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.05&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_z_rand&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_sigma_hit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_lambda_short&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_lambda_short&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_model_type&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;likelihood_field&quot;</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- &lt;param name=&quot;laser_model_type&quot; value=&quot;beam&quot;/&gt; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;laser_likelihood_max_dist&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;2.0&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;update_min_d&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.2&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;update_min_a&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.5&quot;</span>/&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odom_frame_id&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;odom&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;base_frame_id&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;base_footprint&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x6DFB;&#x52A0;&#x673A;&#x5668;&#x4EBA;&#x57FA;&#x5750;&#x6807;&#x7CFB; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;global_frame_id&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;map&quot;</span>/&gt;</span><span class="hljs-comment">&lt;!-- &#x6DFB;&#x52A0;&#x5730;&#x56FE;&#x5750;&#x6807;&#x7CFB; --&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;resample_interval&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;transform_tolerance&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.1&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;recovery_alpha_slow&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.0&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;recovery_alpha_fast&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;0.0&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<h5 id="32&#x7F16;&#x5199;&#x6D4B;&#x8BD5;launch&#x6587;&#x4EF6;">3.2&#x7F16;&#x5199;&#x6D4B;&#x8BD5;launch&#x6587;&#x4EF6;</h5>
+<p>amcl&#x8282;&#x70B9;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x8FD0;&#x884C; amcl &#x8282;&#x70B9;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x52A0;&#x8F7D;&#x5168;&#x5C40;&#x5730;&#x56FE;&#xFF0C;&#x7136;&#x540E;&#x542F;&#x52A8; rviz &#x663E;&#x793A;&#x5B9A;&#x4F4D;&#x7ED3;&#x679C;&#xFF0C;&#x4E0A;&#x8FF0;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x96C6;&#x6210;&#x8FDB;launch&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;nav.yaml&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x8F7D;&#x8BBE;&#x7F6E;&#x7684;&#x5730;&#x56FE;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;$(find mycar_nav)/map/$(arg map)&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x542F;&#x52A8;AMCL&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find mycar_nav)/launch/amcl.launch&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;rviz --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;rviz&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<p>&#x5F53;&#x7136;&#xFF0C;launch&#x6587;&#x4EF6;&#x4E2D;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x8282;&#x70B9;&#x548C;amcl&#x8282;&#x70B9;&#x4E2D;&#x7684;&#x5305;&#x540D;&#x3001;&#x6587;&#x4EF6;&#x540D;&#x9700;&#x8981;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x8BBE;&#x7F6E;&#x4FEE;&#x6539;&#x3002;</p>
+<h5 id="33&#x6267;&#x884C;">3.3&#x6267;&#x884C;</h5>
+<p>1.&#x5148;&#x542F;&#x52A8; Gazebo &#x4EFF;&#x771F;&#x73AF;&#x5883;(&#x6B64;&#x8FC7;&#x7A0B;&#x7565;)&#xFF1B;</p>
+<p>2.&#x542F;&#x52A8;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF1A;</p>
+<pre><code class="lang-perl">rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+</code></pre>
+<p>3.&#x542F;&#x52A8;&#x4E0A;&#x4E00;&#x6B65;&#x4E2D;&#x96C6;&#x6210;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x3001;amcl &#x4E0E; rviz &#x7684; launch &#x6587;&#x4EF6;&#xFF1B;</p>
+<p>4.&#x5728;&#x542F;&#x52A8;&#x7684; rviz &#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;RobotModel&#x3001;Map&#x7EC4;&#x4EF6;&#xFF0C;&#x5206;&#x522B;&#x663E;&#x793A;&#x673A;&#x5668;&#x4EBA;&#x6A21;&#x578B;&#x4E0E;&#x5730;&#x56FE;&#xFF0C;&#x6DFB;&#x52A0; posearray &#x63D2;&#x4EF6;&#xFF0C;&#x8BBE;&#x7F6E;topic&#x4E3A;particlecloud&#x6765;&#x663E;&#x793A; amcl &#x9884;&#x4F30;&#x7684;&#x5F53;&#x524D;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x4F4D;&#x59FF;&#xFF0C;&#x7BAD;&#x5934;&#x8D8A;&#x662F;&#x5BC6;&#x96C6;&#xFF0C;&#x8BF4;&#x660E;&#x5F53;&#x524D;&#x673A;&#x5668;&#x4EBA;&#x5904;&#x4E8E;&#x6B64;&#x4F4D;&#x7F6E;&#x7684;&#x6982;&#x7387;&#x8D8A;&#x9AD8;&#xFF1B;</p>
+<p>5.&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0; posearray &#x4E5F;&#x968F;&#x4E4B;&#x800C;&#x6539;&#x53D8;&#x3002;<img src="https://gitee.com/ry2001/img1/raw/master/202507111930092.gif" alt="img"></p>
+<hr>
+<p><strong>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</strong></p>
+<ul>
+<li><a href="http://wiki.ros.org/amcl" target="_blank">http://wiki.ros.org/amcl</a></li>
+</ul>
+<h3 id="724-&#x5BFC;&#x822A;&#x5B9E;&#x73B0;04&#x8DEF;&#x5F84;&#x89C4;&#x5212;">7.2.4 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;04_&#x8DEF;&#x5F84;&#x89C4;&#x5212;</h3>
+<p>&#x6BCB;&#x5EB8;&#x7F6E;&#x7591;&#x7684;&#xFF0C;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x662F;&#x5BFC;&#x822A;&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x529F;&#x80FD;&#x4E4B;&#x4E00;&#xFF0C;&#x5728;ROS&#x7684;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;navigation&#x4E2D;&#x63D0;&#x4F9B;&#x4E86; move_base &#x529F;&#x80FD;&#x5305;&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x6B64;&#x529F;&#x80FD;&#x3002;</p>
+<h4 id="1movebase&#x7B80;&#x4ECB;">1.move_base&#x7B80;&#x4ECB;</h4>
+<p>move_base &#x529F;&#x80FD;&#x5305;&#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x4E8E;&#x52A8;&#x4F5C;(action)&#x7684;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x5B9E;&#x73B0;&#xFF0C;move_base &#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x76EE;&#x6807;&#x70B9;&#xFF0C;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x5E95;&#x76D8;&#x8FD0;&#x52A8;&#x81F3;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x8FD0;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x8FDE;&#x7EED;&#x53CD;&#x9988;&#x673A;&#x5668;&#x4EBA;&#x81EA;&#x8EAB;&#x7684;&#x59FF;&#x6001;&#x4E0E;&#x76EE;&#x6807;&#x70B9;&#x7684;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x524D;&#x6240;&#x8FF0;(7.1)move_base&#x4E3B;&#x8981;&#x7531;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4E0E;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x7EC4;&#x6210;&#x3002;</p>
+<p>move_base&#x5DF2;&#x7ECF;&#x88AB;&#x96C6;&#x6210;&#x5230;&#x4E86;navigation&#x5305;&#xFF0C;navigation&#x5B89;&#x88C5;&#x524D;&#x9762;&#x4E5F;&#x6709;&#x4ECB;&#x7ECD;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;:</p>
+<blockquote>
+<pre><code>sudo apt install ros-&lt;ROS&#x7248;&#x672C;&gt;-navigation
+</code></pre></blockquote>
+<h4 id="2movebase&#x8282;&#x70B9;&#x8BF4;&#x660E;">2.move_base&#x8282;&#x70B9;&#x8BF4;&#x660E;</h4>
+<p>move_base&#x529F;&#x80FD;&#x5305;&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x8282;&#x70B9;&#x662F;:move_base&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8C03;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x4E86;&#x89E3;&#x8BE5;&#x8282;&#x70B9;action&#x3001;&#x8BA2;&#x9605;&#x7684;&#x8BDD;&#x9898;&#x3001;&#x53D1;&#x5E03;&#x7684;&#x8BDD;&#x9898;&#x3001;&#x670D;&#x52A1;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x3002;</p>
+<h5 id="21&#x52A8;&#x4F5C;">2.1&#x52A8;&#x4F5C;</h5>
+<p><strong>&#x52A8;&#x4F5C;&#x8BA2;&#x9605;</strong></p>
+<p>move_base/goal(move_base_msgs/MoveBaseActionGoal)</p>
+<ul>
+<li>move_base &#x7684;&#x8FD0;&#x52A8;&#x89C4;&#x5212;&#x76EE;&#x6807;&#x3002;</li>
+</ul>
+<p>move_base/cancel(actionlib_msgs/GoalID)</p>
+<ul>
+<li>&#x53D6;&#x6D88;&#x76EE;&#x6807;&#x3002;</li>
+</ul>
+<p><strong>&#x52A8;&#x4F5C;&#x53D1;&#x5E03;</strong></p>
+<p>move_base/feedback(move_base_msgs/MoveBaseActionFeedback)</p>
+<ul>
+<li>&#x8FDE;&#x7EED;&#x53CD;&#x9988;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x542B;&#x673A;&#x5668;&#x4EBA;&#x5E95;&#x76D8;&#x5750;&#x6807;&#x3002;</li>
+</ul>
+<p>move_base/status(actionlib_msgs/GoalStatusArray)</p>
+<ul>
+<li>&#x53D1;&#x9001;&#x5230;move_base&#x7684;&#x76EE;&#x6807;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+<p>move_base/result(move_base_msgs/MoveBaseActionResult)</p>
+<ul>
+<li>&#x64CD;&#x4F5C;&#x7ED3;&#x679C;(&#x6B64;&#x5904;&#x4E3A;&#x7A7A;)&#x3002;</li>
+</ul>
+<h5 id="22&#x8BA2;&#x9605;&#x7684;topic">2.2&#x8BA2;&#x9605;&#x7684;Topic</h5>
+<p>move_base_simple/goal(geometry_msgs/PoseStamped)</p>
+<ul>
+<li>&#x8FD0;&#x52A8;&#x89C4;&#x5212;&#x76EE;&#x6807;(&#x4E0E;action&#x76F8;&#x6BD4;&#xFF0C;&#x6CA1;&#x6709;&#x8FDE;&#x7EED;&#x53CD;&#x9988;&#xFF0C;&#x65E0;&#x6CD5;&#x8FFD;&#x8E2A;&#x673A;&#x5668;&#x4EBA;&#x6267;&#x884C;&#x72B6;&#x6001;)&#x3002;</li>
+</ul>
+<h5 id="23&#x53D1;&#x5E03;&#x7684;topic">2.3&#x53D1;&#x5E03;&#x7684;Topic</h5>
+<p>cmd_vel(geometry_msgs/Twist)</p>
+<ul>
+<li>&#x8F93;&#x51FA;&#x5230;&#x673A;&#x5668;&#x4EBA;&#x5E95;&#x76D8;&#x7684;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x6D88;&#x606F;&#x3002;</li>
+</ul>
+<h5 id="24&#x670D;&#x52A1;">2.4&#x670D;&#x52A1;</h5>
+<p>~make_plan(nav_msgs/GetPlan)</p>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x8BE5;&#x670D;&#x52A1;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x7ED9;&#x5B9A;&#x76EE;&#x6807;&#x7684;&#x89C4;&#x5212;&#x8DEF;&#x5F84;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x6267;&#x884C;&#x8BE5;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x3002;</li>
+</ul>
+<p>~clear_unknown_space(std_srvs/Empty)</p>
+<ul>
+<li>&#x5141;&#x8BB8;&#x7528;&#x6237;&#x76F4;&#x63A5;&#x6E05;&#x9664;&#x673A;&#x5668;&#x4EBA;&#x5468;&#x56F4;&#x7684;&#x672A;&#x77E5;&#x7A7A;&#x95F4;&#x3002;</li>
+</ul>
+<p>~clear_costmaps(std_srvs/Empty)</p>
+<ul>
+<li>&#x5141;&#x8BB8;&#x6E05;&#x9664;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x4E2D;&#x7684;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x673A;&#x5668;&#x4EBA;&#x4E0E;&#x969C;&#x788D;&#x7269;&#x78B0;&#x649E;&#xFF0C;&#x8BF7;&#x614E;&#x7528;&#x3002;</li>
+</ul>
+<h5 id="25&#x53C2;&#x6570;">2.5&#x53C2;&#x6570;</h5>
+<p>&#x8BF7;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#x3002;</p>
+<h4 id="3movebase&#x4E0E;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;">3.move_base&#x4E0E;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;</h4>
+<h5 id="31&#x6982;&#x5FF5;">3.1&#x6982;&#x5FF5;</h5>
+<p>&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;(&#x5C24;&#x5176;&#x662F;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x6A21;&#x5757;)&#x662F;&#x4F9D;&#x8D56;&#x4E8E;&#x5730;&#x56FE;&#x7684;&#xFF0C;&#x5730;&#x56FE;&#x5728;SLAM&#x65F6;&#x5DF2;&#x7ECF;&#x6709;&#x6240;&#x4ECB;&#x7ECD;&#x4E86;&#xFF0C;ROS&#x4E2D;&#x7684;&#x5730;&#x56FE;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#xFF0C;&#x8FD9;&#x5F20;&#x56FE;&#x7247;&#x6709;&#x5BBD;&#x5EA6;&#x3001;&#x9AD8;&#x5EA6;&#x3001;&#x5206;&#x8FA8;&#x7387;&#x7B49;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x5728;&#x56FE;&#x7247;&#x4E2D;&#x4F7F;&#x7528;&#x7070;&#x5EA6;&#x503C;&#x6765;&#x8868;&#x793A;&#x969C;&#x788D;&#x7269;&#x5B58;&#x5728;&#x7684;&#x6982;&#x7387;&#x3002;&#x4E0D;&#x8FC7;SLAM&#x6784;&#x5EFA;&#x7684;&#x5730;&#x56FE;&#x5728;&#x5BFC;&#x822A;&#x4E2D;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#xFF1A;</p>
+<ol>
+<li>SLAM&#x6784;&#x5EFA;&#x7684;&#x5730;&#x56FE;&#x662F;&#x9759;&#x6001;&#x5730;&#x56FE;&#xFF0C;&#x800C;&#x5BFC;&#x822A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x969C;&#x788D;&#x7269;&#x4FE1;&#x606F;&#x662F;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x53EF;&#x80FD;&#x969C;&#x788D;&#x7269;&#x88AB;&#x79FB;&#x8D70;&#x4E86;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x6DFB;&#x52A0;&#x4E86;&#x65B0;&#x7684;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x5BFC;&#x822A;&#x4E2D;&#x9700;&#x8981;&#x65F6;&#x65F6;&#x7684;&#x83B7;&#x53D6;&#x969C;&#x788D;&#x7269;&#x4FE1;&#x606F;&#xFF1B;</li>
+<li>&#x5728;&#x9760;&#x8FD1;&#x969C;&#x788D;&#x7269;&#x8FB9;&#x7F18;&#x65F6;&#xFF0C;&#x867D;&#x7136;&#x6B64;&#x5904;&#x662F;&#x7A7A;&#x95F2;&#x533A;&#x57DF;&#xFF0C;&#x4F46;&#x662F;&#x673A;&#x5668;&#x4EBA;&#x5728;&#x8FDB;&#x5165;&#x8BE5;&#x533A;&#x57DF;&#x540E;&#x53EF;&#x80FD;&#x7531;&#x4E8E;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x56E0;&#x7D20;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x60EF;&#x6027;&#x3001;&#x6216;&#x8005;&#x4E0D;&#x89C4;&#x5219;&#x5F62;&#x4F53;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x8F6C;&#x5F2F;&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x4E0E;&#x969C;&#x788D;&#x7269;&#x4EA7;&#x751F;&#x78B0;&#x649E;&#xFF0C;&#x5B89;&#x5168;&#x8D77;&#x89C1;&#xFF0C;&#x6700;&#x597D;&#x5728;&#x5730;&#x56FE;&#x7684;&#x969C;&#x788D;&#x7269;&#x8FB9;&#x7F18;&#x8BBE;&#x7F6E;&#x8B66;&#x6212;&#x533A;&#xFF0C;&#x5C3D;&#x91CF;&#x7981;&#x6B62;&#x673A;&#x5668;&#x4EBA;&#x8FDB;&#x5165;...</li>
+</ol>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x9759;&#x6001;&#x5730;&#x56FE;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x5E94;&#x7528;&#x4E8E;&#x5BFC;&#x822A;&#xFF0C;&#x5176;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x8F85;&#x52A9;&#x4FE1;&#x606F;&#x7684;&#x5730;&#x56FE;&#xFF0C;&#x6BD4;&#x5982;&#x65F6;&#x65F6;&#x83B7;&#x53D6;&#x7684;&#x969C;&#x788D;&#x7269;&#x6570;&#x636E;&#xFF0C;&#x57FA;&#x4E8E;&#x9759;&#x6001;&#x5730;&#x56FE;&#x6DFB;&#x52A0;&#x7684;&#x81A8;&#x80C0;&#x533A;&#x7B49;&#x6570;&#x636E;&#x3002;</p>
+<h5 id="32&#x7EC4;&#x6210;">3.2&#x7EC4;&#x6210;</h5>
+<p>&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x6709;&#x4E24;&#x5F20;:global_costmap(&#x5168;&#x5C40;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;) &#x548C; local_costmap(&#x672C;&#x5730;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;)&#xFF0C;&#x524D;&#x8005;&#x7528;&#x4E8E;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#xFF0C;&#x540E;&#x8005;&#x7528;&#x4E8E;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x3002;</p>
+<p>&#x4E24;&#x5F20;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x90FD;&#x53EF;&#x4EE5;&#x591A;&#x5C42;&#x53E0;&#x52A0;,&#x4E00;&#x822C;&#x6709;&#x4EE5;&#x4E0B;&#x5C42;&#x7EA7;:</p>
+<ul>
+<li>Static Map Layer&#xFF1A;&#x9759;&#x6001;&#x5730;&#x56FE;&#x5C42;&#xFF0C;SLAM&#x6784;&#x5EFA;&#x7684;&#x9759;&#x6001;&#x5730;&#x56FE;&#x3002;</li>
+<li>Obstacle Map Layer&#xFF1A;&#x969C;&#x788D;&#x5730;&#x56FE;&#x5C42;&#xFF0C;&#x4F20;&#x611F;&#x5668;&#x611F;&#x77E5;&#x7684;&#x969C;&#x788D;&#x7269;&#x4FE1;&#x606F;&#x3002;</li>
+<li>Inflation Layer&#xFF1A;&#x81A8;&#x80C0;&#x5C42;&#xFF0C;&#x5728;&#x4EE5;&#x4E0A;&#x4E24;&#x5C42;&#x5730;&#x56FE;&#x4E0A;&#x8FDB;&#x884C;&#x81A8;&#x80C0;&#xFF08;&#x5411;&#x5916;&#x6269;&#x5F20;&#xFF09;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x5916;&#x58F3;&#x4F1A;&#x649E;&#x4E0A;&#x969C;&#x788D;&#x7269;&#x3002;</li>
+<li>Other Layers&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;costmap&#x3002;</li>
+</ul>
+<p>&#x591A;&#x4E2A;layer&#x53EF;&#x4EE5;&#x6309;&#x9700;&#x81EA;&#x7531;&#x642D;&#x914D;&#x3002;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/&#x5BFC;&#x822A;&#x9759;&#x6001;&#x6548;&#x679C;.PNG" alt="img"></p>
+<h5 id="33&#x78B0;&#x649E;&#x7B97;&#x6CD5;">3.3&#x78B0;&#x649E;&#x7B97;&#x6CD5;</h5>
+<p>&#x5728;ROS&#x4E2D;&#xFF0C;&#x5982;&#x4F55;&#x8BA1;&#x7B97;&#x4EE3;&#x4EF7;&#x503C;&#x5462;&#xFF1F;&#x8BF7;&#x770B;&#x4E0B;&#x56FE;:</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111932096.jpeg" alt="img"></p>
+<p>&#x4E0A;&#x56FE;&#x4E2D;&#xFF0C;&#x6A2A;&#x8F74;&#x662F;&#x8DDD;&#x79BB;&#x673A;&#x5668;&#x4EBA;&#x4E2D;&#x5FC3;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x7EB5;&#x8F74;&#x662F;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x4E2D;&#x6805;&#x683C;&#x7684;&#x7070;&#x5EA6;&#x503C;&#x3002;</p>
+<ul>
+<li>&#x81F4;&#x547D;&#x969C;&#x788D;:&#x6805;&#x683C;&#x503C;&#x4E3A;254&#xFF0C;&#x6B64;&#x65F6;&#x969C;&#x788D;&#x7269;&#x4E0E;&#x673A;&#x5668;&#x4EBA;&#x4E2D;&#x5FC3;&#x91CD;&#x53E0;&#xFF0C;&#x5FC5;&#x7136;&#x53D1;&#x751F;&#x78B0;&#x649E;&#xFF1B;</li>
+<li>&#x5185;&#x5207;&#x969C;&#x788D;:&#x6805;&#x683C;&#x503C;&#x4E3A;253&#xFF0C;&#x6B64;&#x65F6;&#x969C;&#x788D;&#x7269;&#x5904;&#x4E8E;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x5185;&#x5207;&#x5706;&#x5185;&#xFF0C;&#x5FC5;&#x7136;&#x53D1;&#x751F;&#x78B0;&#x649E;&#xFF1B;</li>
+<li>&#x5916;&#x5207;&#x969C;&#x788D;:&#x6805;&#x683C;&#x503C;&#x4E3A;[128,252]&#xFF0C;&#x6B64;&#x65F6;&#x969C;&#x788D;&#x7269;&#x5904;&#x4E8E;&#x5176;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x5916;&#x5207;&#x5706;&#x5185;&#xFF0C;&#x5904;&#x4E8E;&#x78B0;&#x649E;&#x4E34;&#x754C;&#xFF0C;&#x4E0D;&#x4E00;&#x5B9A;&#x53D1;&#x751F;&#x78B0;&#x649E;&#xFF1B;</li>
+<li>&#x975E;&#x81EA;&#x7531;&#x7A7A;&#x95F4;:&#x6805;&#x683C;&#x503C;&#x4E3A;(0,127]&#xFF0C;&#x6B64;&#x65F6;&#x673A;&#x5668;&#x4EBA;&#x5904;&#x4E8E;&#x969C;&#x788D;&#x7269;&#x9644;&#x8FD1;&#xFF0C;&#x5C5E;&#x4E8E;&#x5371;&#x9669;&#x8B66;&#x6212;&#x533A;&#xFF0C;&#x8FDB;&#x5165;&#x6B64;&#x533A;&#x57DF;&#xFF0C;&#x5C06;&#x6765;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x78B0;&#x649E;&#xFF1B;</li>
+<li>&#x81EA;&#x7531;&#x533A;&#x57DF;:&#x6805;&#x683C;&#x503C;&#x4E3A;0&#xFF0C;&#x6B64;&#x5904;&#x673A;&#x5668;&#x4EBA;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x901A;&#x8FC7;&#xFF1B;</li>
+<li>&#x672A;&#x77E5;&#x533A;&#x57DF;:&#x6805;&#x683C;&#x503C;&#x4E3A;255&#xFF0C;&#x8FD8;&#x6CA1;&#x63A2;&#x660E;&#x662F;&#x5426;&#x6709;&#x969C;&#x788D;&#x7269;&#x3002;</li>
+</ul>
+<p>&#x81A8;&#x80C0;&#x7A7A;&#x95F4;&#x7684;&#x8BBE;&#x7F6E;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x975E;&#x81EA;&#x7531;&#x7A7A;&#x95F4;&#x3002;</p>
+<h4 id="4movebase&#x4F7F;&#x7528;">4.move_base&#x4F7F;&#x7528;</h4>
+<p>&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x7B97;&#x6CD5;&#x5728;move_base&#x529F;&#x80FD;&#x5305;&#x7684;move_base&#x8282;&#x70B9;&#x4E2D;&#x5DF2;&#x7ECF;&#x5C01;&#x88C5;&#x5B8C;&#x6BD5;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x4E0D;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x7B97;&#x6CD5;&#x867D;&#x7136;&#x5DF2;&#x7ECF;&#x5C01;&#x88C5;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8BE5;&#x529F;&#x80FD;&#x5305;&#x9762;&#x5411;&#x7684;&#x662F;&#x5404;&#x79CD;&#x7C7B;&#x578B;&#x652F;&#x6301;ROS&#x7684;&#x673A;&#x5668;&#x4EBA;&#xFF0C;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x673A;&#x5668;&#x4EBA;&#x53EF;&#x80FD;&#x5927;&#x5C0F;&#x5C3A;&#x5BF8;&#x4E0D;&#x540C;&#xFF0C;&#x4F20;&#x611F;&#x5668;&#x4E0D;&#x540C;&#xFF0C;&#x901F;&#x5EA6;&#x4E0D;&#x540C;&#xFF0C;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E0D;&#x540C;....&#x6700;&#x540E;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x7ED3;&#x679C;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x8C03;&#x7528;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x673A;&#x5668;&#x4EBA;&#x53C2;&#x6570;&#x3002;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;:</p>
+<ol>
+<li>&#x5148;&#x7F16;&#x5199;launch&#x6587;&#x4EF6;&#x6A21;&#x677F;</li>
+<li>&#x7F16;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>&#x96C6;&#x6210;&#x5BFC;&#x822A;&#x76F8;&#x5173;&#x7684;launch&#x6587;&#x4EF6;</li>
+<li>&#x6D4B;&#x8BD5;</li>
+</ol>
+<h5 id="41launch&#x6587;&#x4EF6;">4.1launch&#x6587;&#x4EF6;</h5>
+<p>&#x5173;&#x4E8E;move_base&#x8282;&#x70B9;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x6A21;&#x677F;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;move_base&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;move_base&quot;</span> <span class="hljs-attr">respawn</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;move_base&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span> <span class="hljs-attr">clear_params</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find &#x529F;&#x80FD;&#x5305;)/param/costmap_common_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> <span class="hljs-attr">ns</span>=<span class="hljs-string">&quot;global_costmap&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find &#x529F;&#x80FD;&#x5305;)/param/costmap_common_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> <span class="hljs-attr">ns</span>=<span class="hljs-string">&quot;local_costmap&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find &#x529F;&#x80FD;&#x5305;)/param/local_costmap_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find &#x529F;&#x80FD;&#x5305;)/param/global_costmap_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find &#x529F;&#x80FD;&#x5305;)/param/base_local_planner_params.yaml&quot;</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<p>launch&#x6587;&#x4EF6;&#x89E3;&#x91CA;:</p>
+<p>&#x542F;&#x52A8;&#x4E86; move_base &#x529F;&#x80FD;&#x5305;&#x4E0B;&#x7684; move_base &#x8282;&#x70B9;&#xFF0C;respawn &#x4E3A; false&#xFF0C;&#x610F;&#x5473;&#x7740;&#x8BE5;&#x8282;&#x70B9;&#x5173;&#x95ED;&#x540E;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x91CD;&#x542F;&#xFF1B;clear_params &#x4E3A; true&#xFF0C;&#x610F;&#x5473;&#x7740;&#x6BCF;&#x6B21;&#x542F;&#x52A8;&#x8BE5;&#x8282;&#x70B9;&#x90FD;&#x8981;&#x6E05;&#x7A7A;&#x79C1;&#x6709;&#x53C2;&#x6570;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x8F7D;&#x5165;&#xFF1B;&#x901A;&#x8FC7; rosparam &#x4F1A;&#x8F7D;&#x5165;&#x82E5;&#x5E72; yaml &#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E9B;yaml&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x4EE5;&#x53CA;&#x4F5C;&#x7528;&#x8BE6;&#x89C1;&#x4E0B;&#x4E00;&#x5C0F;&#x8282;&#x5185;&#x5BB9;&#x3002;</p>
+<h5 id="42&#x914D;&#x7F6E;&#x6587;&#x4EF6;">4.2&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h5>
+<p>&#x5173;&#x4E8E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x5199;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E00;&#x4E9B;&#x6210;&#x719F;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x5B9E;&#x73B0;&#xFF0C;&#x6BD4;&#x5982;: turtlebot3&#xFF0C;github&#x94FE;&#x63A5;&#xFF1A;<a href="https://github.com/ROBOTIS-GIT/turtlebot3/tree/master/turtlebot3_navigation/param&#xFF0C;&#x5148;&#x4E0B;&#x8F7D;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5907;&#x7528;&#x3002;" target="_blank">https://github.com/ROBOTIS-GIT/turtlebot3/tree/master/turtlebot3_navigation/param&#xFF0C;&#x5148;&#x4E0B;&#x8F7D;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5907;&#x7528;&#x3002;</a></p>
+<p>&#x5728;&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x65B0;&#x5EFA; param &#x76EE;&#x5F55;&#xFF0C;&#x590D;&#x5236;&#x4E0B;&#x8F7D;&#x7684;&#x6587;&#x4EF6;&#x5230;&#x6B64;&#x76EE;&#x5F55;: costmap_common_params_burger.yaml&#x3001;local_costmap_params.yaml&#x3001;global_costmap_params.yaml&#x3001;base_local_planner_params.yaml&#xFF0C;&#x5E76;&#x5C06;costmap_common_params_burger.yaml &#x91CD;&#x547D;&#x540D;&#x4E3A;:costmap_common_params.yaml&#x3002;</p>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x4EE5;&#x53CA;&#x89E3;&#x91CA;:</p>
+<h6 id="421costmapcommonparamsyaml">4.2.1costmap_common_params.yaml</h6>
+<p>&#x8BE5;&#x6587;&#x4EF6;&#x662F;move_base &#x5728;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4E0E;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x901A;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x5305;&#x62EC;:&#x673A;&#x5668;&#x4EBA;&#x7684;&#x5C3A;&#x5BF8;&#x3001;&#x8DDD;&#x79BB;&#x969C;&#x788D;&#x7269;&#x7684;&#x5B89;&#x5168;&#x8DDD;&#x79BB;&#x3001;&#x4F20;&#x611F;&#x5668;&#x4FE1;&#x606F;&#x7B49;&#x3002;&#x914D;&#x7F6E;&#x53C2;&#x8003;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-yaml"><span class="hljs-comment">#&#x673A;&#x5668;&#x4EBA;&#x51E0;&#x4F55;&#x53C2;&#xFF0C;&#x5982;&#x679C;&#x673A;&#x5668;&#x4EBA;&#x662F;&#x5706;&#x5F62;&#xFF0C;&#x8BBE;&#x7F6E; robot_radius,&#x5982;&#x679C;&#x662F;&#x5176;&#x4ED6;&#x5F62;&#x72B6;&#x8BBE;&#x7F6E; footprint</span>
+<span class="hljs-attr">robot_radius:</span> <span class="hljs-number">0.12</span> <span class="hljs-comment">#&#x5706;&#x5F62;</span>
+<span class="hljs-comment"># footprint: [[-0.12, -0.12], [-0.12, 0.12], [0.12, 0.12], [0.12, -0.12]] #&#x5176;&#x4ED6;&#x5F62;&#x72B6;</span>
+
+<span class="hljs-attr">obstacle_range:</span> <span class="hljs-number">3.0</span> <span class="hljs-comment"># &#x7528;&#x4E8E;&#x969C;&#x788D;&#x7269;&#x63A2;&#x6D4B;&#xFF0C;&#x6BD4;&#x5982;: &#x503C;&#x4E3A; 3.0&#xFF0C;&#x610F;&#x5473;&#x7740;&#x68C0;&#x6D4B;&#x5230;&#x8DDD;&#x79BB;&#x5C0F;&#x4E8E; 3 &#x7C73;&#x7684;&#x969C;&#x788D;&#x7269;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x5F15;&#x5165;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;</span>
+<span class="hljs-attr">raytrace_range:</span> <span class="hljs-number">3.5</span> <span class="hljs-comment"># &#x7528;&#x4E8E;&#x6E05;&#x9664;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x503C;&#x4E3A; 3.5&#xFF0C;&#x610F;&#x5473;&#x7740;&#x6E05;&#x9664;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x4E2D; 3.5 &#x7C73;&#x4EE5;&#x5916;&#x7684;&#x969C;&#x788D;&#x7269;</span>
+
+
+<span class="hljs-comment">#&#x81A8;&#x80C0;&#x534A;&#x5F84;&#xFF0C;&#x6269;&#x5C55;&#x5728;&#x78B0;&#x649E;&#x533A;&#x57DF;&#x4EE5;&#x5916;&#x7684;&#x4EE3;&#x4EF7;&#x533A;&#x57DF;&#xFF0C;&#x4F7F;&#x5F97;&#x673A;&#x5668;&#x4EBA;&#x89C4;&#x5212;&#x8DEF;&#x5F84;&#x907F;&#x5F00;&#x969C;&#x788D;&#x7269;</span>
+<span class="hljs-attr">inflation_radius:</span> <span class="hljs-number">0.2</span>
+<span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x6BD4;&#x4F8B;&#x7CFB;&#x6570;&#xFF0C;&#x8D8A;&#x5927;&#x5219;&#x4EE3;&#x4EF7;&#x503C;&#x8D8A;&#x5C0F;</span>
+<span class="hljs-attr">cost_scaling_factor:</span> <span class="hljs-number">3.0</span>
+
+<span class="hljs-comment">#&#x5730;&#x56FE;&#x7C7B;&#x578B;</span>
+<span class="hljs-attr">map_type:</span> costmap
+<span class="hljs-comment">#&#x5BFC;&#x822A;&#x5305;&#x6240;&#x9700;&#x8981;&#x7684;&#x4F20;&#x611F;&#x5668;</span>
+<span class="hljs-attr">observation_sources:</span> scan
+<span class="hljs-comment">#&#x5BF9;&#x4F20;&#x611F;&#x5668;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x548C;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;&#x8FD9;&#x4E2A;&#x4E5F;&#x4F1A;&#x7528;&#x4E8E;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x6DFB;&#x52A0;&#x548C;&#x6E05;&#x9664;&#x969C;&#x788D;&#x7269;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x4F20;&#x611F;&#x5668;&#x7528;&#x4E8E;&#x5728;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x6DFB;&#x52A0;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x518D;&#x6DFB;&#x52A0;kinect&#x7528;&#x4E8E;&#x5BFC;&#x822A;&#x548C;&#x6E05;&#x9664;&#x969C;&#x788D;&#x7269;&#x3002;</span>
+<span class="hljs-attr">scan:</span> {sensor_frame: laser, data_type: LaserScan, topic: scan, marking: <span class="hljs-literal">true</span>, clearing: <span class="hljs-literal">true</span>}
+</code></pre>
+<h6 id=""> </h6>
+<h6 id="422globalcostmapparamsyaml">4.2.2global_costmap_params.yaml</h6>
+<p>&#x8BE5;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x5168;&#x5C40;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">global_costmap:</span>
+<span class="hljs-attr">  global_frame:</span> map <span class="hljs-comment">#&#x5730;&#x56FE;&#x5750;&#x6807;&#x7CFB;</span>
+<span class="hljs-attr">  robot_base_frame:</span> base_footprint <span class="hljs-comment">#&#x673A;&#x5668;&#x4EBA;&#x5750;&#x6807;&#x7CFB;</span>
+  <span class="hljs-comment"># &#x4EE5;&#x6B64;&#x5B9E;&#x73B0;&#x5750;&#x6807;&#x53D8;&#x6362;</span>
+
+<span class="hljs-attr">  update_frequency:</span> <span class="hljs-number">1.0</span> <span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x66F4;&#x65B0;&#x9891;&#x7387;</span>
+<span class="hljs-attr">  publish_frequency:</span> <span class="hljs-number">1.0</span> <span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x7684;&#x53D1;&#x5E03;&#x9891;&#x7387;</span>
+<span class="hljs-attr">  transform_tolerance:</span> <span class="hljs-number">0.5</span> <span class="hljs-comment">#&#x7B49;&#x5F85;&#x5750;&#x6807;&#x53D8;&#x6362;&#x53D1;&#x5E03;&#x4FE1;&#x606F;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</span>
+
+<span class="hljs-attr">  static_map:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># &#x662F;&#x5426;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5730;&#x56FE;&#x6216;&#x8005;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5668;&#x6765;&#x521D;&#x59CB;&#x5316;&#x5168;&#x5C40;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x5730;&#x56FE;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;false.</span>
+</code></pre>
+<h6 id="423localcostmapparamsyaml">4.2.3local_costmap_params.yaml</h6>
+<p>&#x8BE5;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x5C40;&#x90E8;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">local_costmap:</span>
+<span class="hljs-attr">  global_frame:</span> odom <span class="hljs-comment">#&#x91CC;&#x7A0B;&#x8BA1;&#x5750;&#x6807;&#x7CFB;</span>
+<span class="hljs-attr">  robot_base_frame:</span> base_footprint <span class="hljs-comment">#&#x673A;&#x5668;&#x4EBA;&#x5750;&#x6807;&#x7CFB;</span>
+
+<span class="hljs-attr">  update_frequency:</span> <span class="hljs-number">10.0</span> <span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x66F4;&#x65B0;&#x9891;&#x7387;</span>
+<span class="hljs-attr">  publish_frequency:</span> <span class="hljs-number">10.0</span> <span class="hljs-comment">#&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x7684;&#x53D1;&#x5E03;&#x9891;&#x7387;</span>
+<span class="hljs-attr">  transform_tolerance:</span> <span class="hljs-number">0.5</span> <span class="hljs-comment">#&#x7B49;&#x5F85;&#x5750;&#x6807;&#x53D8;&#x6362;&#x53D1;&#x5E03;&#x4FE1;&#x606F;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</span>
+
+<span class="hljs-attr">  static_map:</span> <span class="hljs-literal">false</span>  <span class="hljs-comment">#&#x4E0D;&#x9700;&#x8981;&#x9759;&#x6001;&#x5730;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x5347;&#x5BFC;&#x822A;&#x6548;&#x679C;</span>
+<span class="hljs-attr">  rolling_window:</span> <span class="hljs-literal">true</span> <span class="hljs-comment">#&#x662F;&#x5426;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x7A97;&#x53E3;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;false&#xFF0C;&#x5728;&#x9759;&#x6001;&#x7684;&#x5168;&#x5C40;&#x5730;&#x56FE;&#x4E2D;&#xFF0C;&#x5730;&#x56FE;&#x4E0D;&#x4F1A;&#x53D8;&#x5316;</span>
+<span class="hljs-attr">  width:</span> <span class="hljs-number">3</span> <span class="hljs-comment"># &#x5C40;&#x90E8;&#x5730;&#x56FE;&#x5BBD;&#x5EA6; &#x5355;&#x4F4D;&#x662F; m</span>
+<span class="hljs-attr">  height:</span> <span class="hljs-number">3</span> <span class="hljs-comment"># &#x5C40;&#x90E8;&#x5730;&#x56FE;&#x9AD8;&#x5EA6; &#x5355;&#x4F4D;&#x662F; m</span>
+<span class="hljs-attr">  resolution:</span> <span class="hljs-number">0.05</span> <span class="hljs-comment"># &#x5C40;&#x90E8;&#x5730;&#x56FE;&#x5206;&#x8FA8;&#x7387; &#x5355;&#x4F4D;&#x662F; m&#xFF0C;&#x4E00;&#x822C;&#x4E0E;&#x9759;&#x6001;&#x5730;&#x56FE;&#x5206;&#x8FA8;&#x7387;&#x4FDD;&#x6301;&#x4E00;&#x81F4;</span>
+</code></pre>
+<h6 id="424baselocalplannerparams">4.2.4base_local_planner_params</h6>
+<p>&#x57FA;&#x672C;&#x7684;&#x5C40;&#x90E8;&#x89C4;&#x5212;&#x5668;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#xFF0C;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BBE;&#x5B9A;&#x4E86;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x6700;&#x5927;&#x548C;&#x6700;&#x5C0F;&#x901F;&#x5EA6;&#x9650;&#x5236;&#x503C;&#xFF0C;&#x4E5F;&#x8BBE;&#x5B9A;&#x4E86;&#x52A0;&#x901F;&#x5EA6;&#x7684;&#x9608;&#x503C;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">TrajectoryPlannerROS:</span>
+
+<span class="hljs-comment"># Robot Configuration Parameters</span>
+<span class="hljs-attr">  max_vel_x:</span> <span class="hljs-number">0.5</span> <span class="hljs-comment"># X &#x65B9;&#x5411;&#x6700;&#x5927;&#x901F;&#x5EA6;</span>
+<span class="hljs-attr">  min_vel_x:</span> <span class="hljs-number">0.1</span> <span class="hljs-comment"># X &#x65B9;&#x5411;&#x6700;&#x5C0F;&#x901F;&#x901F;</span>
+
+<span class="hljs-attr">  max_vel_theta:</span>  <span class="hljs-number">1.0</span> <span class="hljs-comment"># </span>
+<span class="hljs-attr">  min_vel_theta:</span> <span class="hljs-bullet">-1.0</span>
+<span class="hljs-attr">  min_in_place_vel_theta:</span> <span class="hljs-number">1.0</span>
+
+<span class="hljs-attr">  acc_lim_x:</span> <span class="hljs-number">1.0</span> <span class="hljs-comment"># X &#x52A0;&#x901F;&#x9650;&#x5236;</span>
+<span class="hljs-attr">  acc_lim_y:</span> <span class="hljs-number">0.0</span> <span class="hljs-comment"># Y &#x52A0;&#x901F;&#x9650;&#x5236;</span>
+<span class="hljs-attr">  acc_lim_theta:</span> <span class="hljs-number">0.6</span> <span class="hljs-comment"># &#x89D2;&#x901F;&#x5EA6;&#x52A0;&#x901F;&#x9650;&#x5236;</span>
+
+<span class="hljs-comment"># Goal Tolerance Parameters&#xFF0C;&#x76EE;&#x6807;&#x516C;&#x5DEE;</span>
+<span class="hljs-attr">  xy_goal_tolerance:</span> <span class="hljs-number">0.10</span>
+<span class="hljs-attr">  yaw_goal_tolerance:</span> <span class="hljs-number">0.05</span>
+
+<span class="hljs-comment"># Differential-drive robot configuration</span>
+<span class="hljs-comment"># &#x662F;&#x5426;&#x662F;&#x5168;&#x5411;&#x79FB;&#x52A8;&#x673A;&#x5668;&#x4EBA;</span>
+<span class="hljs-attr">  holonomic_robot:</span> <span class="hljs-literal">false</span>
+
+<span class="hljs-comment"># Forward Simulation Parameters&#xFF0C;&#x524D;&#x8FDB;&#x6A21;&#x62DF;&#x53C2;&#x6570;</span>
+<span class="hljs-attr">  sim_time:</span> <span class="hljs-number">0.8</span>
+<span class="hljs-attr">  vx_samples:</span> <span class="hljs-number">18</span>
+<span class="hljs-attr">  vtheta_samples:</span> <span class="hljs-number">20</span>
+<span class="hljs-attr">  sim_granularity:</span> <span class="hljs-number">0.05</span>
+</code></pre>
+<h6 id="425&#x53C2;&#x6570;&#x914D;&#x7F6E;&#x6280;&#x5DE7;">4.2.5&#x53C2;&#x6570;&#x914D;&#x7F6E;&#x6280;&#x5DE7;</h6>
+<p>&#x4EE5;&#x4E0A;&#x914D;&#x7F6E;&#x5728;&#x5B9E;&#x64CD;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x673A;&#x5668;&#x4EBA;&#x5728;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x65F6;&#x4E0E;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4E0D;&#x7B26;&#x800C;&#x8FDB;&#x5165;&#x81A8;&#x80C0;&#x533A;&#x57DF;&#x51FA;&#x73B0;&#x5047;&#x6B7B;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x4F55;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x60C5;&#x5F62;&#x5462;&#xFF1F;</p>
+<blockquote>
+<p>&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4E0E;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x867D;&#x7136;&#x8BBE;&#x7F6E;&#x7684;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4E8C;&#x8005;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x548C;&#x907F;&#x969C;&#x7684;&#x804C;&#x80FD;&#x4E0D;&#x540C;&#xFF0C;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x7B56;&#x7565;:</p>
+<ul>
+<li>&#x5168;&#x5C40;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x53EF;&#x4EE5;&#x5C06;&#x81A8;&#x80C0;&#x534A;&#x5F84;&#x548C;&#x969C;&#x788D;&#x7269;&#x7CFB;&#x6570;&#x8BBE;&#x7F6E;&#x7684;&#x504F;&#x5927;&#x4E00;&#x4E9B;&#xFF1B;</li>
+<li>&#x672C;&#x5730;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x53EF;&#x4EE5;&#x5C06;&#x81A8;&#x80C0;&#x534A;&#x5F84;&#x548C;&#x969C;&#x788D;&#x7269;&#x7CFB;&#x6570;&#x8BBE;&#x7F6E;&#x7684;&#x504F;&#x5C0F;&#x4E00;&#x4E9B;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x5728;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x65F6;&#xFF0C;&#x89C4;&#x5212;&#x7684;&#x8DEF;&#x5F84;&#x4F1A;&#x5C3D;&#x91CF;&#x8FDC;&#x79BB;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x800C;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x65F6;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x5373;&#x4FBF;&#x504F;&#x79BB;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x4E5F;&#x4F1A;&#x548C;&#x969C;&#x788D;&#x7269;&#x4E4B;&#x95F4;&#x4FDD;&#x7559;&#x66F4;&#x5927;&#x7684;&#x81EA;&#x7531;&#x7A7A;&#x95F4;&#xFF0C;&#x4ECE;&#x800C;&#x907F;&#x514D;&#x4E86;&#x9677;&#x5165;&#x201C;&#x5047;&#x6B7B;&#x201D;&#x7684;&#x60C5;&#x5F62;&#x3002;</p>
+</blockquote>
+<h5 id="43launch&#x6587;&#x4EF6;&#x96C6;&#x6210;">4.3launch&#x6587;&#x4EF6;&#x96C6;&#x6210;</h5>
+<p>&#x5982;&#x679C;&#x8981;&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#xFF0C;&#x9700;&#x8981;&#x96C6;&#x6210;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x3001;amcl &#x3001;move_base &#x4E0E; Rviz &#x7B49;&#xFF0C;&#x96C6;&#x6210;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8BBE;&#x7F6E;&#x5730;&#x56FE;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;nav.yaml&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;&#x5730;&#x56FE;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x8F7D;&#x8BBE;&#x7F6E;&#x7684;&#x5730;&#x56FE;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;map_server&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;$(find mycar_nav)/map/$(arg map)&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x542F;&#x52A8;AMCL&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find mycar_nav)/launch/amcl.launch&quot;</span> /&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;move_base&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find mycar_nav)/launch/path.launch&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;rviz --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;-d $(find mycar_nav)/rviz/nav.rviz&quot;</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<h5 id="44&#x6D4B;&#x8BD5;">4.4&#x6D4B;&#x8BD5;</h5>
+<p>1.&#x5148;&#x542F;&#x52A8; Gazebo &#x4EFF;&#x771F;&#x73AF;&#x5883;(&#x6B64;&#x8FC7;&#x7A0B;&#x7565;)&#xFF1B;</p>
+<p>2.&#x542F;&#x52A8;&#x5BFC;&#x822A;&#x76F8;&#x5173;&#x7684; launch &#x6587;&#x4EF6;&#xFF1B;</p>
+<p>3.&#x6DFB;&#x52A0;Rviz&#x7EC4;&#x4EF6;(&#x53C2;&#x8003;&#x6F14;&#x793A;&#x7ED3;&#x679C;),&#x53EF;&#x4EE5;&#x5C06;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#xFF0C;&#x540E;&#x671F;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF1B;</p>
+<p>&#x5168;&#x5C40;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x4E0E;&#x672C;&#x5730;&#x4EE3;&#x4EF7;&#x5730;&#x56FE;&#x7EC4;&#x4EF6;&#x914D;&#x7F6E;&#x5982;&#x4E0B;:</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/rviz&#x4EE3;&#x4EF7;&#x5730;&#x56FE;.PNG" alt="img"></p>
+<p>&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x4E0E;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x7EC4;&#x4EF6;&#x914D;&#x7F6E;&#x5982;&#x4E0B;:</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/rviz&#x8DEF;&#x5F84;&#x89C4;&#x5212;.PNG" alt="img"></p>
+<p>4.&#x901A;&#x8FC7;Rviz&#x5DE5;&#x5177;&#x680F;&#x7684; 2D Nav Goal&#x8BBE;&#x7F6E;&#x76EE;&#x7684;&#x5730;&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111932185.gif" alt="img">5.&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x5BFC;&#x822A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x8EB2;&#x907F;&#x969C;&#x788D;&#x7269;&#x3002;</p>
+<hr>
+<p><strong>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</strong></p>
+<ul>
+<li><a href="http://wiki.ros.org/move_base" target="_blank">http://wiki.ros.org/move_base</a></li>
+</ul>
+<h3 id="725-&#x5BFC;&#x822A;&#x4E0E;slam&#x5EFA;&#x56FE;">7.2.5 &#x5BFC;&#x822A;&#x4E0E;SLAM&#x5EFA;&#x56FE;</h3>
+<blockquote>
+<p>&#x573A;&#x666F;:&#x5728; 7.2.1 &#x5BFC;&#x822A;&#x5B9E;&#x73B0;01_SLAM&#x5EFA;&#x56FE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x79FB;&#x52A8;&#x5B9E;&#x73B0;&#x5EFA;&#x56FE;&#x7684;&#xFF0C;&#x800C;&#x540E;&#x7EED;&#x53C8;&#x4ECB;&#x7ECD;&#x4E86;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x81EA;&#x4E3B;&#x79FB;&#x52A8;&#x5B9E;&#x73B0;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4E0D;&#x53EF;&#x4EE5;&#x5C06;&#x4E8C;&#x8005;&#x7ED3;&#x5408;&#xFF0C;&#x5B9E;&#x73B0;&#x673A;&#x5668;&#x4EBA;&#x81EA;&#x4E3B;&#x79FB;&#x52A8;&#x7684;SLAM&#x5EFA;&#x56FE;&#x5462;&#xFF1F;</p>
+</blockquote>
+<p>&#x4E0A;&#x8FF0;&#x9700;&#x6C42;&#x662F;&#x53EF;&#x884C;&#x7684;&#x3002;&#x867D;&#x7136;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x7591;&#x95EE;&#xFF0C;&#x5BFC;&#x822A;&#x65F6;&#x9700;&#x8981;&#x5730;&#x56FE;&#x4FE1;&#x606F;&#xFF0C;&#x4E4B;&#x524D;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#x65F6;&#xFF0C;&#x662F;&#x901A;&#x8FC7; map_server &#x5305;&#x7684; map_server &#x8282;&#x70B9;&#x6765;&#x53D1;&#x5E03;&#x5730;&#x56FE;&#x4FE1;&#x606F;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5148;&#x901A;&#x8FC7;SLAM&#x5EFA;&#x56FE;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x4F55;&#x53D1;&#x5E03;&#x5730;&#x56FE;&#x4FE1;&#x606F;&#x5462;&#xFF1F;SLAM&#x5EFA;&#x56FE;&#x8FC7;&#x7A0B;&#x4E2D;&#x672C;&#x8EAB;&#x5C31;&#x4F1A;&#x65F6;&#x65F6;&#x53D1;&#x5E03;&#x5730;&#x56FE;&#x4FE1;&#x606F;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x9700;&#x518D;&#x4F7F;&#x7528;map_server&#xFF0C;SLAM&#x5DF2;&#x7ECF;&#x53D1;&#x5E03;&#x4E86;&#x8BDD;&#x9898;&#x4E3A; /map &#x7684;&#x5730;&#x56FE;&#x6D88;&#x606F;&#x4E86;&#xFF0C;&#x4E14;&#x5BFC;&#x822A;&#x9700;&#x8981;&#x5B9A;&#x4F4D;&#x6A21;&#x5757;&#xFF0C;SLAM&#x672C;&#x8EAB;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5B9A;&#x4F4D;&#x7684;&#x3002;</p>
+<p>&#x8BE5;&#x8FC7;&#x7A0B;&#x5B9E;&#x73B0;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;:</p>
+<ol>
+<li>&#x7F16;&#x5199;launch&#x6587;&#x4EF6;&#xFF0C;&#x96C6;&#x6210;SLAM&#x4E0E;move_base&#x76F8;&#x5173;&#x8282;&#x70B9;&#xFF1B;</li>
+<li>&#x6267;&#x884C;launch&#x6587;&#x4EF6;&#x5E76;&#x6D4B;&#x8BD5;&#x3002;</li>
+</ol>
+<h4 id="1&#x7F16;&#x5199;launc&#x6587;&#x4EF6;">1.&#x7F16;&#x5199;launc&#x6587;&#x4EF6;</h4>
+<p>&#x5F53;&#x524D;launch&#x6587;&#x4EF6;&#x5B9E;&#x73B0;&#xFF0C;&#x65E0;&#x9700;&#x8C03;&#x7528;map_server&#x7684;&#x76F8;&#x5173;&#x8282;&#x70B9;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x542F;&#x52A8;SLAM&#x8282;&#x70B9;&#x4E0E;move_base&#x8282;&#x70B9;&#xFF0C;&#x793A;&#x4F8B;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x542F;&#x52A8;SLAM&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find mycar_nav)/launch/slam.launch&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;move_base&#x8282;&#x70B9; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find mycar_nav)/launch/path.launch&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD0;&#x884C;rviz --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;rviz&quot;</span> <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;-d $(find mycar_nav)/rviz/nav.rviz&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+</code></pre>
+<h4 id="2&#x6D4B;&#x8BD5;">2.&#x6D4B;&#x8BD5;</h4>
+<p>1.&#x9996;&#x5148;&#x8FD0;&#x884C;gazebo&#x4EFF;&#x771F;&#x73AF;&#x5883;&#xFF1B;</p>
+<p>2.&#x7136;&#x540E;&#x6267;&#x884C;launch&#x6587;&#x4EF6;&#xFF1B;</p>
+<p>3.&#x5728;rviz&#x4E2D;&#x901A;&#x8FC7;2D Nav Goal&#x8BBE;&#x7F6E;&#x76EE;&#x6807;&#x70B9;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x5F00;&#x59CB;&#x81EA;&#x4E3B;&#x79FB;&#x52A8;&#x5E76;&#x5EFA;&#x56FE;&#x4E86;&#xFF1B;</p>
+<p>4.&#x6700;&#x540E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; map_server &#x4FDD;&#x5B58;&#x5730;&#x56FE;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111934285.gif" alt="img"></p>
+<h2 id="73-&#x5BFC;&#x822A;&#x76F8;&#x5173;&#x6D88;&#x606F;">7.3 &#x5BFC;&#x822A;&#x76F8;&#x5173;&#x6D88;&#x606F;</h2>
+<p>&#x5728;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x5305;&#x96C6;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x8BF8;&#x591A;&#x8282;&#x70B9;&#xFF0C;&#x6BCB;&#x5EB8;&#x7F6E;&#x7591;&#x7684;&#xFF0C;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x4F7F;&#x7528;&#x5230;&#x4E86;&#x6D88;&#x606F;&#x4E2D;&#x95F4;&#x4EF6;(&#x6570;&#x636E;&#x8F7D;&#x4F53;)&#xFF0C;&#x5728;&#x4E0A;&#x4E00;&#x8282;&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E9B;&#x6D88;&#x606F;&#x5DF2;&#x7ECF;&#x5728;rviz&#x4E2D;&#x505A;&#x4E86;&#x53EF;&#x89C6;&#x5316;&#x5904;&#x7406;&#xFF0C;&#x6BD4;&#x5982;:&#x5730;&#x56FE;&#x3001;&#x96F7;&#x8FBE;&#x3001;&#x6444;&#x50CF;&#x5934;&#x3001;&#x91CC;&#x7A0B;&#x8BA1;&#x3001;&#x8DEF;&#x5F84;&#x89C4;&#x5212;...&#x7684;&#x76F8;&#x5173;&#x6D88;&#x606F;&#x5728;rviz&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x76F8;&#x5173;&#x7EC4;&#x4EF6;&#xFF0C;&#x672C;&#x8282;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x8FD9;&#x4E9B;&#x6D88;&#x606F;&#x7684;&#x5177;&#x4F53;&#x683C;&#x5F0F;&#x3002;</p>
+<h3 id="731-&#x5BFC;&#x822A;&#x4E4B;&#x5730;&#x56FE;">7.3.1 &#x5BFC;&#x822A;&#x4E4B;&#x5730;&#x56FE;</h3>
+<p>&#x5730;&#x56FE;&#x76F8;&#x5173;&#x7684;&#x6D88;&#x606F;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x4E2A;:</p>
+<p>nav_msgs/MapMetaData</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC;&#x5730;&#x56FE;&#x7684;&#x5BBD;&#x5EA6;&#x3001;&#x9AD8;&#x5EA6;&#x3001;&#x5206;&#x8FA8;&#x7387;&#x7B49;&#x3002;</li>
+</ul>
+<p>nav_msgs/OccupancyGrid</p>
+<ul>
+<li>&#x5730;&#x56FE;&#x6805;&#x683C;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x5728;rviz&#x4E2D;&#x4EE5;&#x56FE;&#x5F62;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x3002;</li>
+</ul>
+<h4 id="1navmsgsmapmetadata">1.nav_msgs/MapMetaData</h4>
+<p>&#x8C03;&#x7528;<code>rosmsg info nav_msgs/MapMetaData</code>&#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code>time map_load_time
+float32 resolution #&#x5730;&#x56FE;&#x5206;&#x8FA8;&#x7387;
+uint32 width #&#x5730;&#x56FE;&#x5BBD;&#x5EA6;
+uint32 height #&#x5730;&#x56FE;&#x9AD8;&#x5EA6;
+geometry_msgs/Pose origin #&#x5730;&#x56FE;&#x4F4D;&#x59FF;&#x6570;&#x636E;
+  geometry_msgs/Point position
+    float64 x
+    float64 y
+    float64 z
+  geometry_msgs/Quaternion orientation
+    float64 x
+    float64 y
+    float64 z
+    float64 w
+Copy
+</code></pre><h4 id="2navmsgsoccupancygrid">2.nav_msgs/OccupancyGrid</h4>
+<p>&#x8C03;&#x7528; <code>rosmsg info nav_msgs/OccupancyGrid</code>&#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">std_msgs/Header header
+  uint32 seq
+  <span class="hljs-keyword">time</span> stamp
+  string frame_id
+<span class="hljs-comment">#--- &#x5730;&#x56FE;&#x5143;&#x6570;&#x636E;</span>
+nav_msgs/MapMetaData info
+  <span class="hljs-keyword">time</span> map_load_time
+  float32 resolution
+  uint32 width
+  uint32 height
+  geometry_msgs/Pose origin
+    geometry_msgs/Point position
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z
+    geometry_msgs/Quaternion orientation
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z
+      float64 w
+<span class="hljs-comment">#--- &#x5730;&#x56FE;&#x5185;&#x5BB9;&#x6570;&#x636E;&#xFF0C;&#x6570;&#x7EC4;&#x957F;&#x5EA6; = width * height</span>
+int8[] data
+</code></pre>
+<h3 id="732-&#x5BFC;&#x822A;&#x4E4B;&#x91CC;&#x7A0B;&#x8BA1;">7.3.2 &#x5BFC;&#x822A;&#x4E4B;&#x91CC;&#x7A0B;&#x8BA1;</h3>
+<p>&#x91CC;&#x7A0B;&#x8BA1;&#x76F8;&#x5173;&#x6D88;&#x606F;&#x662F;:nav_msgs/Odometry&#xFF0C;&#x8C03;&#x7528;<code>rosmsg info nav_msgs/Odometry</code> &#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">std_msgs/Header header
+  uint32 seq
+  <span class="hljs-keyword">time</span> stamp
+  string frame_id
+string child_frame_id
+geometry_msgs/PoseWithCovariance pose
+  geometry_msgs/Pose pose <span class="hljs-comment">#&#x91CC;&#x7A0B;&#x8BA1;&#x4F4D;&#x59FF;</span>
+    geometry_msgs/Point position
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z
+    geometry_msgs/Quaternion orientation
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z
+      float64 w
+  float64[<span class="hljs-number">36</span>] covariance
+geometry_msgs/TwistWithCovariance twist
+  geometry_msgs/Twist twist <span class="hljs-comment">#&#x901F;&#x5EA6;</span>
+    geometry_msgs/Vector3 linear
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z
+    geometry_msgs/Vector3 angular
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z    
+  <span class="hljs-comment"># &#x534F;&#x65B9;&#x5DEE;&#x77E9;&#x9635;</span>
+  float64[<span class="hljs-number">36</span>] covariance
+</code></pre>
+<h3 id="733-&#x5BFC;&#x822A;&#x4E4B;&#x5750;&#x6807;&#x53D8;&#x6362;">7.3.3 &#x5BFC;&#x822A;&#x4E4B;&#x5750;&#x6807;&#x53D8;&#x6362;</h3>
+<p>&#x5750;&#x6807;&#x53D8;&#x6362;&#x76F8;&#x5173;&#x6D88;&#x606F;&#x662F;: tf/tfMessage&#xFF0C;&#x8C03;&#x7528;<code>rosmsg info tf/tfMessage</code> &#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">geometry_msgs/TransformStamped[] transforms <span class="hljs-comment">#&#x5305;&#x542B;&#x4E86;&#x591A;&#x4E2A;&#x5750;&#x6807;&#x7CFB;&#x76F8;&#x5BF9;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x7684;&#x6570;&#x7EC4;</span>
+  std_msgs/Header header
+    uint32 seq
+    <span class="hljs-keyword">time</span> stamp
+    string frame_id
+  string child_frame_id
+  geometry_msgs/Transform transform
+    geometry_msgs/Vector3 translation
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z
+    geometry_msgs/Quaternion rotation
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z
+      float64 w
+</code></pre>
+<h3 id="734-&#x5BFC;&#x822A;&#x4E4B;&#x5B9A;&#x4F4D;">7.3.4 &#x5BFC;&#x822A;&#x4E4B;&#x5B9A;&#x4F4D;</h3>
+<p>&#x5B9A;&#x4F4D;&#x76F8;&#x5173;&#x6D88;&#x606F;&#x662F;:geometry_msgs/PoseArray&#xFF0C;&#x8C03;&#x7528;<code>rosmsg info geometry_msgs/PoseArray</code>&#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">std_msgs/Header header
+  uint32 seq
+  <span class="hljs-keyword">time</span> stamp
+  string frame_id
+geometry_msgs/Pose[] poses <span class="hljs-comment">#&#x9884;&#x4F30;&#x7684;&#x70B9;&#x4F4D;&#x59FF;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;</span>
+  geometry_msgs/Point position
+    float64 <span class="hljs-keyword">x</span>
+    float64 <span class="hljs-keyword">y</span>
+    float64 z
+  geometry_msgs/Quaternion orientation
+    float64 <span class="hljs-keyword">x</span>
+    float64 <span class="hljs-keyword">y</span>
+    float64 z
+    float64 w
+</code></pre>
+<h3 id="735-&#x5BFC;&#x822A;&#x4E4B;&#x76EE;&#x6807;&#x70B9;&#x4E0E;&#x8DEF;&#x5F84;&#x89C4;&#x5212;">7.3.5 &#x5BFC;&#x822A;&#x4E4B;&#x76EE;&#x6807;&#x70B9;&#x4E0E;&#x8DEF;&#x5F84;&#x89C4;&#x5212;</h3>
+<p>&#x76EE;&#x6807;&#x70B9;&#x76F8;&#x5173;&#x6D88;&#x606F;&#x662F;:move_base_msgs/MoveBaseActionGoal&#xFF0C;&#x8C03;&#x7528;<code>rosmsg info move_base_msgs/MoveBaseActionGoal</code>&#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">std_msgs/Header header
+  uint32 seq
+  <span class="hljs-keyword">time</span> stamp
+  string frame_id
+actionlib_msgs/GoalID goal_id
+  <span class="hljs-keyword">time</span> stamp
+  string id
+move_base_msgs/MoveBaseGoal goal
+  geometry_msgs/PoseStamped target_pose
+    std_msgs/Header header
+      uint32 seq
+      <span class="hljs-keyword">time</span> stamp
+      string frame_id
+    geometry_msgs/Pose pose <span class="hljs-comment">#&#x76EE;&#x6807;&#x70B9;&#x4F4D;&#x59FF;</span>
+      geometry_msgs/Point position
+        float64 <span class="hljs-keyword">x</span>
+        float64 <span class="hljs-keyword">y</span>
+        float64 z
+      geometry_msgs/Quaternion orientation
+        float64 <span class="hljs-keyword">x</span>
+        float64 <span class="hljs-keyword">y</span>
+        float64 z
+        float64 w
+</code></pre>
+<p>&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x76F8;&#x5173;&#x6D88;&#x606F;&#x662F;:nav_msgs/Path&#xFF0C;&#x8C03;&#x7528;<code>rosmsg info nav_msgs/Path</code>&#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">std_msgs/Header header
+  uint32 seq
+  <span class="hljs-keyword">time</span> stamp
+  string frame_id
+geometry_msgs/PoseStamped[] poses <span class="hljs-comment">#&#x7531;&#x4E00;&#x7CFB;&#x5217;&#x70B9;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;</span>
+  std_msgs/Header header
+    uint32 seq
+    <span class="hljs-keyword">time</span> stamp
+    string frame_id
+  geometry_msgs/Pose pose
+    geometry_msgs/Point position
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z
+    geometry_msgs/Quaternion orientation
+      float64 <span class="hljs-keyword">x</span>
+      float64 <span class="hljs-keyword">y</span>
+      float64 z
+      float64 w
+</code></pre>
+<h3 id="736-&#x5BFC;&#x822A;&#x4E4B;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;">7.3.6 &#x5BFC;&#x822A;&#x4E4B;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;</h3>
+<p>&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x76F8;&#x5173;&#x6D88;&#x606F;&#x662F;:sensor_msgs/LaserScan&#xFF0C;&#x8C03;&#x7528;<code>rosmsg info sensor_msgs/LaserScan</code>&#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">std_msgs/Header header
+  uint32 seq
+  <span class="hljs-keyword">time</span> stamp
+  string frame_id
+float32 angle_min <span class="hljs-comment">#&#x8D77;&#x59CB;&#x626B;&#x63CF;&#x89D2;&#x5EA6;(rad)</span>
+float32 angle_max <span class="hljs-comment">#&#x7EC8;&#x6B62;&#x626B;&#x63CF;&#x89D2;&#x5EA6;(rad)</span>
+float32 angle_increment <span class="hljs-comment">#&#x6D4B;&#x91CF;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x89D2;&#x8DDD;&#x79BB;(rad)</span>
+float32 time_increment <span class="hljs-comment">#&#x6D4B;&#x91CF;&#x95F4;&#x9694;&#x65F6;&#x95F4;(s)</span>
+float32 scan_time <span class="hljs-comment">#&#x626B;&#x63CF;&#x95F4;&#x9694;&#x65F6;&#x95F4;(s)</span>
+float32 range_min <span class="hljs-comment">#&#x6700;&#x5C0F;&#x6709;&#x6548;&#x8DDD;&#x79BB;&#x503C;(m)</span>
+float32 range_max <span class="hljs-comment">#&#x6700;&#x5927;&#x6709;&#x6548;&#x8DDD;&#x79BB;&#x503C;(m)</span>
+float32[] ranges <span class="hljs-comment">#&#x4E00;&#x4E2A;&#x5468;&#x671F;&#x7684;&#x626B;&#x63CF;&#x6570;&#x636E;</span>
+float32[] intensities <span class="hljs-comment">#&#x626B;&#x63CF;&#x5F3A;&#x5EA6;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x5907;&#x4E0D;&#x652F;&#x6301;&#x5F3A;&#x5EA6;&#x6570;&#x636E;&#xFF0C;&#x8BE5;&#x6570;&#x7EC4;&#x4E3A;&#x7A7A;</span>
+</code></pre>
+<h3 id="737-&#x5BFC;&#x822A;&#x4E4B;&#x76F8;&#x673A;">7.3.7 &#x5BFC;&#x822A;&#x4E4B;&#x76F8;&#x673A;</h3>
+<p>&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x76F8;&#x5173;&#x6D88;&#x606F;&#x6709;:sensor_msgs/Image&#x3001;sensor_msgs/CompressedImage&#x3001;sensor_msgs/PointCloud2</p>
+<p>sensor_msgs/Image &#x5BF9;&#x5E94;&#x7684;&#x4E00;&#x822C;&#x7684;&#x56FE;&#x50CF;&#x6570;&#x636E;&#xFF0C;sensor_msgs/CompressedImage &#x5BF9;&#x5E94;&#x538B;&#x7F29;&#x540E;&#x7684;&#x56FE;&#x50CF;&#x6570;&#x636E;&#xFF0C;sensor_msgs/PointCloud2 &#x5BF9;&#x5E94;&#x7684;&#x662F;&#x70B9;&#x4E91;&#x6570;&#x636E;(&#x5E26;&#x6709;&#x6DF1;&#x5EA6;&#x4FE1;&#x606F;&#x7684;&#x56FE;&#x50CF;&#x6570;&#x636E;)&#x3002;</p>
+<p>&#x8C03;&#x7528;<code>rosmsg info sensor_msgs/Image</code>&#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">std_msgs/Header header
+  uint32 seq
+  <span class="hljs-keyword">time</span> stamp
+  string frame_id
+uint32 height <span class="hljs-comment">#&#x9AD8;&#x5EA6;</span>
+uint32 width  <span class="hljs-comment">#&#x5BBD;&#x5EA6;</span>
+string encoding <span class="hljs-comment">#&#x7F16;&#x7801;&#x683C;&#x5F0F;:RGB&#x3001;YUV&#x7B49;</span>
+uint8 is_bigendian <span class="hljs-comment">#&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x7AEF;&#x5B58;&#x50A8;&#x6A21;&#x5F0F;</span>
+uint32 step <span class="hljs-comment">#&#x4E00;&#x884C;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x7684;&#x5B57;&#x8282;&#x6570;&#xFF0C;&#x4F5C;&#x4E3A;&#x6B65;&#x8FDB;&#x53C2;&#x6570;</span>
+uint8[] data <span class="hljs-comment">#&#x56FE;&#x50CF;&#x6570;&#x636E;&#xFF0C;&#x957F;&#x5EA6;&#x7B49;&#x4E8E; step * height</span>
+Copy
+</code></pre>
+<p>&#x8C03;&#x7528;<code>rosmsg info sensor_msgs/CompressedImage</code>&#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">std_msgs/Header header
+  uint32 seq
+  <span class="hljs-keyword">time</span> stamp
+  string frame_id
+string <span class="hljs-keyword">format</span> <span class="hljs-comment">#&#x538B;&#x7F29;&#x7F16;&#x7801;&#x683C;&#x5F0F;(jpeg&#x3001;png&#x3001;bmp)</span>
+uint8[] data <span class="hljs-comment">#&#x538B;&#x7F29;&#x540E;&#x7684;&#x6570;&#x636E;</span>
+Copy
+</code></pre>
+<p>&#x8C03;&#x7528;<code>rosmsg info sensor_msgs/PointCloud2</code>&#x663E;&#x793A;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-perl">std_msgs/Header header
+  uint32 seq
+  <span class="hljs-keyword">time</span> stamp
+  string frame_id
+uint32 height <span class="hljs-comment">#&#x9AD8;&#x5EA6;</span>
+uint32 width  <span class="hljs-comment">#&#x5BBD;&#x5EA6;</span>
+sensor_msgs/PointField[] fields <span class="hljs-comment">#&#x6BCF;&#x4E2A;&#x70B9;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</span>
+  uint8 INT8=<span class="hljs-number">1</span>
+  uint8 UINT8=<span class="hljs-number">2</span>
+  uint8 INT16=<span class="hljs-number">3</span>
+  uint8 UINT16=<span class="hljs-number">4</span>
+  uint8 INT32=<span class="hljs-number">5</span>
+  uint8 UINT32=<span class="hljs-number">6</span>
+  uint8 FLOAT32=<span class="hljs-number">7</span>
+  uint8 FLOAT64=<span class="hljs-number">8</span>
+  string name
+  uint32 offset
+  uint8 datatype
+  uint32 count
+bool is_bigendian <span class="hljs-comment">#&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x7AEF;&#x5B58;&#x50A8;&#x6A21;&#x5F0F;</span>
+uint32 point_step <span class="hljs-comment">#&#x5355;&#x70B9;&#x7684;&#x6570;&#x636E;&#x5B57;&#x8282;&#x6B65;&#x957F;</span>
+uint32 row_step   <span class="hljs-comment">#&#x4E00;&#x884C;&#x6570;&#x636E;&#x7684;&#x5B57;&#x8282;&#x6B65;&#x957F;</span>
+uint8[] data      <span class="hljs-comment">#&#x5B58;&#x50A8;&#x70B9;&#x4E91;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x603B;&#x957F;&#x5EA6;&#x4E3A; row_step * height</span>
+bool is_dense     <span class="hljs-comment">#&#x662F;&#x5426;&#x6709;&#x65E0;&#x6548;&#x70B9;</span>
+</code></pre>
+<h3 id="735-&#x6DF1;&#x5EA6;&#x56FE;&#x50CF;&#x8F6C;&#x6FC0;&#x5149;&#x6570;&#x636E;">7.3.5 &#x6DF1;&#x5EA6;&#x56FE;&#x50CF;&#x8F6C;&#x6FC0;&#x5149;&#x6570;&#x636E;</h3>
+<p>&#x672C;&#x8282;&#x4ECB;&#x7ECD;ROS&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x5305;:depthimage_to_laserscan&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x8BE5;&#x529F;&#x80FD;&#x5305;&#x53EF;&#x4EE5;&#x5C06;&#x6DF1;&#x5EA6;&#x56FE;&#x50CF;&#x4FE1;&#x606F;&#x8F6C;&#x6362;&#x6210;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x4FE1;&#x606F;&#xFF0C;&#x5E94;&#x7528;&#x573A;&#x666F;&#x5982;&#x4E0B;:</p>
+<blockquote>
+<p>&#x5728;&#x8BF8;&#x591A;SLAM&#x7B97;&#x6CD5;&#x4E2D;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x9700;&#x8981;&#x8BA2;&#x9605;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x6570;&#x636E;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x5730;&#x56FE;&#xFF0C;&#x56E0;&#x4E3A;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x53EF;&#x4EE5;&#x611F;&#x77E5;&#x5468;&#x56F4;&#x73AF;&#x5883;&#x7684;&#x6DF1;&#x5EA6;&#x4FE1;&#x606F;&#xFF0C;&#x800C;&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x4E5F;&#x5177;&#x5907;&#x611F;&#x77E5;&#x6DF1;&#x5EA6;&#x4FE1;&#x606F;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4E14;&#x6700;&#x521D;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x4EF7;&#x683C;&#x6BD4;&#x4EF7;&#x6BD4;&#x8F83;&#x6602;&#x8D35;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x4F20;&#x611F;&#x5668;&#x9009;&#x578B;&#x4E0A;&#x53EF;&#x4EE5;&#x9009;&#x7528;&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x4EE3;&#x66FF;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x5417;&#xFF1F;</p>
+</blockquote>
+<p>&#x7B54;&#x6848;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E8C;&#x8005;&#x53D1;&#x5E03;&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5B9E;&#x73B0;&#x4F20;&#x611F;&#x5668;&#x7684;&#x7F6E;&#x6362;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x5C06;&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x53D1;&#x5E03;&#x7684;&#x4E09;&#x7EF4;&#x7684;&#x56FE;&#x5F62;&#x4FE1;&#x606F;&#x8F6C;&#x6362;&#x6210;&#x4E8C;&#x7EF4;&#x7684;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x4E00;&#x529F;&#x80FD;&#x5C31;&#x662F;&#x901A;&#x8FC7;depthimage_to_laserscan&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<h4 id="1depthimagetolaserscan&#x7B80;&#x4ECB;">1.depthimage_to_laserscan&#x7B80;&#x4ECB;</h4>
+<h5 id="11&#x539F;&#x7406;">1.1&#x539F;&#x7406;</h5>
+<p>depthimage_to_laserscan&#x5C06;&#x5B9E;&#x73B0;&#x6DF1;&#x5EA6;&#x56FE;&#x50CF;&#x4E0E;&#x96F7;&#x8FBE;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x7684;&#x539F;&#x7406;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x96F7;&#x8FBE;&#x6570;&#x636E;&#x662F;&#x4E8C;&#x7EF4;&#x7684;&#x3001;&#x5E73;&#x9762;&#x7684;&#xFF0C;&#x6DF1;&#x5EA6;&#x56FE;&#x50CF;&#x662F;&#x4E09;&#x7EF4;&#x7684;&#xFF0C;&#x662F;&#x82E5;&#x5E72;&#x4E8C;&#x7EF4;(&#x6C34;&#x5E73;)&#x6570;&#x636E;&#x7684;&#x7EB5;&#x5411;&#x53E0;&#x52A0;&#xFF0C;&#x5982;&#x679C;&#x5C06;&#x4E09;&#x7EF4;&#x7684;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210;&#x4E8C;&#x7EF4;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x53D6;&#x6DF1;&#x5EA6;&#x56FE;&#x7684;&#x67D0;&#x4E00;&#x5C42;&#x5373;&#x53EF;&#xFF0C;&#x4E3A;&#x4E86;&#x65B9;&#x9762;&#x7406;&#x89E3;&#xFF0C;&#x8BF7;&#x770B;&#x5B98;&#x65B9;&#x793A;&#x4F8B;:</p>
+<p>&#x56FE;&#x4E00;:&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x4E0E;&#x5916;&#x90E8;&#x73AF;&#x5883;(&#x5B9E;&#x7269;&#x56FE;)</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/i2l_G1.jpg" alt="img"></p>
+<p>&#x56FE;&#x4E8C;:&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x53D1;&#x5E03;&#x7684;&#x56FE;&#x7247;&#x4FE1;&#x606F;&#xFF0C;&#x56FE;&#x4E2D;&#x5F69;&#x7EBF;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x8981;&#x8F6C;&#x6362;&#x6210;&#x96F7;&#x8FBE;&#x4FE1;&#x606F;&#x7684;&#x6570;&#x636E;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/i2l_G2.png" alt="img"></p>
+<p>&#x56FE;&#x4E09;:&#x5C06;&#x56FE;&#x4E8C;&#x4EE5;&#x70B9;&#x4E91;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x66F4;&#x4E3A;&#x76F4;&#x89C2;&#xFF0C;&#x56FE;&#x4E2D;&#x5F69;&#x7EBF;&#x5BF9;&#x5E94;&#x7684;&#x4ECD;&#x7136;&#x662F;&#x8981;&#x8F6C;&#x6362;&#x6210;&#x96F7;&#x8FBE;&#x4FE1;&#x606F;&#x7684;&#x6570;&#x636E;</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/i2l_G3.png" alt="img"></p>
+<p>&#x56FE;&#x56DB;:&#x8F6C;&#x6362;&#x4E4B;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x56FE;(&#x4FEF;&#x89C6;)</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202507111938596.png" alt="img"></p>
+<h5 id="12&#x4F18;&#x7F3A;&#x70B9;">1.2&#x4F18;&#x7F3A;&#x70B9;</h5>
+<p><strong>&#x4F18;&#x70B9;:</strong>&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x7684;&#x6210;&#x672C;&#x4E00;&#x822C;&#x4F4E;&#x4E8E;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#xFF0C;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;&#x786C;&#x4EF6;&#x6210;&#x672C;&#xFF1B;</p>
+<p><strong>&#x7F3A;&#x70B9;:</strong> &#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x8F83;&#x4E4B;&#x4E8E;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x65E0;&#x8BBA;&#x662F;&#x68C0;&#x6D4B;&#x8303;&#x56F4;&#x8FD8;&#x662F;&#x7CBE;&#x5EA6;&#x90FD;&#x6709;&#x4E0D;&#x5C0F;&#x7684;&#x5DEE;&#x8DDD;&#xFF0C;SLAM&#x6548;&#x679C;&#x53EF;&#x80FD;&#x4E0D;&#x5982;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x7406;&#x60F3;&#x3002;</p>
+<h5 id="13&#x5B89;&#x88C5;">1.3&#x5B89;&#x88C5;</h5>
+<p>&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x8BF7;&#x5148;&#x5B89;&#x88C5;,&#x547D;&#x4EE4;&#x5982;&#x4E0B;:</p>
+<pre><code>sudo apt-get install ros-melodic-depthimage-to-laserscan
+Copy
+</code></pre><h4 id="2depthimagetolaserscan&#x8282;&#x70B9;&#x8BF4;&#x660E;">2.depthimage_to_laserscan&#x8282;&#x70B9;&#x8BF4;&#x660E;</h4>
+<p>depthimage_to_laserscan &#x529F;&#x80FD;&#x5305;&#x7684;&#x6838;&#x5FC3;&#x8282;&#x70B9;&#x662F;:depthimage_to_laserscan &#xFF0C;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8C03;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x4E86;&#x89E3;&#x8BE5;&#x8282;&#x70B9;&#x8BA2;&#x9605;&#x7684;&#x8BDD;&#x9898;&#x3001;&#x53D1;&#x5E03;&#x7684;&#x8BDD;&#x9898;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x3002;</p>
+<h5 id="21&#x8BA2;&#x9605;&#x7684;topic">2.1&#x8BA2;&#x9605;&#x7684;Topic</h5>
+<p>image(sensor_msgs/Image)</p>
+<ul>
+<li>&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+<p>camera_info(sensor_msgs/CameraInfo)</p>
+<ul>
+<li>&#x5173;&#x8054;&#x56FE;&#x50CF;&#x7684;&#x76F8;&#x673A;&#x4FE1;&#x606F;&#x3002;&#x901A;&#x5E38;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6620;&#x5C04;&#xFF0C;&#x56E0;&#x4E3A;camera_info&#x5C06;&#x4ECE;&#x4E0E;image&#x76F8;&#x540C;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x8FDB;&#x884C;&#x8BA2;&#x9605;&#x3002;</li>
+</ul>
+<h5 id="22&#x53D1;&#x5E03;&#x7684;topic">2.2&#x53D1;&#x5E03;&#x7684;Topic</h5>
+<p>scan(sensor_msgs/LaserScan)</p>
+<ul>
+<li>&#x53D1;&#x5E03;&#x8F6C;&#x6362;&#x6210;&#x7684;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x7C7B;&#x578B;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<h5 id="23&#x53C2;&#x6570;">2.3&#x53C2;&#x6570;</h5>
+<p>&#x8BE5;&#x8282;&#x70B9;&#x53C2;&#x6570;&#x8F83;&#x5C11;&#xFF0C;&#x53EA;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#xFF0C;&#x4E00;&#x822C;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x662F;: output_frame_id&#x3002;</p>
+<p>~scan_height(int, default: 1 pixel)</p>
+<ul>
+<li>&#x8BBE;&#x7F6E;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x4FE1;&#x606F;&#x7684;&#x8C61;&#x7D20;&#x884C;&#x6570;&#x3002;</li>
+</ul>
+<p>~scan_time(double, default: 1/30.0Hz (0.033s))</p>
+<ul>
+<li>&#x4E24;&#x6B21;&#x626B;&#x63CF;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x3002;</li>
+</ul>
+<p>~range_min(double, default: 0.45m)</p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x7684;&#x6700;&#x5C0F;&#x8303;&#x56F4;&#x3002;&#x7ED3;&#x5408;range_max&#x4F7F;&#x7528;&#xFF0C;&#x53EA;&#x4F1A;&#x83B7;&#x53D6; range_min &#x4E0E; range_max &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p>~range_max(double, default: 10.0m)</p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x7684;&#x6700;&#x5927;&#x8303;&#x56F4;&#x3002;&#x7ED3;&#x5408;range_min&#x4F7F;&#x7528;&#xFF0C;&#x53EA;&#x4F1A;&#x83B7;&#x53D6; range_min &#x4E0E; range_max &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p>~output_frame_id(str, default: camera_depth_frame)</p>
+<ul>
+<li>&#x6FC0;&#x5149;&#x4FE1;&#x606F;&#x7684;ID&#x3002;</li>
+</ul>
+<h4 id="3depthimagetolaserscan&#x4F7F;&#x7528;">3.depthimage_to_laserscan&#x4F7F;&#x7528;</h4>
+<h5 id="31&#x7F16;&#x5199;launch&#x6587;&#x4EF6;">3.1&#x7F16;&#x5199;launch&#x6587;&#x4EF6;</h5>
+<p>&#x7F16;&#x5199;launch&#x6587;&#x4EF6;&#x6267;&#x884C;&#xFF0C;&#x5C06;&#x6DF1;&#x5EA6;&#x4FE1;&#x606F;&#x8F6C;&#x6362;&#x6210;&#x96F7;&#x8FBE;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;depthimage_to_laserscan&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;depthimage_to_laserscan&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;depthimage_to_laserscan&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">remap</span> <span class="hljs-attr">from</span>=<span class="hljs-string">&quot;image&quot;</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/camera/depth/image_raw&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;output_frame_id&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;camera&quot;</span>  /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
+Copy
+</code></pre>
+<p>&#x8BA2;&#x9605;&#x7684;&#x8BDD;&#x9898;&#x9700;&#x8981;&#x6839;&#x636E;&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x53D1;&#x5E03;&#x7684;&#x8BDD;&#x9898;&#x8BBE;&#x7F6E;&#xFF0C;output_frame_id&#x9700;&#x8981;&#x4E0E;&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x4E00;&#x81F4;&#x3002;</p>
+<h5 id="32&#x4FEE;&#x6539;urdf&#x6587;&#x4EF6;">3.2&#x4FEE;&#x6539;URDF&#x6587;&#x4EF6;</h5>
+<p>&#x7ECF;&#x8FC7;&#x4FE1;&#x606F;&#x8F6C;&#x6362;&#x4E4B;&#x540E;&#xFF0C;&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x4E5F;&#x5C06;&#x53D1;&#x5E03;&#x96F7;&#x8FBE;&#x6570;&#x636E;&#xFF0C;&#x4E3A;&#x4E86;&#x4E0D;&#x4EA7;&#x751F;&#x6DF7;&#x6DC6;&#xFF0C;&#x53EF;&#x4EE5;&#x6CE8;&#x91CA;&#x6389; xacro &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5173;&#x4E8E;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x7684;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x3002;</p>
+<h5 id="33&#x6267;&#x884C;">3.3&#x6267;&#x884C;</h5>
+<p>1.&#x542F;&#x52A8;gazebo&#x4EFF;&#x771F;&#x73AF;&#x5883;&#xFF0C;&#x5982;&#x4E0B;:</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/i2l_&#x4EFF;&#x771F;.PNG" alt="img"></p>
+<p>2.&#x542F;&#x52A8;rviz&#x5E76;&#x6DFB;&#x52A0;&#x76F8;&#x5173;&#x7EC4;&#x4EF6;(image&#x3001;LaserScan)&#xFF0C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:</p>
+<h4 id="4slam&#x5E94;&#x7528;"><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/i2l_rviz.PNG" alt="img">4.SLAM&#x5E94;&#x7528;</h4>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x5E76;&#x6D4B;&#x8BD5;&#x901A;&#x8FC7;&#x6DF1;&#x5EA6;&#x56FE;&#x50CF;&#x4FE1;&#x606F;&#x8F6C;&#x6362;&#x6210;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x4FE1;&#x606F;&#x4E86;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x5B9E;&#x8DF5;&#x9636;&#x6BB5;&#xFF0C;&#x901A;&#x8FC7;&#x6DF1;&#x5EA6;&#x76F8;&#x673A;&#x5B9E;&#x73B0;SLAM&#xFF0C;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;:</p>
+<p>1.&#x5148;&#x542F;&#x52A8; Gazebo &#x4EFF;&#x771F;&#x73AF;&#x5883;&#xFF1B;</p>
+<p>2.&#x542F;&#x52A8;&#x8F6C;&#x6362;&#x8282;&#x70B9;&#xFF1B;</p>
+<p>3.&#x518D;&#x542F;&#x52A8;&#x5730;&#x56FE;&#x7ED8;&#x5236;&#x7684; launch &#x6587;&#x4EF6;&#xFF1B;</p>
+<p>4.&#x542F;&#x52A8;&#x952E;&#x76D8;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#x5EFA;&#x56FE;&#xFF1B;</p>
+<pre><code>rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+</code></pre><p>5.&#x5728; rviz &#x4E2D;&#x6DFB;&#x52A0;&#x7EC4;&#x4EF6;&#xFF0C;&#x663E;&#x793A;&#x6805;&#x683C;&#x5730;&#x56FE;&#x6700;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x63A7;&#x5236;gazebo&#x4E2D;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x5728;rviz&#x4E2D;&#x53EF;&#x4EE5;&#x663E;&#x793A;gmapping&#x53D1;&#x5E03;&#x7684;&#x6805;&#x683C;&#x5730;&#x56FE;&#x6570;&#x636E;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x524D;&#x9762;&#x4E5F;&#x4ECB;&#x7ECD;&#x4E86;&#xFF0C;&#x7531;&#x4E8E;&#x7CBE;&#x5EA6;&#x548C;&#x68C0;&#x6D4B;&#x8303;&#x56F4;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x5C24;&#x5176;&#x518D;&#x52A0;&#x4E4B;&#x73AF;&#x5883;&#x7684;&#x7279;&#x5F81;&#x70B9;&#x504F;&#x5C11;&#xFF0C;&#x5EFA;&#x56FE;&#x6548;&#x679C;&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x7406;&#x60F3;&#xFF0C;&#x5EFA;&#x56FE;&#x4E2D;&#x751A;&#x81F3;&#x4F1A;&#x51FA;&#x73B0;&#x5730;&#x56FE;&#x504F;&#x79FB;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<h2 id="74-&#x672C;&#x7AE0;&#x5C0F;&#x7ED3;">7.4 &#x672C;&#x7AE0;&#x5C0F;&#x7ED3;</h2>
+<p>&#x672C;&#x7AE0;&#x4ECB;&#x7ECD;&#x4E86;&#x5728;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#xFF0C;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<ul>
+<li>&#x5BFC;&#x822A;&#x6982;&#x5FF5;&#x4EE5;&#x53CA;&#x67B6;&#x6784;&#x8BBE;&#x8BA1;</li>
+<li>SLAM&#x6982;&#x5FF5;&#x4EE5;&#x53CA;gmapping&#x5B9E;&#x73B0;</li>
+<li>&#x5730;&#x56FE;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x4E0E;&#x53CD;&#x5E8F;&#x5217;&#x5316;</li>
+<li>&#x5B9A;&#x4F4D;&#x5B9E;&#x73B0;</li>
+<li>&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x5B9E;&#x73B0;</li>
+<li>&#x5BFC;&#x822A;&#x4E2D;&#x6D89;&#x53CA;&#x7684;&#x6D88;&#x606F;&#x89E3;&#x91CA;</li>
+</ul>
+<p>&#x5BFC;&#x822A;&#x6574;&#x4F53;&#x8BBE;&#x8BA1;&#x67B6;&#x6784;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x5730;&#x56FE;&#x3001;&#x5B9A;&#x4F4D;&#x3001;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x3001;&#x611F;&#x77E5;&#x4EE5;&#x53CA;&#x63A7;&#x5236;&#x7B49;&#x5B9E;&#x73B0;&#xFF0C;&#x611F;&#x77E5;&#x4E0E;&#x63A7;&#x5236;&#x6A21;&#x5757;&#x5728;&#x4E0A;&#x4E00;&#x7AE0;&#x673A;&#x5668;&#x4EBA;&#x7CFB;&#x7EDF;&#x4EFF;&#x771F;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#xFF0C;&#x56E0;&#x6B64;&#x6CA1;&#x6709;&#x505A;&#x8FC7;&#x591A;&#x4ECB;&#x7ECD;&#xFF0C;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#xFF0C;&#x5F53;&#x524D;&#x4E5F;&#x662F;&#x57FA;&#x4E8E;&#x4EFF;&#x771F;&#x73AF;&#x5883;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x540E;&#x7EED;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x642D;&#x5EFA;&#x4E00;&#x53F0;&#x5B9E;&#x4F53;&#x673A;&#x5668;&#x4EBA;&#x5E76;&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../6.机器人系统仿真/机器人系统仿真.html" class="navigation navigation-prev " aria-label="Previous page: 6. 机器人系统仿真">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="补充/全局规划器.html" class="navigation navigation-next " aria-label="Next page: 全局规划器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7. 机器人系统导航仿真","level":"4.1","depth":1,"next":{"title":"全局规划器","level":"4.1.1","depth":2,"path":"7.机器人系统导航仿真/补充/全局规划器.md","ref":"7.机器人系统导航仿真/补充/全局规划器.md","articles":[]},"previous":{"title":"6. 机器人系统仿真","level":"3.1","depth":1,"path":"6.机器人系统仿真/机器人系统仿真.md","ref":"6.机器人系统仿真/机器人系统仿真.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"7.机器人系统导航仿真/机器人系统导航.md","mtime":"2026-06-22T02:23:44.252Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-22T02:30:21.080Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

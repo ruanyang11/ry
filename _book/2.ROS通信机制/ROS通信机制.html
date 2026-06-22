@@ -1,0 +1,2115 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. ROS通信机制 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../3.ROS通信机制进阶/ROS通信机制进阶.html" />
+    
+    
+    <link rel="prev" href="../1.ROS概述和环境搭建/ROS概述和环境搭建.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    课程简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                <a href="../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                    
+                    1. ROS概述和环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="ROS通信机制.html">
+            
+                <a href="ROS通信机制.html">
+            
+                    
+                    2. ROS通信机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../3.ROS通信机制进阶/ROS通信机制进阶.html">
+            
+                <a href="../3.ROS通信机制进阶/ROS通信机制进阶.html">
+            
+                    
+                    3. ROS通信机制进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../4.ROS运行管理/ROS运行管理.html">
+            
+                <a href="../4.ROS运行管理/ROS运行管理.html">
+            
+                    
+                    4. ROS运行管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../5.ROS常用组件/ROS常用组件.html">
+            
+                <a href="../5.ROS常用组件/ROS常用组件.html">
+            
+                    
+                    5. ROS常用组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 实战篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../6.机器人系统仿真/机器人系统仿真.html">
+            
+                <a href="../6.机器人系统仿真/机器人系统仿真.html">
+            
+                    
+                    6. 机器人系统仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 导航篇</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../7.机器人系统导航仿真/机器人系统导航.html">
+            
+                <a href="../7.机器人系统导航仿真/机器人系统导航.html">
+            
+                    
+                    7. 机器人系统导航仿真
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../7.机器人系统导航仿真/补充/全局规划器.html">
+            
+                <a href="../7.机器人系统导航仿真/补充/全局规划器.html">
+            
+                    
+                    全局规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../7.机器人系统导航仿真/补充/局部规划器.html">
+            
+                <a href="../7.机器人系统导航仿真/补充/局部规划器.html">
+            
+                    
+                    局部规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../8.机器人系统导航实体/机器人系统导航.html">
+            
+                <a href="../8.机器人系统导航实体/机器人系统导航.html">
+            
+                    
+                    8. 机器人系统导航实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 进阶篇</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../10.ROS进阶/ROS进阶.html">
+            
+                <a href="../10.ROS进阶/ROS进阶.html">
+            
+                    
+                    9. ROS进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2. ROS通信机制</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-2-&#x7AE0;-ros&#x901A;&#x4FE1;&#x673A;&#x5236;">&#x7B2C; 2 &#x7AE0; ROS&#x901A;&#x4FE1;&#x673A;&#x5236;</h1>
+<p>&#x673A;&#x5668;&#x4EBA;&#x662F;&#x4E00;&#x79CD;&#x9AD8;&#x5EA6;&#x590D;&#x6742;&#x7684;&#x7CFB;&#x7EDF;&#x6027;&#x5B9E;&#x73B0;&#xFF0C;&#x5728;&#x673A;&#x5668;&#x4EBA;&#x4E0A;&#x53EF;&#x80FD;&#x96C6;&#x6210;&#x5404;&#x79CD;&#x4F20;&#x611F;&#x5668;(&#x96F7;&#x8FBE;&#x3001;&#x6444;&#x50CF;&#x5934;&#x3001;GPS...)&#x4EE5;&#x53CA;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x5B9E;&#x73B0;&#xFF0C;&#x4E3A;&#x4E86;&#x89E3;&#x8026;&#x5408;&#xFF0C;&#x5728;ROS&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x70B9;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x7684;&#x3002;&#x66F4;&#x786E;&#x5207;&#x7684;&#x8BB2;&#xFF0C;<strong>ROS&#x662F;&#x8FDB;&#x7A0B;&#xFF08;&#x4E5F;&#x79F0;&#x4E3A;<em>*</em></strong>Nodes<strong>*</strong>&#xFF09;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6846;&#x67B6;&#x3002;** &#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x8FDB;&#x7A0B;&#x751A;&#x81F3;&#x8FD8;&#x53EF;&#x5206;&#x5E03;&#x4E8E;&#x4E0D;&#x540C;&#x4E3B;&#x673A;&#xFF0C;&#x4E0D;&#x540C;&#x4E3B;&#x673A;&#x534F;&#x540C;&#x5DE5;&#x4F5C;&#xFF0C;&#x4ECE;&#x800C;&#x5206;&#x6563;&#x8BA1;&#x7B97;&#x538B;&#x529B;&#x3002;&#x4E0D;&#x8FC7;&#x968F;&#x4E4B;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x9898;: &#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#x662F;&#x5982;&#x4F55;&#x901A;&#x4FE1;&#x7684;&#xFF1F;&#x4E5F;&#x5373;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x95F4;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x7684;&#xFF1F;&#x5728;&#x6B64;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;ROS&#x4E2D;&#x7684;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x4E86;&#x3002;</p>
+<p>ROS &#x4E2D;&#x7684;&#x57FA;&#x672C;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x4E3B;&#x8981;&#x6709;&#x5982;&#x4E0B;&#x4E09;&#x79CD;&#x5B9E;&#x73B0;&#x7B56;&#x7565;:</p>
+<ul>
+<li>&#x8BDD;&#x9898;&#x901A;&#x4FE1;(&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;)</li>
+<li>&#x670D;&#x52A1;&#x901A;&#x4FE1;(&#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x6A21;&#x5F0F;)</li>
+<li>&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;(&#x53C2;&#x6570;&#x5171;&#x4EAB;&#x6A21;&#x5F0F;)</li>
+</ul>
+<p>&#x672C;&#x7AE0;&#x7684;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x662F;&#x4ECB;&#x7ECD;&#x5404;&#x4E2A;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3001;&#x7406;&#x8BBA;&#x6A21;&#x578B;&#x3001;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x3002;&#x672C;&#x7AE0;&#x9884;&#x671F;&#x8FBE;&#x6210;&#x5B66;&#x4E60;&#x76EE;&#x6807;&#x5982;&#x4E0B;:</p>
+<ul>
+<li>&#x80FD;&#x591F;&#x719F;&#x7EC3;&#x4ECB;&#x7ECD;ROS&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x901A;&#x4FE1;&#x673A;&#x5236;</li>
+<li>&#x80FD;&#x591F;&#x7406;&#x89E3;ROS&#x4E2D;&#x6BCF;&#x79CD;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x7684;&#x7406;&#x8BBA;&#x6A21;&#x578B;</li>
+<li>&#x80FD;&#x591F;&#x4EE5;&#x4EE3;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x5404;&#x79CD;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x5BF9;&#x5E94;&#x7684;&#x6848;&#x4F8B;</li>
+<li>&#x80FD;&#x591F;&#x719F;&#x7EC3;&#x4F7F;&#x7528;ROS&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;</li>
+<li>&#x80FD;&#x591F;&#x72EC;&#x7ACB;&#x5B8C;&#x6210;&#x76F8;&#x5173;&#x5B9E;&#x64CD;&#x6848;&#x4F8B;</li>
+</ul>
+<p>&#x6848;&#x4F8B;&#x6F14;&#x793A;:</p>
+<p>1.&#x8BDD;&#x9898;&#x6F14;&#x793A;&#x6848;&#x4F8B;:</p>
+<p>&#x63A7;&#x5236;&#x5C0F;&#x4E4C;&#x9F9F;&#x505A;&#x5706;&#x5468;&#x8FD0;&#x52A8;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051858438.gif" alt="img"></p>
+<p>&#x83B7;&#x53D6;&#x4E4C;&#x9F9F;&#x4F4D;&#x59FF;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051858847.gif" alt="img"></p>
+<p>2.&#x670D;&#x52A1;&#x6F14;&#x793A;&#x6848;&#x4F8B;:&#x5728;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x751F;&#x6210;&#x4E4C;&#x9F9F;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051858142.png" alt="img"></p>
+<p>3.&#x53C2;&#x6570;&#x6F14;&#x793A;&#x6848;&#x4F8B;:&#x6539;&#x53D8;&#x4E4C;&#x9F9F;&#x7A97;&#x53E3;&#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051858750.png" alt="img"></p>
+<h2 id="21-&#x8BDD;&#x9898;&#x901A;&#x4FE1;">2.1 &#x8BDD;&#x9898;&#x901A;&#x4FE1;</h2>
+<p>&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x662F;ROS&#x4E2D;&#x4F7F;&#x7528;&#x9891;&#x7387;&#x6700;&#x9AD8;&#x7684;&#x4E00;&#x79CD;&#x901A;&#x4FE1;&#x6A21;&#x5F0F;&#xFF0C;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x662F;&#x57FA;&#x4E8E;<strong>&#x53D1;&#x5E03;&#x8BA2;&#x9605;</strong>&#x6A21;&#x5F0F;&#x7684;&#xFF0C;&#x4E5F;&#x5373;:&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x8BA2;&#x9605;&#x8BE5;&#x6D88;&#x606F;&#x3002;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E5F;&#x6781;&#x5176;&#x5E7F;&#x6CDB;&#xFF0C;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x573A;&#x666F;:</p>
+<blockquote>
+<p>&#x673A;&#x5668;&#x4EBA;&#x5728;&#x6267;&#x884C;&#x5BFC;&#x822A;&#x529F;&#x80FD;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x4F20;&#x611F;&#x5668;&#x662F;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x4F1A;&#x91C7;&#x96C6;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x611F;&#x77E5;&#x5230;&#x7684;&#x4FE1;&#x606F;&#x5E76;&#x8BA1;&#x7B97;&#xFF0C;&#x7136;&#x540E;&#x751F;&#x6210;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x4FE1;&#x606F;&#x9A71;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x5E95;&#x76D8;&#x8FD0;&#x52A8;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x4E0A;&#x8FF0;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x5C31;&#x4E0D;&#x6B62;&#x4E00;&#x6B21;&#x4F7F;&#x7528;&#x5230;&#x4E86;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x3002;</p>
+<ul>
+<li>&#x4EE5;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x4FE1;&#x606F;&#x7684;&#x91C7;&#x96C6;&#x5904;&#x7406;&#x4E3A;&#x4F8B;&#xFF0C;&#x5728; ROS &#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x9700;&#x8981;&#x65F6;&#x65F6;&#x7684;&#x53D1;&#x5E03;&#x5F53;&#x524D;&#x96F7;&#x8FBE;&#x91C7;&#x96C6;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5BFC;&#x822A;&#x6A21;&#x5757;&#x4E2D;&#x4E5F;&#x6709;&#x8282;&#x70B9;&#x4F1A;&#x8BA2;&#x9605;&#x5E76;&#x89E3;&#x6790;&#x96F7;&#x8FBE;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x518D;&#x4EE5;&#x8FD0;&#x52A8;&#x6D88;&#x606F;&#x7684;&#x53D1;&#x5E03;&#x4E3A;&#x4F8B;&#xFF0C;&#x5BFC;&#x822A;&#x6A21;&#x5757;&#x4F1A;&#x6839;&#x636E;&#x4F20;&#x611F;&#x5668;&#x91C7;&#x96C6;&#x7684;&#x6570;&#x636E;&#x65F6;&#x65F6;&#x7684;&#x8BA1;&#x7B97;&#x51FA;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x4FE1;&#x606F;&#x5E76;&#x53D1;&#x5E03;&#x7ED9;&#x5E95;&#x76D8;&#xFF0C;&#x5E95;&#x76D8;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x8BA2;&#x9605;&#x8FD0;&#x52A8;&#x4FE1;&#x606F;&#x5E76;&#x6700;&#x7EC8;&#x8F6C;&#x6362;&#x6210;&#x63A7;&#x5236;&#x7535;&#x673A;&#x7684;&#x8109;&#x51B2;&#x4FE1;&#x53F7;&#x3002;</li>
+</ul>
+<p>&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;&#x50CF;&#x96F7;&#x8FBE;&#x3001;&#x6444;&#x50CF;&#x5934;&#x3001;GPS.... &#x7B49;&#x7B49;&#x4E00;&#x4E9B;&#x4F20;&#x611F;&#x5668;&#x6570;&#x636E;&#x7684;&#x91C7;&#x96C6;&#xFF0C;&#x4E5F;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x4E86;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#xFF0C;&#x6362;&#x8A00;&#x4E4B;&#xFF0C;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x9002;&#x7528;&#x4E8E;&#x4E0D;&#x65AD;&#x66F4;&#x65B0;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x76F8;&#x5173;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;</p>
+<p><strong>&#x6982;&#x5FF5;</strong></p>
+<p>&#x4EE5;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x7684;&#x901A;&#x4FE1;&#x6A21;&#x5F0F;&#x3002;</p>
+<p><strong>&#x4F5C;&#x7528;</strong></p>
+<p>&#x7528;&#x4E8E;&#x4E0D;&#x65AD;&#x66F4;&#x65B0;&#x7684;&#x3001;&#x5C11;&#x903B;&#x8F91;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x573A;&#x666F;&#x3002;</p>
+<p><strong>&#x6848;&#x4F8B;</strong></p>
+<p>1.&#x5B9E;&#x73B0;&#x6700;&#x57FA;&#x672C;&#x7684;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x578B;&#xFF0C;&#x53D1;&#x5E03;&#x65B9;&#x4EE5;&#x56FA;&#x5B9A;&#x9891;&#x7387;&#x53D1;&#x9001;&#x4E00;&#x6BB5;&#x6587;&#x672C;&#xFF0C;&#x8BA2;&#x9605;&#x65B9;&#x63A5;&#x6536;&#x6587;&#x672C;&#x5E76;&#x8F93;&#x51FA;&#x3002;(2.1.2 -- 2.1.3)</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051859008.gif" alt="img"></p>
+<p>2.&#x5B9E;&#x73B0;&#x5BF9;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#x7684;&#x53D1;&#x5E03;&#x4E0E;&#x8BA2;&#x9605;&#x3002;(2.1.4 -- 2.1.6)</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051859994.gif" alt="img"></p>
+<hr>
+<p><strong>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</strong></p>
+<ul>
+<li><a href="http://www.autolabor.com.cn/book/ROSTutorials/di-2-zhang-ros-jia-gou-she-ji/22hua-ti-tong-xin.html#" target="_blank">http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv</a></li>
+<li><a href="http://www.autolabor.com.cn/book/ROSTutorials/di-2-zhang-ros-jia-gou-she-ji/22hua-ti-tong-xin.html#" target="_blank">http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29</a></li>
+<li><a href="http://www.autolabor.com.cn/book/ROSTutorials/di-2-zhang-ros-jia-gou-she-ji/22hua-ti-tong-xin.html#" target="_blank">http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29</a></li>
+</ul>
+<h3 id="211-&#x7406;&#x8BBA;&#x6A21;&#x578B;">2.1.1 &#x7406;&#x8BBA;&#x6A21;&#x578B;</h3>
+<p>&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x5B9E;&#x73B0;&#x6A21;&#x578B;&#x662F;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#xFF0C;&#x8BE5;&#x6A21;&#x578B;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;,&#x8BE5;&#x6A21;&#x578B;&#x4E2D;&#x6D89;&#x53CA;&#x5230;&#x4E09;&#x4E2A;&#x89D2;&#x8272;:</p>
+<ul>
+<li>ROS Master (&#x7BA1;&#x7406;&#x8005;)</li>
+<li>Talker (&#x53D1;&#x5E03;&#x8005;)</li>
+<li>Listener (&#x8BA2;&#x9605;&#x8005;)</li>
+</ul>
+<p>ROS Master &#x8D1F;&#x8D23;&#x4FDD;&#x7BA1; Talker &#x548C; Listener &#x6CE8;&#x518C;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x5339;&#x914D;&#x8BDD;&#x9898;&#x76F8;&#x540C;&#x7684; Talker &#x4E0E; Listener&#xFF0C;&#x5E2E;&#x52A9; Talker &#x4E0E; Listener &#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x540E;&#xFF0C;Talker &#x53EF;&#x4EE5;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#xFF0C;&#x4E14;&#x53D1;&#x5E03;&#x7684;&#x6D88;&#x606F;&#x4F1A;&#x88AB; Listener &#x8BA2;&#x9605;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051900073.jpeg" alt="img">&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x7531;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x5B9E;&#x73B0;:</p>
+<h4 id="0talker&#x6CE8;&#x518C;">0.Talker&#x6CE8;&#x518C;</h4>
+<p>Talker&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7;RPC&#x5728; ROS Master &#x4E2D;&#x6CE8;&#x518C;&#x81EA;&#x8EAB;&#x4FE1;&#x606F;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6240;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x7684;&#x8BDD;&#x9898;&#x540D;&#x79F0;&#x3002;ROS Master &#x4F1A;&#x5C06;&#x8282;&#x70B9;&#x7684;&#x6CE8;&#x518C;&#x4FE1;&#x606F;&#x52A0;&#x5165;&#x5230;&#x6CE8;&#x518C;&#x8868;&#x4E2D;&#x3002;</p>
+<h4 id="1listener&#x6CE8;&#x518C;">1.Listener&#x6CE8;&#x518C;</h4>
+<p>Listener&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x4E5F;&#x4F1A;&#x901A;&#x8FC7;RPC&#x5728; ROS Master &#x4E2D;&#x6CE8;&#x518C;&#x81EA;&#x8EAB;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x542B;&#x9700;&#x8981;&#x8BA2;&#x9605;&#x6D88;&#x606F;&#x7684;&#x8BDD;&#x9898;&#x540D;&#x3002;ROS Master &#x4F1A;&#x5C06;&#x8282;&#x70B9;&#x7684;&#x6CE8;&#x518C;&#x4FE1;&#x606F;&#x52A0;&#x5165;&#x5230;&#x6CE8;&#x518C;&#x8868;&#x4E2D;&#x3002;</p>
+<h4 id="2ros-master&#x5B9E;&#x73B0;&#x4FE1;&#x606F;&#x5339;&#x914D;">2.ROS Master&#x5B9E;&#x73B0;&#x4FE1;&#x606F;&#x5339;&#x914D;</h4>
+<p>ROS Master &#x4F1A;&#x6839;&#x636E;&#x6CE8;&#x518C;&#x8868;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x5339;&#x914D;Talker &#x548C; Listener&#xFF0C;&#x5E76;&#x901A;&#x8FC7; RPC &#x5411; Listener &#x53D1;&#x9001; Talker &#x7684; RPC &#x5730;&#x5740;&#x4FE1;&#x606F;&#x3002;</p>
+<h4 id="3listener&#x5411;talker&#x53D1;&#x9001;&#x8BF7;&#x6C42;">3.Listener&#x5411;Talker&#x53D1;&#x9001;&#x8BF7;&#x6C42;</h4>
+<p>Listener &#x6839;&#x636E;&#x63A5;&#x6536;&#x5230;&#x7684; RPC &#x5730;&#x5740;&#xFF0C;&#x901A;&#x8FC7; RPC &#x5411; Talker &#x53D1;&#x9001;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#xFF0C;&#x4F20;&#x8F93;&#x8BA2;&#x9605;&#x7684;&#x8BDD;&#x9898;&#x540D;&#x79F0;&#x3001;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x4EE5;&#x53CA;&#x901A;&#x4FE1;&#x534F;&#x8BAE;(TCP/UDP)&#x3002;</p>
+<h4 id="4talker&#x786E;&#x8BA4;&#x8BF7;&#x6C42;">4.Talker&#x786E;&#x8BA4;&#x8BF7;&#x6C42;</h4>
+<p>Talker &#x63A5;&#x6536;&#x5230; Listener &#x7684;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x4E5F;&#x662F;&#x901A;&#x8FC7; RPC &#x5411; Listener &#x786E;&#x8BA4;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x53D1;&#x9001;&#x81EA;&#x8EAB;&#x7684; TCP &#x5730;&#x5740;&#x4FE1;&#x606F;&#x3002;</p>
+<h4 id="5listener&#x4E0E;talker&#x4EF6;&#x91CC;&#x8FDE;&#x63A5;">5.Listener&#x4E0E;Talker&#x4EF6;&#x91CC;&#x8FDE;&#x63A5;</h4>
+<p>Listener &#x6839;&#x636E;&#x6B65;&#x9AA4;4 &#x8FD4;&#x56DE;&#x7684;&#x6D88;&#x606F;&#x4F7F;&#x7528; TCP &#x4E0E; Talker &#x5EFA;&#x7ACB;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x3002;</p>
+<h4 id="6talker&#x5411;listener&#x53D1;&#x9001;&#x6D88;&#x606F;">6.Talker&#x5411;Listener&#x53D1;&#x9001;&#x6D88;&#x606F;</h4>
+<p>&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x540E;&#xFF0C;Talker &#x5F00;&#x59CB;&#x5411; Listener &#x53D1;&#x5E03;&#x6D88;&#x606F;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;1:&#x4E0A;&#x8FF0;&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;&#x4E2D;&#xFF0C;&#x524D;&#x4E94;&#x6B65;&#x4F7F;&#x7528;&#x7684; RPC&#x534F;&#x8BAE;&#xFF0C;&#x6700;&#x540E;&#x4E24;&#x6B65;&#x4F7F;&#x7528;&#x7684;&#x662F; TCP &#x534F;&#x8BAE;</p>
+<p>&#x6CE8;&#x610F;2: Talker &#x4E0E; Listener &#x7684;&#x542F;&#x52A8;&#x65E0;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x8981;&#x6C42;</p>
+<p>&#x6CE8;&#x610F;3: Talker &#x4E0E; Listener &#x90FD;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;</p>
+<p>&#x6CE8;&#x610F;4: Talker &#x4E0E; Listener &#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x540E;&#xFF0C;&#x4E0D;&#x518D;&#x9700;&#x8981; ROS Master&#x3002;&#x4E5F;&#x5373;&#xFF0C;&#x5373;&#x4FBF;&#x5173;&#x95ED;ROS Master&#xFF0C;Talker &#x4E0E; Listern &#x7167;&#x5E38;&#x901A;&#x4FE1;&#x3002;</p>
+</blockquote>
+<h3 id="213-&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x57FA;&#x672C;&#x64CD;&#x4F5C;bpython">2.1.3 &#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x57FA;&#x672C;&#x64CD;&#x4F5C;B(Python)</h3>
+<p><strong>&#x9700;&#x6C42;:</strong></p>
+<blockquote>
+<p>&#x7F16;&#x5199;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x5B9E;&#x73B0;&#xFF0C;&#x8981;&#x6C42;&#x53D1;&#x5E03;&#x65B9;&#x4EE5;10HZ(&#x6BCF;&#x79D2;10&#x6B21;)&#x7684;&#x9891;&#x7387;&#x53D1;&#x5E03;&#x6587;&#x672C;&#x6D88;&#x606F;&#xFF0C;&#x8BA2;&#x9605;&#x65B9;&#x8BA2;&#x9605;&#x6D88;&#x606F;&#x5E76;&#x5C06;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x6253;&#x5370;&#x8F93;&#x51FA;&#x3002;</p>
+</blockquote>
+<p><strong>&#x5206;&#x6790;:</strong></p>
+<p>&#x5728;&#x6A21;&#x578B;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;ROS master &#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x8FDE;&#x63A5;&#x7684;&#x5EFA;&#x7ACB;&#x4E5F;&#x5DF2;&#x7ECF;&#x88AB;&#x5C01;&#x88C5;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x5173;&#x952E;&#x70B9;&#x6709;&#x4E09;&#x4E2A;:</p>
+<ol>
+<li>&#x53D1;&#x5E03;&#x65B9;</li>
+<li>&#x63A5;&#x6536;&#x65B9;</li>
+<li>&#x6570;&#x636E;(&#x6B64;&#x5904;&#x4E3A;&#x666E;&#x901A;&#x6587;&#x672C;)</li>
+</ol>
+<p><strong>&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x7F16;&#x5199;&#x53D1;&#x5E03;&#x65B9;&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x7F16;&#x5199;&#x8BA2;&#x9605;&#x65B9;&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x4E3A;python&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF1B;</li>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x8BD1;&#x5E76;&#x6267;&#x884C;&#x3002;</li>
+</ol>
+<h4 id="1&#x53D1;&#x5E03;&#x65B9;">1.&#x53D1;&#x5E03;&#x65B9;</h4>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x9700;&#x6C42;: &#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x7684;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#xFF0C;&#x4E00;&#x65B9;&#x53D1;&#x5E03;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x65B9;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;
+         &#x5B9E;&#x73B0;&#x7684;&#x5173;&#x952E;&#x70B9;:
+         1.&#x53D1;&#x9001;&#x65B9;
+         2.&#x63A5;&#x6536;&#x65B9;
+         3.&#x6570;&#x636E;(&#x6B64;&#x5904;&#x4E3A;&#x666E;&#x901A;&#x6587;&#x672C;)
+
+         PS: &#x4E8C;&#x8005;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x76F8;&#x540C;&#x7684;&#x8BDD;&#x9898;
+
+
+    &#x6D88;&#x606F;&#x53D1;&#x5E03;&#x65B9;:
+        &#x5FAA;&#x73AF;&#x53D1;&#x5E03;&#x4FE1;&#x606F;:HelloWorld &#x540E;&#x7F00;&#x6570;&#x5B57;&#x7F16;&#x53F7;
+
+    &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:
+        1.&#x5BFC;&#x5305; 
+        2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;:&#x547D;&#x540D;(&#x552F;&#x4E00;)
+        3.&#x5B9E;&#x4F8B;&#x5316; &#x53D1;&#x5E03;&#x8005; &#x5BF9;&#x8C61;
+        4.&#x7EC4;&#x7EC7;&#x88AB;&#x53D1;&#x5E03;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x7F16;&#x5199;&#x903B;&#x8F91;&#x53D1;&#x5E03;&#x6570;&#x636E;
+
+
+&quot;&quot;&quot;</span>
+<span class="hljs-comment">#1.&#x5BFC;&#x5305; </span>
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">from</span> std_msgs.msg <span class="hljs-keyword">import</span> String
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    <span class="hljs-comment">#2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;:&#x547D;&#x540D;(&#x552F;&#x4E00;)</span>
+    rospy.init_node(<span class="hljs-string">&quot;talker_p&quot;</span>)
+    <span class="hljs-comment">#3.&#x5B9E;&#x4F8B;&#x5316; &#x53D1;&#x5E03;&#x8005; &#x5BF9;&#x8C61;</span>
+    pub = rospy.Publisher(<span class="hljs-string">&quot;chatter&quot;</span>,String,queue_size=<span class="hljs-number">10</span>)
+    <span class="hljs-comment">#4.&#x7EC4;&#x7EC7;&#x88AB;&#x53D1;&#x5E03;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x7F16;&#x5199;&#x903B;&#x8F91;&#x53D1;&#x5E03;&#x6570;&#x636E;</span>
+    msg = String()  <span class="hljs-comment">#&#x521B;&#x5EFA; msg &#x5BF9;&#x8C61;</span>
+    msg_front = <span class="hljs-string">&quot;hello &#x4F60;&#x597D;&quot;</span>
+    count = <span class="hljs-number">0</span>  <span class="hljs-comment">#&#x8BA1;&#x6570;&#x5668; </span>
+    <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5FAA;&#x73AF;&#x9891;&#x7387;</span>
+    rate = rospy.Rate(<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
+
+        <span class="hljs-comment">#&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;</span>
+        msg.data = msg_front + str(count)
+
+        pub.publish(msg)
+        rate.sleep()
+        rospy.loginfo(<span class="hljs-string">&quot;&#x5199;&#x51FA;&#x7684;&#x6570;&#x636E;:%s&quot;</span>,msg.data)
+        count += <span class="hljs-number">1</span>
+</code></pre>
+<h4 id="2&#x8BA2;&#x9605;&#x65B9;">2.&#x8BA2;&#x9605;&#x65B9;</h4>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x9700;&#x6C42;: &#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x7684;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#xFF0C;&#x4E00;&#x65B9;&#x53D1;&#x5E03;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x65B9;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;
+         &#x5B9E;&#x73B0;&#x7684;&#x5173;&#x952E;&#x70B9;:
+         1.&#x53D1;&#x9001;&#x65B9;
+         2.&#x63A5;&#x6536;&#x65B9;
+         3.&#x6570;&#x636E;(&#x6B64;&#x5904;&#x4E3A;&#x666E;&#x901A;&#x6587;&#x672C;)
+
+
+    &#x6D88;&#x606F;&#x8BA2;&#x9605;&#x65B9;:
+        &#x8BA2;&#x9605;&#x8BDD;&#x9898;&#x5E76;&#x6253;&#x5370;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6D88;&#x606F;
+
+    &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:
+        1.&#x5BFC;&#x5305; 
+        2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;:&#x547D;&#x540D;(&#x552F;&#x4E00;)
+        3.&#x5B9E;&#x4F8B;&#x5316; &#x8BA2;&#x9605;&#x8005; &#x5BF9;&#x8C61;
+        4.&#x5904;&#x7406;&#x8BA2;&#x9605;&#x7684;&#x6D88;&#x606F;(&#x56DE;&#x8C03;&#x51FD;&#x6570;)
+        5.&#x8BBE;&#x7F6E;&#x5FAA;&#x73AF;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+
+
+
+&quot;&quot;&quot;</span>
+<span class="hljs-comment">#1.&#x5BFC;&#x5305; </span>
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">from</span> std_msgs.msg <span class="hljs-keyword">import</span> String
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">doMsg</span><span class="hljs-params">(msg)</span>:</span>
+    rospy.loginfo(<span class="hljs-string">&quot;I heard:%s&quot;</span>,msg.data)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    <span class="hljs-comment">#2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;:&#x547D;&#x540D;(&#x552F;&#x4E00;)</span>
+    rospy.init_node(<span class="hljs-string">&quot;listener_p&quot;</span>)
+    <span class="hljs-comment">#3.&#x5B9E;&#x4F8B;&#x5316; &#x8BA2;&#x9605;&#x8005; &#x5BF9;&#x8C61;</span>
+    sub = rospy.Subscriber(<span class="hljs-string">&quot;chatter&quot;</span>,String,doMsg,queue_size=<span class="hljs-number">10</span>)
+    <span class="hljs-comment">#4.&#x5904;&#x7406;&#x8BA2;&#x9605;&#x7684;&#x6D88;&#x606F;(&#x56DE;&#x8C03;&#x51FD;&#x6570;)</span>
+    <span class="hljs-comment">#5.&#x8BBE;&#x7F6E;&#x5FAA;&#x73AF;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;</span>
+    rospy.spin()
+</code></pre>
+<h4 id="3&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;">3.&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;</h4>
+<p>&#x7EC8;&#x7AEF;&#x4E0B;&#x8FDB;&#x5165; scripts &#x6267;&#x884C;:<code>chmod +x *.py</code></p>
+<h4 id="4&#x914D;&#x7F6E;-cmakeliststxt">4.&#x914D;&#x7F6E; CMakeLists.txt</h4>
+<pre><code class="lang-python">catkin_install_python(PROGRAMS
+  scripts/talker_p.py
+  scripts/listener_p.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+</code></pre>
+<h4 id="5&#x6267;&#x884C;">5.&#x6267;&#x884C;</h4>
+<p>1.&#x542F;&#x52A8; roscore;</p>
+<p>2.&#x542F;&#x52A8;&#x53D1;&#x5E03;&#x8282;&#x70B9;;</p>
+<p>3.&#x542F;&#x52A8;&#x8BA2;&#x9605;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E0E;&#x5F15;&#x8A00;&#x90E8;&#x5206;&#x7684;&#x6F14;&#x793A;&#x6848;&#x4F8B;1&#x7C7B;&#x4F3C;&#x3002;</p>
+<hr>
+<p>PS&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; rqt_graph &#x67E5;&#x770B;&#x8282;&#x70B9;&#x5173;&#x7CFB;&#x3002;</p>
+<h3 id="214-&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x81EA;&#x5B9A;&#x4E49;msg">2.1.4 &#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x81EA;&#x5B9A;&#x4E49;msg</h3>
+<p>&#x5728; ROS &#x901A;&#x4FE1;&#x534F;&#x8BAE;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x8F7D;&#x4F53;&#x662F;&#x4E00;&#x4E2A;&#x8F83;&#x4E3A;&#x91CD;&#x8981;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF0C;ROS &#x4E2D;&#x901A;&#x8FC7; std_msgs &#x5C01;&#x88C5;&#x4E86;&#x4E00;&#x4E9B;&#x539F;&#x751F;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;,&#x6BD4;&#x5982;:String&#x3001;Int32&#x3001;Int64&#x3001;Char&#x3001;Bool&#x3001;Empty.... &#x4F46;&#x662F;&#xFF0C;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x4E00;&#x822C;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A; data &#x5B57;&#x6BB5;&#xFF0C;&#x7ED3;&#x6784;&#x7684;&#x5355;&#x4E00;&#x610F;&#x5473;&#x7740;&#x529F;&#x80FD;&#x4E0A;&#x7684;&#x5C40;&#x9650;&#x6027;&#xFF0C;&#x5F53;&#x4F20;&#x8F93;&#x4E00;&#x4E9B;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x5982;: &#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#x7684;&#x4FE1;&#x606F;... std_msgs &#x7531;&#x4E8E;&#x63CF;&#x8FF0;&#x6027;&#x8F83;&#x5DEE;&#x800C;&#x663E;&#x5F97;&#x529B;&#x4E0D;&#x4ECE;&#x5FC3;&#xFF0C;&#x8FD9;&#x79CD;&#x573A;&#x666F;&#x4E0B;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x578B;</p>
+<p>msgs&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x6BCF;&#x884C;&#x5177;&#x6709;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x548C;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x6709;&#xFF1A;</p>
+<ul>
+<li>int8, int16, int32, int64 (&#x6216;&#x8005;&#x65E0;&#x7B26;&#x53F7;&#x7C7B;&#x578B;: uint*)</li>
+<li>float32, float64</li>
+<li>string</li>
+<li>time, duration</li>
+<li>other msg files</li>
+<li>variable-length array[] and fixed-length array[C]</li>
+</ul>
+<p>ROS&#x4E2D;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7C7B;&#x578B;&#xFF1A;<code>Header</code>&#xFF0C;&#x6807;&#x5934;&#x5305;&#x542B;&#x65F6;&#x95F4;&#x6233;&#x548C;ROS&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x5750;&#x6807;&#x5E27;&#x4FE1;&#x606F;&#x3002;&#x4F1A;&#x7ECF;&#x5E38;&#x770B;&#x5230;msg&#x6587;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x5177;&#x6709;<code>Header&#x6807;&#x5934;</code>&#x3002;</p>
+<hr>
+<p><strong>&#x9700;&#x6C42;:</strong>&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#xFF0C;&#x8BE5;&#x6D88;&#x606F;&#x5305;&#x542B;&#x4EBA;&#x7684;&#x4FE1;&#x606F;:&#x59D3;&#x540D;&#x3001;&#x8EAB;&#x9AD8;&#x3001;&#x5E74;&#x9F84;&#x7B49;&#x3002;</p>
+<p><strong>&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x6309;&#x7167;&#x56FA;&#x5B9A;&#x683C;&#x5F0F;&#x521B;&#x5EFA; msg &#x6587;&#x4EF6;</li>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x53EF;&#x4EE5;&#x88AB; Python &#x6216; C++ &#x8C03;&#x7528;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;</li>
+</ol>
+<h4 id="1&#x5B9A;&#x4E49;msg&#x6587;&#x4EF6;">1.&#x5B9A;&#x4E49;msg&#x6587;&#x4EF6;</h4>
+<p>&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x65B0;&#x5EFA; msg &#x76EE;&#x5F55;&#xFF0C;&#x6DFB;&#x52A0;&#x6587;&#x4EF6; Person.msg</p>
+<pre><code class="lang-python">string name
+uint16 age
+float64 height
+</code></pre>
+<h4 id="2&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">2.&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<p><strong>package.xml</strong>&#x4E2D;&#x6DFB;&#x52A0;&#x7F16;&#x8BD1;&#x4F9D;&#x8D56;&#x4E0E;&#x6267;&#x884C;&#x4F9D;&#x8D56;</p>
+<pre><code class="lang-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">build_depend</span>&gt;</span>message_generation<span class="hljs-tag">&lt;/<span class="hljs-name">build_depend</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">exec_depend</span>&gt;</span>message_runtime<span class="hljs-tag">&lt;/<span class="hljs-name">exec_depend</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 
+  exce_depend &#x4EE5;&#x524D;&#x5BF9;&#x5E94;&#x7684;&#x662F; run_depend &#x73B0;&#x5728;&#x975E;&#x6CD5;
+  --&gt;</span>
+</code></pre>
+<p><strong>CMakeLists.txt</strong>&#x7F16;&#x8F91; msg &#x76F8;&#x5173;&#x914D;&#x7F6E;</p>
+<pre><code class="lang-perl">find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  message_generation
+)
+<span class="hljs-comment"># &#x9700;&#x8981;&#x52A0;&#x5165; message_generation,&#x5FC5;&#x987B;&#x6709; std_msgs</span>
+
+<span class="hljs-comment">## &#x914D;&#x7F6E; msg &#x6E90;&#x6587;&#x4EF6;</span>
+add_message_files(
+  FILES
+  Person.msg
+)
+
+<span class="hljs-comment"># &#x751F;&#x6210;&#x6D88;&#x606F;&#x65F6;&#x4F9D;&#x8D56;&#x4E8E; std_msgs</span>
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
+
+<span class="hljs-comment">#&#x6267;&#x884C;&#x65F6;&#x4F9D;&#x8D56;</span>
+catkin_package(
+<span class="hljs-comment">#  INCLUDE_DIRS include</span>
+<span class="hljs-comment">#  LIBRARIES demo02_talker_listener</span>
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+<span class="hljs-comment">#  DEPENDS system_lib</span>
+)
+</code></pre>
+<h4 id="3&#x7F16;&#x8BD1;">3.&#x7F16;&#x8BD1;</h4>
+<p><strong>&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;&#x67E5;&#x770B;:</strong></p>
+<p>C++ &#x9700;&#x8981;&#x8C03;&#x7528;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;(.../&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;/devel/include/&#x5305;&#x540D;/xxx.h)</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051907883.png" alt="img"></p>
+<p>Python &#x9700;&#x8981;&#x8C03;&#x7528;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;(.../&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;/devel/lib/python3/dist-packages/&#x5305;&#x540D;/msg)</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051907915.png" alt="img"></p>
+<p>&#x540E;&#x7EED;&#x8C03;&#x7528;&#x76F8;&#x5173; msg &#x65F6;&#xFF0C;&#x662F;&#x4ECE;&#x8FD9;&#x4E9B;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;&#x8C03;&#x7528;&#x7684;</p>
+<h3 id="216-&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x81EA;&#x5B9A;&#x4E49;msg&#x8C03;&#x7528;bpython">2.1.6 &#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x81EA;&#x5B9A;&#x4E49;msg&#x8C03;&#x7528;B(Python)</h3>
+<p><strong>&#x9700;&#x6C42;:</strong></p>
+<blockquote>
+<p>&#x7F16;&#x5199;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x5B9E;&#x73B0;&#xFF0C;&#x8981;&#x6C42;&#x53D1;&#x5E03;&#x65B9;&#x4EE5;1HZ(&#x6BCF;&#x79D2;1&#x6B21;)&#x7684;&#x9891;&#x7387;&#x53D1;&#x5E03;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#xFF0C;&#x8BA2;&#x9605;&#x65B9;&#x8BA2;&#x9605;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#x5E76;&#x5C06;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x6253;&#x5370;&#x8F93;&#x51FA;&#x3002;</p>
+</blockquote>
+<p><strong>&#x5206;&#x6790;:</strong></p>
+<p>&#x5728;&#x6A21;&#x578B;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;ROS master &#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x8FDE;&#x63A5;&#x7684;&#x5EFA;&#x7ACB;&#x4E5F;&#x5DF2;&#x7ECF;&#x88AB;&#x5C01;&#x88C5;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x5173;&#x952E;&#x70B9;&#x6709;&#x4E09;&#x4E2A;:</p>
+<ol>
+<li>&#x53D1;&#x5E03;&#x65B9;</li>
+<li>&#x63A5;&#x6536;&#x65B9;</li>
+<li>&#x6570;&#x636E;(&#x6B64;&#x5904;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;)</li>
+</ol>
+<p><strong>&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x7F16;&#x5199;&#x53D1;&#x5E03;&#x65B9;&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x7F16;&#x5199;&#x8BA2;&#x9605;&#x65B9;&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x4E3A;python&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF1B;</li>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x8BD1;&#x5E76;&#x6267;&#x884C;&#x3002;</li>
+</ol>
+<h4 id="0vscode&#x914D;&#x7F6E;">0.vscode&#x914D;&#x7F6E;</h4>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x4EE3;&#x7801;&#x63D0;&#x793A;&#x4EE5;&#x53CA;&#x8BEF;&#x629B;&#x5F02;&#x5E38;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x914D;&#x7F6E; vscode&#xFF0C;&#x5C06;&#x524D;&#x9762;&#x751F;&#x6210;&#x7684; python &#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x914D;&#x7F6E;&#x8FDB; settings.json</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;python.autoComplete.extraPaths&quot;</span>: [
+        <span class="hljs-string">&quot;/opt/ros/noetic/lib/python3/dist-packages&quot;</span>,
+        <span class="hljs-string">&quot;/xxx/yyy&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;/devel/lib/python3/dist-packages&quot;</span>
+    ]
+}
+</code></pre>
+<h4 id="1&#x53D1;&#x5E03;&#x65B9;">1.&#x53D1;&#x5E03;&#x65B9;</h4>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x53D1;&#x5E03;&#x65B9;:
+        &#x5FAA;&#x73AF;&#x53D1;&#x9001;&#x6D88;&#x606F;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">from</span> demo02_talker_listener.msg <span class="hljs-keyword">import</span> Person
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    <span class="hljs-comment">#1.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;</span>
+    rospy.init_node(<span class="hljs-string">&quot;talker_person_p&quot;</span>)
+    <span class="hljs-comment">#2.&#x521B;&#x5EFA;&#x53D1;&#x5E03;&#x8005;&#x5BF9;&#x8C61;</span>
+    pub = rospy.Publisher(<span class="hljs-string">&quot;chatter_person&quot;</span>,Person,queue_size=<span class="hljs-number">10</span>)
+    <span class="hljs-comment">#3.&#x7EC4;&#x7EC7;&#x6D88;&#x606F;</span>
+    p = Person()
+    p.name = <span class="hljs-string">&quot;&#x846B;&#x82A6;&#x74E6;&quot;</span>
+    p.age = <span class="hljs-number">18</span>
+    p.height = <span class="hljs-number">0.75</span>
+
+    <span class="hljs-comment">#4.&#x7F16;&#x5199;&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x903B;&#x8F91;</span>
+    rate = rospy.Rate(<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
+        pub.publish(p)  <span class="hljs-comment">#&#x53D1;&#x5E03;&#x6D88;&#x606F;</span>
+        rate.sleep()  <span class="hljs-comment">#&#x4F11;&#x7720;</span>
+        rospy.loginfo(<span class="hljs-string">&quot;&#x59D3;&#x540D;:%s, &#x5E74;&#x9F84;:%d, &#x8EAB;&#x9AD8;:%.2f&quot;</span>,p.name, p.age, p.height)
+</code></pre>
+<h4 id="2&#x8BA2;&#x9605;&#x65B9;">2.&#x8BA2;&#x9605;&#x65B9;</h4>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x8BA2;&#x9605;&#x65B9;:
+        &#x8BA2;&#x9605;&#x6D88;&#x606F;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">from</span> demo02_talker_listener.msg <span class="hljs-keyword">import</span> Person
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">doPerson</span><span class="hljs-params">(p)</span>:</span>
+    rospy.loginfo(<span class="hljs-string">&quot;&#x63A5;&#x6536;&#x5230;&#x7684;&#x4EBA;&#x7684;&#x4FE1;&#x606F;:%s, %d, %.2f&quot;</span>,p.name, p.age, p.height)
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    <span class="hljs-comment">#1.&#x521D;&#x59CB;&#x5316;&#x8282;&#x70B9;</span>
+    rospy.init_node(<span class="hljs-string">&quot;listener_person_p&quot;</span>)
+    <span class="hljs-comment">#2.&#x521B;&#x5EFA;&#x8BA2;&#x9605;&#x8005;&#x5BF9;&#x8C61;</span>
+    sub = rospy.Subscriber(<span class="hljs-string">&quot;chatter_person&quot;</span>,Person,doPerson,queue_size=<span class="hljs-number">10</span>)
+    rospy.spin() <span class="hljs-comment">#4.&#x5FAA;&#x73AF;</span>
+</code></pre>
+<h4 id="3&#x6743;&#x9650;&#x8BBE;&#x7F6E;">3.&#x6743;&#x9650;&#x8BBE;&#x7F6E;</h4>
+<p>&#x7EC8;&#x7AEF;&#x4E0B;&#x8FDB;&#x5165; scripts &#x6267;&#x884C;:<code>chmod +x *.py</code></p>
+<h4 id="4&#x914D;&#x7F6E;-cmakeliststxt">4.&#x914D;&#x7F6E; CMakeLists.txt</h4>
+<pre><code class="lang-python">catkin_install_python(PROGRAMS
+  scripts/talker_p.py
+  scripts/listener_p.py
+  scripts/person_talker.py
+  scripts/person_listener.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+</code></pre>
+<h4 id="5&#x6267;&#x884C;">5.&#x6267;&#x884C;</h4>
+<p>1.&#x542F;&#x52A8; roscore;</p>
+<p>2.&#x542F;&#x52A8;&#x53D1;&#x5E03;&#x8282;&#x70B9;;</p>
+<p>3.&#x542F;&#x52A8;&#x8BA2;&#x9605;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E0E;&#x5F15;&#x8A00;&#x90E8;&#x5206;&#x7684;&#x6F14;&#x793A;&#x6848;&#x4F8B;2&#x7C7B;&#x4F3C;&#x3002;</p>
+<hr>
+<p>PS&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; rqt_graph &#x67E5;&#x770B;&#x8282;&#x70B9;&#x5173;&#x7CFB;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051932279.gif" alt=""></p>
+<h2 id="22-&#x670D;&#x52A1;&#x901A;&#x4FE1;">2.2 &#x670D;&#x52A1;&#x901A;&#x4FE1;</h2>
+<p>&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x4E5F;&#x662F;ROS&#x4E2D;&#x4E00;&#x79CD;&#x6781;&#x5176;&#x5E38;&#x7528;&#x7684;&#x901A;&#x4FE1;&#x6A21;&#x5F0F;&#xFF0C;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x662F;&#x57FA;&#x4E8E;<strong>&#x8BF7;&#x6C42;&#x54CD;&#x5E94;</strong>&#x6A21;&#x5F0F;&#x7684;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x5E94;&#x7B54;&#x673A;&#x5236;&#x3002;&#x4E5F;&#x5373;: &#x4E00;&#x4E2A;&#x8282;&#x70B9;A&#x5411;&#x53E6;&#x4E00;&#x4E2A;&#x8282;&#x70B9;B&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF0C;B&#x63A5;&#x6536;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x5E76;&#x4EA7;&#x751F;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;A&#x3002;&#x6BD4;&#x5982;&#x5982;&#x4E0B;&#x573A;&#x666F;:</p>
+<blockquote>
+<p>&#x673A;&#x5668;&#x4EBA;&#x5DE1;&#x903B;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x5206;&#x6790;&#x4F20;&#x611F;&#x5668;&#x6570;&#x636E;&#x53D1;&#x73B0;&#x53EF;&#x7591;&#x7269;&#x4F53;&#x6216;&#x4EBA;... &#x6B64;&#x65F6;&#x9700;&#x8981;&#x62CD;&#x6444;&#x7167;&#x7247;&#x5E76;&#x7559;&#x5B58;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x4E0A;&#x8FF0;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;&#x5230;&#x4E86;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x3002;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x9700;&#x8981;&#x5411;&#x76F8;&#x673A;&#x8282;&#x70B9;&#x53D1;&#x9001;&#x62CD;&#x7167;&#x8BF7;&#x6C42;&#xFF0C;&#x76F8;&#x673A;&#x8282;&#x70B9;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x7ED3;&#x679C;</li>
+</ul>
+<p>&#x4E0E;&#x4E0A;&#x8FF0;&#x5E94;&#x7528;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x66F4;&#x9002;&#x7528;&#x4E8E;&#x5BF9;&#x65F6;&#x65F6;&#x6027;&#x6709;&#x8981;&#x6C42;&#x3001;&#x5177;&#x6709;&#x4E00;&#x5B9A;&#x903B;&#x8F91;&#x5904;&#x7406;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;</p>
+<p><strong>&#x6982;&#x5FF5;</strong></p>
+<p>&#x4EE5;&#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x7684;&#x901A;&#x4FE1;&#x6A21;&#x5F0F;&#x3002;</p>
+<p><strong>&#x4F5C;&#x7528;</strong></p>
+<p>&#x7528;&#x4E8E;&#x5076;&#x7136;&#x7684;&#x3001;&#x5BF9;&#x65F6;&#x65F6;&#x6027;&#x6709;&#x8981;&#x6C42;&#x3001;&#x6709;&#x4E00;&#x5B9A;&#x903B;&#x8F91;&#x5904;&#x7406;&#x9700;&#x6C42;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x573A;&#x666F;&#x3002;</p>
+<p><strong>&#x6848;&#x4F8B;</strong></p>
+<p>&#x5B9E;&#x73B0;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x7684;&#x6C42;&#x548C;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8282;&#x70B9;&#xFF0C;&#x8FD0;&#x884C;&#x4F1A;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x8282;&#x70B9;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x6C42;&#x548C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x54CD;&#x5E94;&#x56DE;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051934485.gif" alt="img"></p>
+<hr>
+<p><strong>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</strong></p>
+<ul>
+<li><a href="http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv" target="_blank">http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv</a></li>
+<li><a href="http://wiki.ros.org/ROS/Tutorials/WritingServiceClient(c%2B%2B" target="_blank">http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28c%2B%2B%29</a>)</li>
+<li><a href="http://wiki.ros.org/ROS/Tutorials/WritingServiceClient(python" target="_blank">http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28python%29</a>)</li>
+</ul>
+<h3 id="221-&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x7406;&#x8BBA;&#x6A21;&#x578B;">2.2.1 &#x670D;&#x52A1;&#x901A;&#x4FE1;&#x7406;&#x8BBA;&#x6A21;&#x578B;</h3>
+<p>&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x8F83;&#x4E4B;&#x4E8E;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x66F4;&#x7B80;&#x5355;&#x4E9B;&#xFF0C;&#x7406;&#x8BBA;&#x6A21;&#x578B;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x8BE5;&#x6A21;&#x578B;&#x4E2D;&#x6D89;&#x53CA;&#x5230;&#x4E09;&#x4E2A;&#x89D2;&#x8272;:</p>
+<ul>
+<li>ROS master(&#x7BA1;&#x7406;&#x8005;)</li>
+<li>Server(&#x670D;&#x52A1;&#x7AEF;)</li>
+<li>Client(&#x5BA2;&#x6237;&#x7AEF;)</li>
+</ul>
+<p>ROS Master &#x8D1F;&#x8D23;&#x4FDD;&#x7BA1; Server &#x548C; Client &#x6CE8;&#x518C;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x5339;&#x914D;&#x8BDD;&#x9898;&#x76F8;&#x540C;&#x7684; Server &#x4E0E; Client &#xFF0C;&#x5E2E;&#x52A9; Server &#x4E0E; Client &#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x540E;&#xFF0C;Client &#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#xFF0C;Server &#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051934547.jpeg" alt="img"></p>
+<p>&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x7531;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x5B9E;&#x73B0;:</p>
+<h4 id="0server&#x6CE8;&#x518C;">0.Server&#x6CE8;&#x518C;</h4>
+<p>Server &#x542F;&#x52A8;&#x540E;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7;RPC&#x5728; ROS Master &#x4E2D;&#x6CE8;&#x518C;&#x81EA;&#x8EAB;&#x4FE1;&#x606F;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x7684;&#x540D;&#x79F0;&#x3002;ROS Master &#x4F1A;&#x5C06;&#x8282;&#x70B9;&#x7684;&#x6CE8;&#x518C;&#x4FE1;&#x606F;&#x52A0;&#x5165;&#x5230;&#x6CE8;&#x518C;&#x8868;&#x4E2D;&#x3002;</p>
+<h4 id="1client&#x6CE8;&#x518C;">1.Client&#x6CE8;&#x518C;</h4>
+<p>Client &#x542F;&#x52A8;&#x540E;&#xFF0C;&#x4E5F;&#x4F1A;&#x901A;&#x8FC7;RPC&#x5728; ROS Master &#x4E2D;&#x6CE8;&#x518C;&#x81EA;&#x8EAB;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x542B;&#x9700;&#x8981;&#x8BF7;&#x6C42;&#x7684;&#x670D;&#x52A1;&#x7684;&#x540D;&#x79F0;&#x3002;ROS Master &#x4F1A;&#x5C06;&#x8282;&#x70B9;&#x7684;&#x6CE8;&#x518C;&#x4FE1;&#x606F;&#x52A0;&#x5165;&#x5230;&#x6CE8;&#x518C;&#x8868;&#x4E2D;&#x3002;</p>
+<h4 id="2ros-master&#x5B9E;&#x73B0;&#x4FE1;&#x606F;&#x5339;&#x914D;">2.ROS Master&#x5B9E;&#x73B0;&#x4FE1;&#x606F;&#x5339;&#x914D;</h4>
+<p>ROS Master &#x4F1A;&#x6839;&#x636E;&#x6CE8;&#x518C;&#x8868;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x5339;&#x914D;Server&#x548C; Client&#xFF0C;&#x5E76;&#x901A;&#x8FC7; RPC &#x5411; Client &#x53D1;&#x9001; Server &#x7684; <strong>TCP</strong> &#x5730;&#x5740;&#x4FE1;&#x606F;&#x3002;</p>
+<h4 id="3client&#x53D1;&#x9001;&#x8BF7;&#x6C42;">3.Client&#x53D1;&#x9001;&#x8BF7;&#x6C42;</h4>
+<p>Client &#x6839;&#x636E;&#x6B65;&#x9AA4;2 &#x54CD;&#x5E94;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4F7F;&#x7528; TCP &#x4E0E; Server &#x5EFA;&#x7ACB;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#xFF0C;&#x5E76;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x3002;</p>
+<h4 id="4server&#x53D1;&#x9001;&#x54CD;&#x5E94;">4.Server&#x53D1;&#x9001;&#x54CD;&#x5E94;</h4>
+<p>Server &#x63A5;&#x6536;&#x3001;&#x89E3;&#x6790;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x4EA7;&#x751F;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9; Client&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;:</p>
+<p>1.&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x88AB;&#x5904;&#x7406;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#xFF1B;</p>
+<p>2.&#x670D;&#x52A1;&#x7AEF;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x90FD;&#x53EF;&#x4EE5;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x3002;</p>
+</blockquote>
+<h3 id="222-&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x81EA;&#x5B9A;&#x4E49;srv">2.2.2 &#x670D;&#x52A1;&#x901A;&#x4FE1;&#x81EA;&#x5B9A;&#x4E49;srv</h3>
+<p><strong>&#x9700;&#x6C42;:</strong></p>
+<blockquote>
+<p>&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x4E2D;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4EA4;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x81F3;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x6C42;&#x548C;&#x5E76;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8BF7;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x4FE1;&#x7684;&#x6570;&#x636E;&#x8F7D;&#x4F53;&#x3002;</p>
+</blockquote>
+<p><strong>&#x6D41;&#x7A0B;:</strong></p>
+<p>srv &#x6587;&#x4EF6;&#x5185;&#x7684;&#x53EF;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E0E; msg &#x6587;&#x4EF6;&#x4E00;&#x81F4;&#xFF0C;&#x4E14;&#x5B9A;&#x4E49; srv &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;&#x4E0E;&#x81EA;&#x5B9A;&#x4E49; msg &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;&#x7C7B;&#x4F3C;:</p>
+<ol>
+<li>&#x6309;&#x7167;&#x56FA;&#x5B9A;&#x683C;&#x5F0F;&#x521B;&#x5EFA;srv&#x6587;&#x4EF6;</li>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;</li>
+</ol>
+<h4 id="1&#x5B9A;&#x4E49;srv&#x6587;&#x4EF6;">1.&#x5B9A;&#x4E49;srv&#x6587;&#x4EF6;</h4>
+<p>&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x5206;&#x6210;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x8BF7;&#x6C42;&#x4E0E;&#x54CD;&#x5E94;&#xFF0C;&#x5728; srv &#x6587;&#x4EF6;&#x4E2D;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#x4F7F;&#x7528;<code>---</code>&#x5206;&#x5272;&#xFF0C;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;:</p>
+<p>&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x65B0;&#x5EFA; srv &#x76EE;&#x5F55;&#xFF0C;&#x6DFB;&#x52A0; xxx.srv &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x65F6;&#x53D1;&#x9001;&#x7684;&#x4E24;&#x4E2A;&#x6570;&#x5B57;</span>
+int32 num1
+int32 num2
+---
+<span class="hljs-comment"># &#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;</span>
+int32 sum
+</code></pre>
+<h4 id="2&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">2.&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<p><strong>package.xml</strong>&#x4E2D;&#x6DFB;&#x52A0;&#x7F16;&#x8BD1;&#x4F9D;&#x8D56;&#x4E0E;&#x6267;&#x884C;&#x4F9D;&#x8D56;</p>
+<pre><code class="lang-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">build_depend</span>&gt;</span>message_generation<span class="hljs-tag">&lt;/<span class="hljs-name">build_depend</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">exec_depend</span>&gt;</span>message_runtime<span class="hljs-tag">&lt;/<span class="hljs-name">exec_depend</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 
+  exce_depend &#x4EE5;&#x524D;&#x5BF9;&#x5E94;&#x7684;&#x662F; run_depend &#x73B0;&#x5728;&#x975E;&#x6CD5;
+  --&gt;</span>
+</code></pre>
+<p><strong>CMakeLists.txt</strong>&#x7F16;&#x8F91; srv &#x76F8;&#x5173;&#x914D;&#x7F6E;</p>
+<pre><code class="lang-perl">find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  message_generation
+)
+<span class="hljs-comment"># &#x9700;&#x8981;&#x52A0;&#x5165; message_generation,&#x5FC5;&#x987B;&#x6709; std_msgs</span>
+
+add_service_files(
+  FILES
+  AddInts.srv
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
+</code></pre>
+<p>&#x6CE8;&#x610F;: &#x5B98;&#x7F51;&#x6CA1;&#x6709;&#x5728; catkin_package &#x4E2D;&#x914D;&#x7F6E; message_runtime,&#x7ECF;&#x6D4B;&#x8BD5;&#x914D;&#x7F6E;&#x4E5F;&#x53EF;&#x4EE5;</p>
+<h4 id="3&#x7F16;&#x8BD1;">3.&#x7F16;&#x8BD1;</h4>
+<p>&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;&#x67E5;&#x770B;:</p>
+<p>C++ &#x9700;&#x8981;&#x8C03;&#x7528;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;(.../&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;/devel/include/&#x5305;&#x540D;/xxx.h)</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/07vscode_&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;(C++" alt="img">.PNG)</p>
+<p>Python &#x9700;&#x8981;&#x8C03;&#x7528;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;(.../&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;/devel/lib/python3/dist-packages/&#x5305;&#x540D;/srv)</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051935776.png" alt="img"></p>
+<p>&#x540E;&#x7EED;&#x8C03;&#x7528;&#x76F8;&#x5173; srv &#x65F6;&#xFF0C;&#x662F;&#x4ECE;&#x8FD9;&#x4E9B;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;&#x8C03;&#x7528;&#x7684;</p>
+<h3 id="224-&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x81EA;&#x5B9A;&#x4E49;srv&#x8C03;&#x7528;bpython">2.2.4 &#x670D;&#x52A1;&#x901A;&#x4FE1;&#x81EA;&#x5B9A;&#x4E49;srv&#x8C03;&#x7528;B(Python)</h3>
+<p><strong>&#x9700;&#x6C42;:</strong></p>
+<blockquote>
+<p>&#x7F16;&#x5199;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4EA4;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x81F3;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x6C42;&#x548C;&#x5E76;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+</blockquote>
+<p><strong>&#x5206;&#x6790;:</strong></p>
+<p>&#x5728;&#x6A21;&#x578B;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;ROS master &#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x8FDE;&#x63A5;&#x7684;&#x5EFA;&#x7ACB;&#x4E5F;&#x5DF2;&#x7ECF;&#x88AB;&#x5C01;&#x88C5;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x5173;&#x952E;&#x70B9;&#x6709;&#x4E09;&#x4E2A;:</p>
+<ol>
+<li>&#x670D;&#x52A1;&#x7AEF;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;</li>
+<li>&#x6570;&#x636E;</li>
+</ol>
+<p><strong>&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x7F16;&#x5199;&#x670D;&#x52A1;&#x7AEF;&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x7F16;&#x5199;&#x5BA2;&#x6237;&#x7AEF;&#x5B9E;&#x73B0;&#xFF1B;</li>
+<li>&#x4E3A;python&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF1B;</li>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x8BD1;&#x5E76;&#x6267;&#x884C;&#x3002;</li>
+</ol>
+<h4 id="0vscode&#x914D;&#x7F6E;">0.vscode&#x914D;&#x7F6E;</h4>
+<p>&#x9700;&#x8981;&#x50CF;&#x4E4B;&#x524D;&#x81EA;&#x5B9A;&#x4E49; msg &#x5B9E;&#x73B0;&#x4E00;&#x6837;&#x914D;&#x7F6E;settings.json &#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x4EE5;&#x524D;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x4E14;&#x6CA1;&#x6709;&#x53D8;&#x66F4;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x914D;&#x7F6E;&#xFF0C;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#x4E0E;&#x4E4B;&#x524D;&#x76F8;&#x540C;:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;python.autoComplete.extraPaths&quot;</span>: [
+        <span class="hljs-string">&quot;/opt/ros/noetic/lib/python3/dist-packages&quot;</span>,
+    ]
+}
+</code></pre>
+<h4 id="1&#x670D;&#x52A1;&#x7AEF;">1.&#x670D;&#x52A1;&#x7AEF;</h4>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x9700;&#x6C42;: 
+        &#x7F16;&#x5199;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8282;&#x70B9;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x5230;&#x670D;&#x52A1;&#x5668;
+        &#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x89E3;&#x6790;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x76F8;&#x52A0;&#x540E;&#xFF0C;&#x5C06;&#x7ED3;&#x679C;&#x54CD;&#x5E94;&#x56DE;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;
+        &#x5BA2;&#x6237;&#x7AEF;&#x518D;&#x89E3;&#x6790;
+
+    &#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5B9E;&#x73B0;:
+        1.&#x5BFC;&#x5305;
+        2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;
+        3.&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5BF9;&#x8C61;
+        4.&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x5E76;&#x4EA7;&#x751F;&#x54CD;&#x5E94;
+        5.spin &#x51FD;&#x6570;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-comment"># 1.&#x5BFC;&#x5305;</span>
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">from</span> demo03_server_client.srv <span class="hljs-keyword">import</span> AddInts,AddIntsRequest,AddIntsResponse
+<span class="hljs-comment"># &#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x662F;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x54CD;&#x5E94;&#x5BF9;&#x8C61;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">doReq</span><span class="hljs-params">(req)</span>:</span>
+    <span class="hljs-comment"># &#x89E3;&#x6790;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;</span>
+    sum = req.num1 + req.num2
+    rospy.loginfo(<span class="hljs-string">&quot;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;:num1 = %d, num2 = %d, sum = %d&quot;</span>,req.num1, req.num2, sum)
+
+    <span class="hljs-comment"># &#x521B;&#x5EFA;&#x54CD;&#x5E94;&#x5BF9;&#x8C61;&#xFF0C;&#x8D4B;&#x503C;&#x5E76;&#x8FD4;&#x56DE;</span>
+    <span class="hljs-comment"># resp = AddIntsResponse()</span>
+    <span class="hljs-comment"># resp.sum = sum</span>
+    resp = AddIntsResponse(sum)
+    <span class="hljs-keyword">return</span> resp
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    <span class="hljs-comment"># 2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;</span>
+    rospy.init_node(<span class="hljs-string">&quot;addints_server_p&quot;</span>)
+    <span class="hljs-comment"># 3.&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5BF9;&#x8C61;</span>
+    server = rospy.Service(<span class="hljs-string">&quot;AddInts&quot;</span>,AddInts,doReq)
+    <span class="hljs-comment"># 4.&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x5E76;&#x4EA7;&#x751F;&#x54CD;&#x5E94;</span>
+    <span class="hljs-comment"># 5.spin &#x51FD;&#x6570;</span>
+    rospy.spin()
+</code></pre>
+<h4 id="2&#x5BA2;&#x6237;&#x7AEF;">2.&#x5BA2;&#x6237;&#x7AEF;</h4>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x9700;&#x6C42;: 
+        &#x7F16;&#x5199;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8282;&#x70B9;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x5230;&#x670D;&#x52A1;&#x5668;
+        &#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x89E3;&#x6790;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x76F8;&#x52A0;&#x540E;&#xFF0C;&#x5C06;&#x7ED3;&#x679C;&#x54CD;&#x5E94;&#x56DE;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;
+        &#x5BA2;&#x6237;&#x7AEF;&#x518D;&#x89E3;&#x6790;
+
+    &#x5BA2;&#x6237;&#x7AEF;&#x5B9E;&#x73B0;:
+        1.&#x5BFC;&#x5305;
+        2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;
+        3.&#x521B;&#x5EFA;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;
+        4.&#x53D1;&#x9001;&#x8BF7;&#x6C42;
+        5.&#x63A5;&#x6536;&#x5E76;&#x5904;&#x7406;&#x54CD;&#x5E94;
+
+    &#x4F18;&#x5316;:
+        &#x52A0;&#x5165;&#x6570;&#x636E;&#x7684;&#x52A8;&#x6001;&#x83B7;&#x53D6;
+
+
+&quot;&quot;&quot;</span>
+<span class="hljs-comment">#1.&#x5BFC;&#x5305;</span>
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">from</span> demo03_server_client.srv <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">import</span> sys
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+
+    <span class="hljs-comment">#&#x4F18;&#x5316;&#x5B9E;&#x73B0;</span>
+    <span class="hljs-keyword">if</span> len(sys.argv) != <span class="hljs-number">3</span>:
+        rospy.logerr(<span class="hljs-string">&quot;&#x8BF7;&#x6B63;&#x786E;&#x63D0;&#x4EA4;&#x53C2;&#x6570;&quot;</span>)
+        sys.exit(<span class="hljs-number">1</span>)
+
+
+    <span class="hljs-comment"># 2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;</span>
+    rospy.init_node(<span class="hljs-string">&quot;AddInts_Client_p&quot;</span>)
+    <span class="hljs-comment"># 3.&#x521B;&#x5EFA;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;</span>
+    client = rospy.ServiceProxy(<span class="hljs-string">&quot;AddInts&quot;</span>,AddInts)
+    <span class="hljs-comment"># &#x8BF7;&#x6C42;&#x524D;&#xFF0C;&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x5C31;&#x7EEA;</span>
+    <span class="hljs-comment"># &#x65B9;&#x5F0F;1:</span>
+    <span class="hljs-comment"># rospy.wait_for_service(&quot;AddInts&quot;)</span>
+    <span class="hljs-comment"># &#x65B9;&#x5F0F;2</span>
+    client.wait_for_service()
+    <span class="hljs-comment"># 4.&#x53D1;&#x9001;&#x8BF7;&#x6C42;,&#x63A5;&#x6536;&#x5E76;&#x5904;&#x7406;&#x54CD;&#x5E94;</span>
+    <span class="hljs-comment"># &#x65B9;&#x5F0F;1</span>
+    <span class="hljs-comment"># resp = client(3,4)</span>
+    <span class="hljs-comment"># &#x65B9;&#x5F0F;2</span>
+    <span class="hljs-comment"># resp = client(AddIntsRequest(1,5))</span>
+    <span class="hljs-comment"># &#x65B9;&#x5F0F;3</span>
+    req = AddIntsRequest()
+    <span class="hljs-comment"># req.num1 = 100</span>
+    <span class="hljs-comment"># req.num2 = 200 </span>
+
+    <span class="hljs-comment">#&#x4F18;&#x5316;</span>
+    req.num1 = int(sys.argv[<span class="hljs-number">1</span>])
+    req.num2 = int(sys.argv[<span class="hljs-number">2</span>]) 
+
+    resp = client.call(req)
+    rospy.loginfo(<span class="hljs-string">&quot;&#x54CD;&#x5E94;&#x7ED3;&#x679C;:%d&quot;</span>,resp.sum)
+</code></pre>
+<h4 id="3&#x8BBE;&#x7F6E;&#x6743;&#x9650;">3.&#x8BBE;&#x7F6E;&#x6743;&#x9650;</h4>
+<p>&#x7EC8;&#x7AEF;&#x4E0B;&#x8FDB;&#x5165; scripts &#x6267;&#x884C;:<code>chmod +x *.py</code></p>
+<h4 id="4&#x914D;&#x7F6E;-cmakeliststxt">4.&#x914D;&#x7F6E; CMakeLists.txt</h4>
+<p><strong>CMakeLists.txt</strong></p>
+<pre><code class="lang-cmake">catkin_install_python(PROGRAMS
+  scripts/AddInts_Server_p.py 
+  scripts/AddInts_Client_p.py
+  DESTINATION <span class="hljs-variable">${CATKIN_PACKAGE_BIN_DESTINATION}</span>
+)
+</code></pre>
+<h4 id="5&#x6267;&#x884C;">5.&#x6267;&#x884C;</h4>
+<p><strong>&#x6D41;&#x7A0B;:</strong></p>
+<ul>
+<li>&#x9700;&#x8981;&#x5148;&#x542F;&#x52A8;&#x670D;&#x52A1;:<code>rosrun &#x5305;&#x540D; &#x670D;&#x52A1;</code></li>
+<li>&#x7136;&#x540E;&#x518D;&#x8C03;&#x7528;&#x5BA2;&#x6237;&#x7AEF; :<code>rosrun &#x5305;&#x540D; &#x5BA2;&#x6237;&#x7AEF; &#x53C2;&#x6570;1 &#x53C2;&#x6570;2</code></li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<p>&#x4F1A;&#x6839;&#x636E;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x54CD;&#x5E94;&#x76F8;&#x52A0;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<h2 id="23-&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;">2.3 &#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;</h2>
+<p>&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x5728;ROS&#x4E2D;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x5171;&#x4EAB;&#x3002;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x72EC;&#x7ACB;&#x4E8E;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x5BB9;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x8BE5;&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x88AB;&#x4E0D;&#x540C;&#x7684;&#x8282;&#x70B9;&#x8C03;&#x7528;&#xFF0C;&#x5F53;&#x7136;&#x4E0D;&#x540C;&#x7684;&#x8282;&#x70B9;&#x4E5F;&#x53EF;&#x4EE5;&#x5F80;&#x5176;&#x4E2D;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x5173;&#x4E8E;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5178;&#x578B;&#x5E94;&#x7528;&#x573A;&#x666F;&#x5982;&#x4E0B;:</p>
+<blockquote>
+<p>&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#x65F6;&#xFF0C;&#x4F1A;&#x8FDB;&#x884C;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#xFF0C;&#x6BD4;&#x5982;: &#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#xFF0C;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x4ECE;&#x51FA;&#x53D1;&#x70B9;&#x5230;&#x76EE;&#x6807;&#x70B9;&#x7684;&#x5927;&#x81F4;&#x8DEF;&#x5F84;&#x3002;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x5F53;&#x524D;&#x8DEF;&#x51B5;&#x751F;&#x6210;&#x65F6;&#x65F6;&#x7684;&#x884C;&#x8FDB;&#x8DEF;&#x5F84;</p>
+</blockquote>
+<p>&#x4E0A;&#x8FF0;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x548C;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x5230;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#xFF1A;</p>
+<ul>
+<li>&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x53C2;&#x8003;&#x5C0F;&#x8F66;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E9B;&#x5C3A;&#x5BF8;&#x4FE1;&#x606F;&#x5B58;&#x50A8;&#x5230;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x8282;&#x70B9;&#x4E0E;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x89C4;&#x5212;&#x8282;&#x70B9;&#x90FD;&#x53EF;&#x4EE5;&#x4ECE;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x8C03;&#x7528;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E00;&#x822C;&#x9002;&#x7528;&#x4E8E;&#x5B58;&#x5728;&#x6570;&#x636E;&#x5171;&#x4EAB;&#x7684;&#x4E00;&#x4E9B;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;</p>
+<p><strong>&#x6982;&#x5FF5;</strong></p>
+<p>&#x4EE5;&#x5171;&#x4EAB;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x7684;&#x901A;&#x4FE1;&#x6A21;&#x5F0F;&#x3002;</p>
+<p><strong>&#x4F5C;&#x7528;</strong></p>
+<p>&#x5B58;&#x50A8;&#x4E00;&#x4E9B;&#x591A;&#x8282;&#x70B9;&#x5171;&#x4EAB;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</p>
+<p><strong>&#x6848;&#x4F8B;</strong></p>
+<p>&#x5B9E;&#x73B0;&#x53C2;&#x6570;&#x589E;&#x5220;&#x6539;&#x67E5;&#x64CD;&#x4F5C;&#x3002;</p>
+<hr>
+<p><strong>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</strong></p>
+<ul>
+<li><a href="http://wiki.ros.org/Parameter Server" target="_blank">http://wiki.ros.org/Parameter%20Server</a></li>
+<li><a href="http://wiki.ros.org/roscpp/Overview/Parameter Server" target="_blank">http://wiki.ros.org/roscpp/Overview/Parameter%20Server</a></li>
+<li><a href="http://wiki.ros.org/rospy/Overview/Parameter Server" target="_blank">http://wiki.ros.org/rospy/Overview/Parameter%20Server</a></li>
+</ul>
+<h3 id="231-&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x7406;&#x8BBA;&#x6A21;&#x578B;">2.3.1 &#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x7406;&#x8BBA;&#x6A21;&#x578B;</h3>
+<p>&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x5B9E;&#x73B0;&#x662F;&#x6700;&#x4E3A;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x8BE5;&#x6A21;&#x578B;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;,&#x8BE5;&#x6A21;&#x578B;&#x4E2D;&#x6D89;&#x53CA;&#x5230;&#x4E09;&#x4E2A;&#x89D2;&#x8272;:</p>
+<ul>
+<li>ROS Master (&#x7BA1;&#x7406;&#x8005;)</li>
+<li>Talker (&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x8005;)</li>
+<li>Listener (&#x53C2;&#x6570;&#x8C03;&#x7528;&#x8005;)</li>
+</ul>
+<p>ROS Master &#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x5BB9;&#x5668;&#x4FDD;&#x5B58;&#x53C2;&#x6570;&#xFF0C;Talker &#x53EF;&#x4EE5;&#x5411;&#x5BB9;&#x5668;&#x4E2D;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;Listener &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506051944301.jpeg" alt="img"></p>
+<p>&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x7531;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x5B9E;&#x73B0;:</p>
+<h4 id="1talker-&#x8BBE;&#x7F6E;&#x53C2;&#x6570;">1.Talker &#x8BBE;&#x7F6E;&#x53C2;&#x6570;</h4>
+<p>Talker &#x901A;&#x8FC7; RPC &#x5411;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x53C2;&#x6570;(&#x5305;&#x62EC;&#x53C2;&#x6570;&#x540D;&#x4E0E;&#x53C2;&#x6570;&#x503C;)&#xFF0C;ROS Master &#x5C06;&#x53C2;&#x6570;&#x4FDD;&#x5B58;&#x5230;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#x3002;</p>
+<h4 id="2listener-&#x83B7;&#x53D6;&#x53C2;&#x6570;">2.Listener &#x83B7;&#x53D6;&#x53C2;&#x6570;</h4>
+<p>Listener &#x901A;&#x8FC7; RPC &#x5411;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x53C2;&#x6570;&#x67E5;&#x627E;&#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42;&#x4E2D;&#x5305;&#x542B;&#x8981;&#x67E5;&#x627E;&#x7684;&#x53C2;&#x6570;&#x540D;&#x3002;</p>
+<h4 id="3ros-master-&#x5411;-listener-&#x53D1;&#x9001;&#x53C2;&#x6570;&#x503C;">3.ROS Master &#x5411; Listener &#x53D1;&#x9001;&#x53C2;&#x6570;&#x503C;</h4>
+<p>ROS Master &#x6839;&#x636E;&#x6B65;&#x9AA4;2&#x8BF7;&#x6C42;&#x63D0;&#x4F9B;&#x7684;&#x53C2;&#x6570;&#x540D;&#x67E5;&#x627E;&#x53C2;&#x6570;&#x503C;&#xFF0C;&#x5E76;&#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x901A;&#x8FC7; RPC &#x53D1;&#x9001;&#x7ED9; Listener&#x3002;</p>
+<hr>
+<p>&#x53C2;&#x6570;&#x53EF;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;:</p>
+<ul>
+<li>32-bit integers</li>
+<li>booleans</li>
+<li>strings</li>
+<li>doubles</li>
+<li>iso8601 dates</li>
+<li>lists</li>
+<li>base64-encoded binary data</li>
+<li>&#x5B57;&#x5178;</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#x610F;:&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x662F;&#x4E3A;&#x9AD8;&#x6027;&#x80FD;&#x800C;&#x8BBE;&#x8BA1;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x6700;&#x597D;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x9759;&#x6001;&#x7684;&#x975E;&#x4E8C;&#x8FDB;&#x5236;&#x7684;&#x7B80;&#x5355;&#x6570;&#x636E;</p>
+</blockquote>
+<h3 id="233-&#x53C2;&#x6570;&#x64CD;&#x4F5C;bpython">2.3.3 &#x53C2;&#x6570;&#x64CD;&#x4F5C;B(Python)</h3>
+<p><strong>&#x9700;&#x6C42;:</strong>&#x5B9E;&#x73B0;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x53C2;&#x6570;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="1&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x65B0;&#x589E;&#x4FEE;&#x6539;&#x53C2;&#x6570;">1.&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x65B0;&#x589E;(&#x4FEE;&#x6539;)&#x53C2;&#x6570;</h4>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x64CD;&#x4F5C;&#x4E4B;&#x65B0;&#x589E;&#x4E0E;&#x4FEE;&#x6539;(&#x4E8C;&#x8005;API&#x4E00;&#x6837;)_Python&#x5B9E;&#x73B0;:
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> rospy
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    rospy.init_node(<span class="hljs-string">&quot;set_update_paramter_p&quot;</span>)
+
+    <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5404;&#x79CD;&#x7C7B;&#x578B;&#x53C2;&#x6570;</span>
+    rospy.set_param(<span class="hljs-string">&quot;p_int&quot;</span>,<span class="hljs-number">10</span>)
+    rospy.set_param(<span class="hljs-string">&quot;p_double&quot;</span>,<span class="hljs-number">3.14</span>)
+    rospy.set_param(<span class="hljs-string">&quot;p_bool&quot;</span>,<span class="hljs-keyword">True</span>)
+    rospy.set_param(<span class="hljs-string">&quot;p_string&quot;</span>,<span class="hljs-string">&quot;hello python&quot;</span>)
+    rospy.set_param(<span class="hljs-string">&quot;p_list&quot;</span>,[<span class="hljs-string">&quot;hello&quot;</span>,<span class="hljs-string">&quot;haha&quot;</span>,<span class="hljs-string">&quot;xixi&quot;</span>])
+    rospy.set_param(<span class="hljs-string">&quot;p_dict&quot;</span>,{<span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;hulu&quot;</span>,<span class="hljs-string">&quot;age&quot;</span>:<span class="hljs-number">8</span>})
+
+    <span class="hljs-comment"># &#x4FEE;&#x6539;</span>
+    rospy.set_param(<span class="hljs-string">&quot;p_int&quot;</span>,<span class="hljs-number">100</span>)
+</code></pre>
+<h4 id="2&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x53C2;&#x6570;">2.&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x53C2;&#x6570;</h4>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x64CD;&#x4F5C;&#x4E4B;&#x67E5;&#x8BE2;_Python&#x5B9E;&#x73B0;:    
+        get_param(&#x952E;,&#x9ED8;&#x8BA4;&#x503C;)
+            &#x5F53;&#x952E;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x8FD4;&#x56DE;&#x9ED8;&#x8BA4;&#x503C;
+        get_param_cached
+        get_param_names
+        has_param
+        search_param
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> rospy
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    rospy.init_node(<span class="hljs-string">&quot;get_param_p&quot;</span>)
+
+    <span class="hljs-comment">#&#x83B7;&#x53D6;&#x53C2;&#x6570;</span>
+    int_value = rospy.get_param(<span class="hljs-string">&quot;p_int&quot;</span>,<span class="hljs-number">10000</span>)
+    double_value = rospy.get_param(<span class="hljs-string">&quot;p_double&quot;</span>)
+    bool_value = rospy.get_param(<span class="hljs-string">&quot;p_bool&quot;</span>)
+    string_value = rospy.get_param(<span class="hljs-string">&quot;p_string&quot;</span>)
+    p_list = rospy.get_param(<span class="hljs-string">&quot;p_list&quot;</span>)
+    p_dict = rospy.get_param(<span class="hljs-string">&quot;p_dict&quot;</span>)
+
+    rospy.loginfo(<span class="hljs-string">&quot;&#x83B7;&#x53D6;&#x7684;&#x6570;&#x636E;:%d,%.2f,%d,%s&quot;</span>,
+                int_value,
+                double_value,
+                bool_value,
+                string_value)
+    <span class="hljs-keyword">for</span> ele <span class="hljs-keyword">in</span> p_list:
+        rospy.loginfo(<span class="hljs-string">&quot;ele = %s&quot;</span>, ele)
+
+    rospy.loginfo(<span class="hljs-string">&quot;name = %s, age = %d&quot;</span>,p_dict[<span class="hljs-string">&quot;name&quot;</span>],p_dict[<span class="hljs-string">&quot;age&quot;</span>])
+
+    <span class="hljs-comment"># get_param_cached</span>
+    int_cached = rospy.get_param_cached(<span class="hljs-string">&quot;p_int&quot;</span>)
+    rospy.loginfo(<span class="hljs-string">&quot;&#x7F13;&#x5B58;&#x6570;&#x636E;:%d&quot;</span>,int_cached)
+
+    <span class="hljs-comment"># get_param_names</span>
+    names = rospy.get_param_names()
+    <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> names:
+        rospy.loginfo(<span class="hljs-string">&quot;name = %s&quot;</span>,name)
+
+    rospy.loginfo(<span class="hljs-string">&quot;-&quot;</span>*<span class="hljs-number">80</span>)
+
+    <span class="hljs-comment"># has_param</span>
+    flag = rospy.has_param(<span class="hljs-string">&quot;p_int&quot;</span>)
+    rospy.loginfo(<span class="hljs-string">&quot;&#x5305;&#x542B;p_int&#x5417;&#xFF1F;%d&quot;</span>,flag)
+
+    <span class="hljs-comment"># search_param</span>
+    key = rospy.search_param(<span class="hljs-string">&quot;p_int&quot;</span>)
+    rospy.loginfo(<span class="hljs-string">&quot;&#x641C;&#x7D22;&#x7684;&#x952E; = %s&quot;</span>,key)
+</code></pre>
+<h4 id="3&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x5220;&#x9664;&#x53C2;&#x6570;">3.&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x5220;&#x9664;&#x53C2;&#x6570;</h4>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x64CD;&#x4F5C;&#x4E4B;&#x5220;&#x9664;_Python&#x5B9E;&#x73B0;:
+    rospy.delete_param(&quot;&#x952E;&quot;)
+    &#x952E;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x6210;&#x529F;&#xFF0C;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span> rospy
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    rospy.init_node(<span class="hljs-string">&quot;delete_param_p&quot;</span>)
+
+    <span class="hljs-keyword">try</span>:
+        rospy.delete_param(<span class="hljs-string">&quot;p_int&quot;</span>)
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+        rospy.loginfo(<span class="hljs-string">&quot;&#x5220;&#x9664;&#x5931;&#x8D25;&quot;</span>)
+</code></pre>
+<h2 id="24-&#x5E38;&#x7528;&#x547D;&#x4EE4;">2.4 &#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<p>&#x673A;&#x5668;&#x4EBA;&#x7CFB;&#x7EDF;&#x4E2D;&#x542F;&#x52A8;&#x7684;&#x8282;&#x70B9;&#x5C11;&#x5219;&#x51E0;&#x4E2A;&#xFF0C;&#x591A;&#x5219;&#x5341;&#x51E0;&#x4E2A;&#x3001;&#x51E0;&#x5341;&#x4E2A;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x8282;&#x70B9;&#x540D;&#x79F0;&#x5404;&#x5F02;&#xFF0C;&#x901A;&#x4FE1;&#x65F6;&#x4F7F;&#x7528;&#x8BDD;&#x9898;&#x3001;&#x670D;&#x52A1;&#x3001;&#x6D88;&#x606F;&#x3001;&#x53C2;&#x6570;&#x7B49;&#x7B49;&#x90FD;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;&#x4E00;&#x4E2A;&#x663E;&#x800C;&#x6613;&#x89C1;&#x7684;&#x95EE;&#x9898;&#x662F;: &#x5F53;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x8282;&#x70B9;&#x548C;&#x5176;&#x4ED6;&#x67D0;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x8282;&#x70B9;&#x901A;&#x4FE1;&#x65F6;&#xFF0C;&#x5982;&#x4F55;&#x83B7;&#x53D6;&#x5BF9;&#x65B9;&#x7684;&#x8BDD;&#x9898;&#x3001;&#x4EE5;&#x53CA;&#x6D88;&#x606F;&#x8F7D;&#x4F53;&#x7684;&#x683C;&#x5F0F;&#x5462;&#xFF1F;</p>
+<p>&#x5728; ROS &#x540C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x5B9E;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x7684;&#x5404;&#x7C7B;&#x4FE1;&#x606F;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x5982;&#x4E0B;:</p>
+<ul>
+<li>rosnode : &#x64CD;&#x4F5C;&#x8282;&#x70B9;</li>
+<li>rostopic : &#x64CD;&#x4F5C;&#x8BDD;&#x9898;</li>
+<li>rosservice : &#x64CD;&#x4F5C;&#x670D;&#x52A1;</li>
+<li>rosmsg : &#x64CD;&#x4F5C;msg&#x6D88;&#x606F;</li>
+<li>rossrv : &#x64CD;&#x4F5C;srv&#x6D88;&#x606F;</li>
+<li>rosparam : &#x64CD;&#x4F5C;&#x53C2;&#x6570;</li>
+</ul>
+<hr>
+<h4 id="&#x4F5C;&#x7528;"><strong>&#x4F5C;&#x7528;</strong></h4>
+<p>&#x548C;&#x4E4B;&#x524D;&#x4ECB;&#x7ECD;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x6BD4;&#x8F83;&#xFF0C;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x662F;&#x9759;&#x6001;&#x7684;&#xFF0C;&#x64CD;&#x4F5C;&#x7684;&#x662F;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5728;ROS&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x7684;&#x83B7;&#x53D6;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6216;&#x53C2;&#x6570;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;</p>
+<h4 id="&#x6848;&#x4F8B;">&#x6848;&#x4F8B;</h4>
+<p>&#x672C;&#x8282;&#x5C06;&#x501F;&#x52A9;&#x4E8E;2.1&#x3001;2.2&#x548C;2.3&#x7684;&#x901A;&#x4FE1;&#x5B9E;&#x73B0;&#x4ECB;&#x7ECD;&#x76F8;&#x5173;&#x547D;&#x4EE4;&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x7EC3;&#x4E60;ROS&#x5185;&#x7F6E;&#x7684;&#x5C0F;&#x6D77;&#x9F9F;&#x4F8B;&#x7A0B;&#x6765;&#x5F3A;&#x5316;&#x547D;&#x4EE4;&#x7684;&#x5E94;&#x7528;&#x3002;</p>
+<hr>
+<p><strong>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</strong></p>
+<ul>
+<li><a href="http://wiki.ros.org/ROS/CommandLineTools" target="_blank">http://wiki.ros.org/ROS/CommandLineTools</a></li>
+</ul>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/ROS%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7.PNG" alt="img"></p>
+<h3 id="241-rosnode">2.4.1 rosnode</h3>
+<p>rosnode &#x662F;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x7684;&#x547D;&#x4EE4;</p>
+<pre><code class="lang-perl">rosnode ping    &#x6D4B;&#x8BD5;&#x5230;&#x8282;&#x70B9;&#x7684;&#x8FDE;&#x63A5;&#x72B6;&#x6001;
+rosnode list    &#x5217;&#x51FA;&#x6D3B;&#x52A8;&#x8282;&#x70B9;
+rosnode info    &#x6253;&#x5370;&#x8282;&#x70B9;&#x4FE1;&#x606F;
+rosnode machine    &#x5217;&#x51FA;&#x6307;&#x5B9A;&#x8BBE;&#x5907;&#x4E0A;&#x8282;&#x70B9;
+rosnode <span class="hljs-keyword">kill</span>    &#x6740;&#x6B7B;&#x67D0;&#x4E2A;&#x8282;&#x70B9;
+rosnode cleanup    &#x6E05;&#x9664;&#x4E0D;&#x53EF;&#x8FDE;&#x63A5;&#x7684;&#x8282;&#x70B9;
+</code></pre>
+<ul>
+<li><p>rosnode ping</p>
+<p>&#x6D4B;&#x8BD5;&#x5230;&#x8282;&#x70B9;&#x7684;&#x8FDE;&#x63A5;&#x72B6;&#x6001;</p>
+</li>
+<li><p>rosnode list</p>
+<p>&#x5217;&#x51FA;&#x6D3B;&#x52A8;&#x8282;&#x70B9;</p>
+</li>
+<li><p>rosnode info</p>
+<p>&#x6253;&#x5370;&#x8282;&#x70B9;&#x4FE1;&#x606F;</p>
+</li>
+<li><p>rosnode machine</p>
+<p>&#x5217;&#x51FA;&#x6307;&#x5B9A;&#x8BBE;&#x5907;&#x4E0A;&#x7684;&#x8282;&#x70B9;</p>
+</li>
+<li><p>rosnode kill</p>
+<p>&#x6740;&#x6B7B;&#x67D0;&#x4E2A;&#x8282;&#x70B9;</p>
+</li>
+<li><p>rosnode cleanup</p>
+<p>&#x6E05;&#x9664;&#x65E0;&#x7528;&#x8282;&#x70B9;&#xFF0C;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E; ctrl + c &#x5173;&#x95ED;&#xFF0C;&#x8BE5;&#x8282;&#x70B9;&#x5E76;&#x6CA1;&#x88AB;&#x5F7B;&#x5E95;&#x6E05;&#x9664;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; cleanup &#x6E05;&#x9664;&#x8282;&#x70B9;</p>
+</li>
+</ul>
+<h3 id="242-rostopic">2.4.2 rostopic</h3>
+<p><strong>rostopic</strong>&#x5305;&#x542B;rostopic&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x6709;&#x5173;ROS &#x4E3B;&#x9898;&#x7684;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x53D1;&#x5E03;&#x8005;&#xFF0C;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x53D1;&#x5E03;&#x9891;&#x7387;&#x548C;ROS&#x6D88;&#x606F;&#x3002;&#x5B83;&#x8FD8;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5B9E;&#x9A8C;&#x6027;Python&#x5E93;&#xFF0C;&#x7528;&#x4E8E;&#x52A8;&#x6001;&#x83B7;&#x53D6;&#x6709;&#x5173;&#x4E3B;&#x9898;&#x7684;&#x4FE1;&#x606F;&#x5E76;&#x4E0E;&#x4E4B;&#x4EA4;&#x4E92;&#x3002;</p>
+<pre><code>rostopic bw     &#x663E;&#x793A;&#x4E3B;&#x9898;&#x4F7F;&#x7528;&#x7684;&#x5E26;&#x5BBD;
+rostopic delay  &#x663E;&#x793A;&#x5E26;&#x6709; header &#x7684;&#x4E3B;&#x9898;&#x5EF6;&#x8FDF;
+rostopic echo   &#x6253;&#x5370;&#x6D88;&#x606F;&#x5230;&#x5C4F;&#x5E55;
+rostopic find   &#x6839;&#x636E;&#x7C7B;&#x578B;&#x67E5;&#x627E;&#x4E3B;&#x9898;
+rostopic hz     &#x663E;&#x793A;&#x4E3B;&#x9898;&#x7684;&#x53D1;&#x5E03;&#x9891;&#x7387;
+rostopic info   &#x663E;&#x793A;&#x4E3B;&#x9898;&#x76F8;&#x5173;&#x4FE1;&#x606F;
+rostopic list   &#x663E;&#x793A;&#x6240;&#x6709;&#x6D3B;&#x52A8;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x4E3B;&#x9898;
+rostopic pub    &#x5C06;&#x6570;&#x636E;&#x53D1;&#x5E03;&#x5230;&#x4E3B;&#x9898;
+rostopic type   &#x6253;&#x5370;&#x4E3B;&#x9898;&#x7C7B;&#x578B;
+Copy
+</code></pre><ul>
+<li><p><strong>rostopic list</strong>(-v)</p>
+<p>&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5373;&#x53EF;&#xFF0C;&#x63A7;&#x5236;&#x53F0;&#x5C06;&#x6253;&#x5370;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x4E3B;&#x9898;&#x540D;&#x79F0;</p>
+<p>rostopic list -v : &#x83B7;&#x53D6;&#x8BDD;&#x9898;&#x8BE6;&#x60C5;(&#x6BD4;&#x5982;&#x5217;&#x51FA;&#xFF1A;&#x53D1;&#x5E03;&#x8005;&#x548C;&#x8BA2;&#x9605;&#x8005;&#x4E2A;&#x6570;...)</p>
+</li>
+<li><p><strong>rostopic pub</strong></p>
+<p>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x547D;&#x4EE4;&#x5411;&#x8BA2;&#x9605;&#x8005;&#x53D1;&#x5E03;&#x6D88;&#x606F;</p>
+<p>&#x4E3A;roboware &#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684; &#x53D1;&#x5E03;/&#x8BA2;&#x9605; &#x6A21;&#x578B;&#x6848;&#x4F8B;&#x4E2D;&#x7684; &#x8BA2;&#x9605;&#x8005; &#x53D1;&#x5E03;&#x4E00;&#x6761;&#x5B57;&#x7B26;&#x4E32;</p>
+<pre><code class="lang-perl">rostopic pub /&#x4E3B;&#x9898;&#x540D;&#x79F0; &#x6D88;&#x606F;&#x7C7B;&#x578B; &#x6D88;&#x606F;&#x5185;&#x5BB9;
+rostopic pub /chatter std_msgs gagaxixi
+</code></pre>
+<p>&#x4E3A; &#x5C0F;&#x4E4C;&#x9F9F;&#x6848;&#x4F8B;&#x7684; &#x8BA2;&#x9605;&#x8005; &#x53D1;&#x5E03;&#x4E00;&#x6761;&#x8FD0;&#x52A8;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-perl">rostopic pub /turtle1/cmd_vel geometry_msgs/Twist
+ <span class="hljs-string">&quot;linear:
+  x: 1.0
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 2.0&quot;</span>
+//&#x53EA;&#x53D1;&#x5E03;&#x4E00;&#x6B21;&#x8FD0;&#x52A8;&#x4FE1;&#x606F;
+
+rostopic pub -r <span class="hljs-number">10</span> /turtle1/cmd_vel geometry_msgs/Twist
+ <span class="hljs-string">&quot;linear:
+  x: 1.0
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 2.0&quot;</span>
+// &#x4EE5; <span class="hljs-number">10</span>HZ &#x7684;&#x9891;&#x7387;&#x5FAA;&#x73AF;&#x53D1;&#x9001;&#x8FD0;&#x52A8;&#x4FE1;&#x606F;
+</code></pre>
+</li>
+<li><p><strong>rostpic echo</strong></p>
+<p>&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x8BDD;&#x9898;&#x5F53;&#x524D;&#x53D1;&#x5E03;&#x7684;&#x6D88;&#x606F;</p>
+</li>
+<li><p><strong>rostopic info</strong></p>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8BDD;&#x9898;&#x7684;&#x5C0F;&#x5173;&#x4FE1;&#x606F;</p>
+<p>&#x6D88;&#x606F;&#x7C7B;&#x578B;</p>
+<p>&#x53D1;&#x5E03;&#x8005;&#x4FE1;&#x606F;</p>
+<p>&#x8BA2;&#x9605;&#x8005;&#x4FE1;&#x606F;</p>
+</li>
+<li><p><strong>rostopic type</strong></p>
+<p>&#x5217;&#x51FA;&#x8BDD;&#x9898;&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x578B;</p>
+</li>
+<li><p><strong>rostopic find &#x6D88;&#x606F;&#x7C7B;&#x578B;</strong></p>
+<p>&#x6839;&#x636E;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x67E5;&#x627E;&#x8BDD;&#x9898;</p>
+</li>
+<li><p><strong>rostopic delay</strong></p>
+<p>&#x5217;&#x51FA;&#x6D88;&#x606F;&#x5934;&#x4FE1;&#x606F;</p>
+</li>
+<li><p><strong>rostopic hz</strong></p>
+<p>&#x5217;&#x51FA;&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x9891;&#x7387;</p>
+</li>
+<li><p><strong>rostopic bw</strong></p>
+<p>&#x5217;&#x51FA;&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x5E26;&#x5BBD;</p>
+</li>
+</ul>
+<h3 id="243-rosmsg">2.4.3 rosmsg</h3>
+<p>rosmsg&#x662F;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x6709;&#x5173; ROS&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x7684; &#x4FE1;&#x606F;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x3002;</p>
+<p><strong>rosmsg &#x6F14;&#x793A;</strong></p>
+<pre><code class="lang-perl">rosmsg show    &#x663E;&#x793A;&#x6D88;&#x606F;&#x63CF;&#x8FF0;
+rosmsg info    &#x663E;&#x793A;&#x6D88;&#x606F;&#x4FE1;&#x606F;
+rosmsg list    &#x5217;&#x51FA;&#x6240;&#x6709;&#x6D88;&#x606F;
+rosmsg md5    &#x663E;&#x793A; md5 &#x52A0;&#x5BC6;&#x540E;&#x7684;&#x6D88;&#x606F;
+rosmsg <span class="hljs-keyword">package</span>    &#x663E;&#x793A;&#x67D0;&#x4E2A;&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6D88;&#x606F;
+rosmsg packages    &#x5217;&#x51FA;&#x5305;&#x542B;&#x6D88;&#x606F;&#x7684;&#x529F;&#x80FD;&#x5305;
+</code></pre>
+<ul>
+<li><p>rosmsg list</p>
+<p>&#x4F1A;&#x5217;&#x51FA;&#x5F53;&#x524D; ROS &#x4E2D;&#x7684;&#x6240;&#x6709; msg</p>
+</li>
+<li><p>rosmsg packages</p>
+<p>&#x5217;&#x51FA;&#x5305;&#x542B;&#x6D88;&#x606F;&#x7684;&#x6240;&#x6709;&#x5305;</p>
+</li>
+<li><p>rosmsg package</p>
+<p>&#x5217;&#x51FA;&#x67D0;&#x4E2A;&#x5305;&#x4E0B;&#x7684;&#x6240;&#x6709;msg</p>
+<pre><code class="lang-perl">//rosmsg <span class="hljs-keyword">package</span> &#x5305;&#x540D; 
+rosmsg <span class="hljs-keyword">package</span> turtlesim
+</code></pre>
+</li>
+<li><p>rosmsg show</p>
+<p>&#x663E;&#x793A;&#x6D88;&#x606F;&#x63CF;&#x8FF0;</p>
+<pre><code class="lang-perl">//rosmsg show &#x6D88;&#x606F;&#x540D;&#x79F0;
+rosmsg show turtlesim/Pose
+&#x7ED3;&#x679C;:
+float32 <span class="hljs-keyword">x</span>
+float32 <span class="hljs-keyword">y</span>
+float32 theta
+float32 linear_velocity
+float32 angular_velocity
+</code></pre>
+</li>
+<li><p>rosmsg info</p>
+<p>&#x4F5C;&#x7528;&#x4E0E; rosmsg show &#x4E00;&#x6837;</p>
+</li>
+<li><p>rosmsg md5 (&#x8D44;&#x6599;:<a href="http://wiki.ros.org/ROS/Technical Overview#Message_serialization_and_msg_MD5_sums" target="_blank">http://wiki.ros.org/ROS/Technical%20Overview#Message_serialization_and_msg_MD5_sums</a>)</p>
+<p>&#x4E00;&#x79CD;&#x6821;&#x9A8C;&#x7B97;&#x6CD5;&#xFF0C;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x7684;&#x4E00;&#x81F4;&#x6027;</p>
+</li>
+</ul>
+<h3 id="244-rosservice">2.4.4 rosservice</h3>
+<p>rosservice&#x5305;&#x542B;&#x7528;&#x4E8E;&#x5217;&#x51FA;&#x548C;&#x67E5;&#x8BE2;ROS<a href="http://wiki.ros.org/Services" target="_blank">Services</a>&#x7684;rosservice&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x3002;</p>
+<p>&#x8C03;&#x7528;&#x90E8;&#x5206;&#x670D;&#x52A1;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x76F8;&#x5173;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x6CA1;&#x6709;&#x914D;&#x7F6E; path&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x5165;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x8C03;&#x7528; source ./devel/setup.bash</p>
+<pre><code class="lang-perl">rosservice args &#x6253;&#x5370;&#x670D;&#x52A1;&#x53C2;&#x6570;
+rosservice call    &#x4F7F;&#x7528;&#x63D0;&#x4F9B;&#x7684;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x670D;&#x52A1;
+rosservice find    &#x6309;&#x7167;&#x670D;&#x52A1;&#x7C7B;&#x578B;&#x67E5;&#x627E;&#x670D;&#x52A1;
+rosservice info    &#x6253;&#x5370;&#x6709;&#x5173;&#x670D;&#x52A1;&#x7684;&#x4FE1;&#x606F;
+rosservice list    &#x5217;&#x51FA;&#x6240;&#x6709;&#x6D3B;&#x52A8;&#x7684;&#x670D;&#x52A1;
+rosservice type    &#x6253;&#x5370;&#x670D;&#x52A1;&#x7C7B;&#x578B;
+rosservice uri    &#x6253;&#x5370;&#x670D;&#x52A1;&#x7684; ROSRPC uri
+</code></pre>
+<ul>
+<li><p>rosservice list</p>
+<p>&#x5217;&#x51FA;&#x6240;&#x6709;&#x6D3B;&#x52A8;&#x7684; service</p>
+<pre><code class="lang-perl">~ rosservice list
+/clear
+/<span class="hljs-keyword">kill</span>
+/listener/get_loggers
+/listener/set_logger_level
+/<span class="hljs-keyword">reset</span>
+/rosout/get_loggers
+/rosout/set_logger_level
+/rostopic_4985_1578723066421/get_loggers
+/rostopic_4985_1578723066421/set_logger_level
+/rostopic_5582_1578724343069/get_loggers
+/rostopic_5582_1578724343069/set_logger_level
+/spawn
+/turtle1/set_pen
+/turtle1/teleport_absolute
+/turtle1/teleport_relative
+/turtlesim/get_loggers
+/turtlesim/set_logger_level
+</code></pre>
+</li>
+<li><p>rosservice args</p>
+<p>&#x6253;&#x5370;&#x670D;&#x52A1;&#x53C2;&#x6570;</p>
+<pre><code class="lang-perl">rosservice args /spawn
+<span class="hljs-keyword">x</span> <span class="hljs-keyword">y</span> theta name
+</code></pre>
+</li>
+<li><p>rosservice call</p>
+<p>&#x8C03;&#x7528;&#x670D;&#x52A1;</p>
+<p>&#x4E3A;&#x5C0F;&#x4E4C;&#x9F9F;&#x7684;&#x6848;&#x4F8B;&#x751F;&#x6210;&#x4E00;&#x53EA;&#x65B0;&#x7684;&#x4E4C;&#x9F9F;</p>
+<pre><code class="lang-perl">rosservice call /spawn <span class="hljs-string">&quot;x: 1.0
+y: 2.0
+theta: 0.0
+name: &apos;xxx&apos;&quot;</span>
+name: <span class="hljs-string">&quot;xxx&quot;</span>
+
+//&#x751F;&#x6210;&#x4E00;&#x53EA;&#x53EB; xxx &#x7684;&#x4E4C;&#x9F9F;
+</code></pre>
+</li>
+<li><p>rosservice find</p>
+<p>&#x6839;&#x636E;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x83B7;&#x53D6;&#x8BDD;&#x9898;</p>
+</li>
+<li><p>rosservice info</p>
+<p>&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x8BDD;&#x9898;&#x8BE6;&#x60C5;</p>
+</li>
+<li><p>rosservice type</p>
+<p>&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x7C7B;&#x578B;</p>
+</li>
+<li><p>rosservice uri</p>
+<p>&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668; uri</p>
+</li>
+</ul>
+<h3 id="245-rossrv">2.4.5 rossrv</h3>
+<p>rossrv&#x662F;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x6709;&#x5173;ROS&#x670D;&#x52A1;&#x7C7B;&#x578B;&#x7684;&#x4FE1;&#x606F;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x4E0E; rosmsg &#x4F7F;&#x7528;&#x8BED;&#x6CD5;&#x9AD8;&#x5EA6;&#x96F7;&#x540C;&#x3002;</p>
+<pre><code class="lang-perl">rossrv show    &#x663E;&#x793A;&#x670D;&#x52A1;&#x6D88;&#x606F;&#x8BE6;&#x60C5;
+rossrv info    &#x663E;&#x793A;&#x670D;&#x52A1;&#x6D88;&#x606F;&#x76F8;&#x5173;&#x4FE1;&#x606F;
+rossrv list    &#x5217;&#x51FA;&#x6240;&#x6709;&#x670D;&#x52A1;&#x4FE1;&#x606F;
+rossrv md5    &#x663E;&#x793A; md5 &#x52A0;&#x5BC6;&#x540E;&#x7684;&#x670D;&#x52A1;&#x6D88;&#x606F;
+rossrv <span class="hljs-keyword">package</span>    &#x663E;&#x793A;&#x67D0;&#x4E2A;&#x5305;&#x4E0B;&#x6240;&#x6709;&#x670D;&#x52A1;&#x6D88;&#x606F;
+rossrv packages    &#x663E;&#x793A;&#x5305;&#x542B;&#x670D;&#x52A1;&#x6D88;&#x606F;&#x7684;&#x6240;&#x6709;&#x5305;
+</code></pre>
+<ul>
+<li><p>rossrv list</p>
+<p>&#x4F1A;&#x5217;&#x51FA;&#x5F53;&#x524D; ROS &#x4E2D;&#x7684;&#x6240;&#x6709; srv &#x6D88;&#x606F;</p>
+</li>
+<li><p>rossrv packages</p>
+<p>&#x5217;&#x51FA;&#x5305;&#x542B;&#x670D;&#x52A1;&#x6D88;&#x606F;&#x7684;&#x6240;&#x6709;&#x5305;</p>
+</li>
+<li><p>rossrv package</p>
+<p>&#x5217;&#x51FA;&#x67D0;&#x4E2A;&#x5305;&#x4E0B;&#x7684;&#x6240;&#x6709;msg</p>
+<pre><code class="lang-perl">//rossrv <span class="hljs-keyword">package</span> &#x5305;&#x540D; 
+rossrv <span class="hljs-keyword">package</span> turtlesim
+</code></pre>
+</li>
+<li><p>rossrv show</p>
+<p>&#x663E;&#x793A;&#x6D88;&#x606F;&#x63CF;&#x8FF0;</p>
+<pre><code class="lang-perl">//rossrv show &#x6D88;&#x606F;&#x540D;&#x79F0;
+rossrv show turtlesim/Spawn
+&#x7ED3;&#x679C;:
+float32 <span class="hljs-keyword">x</span>
+float32 <span class="hljs-keyword">y</span>
+float32 theta
+string name
+---
+string name
+</code></pre>
+</li>
+<li><p>rossrv info</p>
+<p>&#x4F5C;&#x7528;&#x4E0E; rossrv show &#x4E00;&#x81F4;</p>
+</li>
+<li><p>rossrv md5</p>
+<p>&#x5BF9; service &#x6570;&#x636E;&#x4F7F;&#x7528; md5 &#x6821;&#x9A8C;(&#x52A0;&#x5BC6;)</p>
+</li>
+</ul>
+<h3 id="246-rosparam">2.4.6 rosparam</h3>
+<p>rosparam&#x5305;&#x542B;rosparam&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x7528;&#x4E8E;&#x4F7F;&#x7528;YAML&#x7F16;&#x7801;&#x6587;&#x4EF6;&#x5728;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;ROS&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-perl">rosparam set    &#x8BBE;&#x7F6E;&#x53C2;&#x6570;
+rosparam get    &#x83B7;&#x53D6;&#x53C2;&#x6570;
+rosparam load    &#x4ECE;&#x5916;&#x90E8;&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x53C2;&#x6570;
+rosparam <span class="hljs-keyword">dump</span>    &#x5C06;&#x53C2;&#x6570;&#x5199;&#x51FA;&#x5230;&#x5916;&#x90E8;&#x6587;&#x4EF6;
+rosparam <span class="hljs-keyword">delete</span>    &#x5220;&#x9664;&#x53C2;&#x6570;
+rosparam list    &#x5217;&#x51FA;&#x6240;&#x6709;&#x53C2;&#x6570;
+</code></pre>
+<ul>
+<li><p>rosparam list</p>
+<p>&#x5217;&#x51FA;&#x6240;&#x6709;&#x53C2;&#x6570;</p>
+<pre><code class="lang-perl">rosparam list
+
+//&#x9ED8;&#x8BA4;&#x7ED3;&#x679C;
+/rosdistro
+/roslaunch/uris/host_helloros_virtual_machine__42911
+/rosversion
+/run_id
+</code></pre>
+</li>
+<li><p>rosparam set</p>
+<p>&#x8BBE;&#x7F6E;&#x53C2;&#x6570;</p>
+<pre><code class="lang-perl">rosparam set name huluwa
+
+//&#x518D;&#x6B21;&#x8C03;&#x7528; rosparam list &#x7ED3;&#x679C;
+/name
+/rosdistro
+/roslaunch/uris/host_helloros_virtual_machine__42911
+/rosversion
+/run_id
+</code></pre>
+</li>
+<li><p>rosparam get</p>
+<p>&#x83B7;&#x53D6;&#x53C2;&#x6570;</p>
+<pre><code class="lang-perl">rosparam get name
+
+//&#x7ED3;&#x679C;
+huluwa
+</code></pre>
+</li>
+<li><p>rosparam delete</p>
+<p>&#x5220;&#x9664;&#x53C2;&#x6570;</p>
+<pre><code class="lang-perl">rosparam <span class="hljs-keyword">delete</span> name
+
+//&#x7ED3;&#x679C;
+//&#x53BB;&#x9664;&#x4E86;name
+</code></pre>
+</li>
+<li><p>rosparam load(&#x5148;&#x51C6;&#x5907; yaml &#x6587;&#x4EF6;)</p>
+<p>&#x4ECE;&#x5916;&#x90E8;&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x53C2;&#x6570;</p>
+<pre><code class="lang-perl">rosparam load xxx.yaml
+</code></pre>
+</li>
+<li><p>rosparam dump</p>
+<p>&#x5C06;&#x53C2;&#x6570;&#x5199;&#x51FA;&#x5230;&#x5916;&#x90E8;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-perl">rosparam <span class="hljs-keyword">dump</span> yyy.yaml
+</code></pre>
+</li>
+</ul>
+<h2 id="25-&#x901A;&#x4FE1;&#x673A;&#x5236;&#x5B9E;&#x64CD;">2.5 &#x901A;&#x4FE1;&#x673A;&#x5236;&#x5B9E;&#x64CD;</h2>
+<p>&#x672C;&#x8282;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;ROS&#x5185;&#x7F6E;&#x7684;turtlesim&#x6848;&#x4F8B;&#xFF0C;&#x7ED3;&#x5408;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;ROS&#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x3001;&#x8BDD;&#x9898;&#x3001;&#x8BDD;&#x9898;&#x6D88;&#x606F;&#x3001;&#x670D;&#x52A1;&#x3001;&#x670D;&#x52A1;&#x6D88;&#x606F;&#x4E0E;&#x53C2;&#x6570;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6700;&#x7EC8;&#x518D;&#x4EE5;&#x7F16;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x4E4C;&#x9F9F;&#x8FD0;&#x52A8;&#x7684;&#x63A7;&#x5236;&#x3001;&#x4E4C;&#x9F9F;&#x4F4D;&#x59FF;&#x7684;&#x8BA2;&#x9605;&#x3001;&#x4E4C;&#x9F9F;&#x751F;&#x6210;&#x4E0E;&#x4E4C;&#x9F9F;&#x7A97;&#x4F53;&#x80CC;&#x666F;&#x989C;&#x8272;&#x7684;&#x4FEE;&#x6539;&#x3002;</p>
+<hr>
+<p>&#x76EE;&#x7684;:&#x719F;&#x6089;&#x3001;&#x5F3A;&#x5316;&#x901A;&#x4FE1;&#x6A21;&#x5F0F;&#x5E94;&#x7528;</p>
+<h3 id="51-&#x5B9E;&#x64CD;01&#x8BDD;&#x9898;&#x53D1;&#x5E03;">.5.1 &#x5B9E;&#x64CD;01_&#x8BDD;&#x9898;&#x53D1;&#x5E03;</h3>
+<p><strong>&#x9700;&#x6C42;&#x63CF;&#x8FF0;:</strong>&#x7F16;&#x7801;&#x5B9E;&#x73B0;&#x4E4C;&#x9F9F;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#xFF0C;&#x8BA9;&#x5C0F;&#x4E4C;&#x9F9F;&#x505A;&#x5706;&#x5468;&#x8FD0;&#x52A8;&#x3002;</p>
+<p><strong>&#x7ED3;&#x679C;&#x6F14;&#x793A;:</strong></p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506060916343.gif" alt="img"></p>
+<p><strong>&#x5B9E;&#x73B0;&#x5206;&#x6790;:</strong></p>
+<ol>
+<li>&#x4E4C;&#x9F9F;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x5B9E;&#x73B0;&#xFF0C;&#x5173;&#x952E;&#x8282;&#x70B9;&#x6709;&#x4E24;&#x4E2A;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x4E4C;&#x9F9F;&#x8FD0;&#x52A8;&#x663E;&#x793A;&#x8282;&#x70B9; turtlesim_node&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x662F;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF0C;&#x4E8C;&#x8005;&#x662F;&#x8BA2;&#x9605;&#x53D1;&#x5E03;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x901A;&#x4FE1;&#x7684;&#xFF0C;&#x4E4C;&#x9F9F;&#x8FD0;&#x52A8;&#x663E;&#x793A;&#x8282;&#x70B9;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5373;&#x53EF;&#xFF0C;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#x662F;&#x4F7F;&#x7528;&#x7684; turtle_teleop_key&#x901A;&#x8FC7;&#x952E;&#x76D8; &#x63A7;&#x5236;&#xFF0C;&#x73B0;&#x5728;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x63A7;&#x5236;&#x8282;&#x70B9;&#x81EA;&#x5B9E;&#x73B0;&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x4E0E;&#x663E;&#x793A;&#x8282;&#x70B9;&#x901A;&#x4FE1;&#x4F7F;&#x7528;&#x7684;&#x8BDD;&#x9898;&#x4E0E;&#x6D88;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ros&#x547D;&#x4EE4;&#x7ED3;&#x5408;&#x8BA1;&#x7B97;&#x56FE;&#x6765;&#x83B7;&#x53D6;&#x3002;</li>
+<li>&#x4E86;&#x89E3;&#x4E86;&#x8BDD;&#x9898;&#x4E0E;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x901A;&#x8FC7; C++ &#x6216; Python &#x7F16;&#x5199;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF0C;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x8BDD;&#x9898;&#xFF0C;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x903B;&#x8F91;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x5373;&#x53EF;&#x3002;</li>
+</ol>
+<p><strong>&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x56FE;&#x7ED3;&#x5408;ros&#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x8BDD;&#x9898;&#x4E0E;&#x6D88;&#x606F;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x7F16;&#x7801;&#x5B9E;&#x73B0;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x542F;&#x52A8; roscore&#x3001;turtlesim_node &#x4EE5;&#x53CA;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF0C;&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x3002;</li>
+</ol>
+<h4 id="1&#x8BDD;&#x9898;&#x4E0E;&#x6D88;&#x606F;&#x83B7;&#x53D6;">1.&#x8BDD;&#x9898;&#x4E0E;&#x6D88;&#x606F;&#x83B7;&#x53D6;</h4>
+<p><strong>&#x51C6;&#x5907;:</strong> &#x5148;&#x542F;&#x52A8;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x4E4C;&#x9F9F;&#x8FD0;&#x52A8;&#x6848;&#x4F8B;&#x3002;</p>
+<h5 id="11&#x8BDD;&#x9898;&#x83B7;&#x53D6;">1.1&#x8BDD;&#x9898;&#x83B7;&#x53D6;</h5>
+<p><strong>&#x83B7;&#x53D6;&#x8BDD;&#x9898;:</strong>/turtle1/cmd_vel</p>
+<p>&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x56FE;&#x67E5;&#x770B;&#x8BDD;&#x9898;&#xFF0C;&#x542F;&#x52A8;&#x8BA1;&#x7B97;&#x56FE;:</p>
+<pre><code class="lang-perl">rqt_graph
+</code></pre>
+<p>&#x6216;&#x8005;&#x901A;&#x8FC7; rostopic &#x5217;&#x51FA;&#x8BDD;&#x9898;:</p>
+<pre><code class="lang-perl">rostopic list
+</code></pre>
+<h5 id="12&#x6D88;&#x606F;&#x83B7;&#x53D6;">1.2&#x6D88;&#x606F;&#x83B7;&#x53D6;</h5>
+<p><strong>&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x7C7B;&#x578B;:</strong>geometry_msgs/Twist</p>
+<pre><code class="lang-perl">rostopic type /turtle1/cmd_vel
+</code></pre>
+<p><strong>&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x683C;&#x5F0F;:</strong></p>
+<pre><code class="lang-perl">rosmsg info geometry_msgs/Twist
+</code></pre>
+<p><strong>&#x54CD;&#x5E94;&#x7ED3;&#x679C;:</strong></p>
+<pre><code class="lang-perl">geometry_msgs/Vector3 linear
+  float64 <span class="hljs-keyword">x</span>
+  float64 <span class="hljs-keyword">y</span>
+  float64 z
+geometry_msgs/Vector3 angular
+  float64 <span class="hljs-keyword">x</span>
+  float64 <span class="hljs-keyword">y</span>
+  float64 z
+</code></pre>
+<p>linear(&#x7EBF;&#x901F;&#x5EA6;) &#x4E0B;&#x7684;xyz&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x5728;x&#x3001;y&#x548C;z&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x901F;&#x5EA6;(&#x5355;&#x4F4D;&#x662F; m/s)&#xFF1B;</p>
+<p>angular(&#x89D2;&#x901F;&#x5EA6;)&#x4E0B;&#x7684;xyz&#x5206;&#x522B;&#x5BF9;&#x5E94;x&#x8F74;&#x4E0A;&#x7684;&#x7FFB;&#x6EDA;&#x3001;y&#x8F74;&#x4E0A;&#x4FEF;&#x4EF0;&#x548C;z&#x8F74;&#x4E0A;&#x504F;&#x822A;&#x7684;&#x901F;&#x5EA6;(&#x5355;&#x4F4D;&#x662F;rad/s)&#x3002;</p>
+<blockquote>
+<p>&#x8BE6;&#x60C5;&#x8BF7;&#x67E5;&#x770B;&#x8865;&#x5145;&#x8D44;&#x6599;&#x3002;</p>
+</blockquote>
+<h4 id="2&#x5B9E;&#x73B0;&#x53D1;&#x5E03;&#x8282;&#x70B9;">2.&#x5B9E;&#x73B0;&#x53D1;&#x5E03;&#x8282;&#x70B9;</h4>
+<p>&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x7684;&#x529F;&#x80FD;&#x5305;: roscpp rospy std_msgs geometry_msgs</p>
+<p><strong>&#x5B9E;&#x73B0;&#x65B9;&#x6848;A:</strong> C++</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">/*
+    &#x7F16;&#x5199; ROS &#x8282;&#x70B9;&#xFF0C;&#x63A7;&#x5236;&#x5C0F;&#x4E4C;&#x9F9F;&#x753B;&#x5706;
+
+    &#x51C6;&#x5907;&#x5DE5;&#x4F5C;:
+        1.&#x83B7;&#x53D6;topic(&#x5DF2;&#x77E5;: /turtle1/cmd_vel)
+        2.&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x7C7B;&#x578B;(&#x5DF2;&#x77E5;: geometry_msgs/Twist)
+        3.&#x8FD0;&#x884C;&#x524D;&#xFF0C;&#x6CE8;&#x610F;&#x5148;&#x542F;&#x52A8; turtlesim_node &#x8282;&#x70B9;
+
+    &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:
+        1.&#x5305;&#x542B;&#x5934;&#x6587;&#x4EF6;
+        2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;
+        3.&#x521B;&#x5EFA;&#x53D1;&#x5E03;&#x8005;&#x5BF9;&#x8C61;
+        4.&#x5FAA;&#x73AF;&#x53D1;&#x5E03;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x6D88;&#x606F;
+*/</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;geometry_msgs/Twist.h&quot;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+    setlocale(LC_ALL,<span class="hljs-string">&quot;&quot;</span>);
+    <span class="hljs-comment">// 2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;</span>
+    ros::init(argc,argv,<span class="hljs-string">&quot;control&quot;</span>);
+    ros::NodeHandle nh;
+    <span class="hljs-comment">// 3.&#x521B;&#x5EFA;&#x53D1;&#x5E03;&#x8005;&#x5BF9;&#x8C61;</span>
+    ros::Publisher pub = nh.advertise&lt;geometry_msgs::Twist&gt;(<span class="hljs-string">&quot;/turtle1/cmd_vel&quot;</span>,<span class="hljs-number">1000</span>);
+    <span class="hljs-comment">// 4.&#x5FAA;&#x73AF;&#x53D1;&#x5E03;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x6D88;&#x606F;</span>
+    <span class="hljs-comment">//4-1.&#x7EC4;&#x7EC7;&#x6D88;&#x606F;</span>
+    geometry_msgs::Twist msg;
+    msg.linear.x = <span class="hljs-number">1.0</span>;
+    msg.linear.y = <span class="hljs-number">0.0</span>;
+    msg.linear.z = <span class="hljs-number">0.0</span>;
+
+    msg.angular.x = <span class="hljs-number">0.0</span>;
+    msg.angular.y = <span class="hljs-number">0.0</span>;
+    msg.angular.z = <span class="hljs-number">2.0</span>;
+
+    <span class="hljs-comment">//4-2.&#x8BBE;&#x7F6E;&#x53D1;&#x9001;&#x9891;&#x7387;</span>
+    ros::<span class="hljs-function">Rate <span class="hljs-title">r</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span>;
+    <span class="hljs-comment">//4-3.&#x5FAA;&#x73AF;&#x53D1;&#x9001;</span>
+    <span class="hljs-keyword">while</span> (ros::ok())
+    {
+        pub.publish(msg);
+
+        ros::spinOnce();
+    }
+
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6B64;&#x5904;&#x7565;</p>
+<p><strong>&#x5B9E;&#x73B0;&#x65B9;&#x6848;B:</strong> Python</p>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x7F16;&#x5199; ROS &#x8282;&#x70B9;&#xFF0C;&#x63A7;&#x5236;&#x5C0F;&#x4E4C;&#x9F9F;&#x753B;&#x5706;
+
+    &#x51C6;&#x5907;&#x5DE5;&#x4F5C;:
+        1.&#x83B7;&#x53D6;topic(&#x5DF2;&#x77E5;: /turtle1/cmd_vel)
+        2.&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x7C7B;&#x578B;(&#x5DF2;&#x77E5;: geometry_msgs/Twist)
+        3.&#x8FD0;&#x884C;&#x524D;&#xFF0C;&#x6CE8;&#x610F;&#x5148;&#x542F;&#x52A8; turtlesim_node &#x8282;&#x70B9;
+
+    &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:
+        1.&#x5BFC;&#x5305;
+        2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;
+        3.&#x521B;&#x5EFA;&#x53D1;&#x5E03;&#x8005;&#x5BF9;&#x8C61;
+        4.&#x5FAA;&#x73AF;&#x53D1;&#x5E03;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x6D88;&#x606F;
+
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">from</span> geometry_msgs.msg <span class="hljs-keyword">import</span> Twist
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    <span class="hljs-comment"># 2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;</span>
+    rospy.init_node(<span class="hljs-string">&quot;control_circle_p&quot;</span>)
+    <span class="hljs-comment"># 3.&#x521B;&#x5EFA;&#x53D1;&#x5E03;&#x8005;&#x5BF9;&#x8C61;</span>
+    pub = rospy.Publisher(<span class="hljs-string">&quot;/turtle1/cmd_vel&quot;</span>,Twist,queue_size=<span class="hljs-number">1000</span>)
+    <span class="hljs-comment"># 4.&#x5FAA;&#x73AF;&#x53D1;&#x5E03;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x6D88;&#x606F;</span>
+    rate = rospy.Rate(<span class="hljs-number">10</span>)
+    msg = Twist()
+    msg.linear.x = <span class="hljs-number">1.0</span>
+    msg.linear.y = <span class="hljs-number">0.0</span>
+    msg.linear.z = <span class="hljs-number">0.0</span>
+    msg.angular.x = <span class="hljs-number">0.0</span>
+    msg.angular.y = <span class="hljs-number">0.0</span>
+    msg.angular.z = <span class="hljs-number">0.5</span>
+
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
+        pub.publish(msg)
+        rate.sleep()
+</code></pre>
+<p>&#x6743;&#x9650;&#x8BBE;&#x7F6E;&#x4EE5;&#x53CA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6B64;&#x5904;&#x7565;</p>
+<h4 id="3&#x8FD0;&#x884C;">3.&#x8FD0;&#x884C;</h4>
+<p>&#x9996;&#x5148;&#xFF0C;&#x542F;&#x52A8; roscore&#xFF1B;</p>
+<p>&#x7136;&#x540E;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x6700;&#x540E;&#x6267;&#x884C;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E0E;&#x6F14;&#x793A;&#x7ED3;&#x679C;&#x7C7B;&#x4F3C;&#x3002;</p>
+<hr>
+<p><strong>&#x8865;&#x5145;&#x8D44;&#x6599;1:</strong></p>
+<p><strong>&#x5F27;&#x5EA6;:</strong> &#x5355;&#x4F4D;&#x5F27;&#x5EA6;&#x5B9A;&#x4E49;&#x4E3A;&#x5706;&#x5F27;&#x957F;&#x5EA6;&#x7B49;&#x4E8E;&#x534A;&#x5F84;&#x65F6;&#x7684;&#x5706;&#x5FC3;&#x89D2;&#x3002;</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506060916308.png" alt="img"></p>
+<p><strong>&#x8865;&#x5145;&#x8D44;&#x6599;2:</strong>&#x504F;&#x822A;&#x3001;&#x7FFB;&#x6EDA;&#x4E0E;&#x4FEF;&#x4EF0;</p>
+<p>&#x5750;&#x6807;&#x7CFB;&#x56FE;&#x89E3;:</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506060916339.png" alt="img"></p>
+<p>&#x504F;&#x822A;:</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/&#x6B27;&#x62C9;&#x89D2;2.gif" alt="img"></p>
+<p>&#x4FEF;&#x4EF0;:</p>
+<p><img src="http://www.autolabor.com.cn/book/ROSTutorials/assets/&#x6B27;&#x62C9;&#x89D2;3.gif" alt="img"></p>
+<p>&#x7FFB;&#x6EDA;:</p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506060916374.gif" alt="img"></p>
+<h3 id="252-&#x5B9E;&#x64CD;02&#x8BDD;&#x9898;&#x8BA2;&#x9605;">2.5.2 &#x5B9E;&#x64CD;02_&#x8BDD;&#x9898;&#x8BA2;&#x9605;</h3>
+<p><strong>&#x9700;&#x6C42;&#x63CF;&#x8FF0;:</strong> &#x5DF2;&#x77E5;turtlesim&#x4E2D;&#x7684;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#xFF0C;&#x4F1A;&#x53D1;&#x5E03;&#x5F53;&#x524D;&#x4E4C;&#x9F9F;&#x7684;&#x4F4D;&#x59FF;(&#x7A97;&#x4F53;&#x4E2D;&#x4E4C;&#x9F9F;&#x7684;&#x5750;&#x6807;&#x4EE5;&#x53CA;&#x671D;&#x5411;)&#xFF0C;&#x8981;&#x6C42;&#x63A7;&#x5236;&#x4E4C;&#x9F9F;&#x8FD0;&#x52A8;&#xFF0C;&#x5E76;&#x65F6;&#x65F6;&#x6253;&#x5370;&#x5F53;&#x524D;&#x4E4C;&#x9F9F;&#x7684;&#x4F4D;&#x59FF;&#x3002;</p>
+<p><strong>&#x7ED3;&#x679C;&#x6F14;&#x793A;:</strong></p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506060918509.gif" alt="img"></p>
+<p><strong>&#x5B9E;&#x73B0;&#x5206;&#x6790;:</strong></p>
+<ol>
+<li>&#x9996;&#x5148;&#xFF0C;&#x9700;&#x8981;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x4EE5;&#x53CA;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x5E76;&#x63A7;&#x5236;&#x4E4C;&#x9F9F;&#x8FD0;&#x52A8;&#x3002;</li>
+<li>&#x8981;&#x901A;&#x8FC7;ROS&#x547D;&#x4EE4;&#xFF0C;&#x6765;&#x83B7;&#x53D6;&#x4E4C;&#x9F9F;&#x4F4D;&#x59FF;&#x53D1;&#x5E03;&#x7684;&#x8BDD;&#x9898;&#x4EE5;&#x53CA;&#x6D88;&#x606F;&#x3002;</li>
+<li>&#x7F16;&#x5199;&#x8BA2;&#x9605;&#x8282;&#x70B9;&#xFF0C;&#x8BA2;&#x9605;&#x5E76;&#x6253;&#x5370;&#x4E4C;&#x9F9F;&#x7684;&#x4F4D;&#x59FF;&#x3002;</li>
+</ol>
+<p><strong>&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x901A;&#x8FC7;ros&#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x8BDD;&#x9898;&#x4E0E;&#x6D88;&#x606F;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x7F16;&#x7801;&#x5B9E;&#x73B0;&#x4F4D;&#x59FF;&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x542F;&#x52A8; roscore&#x3001;turtlesim_node &#x3001;&#x63A7;&#x5236;&#x8282;&#x70B9;&#x4EE5;&#x53CA;&#x4F4D;&#x59FF;&#x8BA2;&#x9605;&#x8282;&#x70B9;&#xFF0C;&#x63A7;&#x5236;&#x4E4C;&#x9F9F;&#x8FD0;&#x52A8;&#x5E76;&#x8F93;&#x51FA;&#x4E4C;&#x9F9F;&#x7684;&#x4F4D;&#x59FF;&#x3002;</li>
+</ol>
+<h4 id="1&#x8BDD;&#x9898;&#x4E0E;&#x6D88;&#x606F;&#x83B7;&#x53D6;">1.&#x8BDD;&#x9898;&#x4E0E;&#x6D88;&#x606F;&#x83B7;&#x53D6;</h4>
+<p><strong>&#x83B7;&#x53D6;&#x8BDD;&#x9898;:</strong>/turtle1/pose</p>
+<pre><code class="lang-perl">rostopic list
+</code></pre>
+<p><strong>&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x7C7B;&#x578B;:</strong>turtlesim/Pose</p>
+<pre><code class="lang-perl">rostopic type  /turtle1/pose
+</code></pre>
+<p><strong>&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x683C;&#x5F0F;:</strong></p>
+<pre><code class="lang-perl">rosmsg info turtlesim/Pose
+</code></pre>
+<p><strong>&#x54CD;&#x5E94;&#x7ED3;&#x679C;:</strong></p>
+<pre><code class="lang-perl">float32 <span class="hljs-keyword">x</span>
+float32 <span class="hljs-keyword">y</span>
+float32 theta
+float32 linear_velocity
+float32 angular_velocity
+</code></pre>
+<h4 id="2&#x5B9E;&#x73B0;&#x8BA2;&#x9605;&#x8282;&#x70B9;">2.&#x5B9E;&#x73B0;&#x8BA2;&#x9605;&#x8282;&#x70B9;</h4>
+<p>&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x7684;&#x529F;&#x80FD;&#x5305;: roscpp rospy std_msgs turtlesim</p>
+<p><strong>&#x5B9E;&#x73B0;&#x65B9;&#x6848;A:</strong> C++</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">/*  
+    &#x8BA2;&#x9605;&#x5C0F;&#x4E4C;&#x9F9F;&#x7684;&#x4F4D;&#x59FF;: &#x65F6;&#x65F6;&#x83B7;&#x53D6;&#x5C0F;&#x4E4C;&#x9F9F;&#x5728;&#x7A97;&#x4F53;&#x4E2D;&#x7684;&#x5750;&#x6807;&#x5E76;&#x6253;&#x5370;
+    &#x51C6;&#x5907;&#x5DE5;&#x4F5C;:
+        1.&#x83B7;&#x53D6;&#x8BDD;&#x9898;&#x540D;&#x79F0; /turtle1/pose
+        2.&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x7C7B;&#x578B; turtlesim/Pose
+        3.&#x8FD0;&#x884C;&#x524D;&#x542F;&#x52A8; turtlesim_node &#x4E0E; turtle_teleop_key &#x8282;&#x70B9;
+
+    &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:
+        1.&#x5305;&#x542B;&#x5934;&#x6587;&#x4EF6;
+        2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;
+        3.&#x521B;&#x5EFA; ROS &#x53E5;&#x67C4;
+        4.&#x521B;&#x5EFA;&#x8BA2;&#x9605;&#x8005;&#x5BF9;&#x8C61;
+        5.&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5904;&#x7406;&#x8BA2;&#x9605;&#x7684;&#x6570;&#x636E;
+        6.spin
+*/</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;turtlesim/Pose.h&quot;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">doPose</span><span class="hljs-params">(<span class="hljs-keyword">const</span> turtlesim::Pose::ConstPtr&amp; p)</span></span>{
+    ROS_INFO(<span class="hljs-string">&quot;&#x4E4C;&#x9F9F;&#x4F4D;&#x59FF;&#x4FE1;&#x606F;:x=%.2f,y=%.2f,theta=%.2f,lv=%.2f,av=%.2f&quot;</span>,
+        p-&gt;x,p-&gt;y,p-&gt;theta,p-&gt;linear_velocity,p-&gt;angular_velocity
+    );
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+    setlocale(LC_ALL,<span class="hljs-string">&quot;&quot;</span>);
+    <span class="hljs-comment">// 2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;</span>
+    ros::init(argc,argv,<span class="hljs-string">&quot;sub_pose&quot;</span>);
+    <span class="hljs-comment">// 3.&#x521B;&#x5EFA; ROS &#x53E5;&#x67C4;</span>
+    ros::NodeHandle nh;
+    <span class="hljs-comment">// 4.&#x521B;&#x5EFA;&#x8BA2;&#x9605;&#x8005;&#x5BF9;&#x8C61;</span>
+    ros::Subscriber sub = nh.subscribe&lt;turtlesim::Pose&gt;(<span class="hljs-string">&quot;/turtle1/pose&quot;</span>,<span class="hljs-number">1000</span>,doPose);
+    <span class="hljs-comment">// 5.&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5904;&#x7406;&#x8BA2;&#x9605;&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-comment">// 6.spin</span>
+    ros::spin();
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6B64;&#x5904;&#x7565;</p>
+<p><strong>&#x5B9E;&#x73B0;&#x65B9;&#x6848;B:</strong> Python</p>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x8BA2;&#x9605;&#x5C0F;&#x4E4C;&#x9F9F;&#x7684;&#x4F4D;&#x59FF;: &#x65F6;&#x65F6;&#x83B7;&#x53D6;&#x5C0F;&#x4E4C;&#x9F9F;&#x5728;&#x7A97;&#x4F53;&#x4E2D;&#x7684;&#x5750;&#x6807;&#x5E76;&#x6253;&#x5370;
+    &#x51C6;&#x5907;&#x5DE5;&#x4F5C;:
+        1.&#x83B7;&#x53D6;&#x8BDD;&#x9898;&#x540D;&#x79F0; /turtle1/pose
+        2.&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x7C7B;&#x578B; turtlesim/Pose
+        3.&#x8FD0;&#x884C;&#x524D;&#x542F;&#x52A8; turtlesim_node &#x4E0E; turtle_teleop_key &#x8282;&#x70B9;
+
+    &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:
+        1.&#x5BFC;&#x5305;
+        2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;
+        3.&#x521B;&#x5EFA;&#x8BA2;&#x9605;&#x8005;&#x5BF9;&#x8C61;
+        4.&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5904;&#x7406;&#x8BA2;&#x9605;&#x7684;&#x6570;&#x636E;
+        5.spin
+
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">from</span> turtlesim.msg <span class="hljs-keyword">import</span> Pose
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">doPose</span><span class="hljs-params">(data)</span>:</span>
+    rospy.loginfo(<span class="hljs-string">&quot;&#x4E4C;&#x9F9F;&#x5750;&#x6807;:x=%.2f, y=%.2f,theta=%.2f&quot;</span>,data.x,data.y,data.theta)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+
+    <span class="hljs-comment"># 2.&#x521D;&#x59CB;&#x5316; ROS &#x8282;&#x70B9;</span>
+    rospy.init_node(<span class="hljs-string">&quot;sub_pose_p&quot;</span>)
+
+    <span class="hljs-comment"># 3.&#x521B;&#x5EFA;&#x8BA2;&#x9605;&#x8005;&#x5BF9;&#x8C61;</span>
+    sub = rospy.Subscriber(<span class="hljs-string">&quot;/turtle1/pose&quot;</span>,Pose,doPose,queue_size=<span class="hljs-number">1000</span>)
+    <span class="hljs-comment">#     4.&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5904;&#x7406;&#x8BA2;&#x9605;&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-comment">#     5.spin</span>
+    rospy.spin()
+</code></pre>
+<p>&#x6743;&#x9650;&#x8BBE;&#x7F6E;&#x4EE5;&#x53CA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6B64;&#x5904;&#x7565;</p>
+<h4 id="3&#x8FD0;&#x884C;">3.&#x8FD0;&#x884C;</h4>
+<p>&#x9996;&#x5148;&#xFF0C;&#x542F;&#x52A8; roscore&#xFF1B;</p>
+<p>&#x7136;&#x540E;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#xFF0C;&#x6267;&#x884C;&#x8FD0;&#x52A8;&#x63A7;&#x5236;&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x6700;&#x540E;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x4F4D;&#x59FF;&#x8BA2;&#x9605;&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E0E;&#x6F14;&#x793A;&#x7ED3;&#x679C;&#x7C7B;&#x4F3C;&#x3002;</p>
+<h3 id="253-&#x5B9E;&#x64CD;03&#x670D;&#x52A1;&#x8C03;&#x7528;">2.5.3 &#x5B9E;&#x64CD;03_&#x670D;&#x52A1;&#x8C03;&#x7528;</h3>
+<p><strong>&#x9700;&#x6C42;&#x63CF;&#x8FF0;:</strong>&#x7F16;&#x7801;&#x5B9E;&#x73B0;&#x5411; turtlesim &#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF0C;&#x5728;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#x7684;&#x7A97;&#x4F53;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x751F;&#x6210;&#x4E00;&#x4E4C;&#x9F9F;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x8BF7;&#x6C42;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><strong>&#x7ED3;&#x679C;&#x6F14;&#x793A;:</strong></p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506060919497.png" alt="img"></p>
+<p><strong>&#x5B9E;&#x73B0;&#x5206;&#x6790;:</strong></p>
+<ol>
+<li>&#x9996;&#x5148;&#xFF0C;&#x9700;&#x8981;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x8981;&#x901A;&#x8FC7;ROS&#x547D;&#x4EE4;&#xFF0C;&#x6765;&#x83B7;&#x53D6;&#x4E4C;&#x9F9F;&#x751F;&#x6210;&#x670D;&#x52A1;&#x7684;&#x670D;&#x52A1;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x670D;&#x52A1;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x3002;</li>
+<li>&#x7F16;&#x5199;&#x670D;&#x52A1;&#x8BF7;&#x6C42;&#x8282;&#x70B9;&#xFF0C;&#x751F;&#x6210;&#x65B0;&#x7684;&#x4E4C;&#x9F9F;&#x3002;</li>
+</ol>
+<p><strong>&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x901A;&#x8FC7;ros&#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x4E0E;&#x670D;&#x52A1;&#x6D88;&#x606F;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x7F16;&#x7801;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x8BF7;&#x6C42;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x542F;&#x52A8; roscore&#x3001;turtlesim_node &#x3001;&#x4E4C;&#x9F9F;&#x751F;&#x6210;&#x8282;&#x70B9;&#xFF0C;&#x751F;&#x6210;&#x65B0;&#x7684;&#x4E4C;&#x9F9F;&#x3002;</li>
+</ol>
+<h4 id="1&#x670D;&#x52A1;&#x540D;&#x79F0;&#x4E0E;&#x670D;&#x52A1;&#x6D88;&#x606F;&#x83B7;&#x53D6;">1.&#x670D;&#x52A1;&#x540D;&#x79F0;&#x4E0E;&#x670D;&#x52A1;&#x6D88;&#x606F;&#x83B7;&#x53D6;</h4>
+<p><strong>&#x83B7;&#x53D6;&#x8BDD;&#x9898;:</strong>/spawn</p>
+<pre><code class="lang-perl">rosservice list
+</code></pre>
+<p><strong>&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x7C7B;&#x578B;:</strong>turtlesim/Spawn</p>
+<pre><code class="lang-perl">rosservice type /spawn
+</code></pre>
+<p><strong>&#x83B7;&#x53D6;&#x6D88;&#x606F;&#x683C;&#x5F0F;:</strong></p>
+<pre><code class="lang-perl">rossrv info turtlesim/Spawn
+</code></pre>
+<p><strong>&#x54CD;&#x5E94;&#x7ED3;&#x679C;:</strong></p>
+<pre><code class="lang-perl">float32 <span class="hljs-keyword">x</span>
+float32 <span class="hljs-keyword">y</span>
+float32 theta
+string name
+---
+string name
+</code></pre>
+<h4 id="2&#x670D;&#x52A1;&#x5BA2;&#x6237;&#x7AEF;&#x5B9E;&#x73B0;">2.&#x670D;&#x52A1;&#x5BA2;&#x6237;&#x7AEF;&#x5B9E;&#x73B0;</h4>
+<p>&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x5305;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x7684;&#x529F;&#x80FD;&#x5305;: roscpp rospy std_msgs turtlesim</p>
+<p><strong>&#x5B9E;&#x73B0;&#x65B9;&#x6848;A:</strong>C++</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">/*
+    &#x751F;&#x6210;&#x4E00;&#x53EA;&#x5C0F;&#x4E4C;&#x9F9F;
+    &#x51C6;&#x5907;&#x5DE5;&#x4F5C;:
+        1.&#x670D;&#x52A1;&#x8BDD;&#x9898; /spawn
+        2.&#x670D;&#x52A1;&#x6D88;&#x606F;&#x7C7B;&#x578B; turtlesim/Spawn
+        3.&#x8FD0;&#x884C;&#x524D;&#x5148;&#x542F;&#x52A8; turtlesim_node &#x8282;&#x70B9;
+
+    &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:
+        1.&#x5305;&#x542B;&#x5934;&#x6587;&#x4EF6;
+          &#x9700;&#x8981;&#x5305;&#x542B; turtlesim &#x5305;&#x4E0B;&#x8D44;&#x6E90;&#xFF0C;&#x6CE8;&#x610F;&#x5728; package.xml &#x914D;&#x7F6E;
+        2.&#x521D;&#x59CB;&#x5316; ros &#x8282;&#x70B9;
+        3.&#x521B;&#x5EFA; ros &#x53E5;&#x67C4;
+        4.&#x521B;&#x5EFA; service &#x5BA2;&#x6237;&#x7AEF;
+        5.&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x542F;&#x52A8;
+        6.&#x53D1;&#x9001;&#x8BF7;&#x6C42;
+        7.&#x5904;&#x7406;&#x54CD;&#x5E94;
+
+*/</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;turtlesim/Spawn.h&quot;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+    setlocale(LC_ALL,<span class="hljs-string">&quot;&quot;</span>);
+    <span class="hljs-comment">// 2.&#x521D;&#x59CB;&#x5316; ros &#x8282;&#x70B9;</span>
+    ros::init(argc,argv,<span class="hljs-string">&quot;set_turtle&quot;</span>);
+    <span class="hljs-comment">// 3.&#x521B;&#x5EFA; ros &#x53E5;&#x67C4;</span>
+    ros::NodeHandle nh;
+    <span class="hljs-comment">// 4.&#x521B;&#x5EFA; service &#x5BA2;&#x6237;&#x7AEF;</span>
+    ros::ServiceClient client = nh.serviceClient&lt;turtlesim::Spawn&gt;(<span class="hljs-string">&quot;/spawn&quot;</span>);
+    <span class="hljs-comment">// 5.&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x542F;&#x52A8;</span>
+    <span class="hljs-comment">// client.waitForExistence();</span>
+    ros::service::waitForService(<span class="hljs-string">&quot;/spawn&quot;</span>);
+    <span class="hljs-comment">// 6.&#x53D1;&#x9001;&#x8BF7;&#x6C42;</span>
+    turtlesim::Spawn spawn;
+    spawn.request.x = <span class="hljs-number">1.0</span>;
+    spawn.request.y = <span class="hljs-number">1.0</span>;
+    spawn.request.theta = <span class="hljs-number">1.57</span>;
+    spawn.request.name = <span class="hljs-string">&quot;my_turtle&quot;</span>;
+    <span class="hljs-keyword">bool</span> flag = client.call(spawn);
+    <span class="hljs-comment">// 7.&#x5904;&#x7406;&#x54CD;&#x5E94;&#x7ED3;&#x679C;</span>
+    <span class="hljs-keyword">if</span> (flag)
+    {
+        ROS_INFO(<span class="hljs-string">&quot;&#x65B0;&#x7684;&#x4E4C;&#x9F9F;&#x751F;&#x6210;,&#x540D;&#x5B57;:%s&quot;</span>,spawn.response.name.c_str());
+    } <span class="hljs-keyword">else</span> {
+        ROS_INFO(<span class="hljs-string">&quot;&#x4E4C;&#x9F9F;&#x751F;&#x6210;&#x5931;&#x8D25;&#xFF01;&#xFF01;&#xFF01;&quot;</span>);
+    }
+
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6B64;&#x5904;&#x7565;</p>
+<p><strong>&#x5B9E;&#x73B0;&#x65B9;&#x6848;B:</strong>Python</p>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+<span class="hljs-string">&quot;&quot;&quot;
+    &#x751F;&#x6210;&#x4E00;&#x53EA;&#x5C0F;&#x4E4C;&#x9F9F;
+    &#x51C6;&#x5907;&#x5DE5;&#x4F5C;:
+        1.&#x670D;&#x52A1;&#x8BDD;&#x9898; /spawn
+        2.&#x670D;&#x52A1;&#x6D88;&#x606F;&#x7C7B;&#x578B; turtlesim/Spawn
+        3.&#x8FD0;&#x884C;&#x524D;&#x5148;&#x542F;&#x52A8; turtlesim_node &#x8282;&#x70B9;
+
+    &#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:
+        1.&#x5BFC;&#x5305;
+          &#x9700;&#x8981;&#x5305;&#x542B; turtlesim &#x5305;&#x4E0B;&#x8D44;&#x6E90;&#xFF0C;&#x6CE8;&#x610F;&#x5728; package.xml &#x914D;&#x7F6E;
+        2.&#x521D;&#x59CB;&#x5316; ros &#x8282;&#x70B9;
+        3.&#x521B;&#x5EFA; service &#x5BA2;&#x6237;&#x7AEF;
+        4.&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x542F;&#x52A8;
+        5.&#x53D1;&#x9001;&#x8BF7;&#x6C42;
+        6.&#x5904;&#x7406;&#x54CD;&#x5E94;
+
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">from</span> turtlesim.srv <span class="hljs-keyword">import</span> Spawn,SpawnRequest,SpawnResponse
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    <span class="hljs-comment"># 2.&#x521D;&#x59CB;&#x5316; ros &#x8282;&#x70B9;</span>
+    rospy.init_node(<span class="hljs-string">&quot;set_turtle_p&quot;</span>)
+    <span class="hljs-comment"># 3.&#x521B;&#x5EFA; service &#x5BA2;&#x6237;&#x7AEF;</span>
+    client = rospy.ServiceProxy(<span class="hljs-string">&quot;/spawn&quot;</span>,Spawn)
+    <span class="hljs-comment"># 4.&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x542F;&#x52A8;</span>
+    client.wait_for_service()
+    <span class="hljs-comment"># 5.&#x53D1;&#x9001;&#x8BF7;&#x6C42;</span>
+    req = SpawnRequest()
+    req.x = <span class="hljs-number">2.0</span>
+    req.y = <span class="hljs-number">2.0</span>
+    req.theta = <span class="hljs-number">-1.57</span>
+    req.name = <span class="hljs-string">&quot;my_turtle_p&quot;</span>
+    <span class="hljs-keyword">try</span>:
+        response = client.call(req)
+        <span class="hljs-comment"># 6.&#x5904;&#x7406;&#x54CD;&#x5E94;</span>
+        rospy.loginfo(<span class="hljs-string">&quot;&#x4E4C;&#x9F9F;&#x521B;&#x5EFA;&#x6210;&#x529F;!&#xFF0C;&#x53EB;:%s&quot;</span>,response.name)
+    <span class="hljs-keyword">except</span> expression <span class="hljs-keyword">as</span> identifier:
+        rospy.loginfo(<span class="hljs-string">&quot;&#x670D;&#x52A1;&#x8C03;&#x7528;&#x5931;&#x8D25;&quot;</span>)
+</code></pre>
+<p>&#x6743;&#x9650;&#x8BBE;&#x7F6E;&#x4EE5;&#x53CA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6B64;&#x5904;&#x7565;</p>
+<h4 id="3&#x8FD0;&#x884C;">3.&#x8FD0;&#x884C;</h4>
+<p>&#x9996;&#x5148;&#xFF0C;&#x542F;&#x52A8; roscore&#xFF1B;</p>
+<p>&#x7136;&#x540E;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x6700;&#x540E;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x751F;&#x6210;&#x8BF7;&#x6C42;&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E0E;&#x6F14;&#x793A;&#x7ED3;&#x679C;&#x7C7B;&#x4F3C;&#x3002;</p>
+<h3 id="254-&#x5B9E;&#x64CD;04&#x53C2;&#x6570;&#x8BBE;&#x7F6E;">2.5.4 &#x5B9E;&#x64CD;04_&#x53C2;&#x6570;&#x8BBE;&#x7F6E;</h3>
+<p><strong>&#x9700;&#x6C42;&#x63CF;&#x8FF0;:</strong> &#x4FEE;&#x6539;turtlesim&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#x7A97;&#x4F53;&#x7684;&#x80CC;&#x666F;&#x8272;&#xFF0C;&#x5DF2;&#x77E5;&#x80CC;&#x666F;&#x8272;&#x662F;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65B9;&#x5F0F;&#x4EE5; rgb &#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;&#x7684;&#x3002;</p>
+<p><strong>&#x7ED3;&#x679C;&#x6F14;&#x793A;:</strong></p>
+<p><img src="https://gitee.com/ry2001/img1/raw/master/202506060920525.png" alt="img"></p>
+<p><strong>&#x5B9E;&#x73B0;&#x5206;&#x6790;:</strong></p>
+<ol>
+<li>&#x9996;&#x5148;&#xFF0C;&#x9700;&#x8981;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x8981;&#x901A;&#x8FC7;ROS&#x547D;&#x4EE4;&#xFF0C;&#x6765;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x8BBE;&#x7F6E;&#x80CC;&#x666F;&#x8272;&#x7684;&#x53C2;&#x6570;&#x3002;</li>
+<li>&#x7F16;&#x5199;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x8282;&#x70B9;&#xFF0C;&#x4FEE;&#x6539;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x503C;&#x3002;</li>
+</ol>
+<p><strong>&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x901A;&#x8FC7;ros&#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x3002;</li>
+<li>&#x7F16;&#x7801;&#x5B9E;&#x73B0;&#x670D;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x542F;&#x52A8; roscore&#x3001;turtlesim_node &#x4E0E;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x8282;&#x70B9;&#xFF0C;&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x3002;</li>
+</ol>
+<h4 id="1&#x53C2;&#x6570;&#x540D;&#x83B7;&#x53D6;">1.&#x53C2;&#x6570;&#x540D;&#x83B7;&#x53D6;</h4>
+<p><strong>&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x5217;&#x8868;:</strong></p>
+<pre><code class="lang-perl">rosparam list
+</code></pre>
+<p><strong>&#x54CD;&#x5E94;&#x7ED3;&#x679C;:</strong></p>
+<pre><code class="lang-perl">/turtlesim/background_b
+/turtlesim/background_g
+/turtlesim/background_r
+</code></pre>
+<h4 id="2&#x53C2;&#x6570;&#x4FEE;&#x6539;">2.&#x53C2;&#x6570;&#x4FEE;&#x6539;</h4>
+<p><strong>&#x5B9E;&#x73B0;&#x65B9;&#x6848;A:</strong>C++</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">/*
+    &#x6CE8;&#x610F;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x4F7F;&#x7528;&#x3002;
+
+*/</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+    ros::init(argc,argv,<span class="hljs-string">&quot;haha&quot;</span>);
+
+    ros::<span class="hljs-function">NodeHandle <span class="hljs-title">nh</span><span class="hljs-params">(<span class="hljs-string">&quot;turtlesim&quot;</span>)</span></span>;
+    <span class="hljs-comment">//ros::NodeHandle nh;</span>
+
+    <span class="hljs-comment">// ros::param::set(&quot;/turtlesim/background_r&quot;,0);</span>
+    <span class="hljs-comment">// ros::param::set(&quot;/turtlesim/background_g&quot;,0);</span>
+    <span class="hljs-comment">// ros::param::set(&quot;/turtlesim/background_b&quot;,0);</span>
+
+    nh.setParam(<span class="hljs-string">&quot;background_r&quot;</span>,<span class="hljs-number">0</span>);
+    nh.setParam(<span class="hljs-string">&quot;background_g&quot;</span>,<span class="hljs-number">0</span>);
+    nh.setParam(<span class="hljs-string">&quot;background_b&quot;</span>,<span class="hljs-number">0</span>);
+
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6B64;&#x5904;&#x7565;</p>
+<p><strong>&#x5B9E;&#x73B0;&#x65B9;&#x6848;B:</strong>Python</p>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+
+<span class="hljs-keyword">import</span> rospy
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    rospy.init_node(<span class="hljs-string">&quot;hehe&quot;</span>)
+    <span class="hljs-comment"># rospy.set_param(&quot;/turtlesim/background_r&quot;,255)</span>
+    <span class="hljs-comment"># rospy.set_param(&quot;/turtlesim/background_g&quot;,255)</span>
+    <span class="hljs-comment"># rospy.set_param(&quot;/turtlesim/background_b&quot;,255)</span>
+    rospy.set_param(<span class="hljs-string">&quot;background_r&quot;</span>,<span class="hljs-number">255</span>)
+    rospy.set_param(<span class="hljs-string">&quot;background_g&quot;</span>,<span class="hljs-number">255</span>)
+    rospy.set_param(<span class="hljs-string">&quot;background_b&quot;</span>,<span class="hljs-number">255</span>)  <span class="hljs-comment"># &#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x5165; __ns:=xxx</span>
+</code></pre>
+<p>&#x6743;&#x9650;&#x8BBE;&#x7F6E;&#x4EE5;&#x53CA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6B64;&#x5904;&#x7565;</p>
+<h4 id="3&#x8FD0;&#x884C;">3.&#x8FD0;&#x884C;</h4>
+<p>&#x9996;&#x5148;&#xFF0C;&#x542F;&#x52A8; roscore&#xFF1B;</p>
+<p>&#x7136;&#x540E;&#x542F;&#x52A8;&#x80CC;&#x666F;&#x8272;&#x8BBE;&#x7F6E;&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x6700;&#x540E;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#xFF1B;</p>
+<p>&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E0E;&#x6F14;&#x793A;&#x7ED3;&#x679C;&#x7C7B;&#x4F3C;&#x3002;</p>
+<p>PS: &#x6CE8;&#x610F;&#x8282;&#x70B9;&#x542F;&#x52A8;&#x987A;&#x5E8F;&#xFF0C;&#x5982;&#x679C;&#x5148;&#x542F;&#x52A8;&#x4E4C;&#x9F9F;&#x663E;&#x793A;&#x8282;&#x70B9;&#xFF0C;&#x540E;&#x542F;&#x52A8;&#x80CC;&#x666F;&#x8272;&#x8BBE;&#x7F6E;&#x8282;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x989C;&#x8272;&#x8BBE;&#x7F6E;&#x4E0D;&#x4F1A;&#x751F;&#x6548;&#x3002;</p>
+<h4 id="4&#x5176;&#x4ED6;&#x8BBE;&#x7F6E;&#x65B9;&#x5F0F;">4.&#x5176;&#x4ED6;&#x8BBE;&#x7F6E;&#x65B9;&#x5F0F;</h4>
+<p><strong>&#x65B9;&#x5F0F;1:&#x4FEE;&#x6539;&#x5C0F;&#x4E4C;&#x9F9F;&#x8282;&#x70B9;&#x7684;&#x80CC;&#x666F;&#x8272;(&#x547D;&#x4EE4;&#x884C;&#x5B9E;&#x73B0;)</strong></p>
+<pre><code class="lang-perl">rosparam set /turtlesim/background_b &#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x503C;
+rosparam set /turtlesim/background_g &#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x503C;
+rosparam set /turtlesim/background_r &#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x503C;
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x540E;&#xFF0C;&#x91CD;&#x542F; turtlesim_node &#x8282;&#x70B9;&#xFF0C;&#x80CC;&#x666F;&#x8272;&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x4E86;</p>
+<p><strong>&#x65B9;&#x5F0F;2:&#x542F;&#x52A8;&#x8282;&#x70B9;&#x65F6;&#xFF0C;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;</strong></p>
+<pre><code class="lang-perl">rosrun turtlesim turtlesim_node _background_r:=<span class="hljs-number">100</span> _background_g=<span class="hljs-number">0</span> _background_b=<span class="hljs-number">0</span>
+</code></pre>
+<p><strong>&#x65B9;&#x5F0F;3:&#x901A;&#x8FC7;launch&#x6587;&#x4EF6;&#x4F20;&#x53C2;</strong></p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;turtlesim&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;turtlesim_node&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;set_bg&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- launch &#x4F20;&#x53C2;&#x7B56;&#x7565;1 --&gt;</span>
+        <span class="hljs-comment">&lt;!-- &lt;param name=&quot;background_b&quot; value=&quot;0&quot; type=&quot;int&quot; /&gt;
+        &lt;param name=&quot;background_g&quot; value=&quot;0&quot; type=&quot;int&quot; /&gt;
+        &lt;param name=&quot;background_r&quot; value=&quot;0&quot; type=&quot;int&quot; /&gt; --&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- launch &#x4F20;&#x53C2;&#x7B56;&#x7565;2 --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">rosparam</span> <span class="hljs-attr">command</span>=<span class="hljs-string">&quot;load&quot;</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find demo03_test_parameter)/cfg/color.yaml&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">node</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/
+</span></code></pre>
+<h2 id="26-&#x901A;&#x4FE1;&#x673A;&#x5236;&#x6BD4;&#x8F83;">2.6 &#x901A;&#x4FE1;&#x673A;&#x5236;&#x6BD4;&#x8F83;</h2>
+<p>&#x4E09;&#x79CD;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x4E2D;&#xFF0C;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x5171;&#x4EAB;&#x673A;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x6570;&#x636E;&#xFF0C;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x4E0E;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x662F;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x6570;&#x636E;&#x7684;&#xFF0C;&#x4E09;&#x8005;&#x662F;ROS&#x4E2D;&#x6700;&#x57FA;&#x7840;&#x4E5F;&#x662F;&#x5E94;&#x7528;&#x6700;&#x4E3A;&#x5E7F;&#x6CDB;&#x7684;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x3002;</p>
+<p>&#x8FD9;&#x5176;&#x4E2D;&#xFF0C;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x548C;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x76F8;&#x4F3C;&#x6027;&#x4E5F;&#x6709;&#x672C;&#x8D28;&#x4E0A;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x5728;&#x6B64;&#x5C06;&#x4E8C;&#x8005;&#x505A;&#x4E00;&#x4E0B;&#x7B80;&#x5355;&#x6BD4;&#x8F83;:</p>
+<p>&#x4E8C;&#x8005;&#x7684;&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;&#x662F;&#x6BD4;&#x8F83;&#x76F8;&#x4F3C;&#x7684;&#xFF0C;&#x90FD;&#x662F;&#x6D89;&#x53CA;&#x5230;&#x56DB;&#x4E2A;&#x8981;&#x7D20;:</p>
+<ul>
+<li>&#x8981;&#x7D20;1: &#x6D88;&#x606F;&#x7684;&#x53D1;&#x5E03;&#x65B9;/&#x5BA2;&#x6237;&#x7AEF;(Publisher/Client)</li>
+<li>&#x8981;&#x7D20;2: &#x6D88;&#x606F;&#x7684;&#x8BA2;&#x9605;&#x65B9;/&#x670D;&#x52A1;&#x7AEF;(Subscriber/Server)</li>
+<li>&#x8981;&#x7D20;3: &#x8BDD;&#x9898;&#x540D;&#x79F0;(Topic/Service)</li>
+<li>&#x8981;&#x7D20;4: &#x6570;&#x636E;&#x8F7D;&#x4F53;(msg/srv)</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x6982;&#x62EC;&#x4E3A;: &#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x901A;&#x8FC7;&#x8BDD;&#x9898;&#x5173;&#x8054;&#x5230;&#x4E00;&#x8D77;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x8F7D;&#x4F53;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x3002;</p>
+<p>&#x4E8C;&#x8005;&#x7684;&#x5B9E;&#x73B0;&#x4E5F;&#x662F;&#x6709;&#x672C;&#x8D28;&#x5DEE;&#x5F02;&#x7684;&#xFF0C;&#x5177;&#x4F53;&#x6BD4;&#x8F83;&#x5982;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">Topic(&#x8BDD;&#x9898;)</th>
+<th style="text-align:left">Service(&#x670D;&#x52A1;)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x901A;&#x4FE1;&#x6A21;&#x5F0F;</td>
+<td style="text-align:left">&#x53D1;&#x5E03;/&#x8BA2;&#x9605;</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;/&#x54CD;&#x5E94;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x540C;&#x6B65;&#x6027;</td>
+<td style="text-align:left">&#x5F02;&#x6B65;</td>
+<td style="text-align:left">&#x540C;&#x6B65;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5E95;&#x5C42;&#x534F;&#x8BAE;</td>
+<td style="text-align:left">ROSTCP/ROSUDP</td>
+<td style="text-align:left">ROSTCP/ROSUDP</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x7F13;&#x51B2;&#x533A;</td>
+<td style="text-align:left">&#x6709;</td>
+<td style="text-align:left">&#x65E0;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x65F6;&#x65F6;&#x6027;</td>
+<td style="text-align:left">&#x5F31;</td>
+<td style="text-align:left">&#x5F3A;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x8282;&#x70B9;&#x5173;&#x7CFB;</td>
+<td style="text-align:left">&#x591A;&#x5BF9;&#x591A;</td>
+<td style="text-align:left">&#x4E00;&#x5BF9;&#x591A;(&#x4E00;&#x4E2A; Server)</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x901A;&#x4FE1;&#x6570;&#x636E;</td>
+<td style="text-align:left">msg</td>
+<td style="text-align:left">srv</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4F7F;&#x7528;&#x573A;&#x666F;</td>
+<td style="text-align:left">&#x8FDE;&#x7EED;&#x9AD8;&#x9891;&#x7684;&#x6570;&#x636E;&#x53D1;&#x5E03;&#x4E0E;&#x63A5;&#x6536;:&#x96F7;&#x8FBE;&#x3001;&#x91CC;&#x7A0B;&#x8BA1;</td>
+<td style="text-align:left">&#x5076;&#x5C14;&#x8C03;&#x7528;&#x6216;&#x6267;&#x884C;&#x67D0;&#x4E00;&#x9879;&#x7279;&#x5B9A;&#x529F;&#x80FD;&#xFF1A;&#x62CD;&#x7167;&#x3001;&#x8BED;&#x97F3;&#x8BC6;&#x522B;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0D;&#x540C;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x4E92;&#x8865;&#x6027;&#xFF0C;&#x90FD;&#x6709;&#x5404;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;&#x5C24;&#x5176;&#x662F;&#x8BDD;&#x9898;&#x4E0E;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#xFF0C;&#x9700;&#x8981;&#x7ED3;&#x5408;&#x5177;&#x4F53;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E0E;&#x4E8C;&#x8005;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x3002;</p>
+<h2 id="27-&#x672C;&#x7AE0;&#x5C0F;&#x7ED3;">2.7 &#x672C;&#x7AE0;&#x5C0F;&#x7ED3;</h2>
+<p>&#x672C;&#x7AE0;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x4E86;ROS&#x4E2D;&#x6700;&#x57FA;&#x672C;&#x7684;&#x4E5F;&#x662F;&#x6700;&#x6838;&#x5FC3;&#x7684;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x5B9E;&#x73B0;: &#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x3001;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x3001;&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x3002;&#x6BCF;&#x79CD;&#x901A;&#x4FE1;&#x673A;&#x5236;&#xFF0C;&#x90FD;&#x4ECB;&#x7ECD;&#x4E86;&#x5982;&#x4E0B;&#x5185;&#x5BB9;:</p>
+<ul>
+<li>&#x4F0A;&#x59CB;&#x4ECB;&#x7ECD;&#x4E86;&#x5F53;&#x524D;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1B;</li>
+<li>&#x4ECB;&#x7ECD;&#x4E86;&#x5F53;&#x524D;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x7684;&#x7406;&#x8BBA;&#x6A21;&#x578B;&#xFF1B;</li>
+<li>&#x5206;&#x522B;&#x4ECB;&#x7ECD;&#x4E86;&#x5F53;&#x524D;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x7684;C++&#x4E0E;Python&#x5B9E;&#x73B0;&#x3002;</li>
+</ul>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x4ECB;&#x7ECD;&#x4E86;:</p>
+<ul>
+<li>ROS&#x4E2D;&#x7684;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x65B9;&#x4FBF;&#x64CD;&#x4F5C;&#x3001;&#x8C03;&#x8BD5;&#x8282;&#x70B9;&#x4EE5;&#x53CA;&#x901A;&#x4FE1;&#x4FE1;&#x606F;&#xFF1B;</li>
+<li>&#x901A;&#x8FC7;&#x5B9E;&#x64CD;&#x53C8;&#x5C06;&#x4E0A;&#x8FF0;&#x77E5;&#x8BC6;&#x70B9;&#x52A0;&#x4EE5;&#x6574;&#x5408;&#xFF1B;</li>
+<li>&#x6700;&#x540E;&#x53C8;&#x7740;&#x91CD;&#x6BD4;&#x8F83;&#x4E86;&#x8BDD;&#x9898;&#x901A;&#x4FE1;&#x4E0E;&#x670D;&#x52A1;&#x901A;&#x4FE1;&#x7684;&#x76F8;&#x540C;&#x70B9;&#x4EE5;&#x53CA;&#x5DEE;&#x5F02;&#x3002;</li>
+</ul>
+<p>&#x638C;&#x63E1;&#x672C;&#x7AE0;&#x5185;&#x5BB9;&#x540E;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x5BB9;&#x5E94;&#x5BF9;ROS&#x4E2D;&#x5927;&#x90E8;&#x5206;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E86;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../1.ROS概述和环境搭建/ROS概述和环境搭建.html" class="navigation navigation-prev " aria-label="Previous page: 1. ROS概述和环境搭建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../3.ROS通信机制进阶/ROS通信机制进阶.html" class="navigation navigation-next " aria-label="Next page: 3. ROS通信机制进阶">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. ROS通信机制","level":"2.2","depth":1,"next":{"title":"3. ROS通信机制进阶","level":"2.3","depth":1,"path":"3.ROS通信机制进阶/ROS通信机制进阶.md","ref":"3.ROS通信机制进阶/ROS通信机制进阶.md","articles":[]},"previous":{"title":"1. ROS概述和环境搭建","level":"2.1","depth":1,"path":"1.ROS概述和环境搭建/ROS概述和环境搭建.md","ref":"1.ROS概述和环境搭建/ROS概述和环境搭建.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2.ROS通信机制/ROS通信机制.md","mtime":"2026-06-22T02:23:44.169Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-22T02:30:21.080Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

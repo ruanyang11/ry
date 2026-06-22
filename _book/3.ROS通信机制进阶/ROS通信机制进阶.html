@@ -1,0 +1,1183 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3. ROS通信机制进阶 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../4.ROS运行管理/ROS运行管理.html" />
+    
+    
+    <link rel="prev" href="../2.ROS通信机制/ROS通信机制.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    课程简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                <a href="../1.ROS概述和环境搭建/ROS概述和环境搭建.html">
+            
+                    
+                    1. ROS概述和环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../2.ROS通信机制/ROS通信机制.html">
+            
+                <a href="../2.ROS通信机制/ROS通信机制.html">
+            
+                    
+                    2. ROS通信机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="ROS通信机制进阶.html">
+            
+                <a href="ROS通信机制进阶.html">
+            
+                    
+                    3. ROS通信机制进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../4.ROS运行管理/ROS运行管理.html">
+            
+                <a href="../4.ROS运行管理/ROS运行管理.html">
+            
+                    
+                    4. ROS运行管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../5.ROS常用组件/ROS常用组件.html">
+            
+                <a href="../5.ROS常用组件/ROS常用组件.html">
+            
+                    
+                    5. ROS常用组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 实战篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../6.机器人系统仿真/机器人系统仿真.html">
+            
+                <a href="../6.机器人系统仿真/机器人系统仿真.html">
+            
+                    
+                    6. 机器人系统仿真
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 导航篇</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../7.机器人系统导航仿真/机器人系统导航.html">
+            
+                <a href="../7.机器人系统导航仿真/机器人系统导航.html">
+            
+                    
+                    7. 机器人系统导航仿真
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../7.机器人系统导航仿真/补充/全局规划器.html">
+            
+                <a href="../7.机器人系统导航仿真/补充/全局规划器.html">
+            
+                    
+                    全局规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../7.机器人系统导航仿真/补充/局部规划器.html">
+            
+                <a href="../7.机器人系统导航仿真/补充/局部规划器.html">
+            
+                    
+                    局部规划器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../8.机器人系统导航实体/机器人系统导航.html">
+            
+                <a href="../8.机器人系统导航实体/机器人系统导航.html">
+            
+                    
+                    8. 机器人系统导航实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ROS 进阶篇</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../10.ROS进阶/ROS进阶.html">
+            
+                <a href="../10.ROS进阶/ROS进阶.html">
+            
+                    
+                    9. ROS进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3. ROS通信机制进阶</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-3-&#x7AE0;-ros&#x901A;&#x4FE1;&#x673A;&#x5236;&#x8FDB;&#x9636;">&#x7B2C; 3 &#x7AE0; ROS&#x901A;&#x4FE1;&#x673A;&#x5236;&#x8FDB;&#x9636;</h1>
+<p>&#x4E0A;&#x4E00;&#x7AE0;&#x5185;&#x5BB9;&#xFF0C;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x4E86;ROS&#x901A;&#x4FE1;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5185;&#x5BB9;&#x504F;&#x5411;&#x4E8E;&#x7C97;&#x7C92;&#x5EA6;&#x7684;&#x901A;&#x4FE1;&#x6846;&#x67B6;&#x7684;&#x8BB2;&#x89E3;&#xFF0C;&#x6CA1;&#x6709;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x6D89;&#x53CA;&#x7684;API&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x5C01;&#x88C5;&#x4EE3;&#x7801;&#xFF0C;&#x9274;&#x4E8E;&#x6B64;&#xFF0C;&#x672C;&#x7AE0;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<ul>
+<li>ROS&#x5E38;&#x7528;API&#x4ECB;&#x7ECD;&#xFF1B;</li>
+<li>ROS&#x4E2D;&#x81EA;&#x5B9A;&#x4E49;&#x5934;&#x6587;&#x4EF6;&#x4E0E;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<p>&#x9884;&#x671F;&#x8FBE;&#x6210;&#x7684;&#x5B66;&#x4E60;&#x76EE;&#x6807;:</p>
+<ul>
+<li>&#x719F;&#x7EC3;&#x638C;&#x63E1;ROS&#x5E38;&#x7528;API&#xFF1B;</li>
+<li>&#x638C;&#x63E1;ROS&#x4E2D;&#x81EA;&#x5B9A;&#x4E49;&#x5934;&#x6587;&#x4EF6;&#x4E0E;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x3002;</li>
+</ul>
+<h2 id="31-&#x5E38;&#x7528;api">3.1 &#x5E38;&#x7528;API</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5EFA;&#x8BAE;&#x53C2;&#x8003;&#x5B98;&#x65B9;API&#x6587;&#x6863;&#x6216;&#x53C2;&#x8003;&#x6E90;&#x7801;:</p>
+<ul>
+<li>ROS&#x8282;&#x70B9;&#x7684;&#x521D;&#x59CB;&#x5316;&#x76F8;&#x5173;API;</li>
+<li>NodeHandle &#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;&#x76F8;&#x5173;API;</li>
+<li>&#x8BDD;&#x9898;&#x7684;&#x53D1;&#x5E03;&#x65B9;&#xFF0C;&#x8BA2;&#x9605;&#x65B9;&#x5BF9;&#x8C61;&#x76F8;&#x5173;API;</li>
+<li>&#x670D;&#x52A1;&#x7684;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;&#x76F8;&#x5173;API;</li>
+<li>&#x65F6;&#x95F4;&#x76F8;&#x5173;API;</li>
+<li>&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x76F8;&#x5173;API&#x3002;</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x670D;&#x52A1;&#x5668;&#x76F8;&#x5173;API&#x5728;&#x7B2C;&#x4E8C;&#x7AE0;&#x5DF2;&#x7ECF;&#x6709;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x548C;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x6B64;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+<hr>
+<p><strong>&#x53E6;&#x8BF7;&#x53C2;&#x8003;:</strong></p>
+<ul>
+<li><a href="http://wiki.ros.org/APIs" target="_blank">http://wiki.ros.org/APIs</a></li>
+<li><a href="https://docs.ros.org/en/api/roscpp/html/" target="_blank">https://docs.ros.org/en/api/roscpp/html/</a></li>
+</ul>
+<h3 id="311-&#x521D;&#x59CB;&#x5316;">3.1.1 &#x521D;&#x59CB;&#x5316;</h3>
+<hr>
+<h4 id="c">C++</h4>
+<h5 id="&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;</h5>
+<pre><code class="lang-cpp"><span class="hljs-comment">/** @brief ROS&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#x3002;
+ *
+ * &#x8BE5;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x89E3;&#x6790;&#x5E76;&#x4F7F;&#x7528;&#x8282;&#x70B9;&#x542F;&#x52A8;&#x65F6;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;(&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x8282;&#x70B9;&#x540D;&#x79F0;&#x3001;&#x547D;&#x540D;&#x7A7A;&#x95F4;...) 
+ *
+ * &#x8BE5;&#x51FD;&#x6570;&#x6709;&#x591A;&#x4E2A;&#x91CD;&#x8F7D;&#x7248;&#x672C;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;NodeHandle&#x5EFA;&#x8BAE;&#x8C03;&#x7528;&#x8BE5;&#x7248;&#x672C;&#x3002; 
+ *
+ * \param argc &#x53C2;&#x6570;&#x4E2A;&#x6570;
+ * \param argv &#x53C2;&#x6570;&#x5217;&#x8868;
+ * \param name &#x8282;&#x70B9;&#x540D;&#x79F0;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x5176;&#x552F;&#x4E00;&#x6027;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x5305;&#x542B;&#x547D;&#x540D;&#x7A7A;&#x95F4;
+ * \param options &#x8282;&#x70B9;&#x542F;&#x52A8;&#x9009;&#x9879;&#xFF0C;&#x88AB;&#x5C01;&#x88C5;&#x8FDB;&#x4E86;ros::init_options
+ *
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;argc, <span class="hljs-keyword">char</span> **argv, <span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>&amp; name, uint32_t options = <span class="hljs-number">0</span>)</span></span>;
+</code></pre>
+<hr>
+<h4 id="python">Python</h4>
+<h5 id="&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;</h5>
+<pre><code class="lang-perl">def init_node(name, argv=None, anonymous=False, log_level=None, disable_rostime=False, disable_rosout=False, disable_signals=False, xmlrpc_port=<span class="hljs-number">0</span>, tcpros_port=<span class="hljs-number">0</span>):
+    <span class="hljs-string">&quot;&quot;</span><span class="hljs-string">&quot;
+    &#x5728;ROS msater&#x4E2D;&#x6CE8;&#x518C;&#x8282;&#x70B9;
+
+    @param name: &#x8282;&#x70B9;&#x540D;&#x79F0;&#xFF0C;&#x5FC5;&#x987B;&#x4FDD;&#x8BC1;&#x8282;&#x70B9;&#x540D;&#x79F0;&#x552F;&#x4E00;&#xFF0C;&#x8282;&#x70B9;&#x540D;&#x79F0;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x547D;&#x540D;&#x7A7A;&#x95F4;(&#x4E0D;&#x80FD;&#x5305;&#x542B; &apos;/&apos;)
+    @type  name: str
+
+    @param anonymous: &#x53D6;&#x503C;&#x4E3A; true &#x65F6;&#xFF0C;&#x4E3A;&#x8282;&#x70B9;&#x540D;&#x79F0;&#x540E;&#x7F00;&#x968F;&#x673A;&#x7F16;&#x53F7;
+    @type anonymous: bool
+    &quot;</span><span class="hljs-string">&quot;&quot;</span>
+</code></pre>
+<h3 id="312-&#x8BDD;&#x9898;&#x4E0E;&#x670D;&#x52A1;&#x76F8;&#x5173;&#x5BF9;&#x8C61;">3.1.2 &#x8BDD;&#x9898;&#x4E0E;&#x670D;&#x52A1;&#x76F8;&#x5173;&#x5BF9;&#x8C61;</h3>
+<hr>
+<h4 id="c">C++</h4>
+<p>&#x5728; roscpp &#x4E2D;&#xFF0C;&#x8BDD;&#x9898;&#x548C;&#x670D;&#x52A1;&#x7684;&#x76F8;&#x5173;&#x5BF9;&#x8C61;&#x4E00;&#x822C;&#x7531; NodeHandle &#x521B;&#x5EFA;&#x3002;</p>
+<p>NodeHandle&#x6709;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x8FD9;&#x662F;&#x540E;&#x671F;&#x7684;&#x91CD;&#x70B9;&#xFF0C;&#x4F46;&#x662F;&#x672C;&#x7AE0;&#x6682;&#x4E0D;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h5 id="1&#x53D1;&#x5E03;&#x5BF9;&#x8C61;">1.&#x53D1;&#x5E03;&#x5BF9;&#x8C61;</h5>
+<h6 id="&#x5BF9;&#x8C61;&#x83B7;&#x53D6;">&#x5BF9;&#x8C61;&#x83B7;&#x53D6;:</h6>
+<pre><code class="lang-cpp"><span class="hljs-comment">/**
+* \brief &#x6839;&#x636E;&#x8BDD;&#x9898;&#x751F;&#x6210;&#x53D1;&#x5E03;&#x5BF9;&#x8C61;
+*
+* &#x5728; ROS master &#x6CE8;&#x518C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53D1;&#x5E03;&#x8005;&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x53D1;&#x5E03;&#x6D88;&#x606F;
+*
+* &#x4F7F;&#x7528;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:
+*
+*   ros::Publisher pub = handle.advertise&lt;std_msgs::Empty&gt;(&quot;my_topic&quot;, 1);
+*
+* \param topic &#x53D1;&#x5E03;&#x6D88;&#x606F;&#x4F7F;&#x7528;&#x7684;&#x8BDD;&#x9898;
+*
+* \param queue_size &#x7B49;&#x5F85;&#x53D1;&#x9001;&#x7ED9;&#x8BA2;&#x9605;&#x8005;&#x7684;&#x6700;&#x5927;&#x6D88;&#x606F;&#x6570;&#x91CF;
+*
+* \param latch (optional) &#x5982;&#x679C;&#x4E3A; true,&#x8BE5;&#x8BDD;&#x9898;&#x53D1;&#x5E03;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6761;&#x6D88;&#x606F;&#x5C06;&#x88AB;&#x4FDD;&#x5B58;&#xFF0C;&#x5E76;&#x4E14;&#x540E;&#x671F;&#x5F53;&#x6709;&#x8BA2;&#x9605;&#x8005;&#x8FDE;&#x63A5;&#x65F6;&#x4F1A;&#x5C06;&#x8BE5;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x8BA2;&#x9605;&#x8005;
+*
+* \return &#x8C03;&#x7528;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53D1;&#x5E03;&#x5BF9;&#x8C61;
+*
+*
+*/</span>
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> M&gt;
+<span class="hljs-function">Publisher <span class="hljs-title">advertise</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>&amp; topic, uint32_t queue_size, <span class="hljs-keyword">bool</span> latch = <span class="hljs-literal">false</span>)</span>
+</span></code></pre>
+<h6 id="&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x51FD;&#x6570;">&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x51FD;&#x6570;:</h6>
+<pre><code class="lang-cpp"><span class="hljs-comment">/**
+* &#x53D1;&#x5E03;&#x6D88;&#x606F;          
+*/</span>
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> M&gt;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">publish</span><span class="hljs-params">(<span class="hljs-keyword">const</span> M&amp; message)</span> <span class="hljs-keyword">const</span>
+</span></code></pre>
+<h5 id="2&#x8BA2;&#x9605;&#x5BF9;&#x8C61;">2.&#x8BA2;&#x9605;&#x5BF9;&#x8C61;</h5>
+<h6 id="&#x5BF9;&#x8C61;&#x83B7;&#x53D6;">&#x5BF9;&#x8C61;&#x83B7;&#x53D6;:</h6>
+<pre><code class="lang-cpp">/**
+   * \brief &#x751F;&#x6210;&#x67D0;&#x4E2A;&#x8BDD;&#x9898;&#x7684;&#x8BA2;&#x9605;&#x5BF9;&#x8C61;
+   *
+   * &#x8BE5;&#x51FD;&#x6570;&#x5C06;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x8BDD;&#x9898;&#x5728;ROS master &#x6CE8;&#x518C;&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x8FDE;&#x63A5;&#x76F8;&#x540C;&#x4E3B;&#x9898;&#x7684;&#x53D1;&#x5E03;&#x65B9;&#xFF0C;&#x6BCF;&#x63A5;&#x6536;&#x5230;&#x4E00;&#x6761;&#x6D88;&#x606F;&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x56DE;&#x8C03;
+   * &#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x4F20;&#x5165;&#x8BE5;&#x6D88;&#x606F;&#x7684;&#x5171;&#x4EAB;&#x6307;&#x9488;&#xFF0C;&#x8BE5;&#x6D88;&#x606F;&#x4E0D;&#x80FD;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x56E0;&#x4E3A;&#x53EF;&#x80FD;&#x5176;&#x4ED6;&#x8BA2;&#x9605;&#x5BF9;&#x8C61;&#x4E5F;&#x4F1A;&#x4F7F;&#x7528;&#x8BE5;&#x6D88;&#x606F;&#x3002;
+   * 
+   * &#x4F7F;&#x7528;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:
+
+void callback(const std_msgs::Empty::ConstPtr&amp; message)
+{
+}
+
+ros::Subscriber sub = handle.subscribe(&quot;my_topic&quot;, 1, callback);
+
+   *
+* \param M [template] M &#x662F;&#x6307;&#x6D88;&#x606F;&#x7C7B;&#x578B;
+* \param topic &#x8BA2;&#x9605;&#x7684;&#x8BDD;&#x9898;
+* \param queue_size &#x6D88;&#x606F;&#x961F;&#x5217;&#x957F;&#x5EA6;&#xFF0C;&#x8D85;&#x51FA;&#x957F;&#x5EA6;&#x65F6;&#xFF0C;&#x5934;&#x90E8;&#x7684;&#x6D88;&#x606F;&#x5C06;&#x88AB;&#x5F03;&#x7528;
+* \param fp &#x5F53;&#x8BA2;&#x9605;&#x5230;&#x4E00;&#x6761;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+* \return &#x8C03;&#x7528;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8BA2;&#x9605;&#x8005;&#x5BF9;&#x8C61;&#xFF0C;&#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7A7A;&#x5BF9;&#x8C61;
+* 
+
+void callback(const std_msgs::Empty::ConstPtr&amp; message){...}
+ros::NodeHandle nodeHandle;
+ros::Subscriber sub = nodeHandle.subscribe(&quot;my_topic&quot;, 1, callback);
+if (sub) // Enter if subscriber is valid
+{
+...
+}
+
+*/
+template&lt;class M&gt;
+Subscriber subscribe(const std::string&amp; topic, uint32_t queue_size, void(*fp)(const boost::shared_ptr&lt;M const&gt;&amp;), const TransportHints&amp; transport_hints = TransportHints())
+</code></pre>
+<h5 id="3&#x670D;&#x52A1;&#x5BF9;&#x8C61;">3.&#x670D;&#x52A1;&#x5BF9;&#x8C61;</h5>
+<h6 id="&#x5BF9;&#x8C61;&#x83B7;&#x53D6;">&#x5BF9;&#x8C61;&#x83B7;&#x53D6;:</h6>
+<pre><code class="lang-cpp">/**
+* \brief &#x751F;&#x6210;&#x670D;&#x52A1;&#x7AEF;&#x5BF9;&#x8C61;
+*
+* &#x8BE5;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8FDE;&#x63A5;&#x5230; ROS master&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x7ED9;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x670D;&#x52A1;&#x5BF9;&#x8C61;&#x3002;
+*
+* &#x4F7F;&#x7528;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:
+\verbatim
+bool callback(std_srvs::Empty&amp; request, std_srvs::Empty&amp; response)
+{
+return true;
+}
+
+ros::ServiceServer service = handle.advertiseService(&quot;my_service&quot;, callback);
+\endverbatim
+*
+* \param service &#x670D;&#x52A1;&#x7684;&#x4E3B;&#x9898;&#x540D;&#x79F0;
+* \param srv_func &#x63A5;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+* \return &#x8BF7;&#x6C42;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;&#x670D;&#x52A1;&#x5BF9;&#x8C61;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x7A7A;&#x5BF9;&#x8C61;:
+\verbatim
+bool Foo::callback(std_srvs::Empty&amp; request, std_srvs::Empty&amp; response)
+{
+return true;
+}
+ros::NodeHandle nodeHandle;
+Foo foo_object;
+ros::ServiceServer service = nodeHandle.advertiseService(&quot;my_service&quot;, callback);
+if (service) // Enter if advertised service is valid
+{
+...
+}
+\endverbatim
+
+*/
+template&lt;class MReq, class MRes&gt;
+ServiceServer advertiseService(const std::string&amp; service, bool(*srv_func)(MReq&amp;, MRes&amp;))
+</code></pre>
+<h5 id="4&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;">4.&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</h5>
+<h6 id="&#x5BF9;&#x8C61;&#x83B7;&#x53D6;">&#x5BF9;&#x8C61;&#x83B7;&#x53D6;:</h6>
+<pre><code class="lang-cpp">/** 
+  * @brief &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;
+  *
+  * &#x5F53;&#x6E05;&#x9664;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x7684;&#x5F15;&#x7528;&#x53E5;&#x67C4;&#x65F6;&#xFF0C;&#x8FDE;&#x63A5;&#x5C06;&#x88AB;&#x5173;&#x95ED;&#x3002;
+  *
+  * @param service_name &#x670D;&#x52A1;&#x4E3B;&#x9898;&#x540D;&#x79F0;
+  */
+ template&lt;class Service&gt;
+ ServiceClient serviceClient(const std::string&amp; service_name, bool persistent = false, 
+                             const M_string&amp; header_values = M_string())
+</code></pre>
+<h6 id="&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x51FD;&#x6570;">&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x51FD;&#x6570;:</h6>
+<pre><code class="lang-cpp"><span class="hljs-comment">/**
+   * @brief &#x53D1;&#x9001;&#x8BF7;&#x6C42;
+   * &#x8FD4;&#x56DE;&#x503C;&#x4E3A; bool &#x7C7B;&#x578B;&#xFF0C;true&#xFF0C;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x6210;&#x529F;&#xFF0C;false&#xFF0C;&#x5904;&#x7406;&#x5931;&#x8D25;&#x3002;
+   */</span>
+  <span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> Service&gt;
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">call</span><span class="hljs-params">(Service&amp; service)</span>
+</span></code></pre>
+<h6 id="&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x51FD;&#x6570;1">&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x51FD;&#x6570;1:</h6>
+<pre><code class="lang-cpp">/**
+ * ros::service::waitForService(&quot;addInts&quot;);
+ * \brief &#x7B49;&#x5F85;&#x670D;&#x52A1;&#x53EF;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x4E00;&#x81F4;&#x5904;&#x4E8E;&#x963B;&#x585E;&#x72B6;&#x6001;
+ * \param service_name &#x88AB;&quot;&#x7B49;&#x5F85;&quot;&#x7684;&#x670D;&#x52A1;&#x7684;&#x8BDD;&#x9898;&#x540D;&#x79F0;
+ * \param timeout &#x7B49;&#x5F85;&#x6700;&#x5927;&#x65F6;&#x5E38;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; -1&#xFF0C;&#x53EF;&#x4EE5;&#x6C38;&#x4E45;&#x7B49;&#x5F85;&#x76F4;&#x81F3;&#x8282;&#x70B9;&#x5173;&#x95ED;
+ * \return &#x6210;&#x529F;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false&#x3002;
+ */
+ROSCPP_DECL bool waitForService(const std::string&amp; service_name, ros::Duration timeout = ros::Duration(-1));
+</code></pre>
+<h6 id="&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x51FD;&#x6570;2">&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x51FD;&#x6570;2:</h6>
+<pre><code class="lang-cpp">/**
+* client.waitForExistence();
+* \brief &#x7B49;&#x5F85;&#x670D;&#x52A1;&#x53EF;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x4E00;&#x81F4;&#x5904;&#x4E8E;&#x963B;&#x585E;&#x72B6;&#x6001;
+* \param timeout &#x7B49;&#x5F85;&#x6700;&#x5927;&#x65F6;&#x5E38;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; -1&#xFF0C;&#x53EF;&#x4EE5;&#x6C38;&#x4E45;&#x7B49;&#x5F85;&#x76F4;&#x81F3;&#x8282;&#x70B9;&#x5173;&#x95ED;
+* \return &#x6210;&#x529F;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false&#x3002;
+*/
+bool waitForExistence(ros::Duration timeout = ros::Duration(-1));
+</code></pre>
+<hr>
+<h4 id="python">Python</h4>
+<h5 id="1&#x53D1;&#x5E03;&#x5BF9;&#x8C61;">1.&#x53D1;&#x5E03;&#x5BF9;&#x8C61;</h5>
+<h6 id="&#x5BF9;&#x8C61;&#x83B7;&#x53D6;">&#x5BF9;&#x8C61;&#x83B7;&#x53D6;:</h6>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Publisher</span><span class="hljs-params">(Topic)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;ROS master&#x6CE8;&#x518C;&#x4E3A;&#x76F8;&#x5173;&#x8BDD;&#x9898;&#x7684;&#x53D1;&#x5E03;&#x65B9;
+    &quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, data_class, subscriber_listener=None, tcp_nodelay=False, latch=False, headers=None, queue_size=None)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        Constructor
+        @param name: &#x8BDD;&#x9898;&#x540D;&#x79F0; 
+        @type  name: str
+        @param data_class: &#x6D88;&#x606F;&#x7C7B;&#x578B;
+
+        @param latch: &#x5982;&#x679C;&#x4E3A; true,&#x8BE5;&#x8BDD;&#x9898;&#x53D1;&#x5E03;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6761;&#x6D88;&#x606F;&#x5C06;&#x88AB;&#x4FDD;&#x5B58;&#xFF0C;&#x5E76;&#x4E14;&#x540E;&#x671F;&#x5F53;&#x6709;&#x8BA2;&#x9605;&#x8005;&#x8FDE;&#x63A5;&#x65F6;&#x4F1A;&#x5C06;&#x8BE5;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x8BA2;&#x9605;&#x8005;
+        @type  latch: bool
+
+        @param queue_size: &#x7B49;&#x5F85;&#x53D1;&#x9001;&#x7ED9;&#x8BA2;&#x9605;&#x8005;&#x7684;&#x6700;&#x5927;&#x6D88;&#x606F;&#x6570;&#x91CF;
+        @type  queue_size: int
+
+        &quot;&quot;&quot;</span>
+</code></pre>
+<h6 id="&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x51FD;&#x6570;">&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x51FD;&#x6570;:</h6>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">publish</span><span class="hljs-params">(self, *args, **kwds)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x53D1;&#x5E03;&#x6D88;&#x606F;
+        &quot;&quot;&quot;</span>
+</code></pre>
+<h5 id="2&#x8BA2;&#x9605;&#x5BF9;&#x8C61;">2.&#x8BA2;&#x9605;&#x5BF9;&#x8C61;</h5>
+<h6 id="&#x5BF9;&#x8C61;&#x83B7;&#x53D6;">&#x5BF9;&#x8C61;&#x83B7;&#x53D6;:</h6>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Subscriber</span><span class="hljs-params">(Topic)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+   &#x7C7B;&#x6CE8;&#x518C;&#x4E3A;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x7684;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x5176;&#x4E2D;&#x6D88;&#x606F;&#x662F;&#x7ED9;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x3002;
+    &quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, data_class, callback=None, callback_args=None,
+                 queue_size=None, buff_size=DEFAULT_BUFF_SIZE, tcp_nodelay=False)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        Constructor.
+
+        @param name: &#x8BDD;&#x9898;&#x540D;&#x79F0;
+        @type  name: str
+        @param data_class: &#x6D88;&#x606F;&#x7C7B;&#x578B;
+        @type  data_class: L{Message} class
+        @param callback: &#x5904;&#x7406;&#x8BA2;&#x9605;&#x5230;&#x7684;&#x6D88;&#x606F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+        @type  callback: fn(msg, cb_args)
+
+        @param queue_size: &#x6D88;&#x606F;&#x961F;&#x5217;&#x957F;&#x5EA6;&#xFF0C;&#x8D85;&#x51FA;&#x957F;&#x5EA6;&#x65F6;&#xFF0C;&#x5934;&#x90E8;&#x7684;&#x6D88;&#x606F;&#x5C06;&#x88AB;&#x5F03;&#x7528;
+
+        &quot;&quot;&quot;</span>
+</code></pre>
+<h5 id="3&#x670D;&#x52A1;&#x5BF9;&#x8C61;">3.&#x670D;&#x52A1;&#x5BF9;&#x8C61;</h5>
+<h6 id="&#x5BF9;&#x8C61;&#x83B7;&#x53D6;">&#x5BF9;&#x8C61;&#x83B7;&#x53D6;:</h6>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Service</span><span class="hljs-params">(ServiceImpl)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+     &#x58F0;&#x660E;&#x4E00;&#x4E2A;ROS&#x670D;&#x52A1;
+
+    &#x4F7F;&#x7528;&#x793A;&#x4F8B;::
+      s = Service(&apos;getmapservice&apos;, GetMap, get_map_handler)
+    &quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, service_class, handler,
+                 buff_size=DEFAULT_BUFF_SIZE, error_handler=None)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+
+        @param name: &#x670D;&#x52A1;&#x4E3B;&#x9898;&#x540D;&#x79F0; ``str``
+        @param service_class:&#x670D;&#x52A1;&#x6D88;&#x606F;&#x7C7B;&#x578B;
+
+        @param handler: &#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x6570;&#x636E;
+
+        @type  handler: fn(req)-&gt;resp
+
+        &quot;&quot;&quot;</span>
+</code></pre>
+<h5 id="4&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;">4.&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</h5>
+<h6 id="&#x5BF9;&#x8C61;&#x83B7;&#x53D6;">&#x5BF9;&#x8C61;&#x83B7;&#x53D6;:</h6>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ServiceProxy</span><span class="hljs-params">(_Service)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+   &#x521B;&#x5EFA;&#x4E00;&#x4E2A;ROS&#x670D;&#x52A1;&#x7684;&#x53E5;&#x67C4;
+
+    &#x793A;&#x4F8B;&#x7528;&#x6CD5;::
+      add_two_ints = ServiceProxy(&apos;add_two_ints&apos;, AddTwoInts)
+      resp = add_two_ints(1, 2)
+    &quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, service_class, persistent=False, headers=None)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        ctor.
+        @param name: &#x670D;&#x52A1;&#x4E3B;&#x9898;&#x540D;&#x79F0;
+        @type  name: str
+        @param service_class: &#x670D;&#x52A1;&#x6D88;&#x606F;&#x7C7B;&#x578B;
+        @type  service_class: Service class
+        &quot;&quot;&quot;</span>
+</code></pre>
+<h6 id="&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x51FD;&#x6570;">&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x51FD;&#x6570;:</h6>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">call</span><span class="hljs-params">(self, *args, **kwds)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x54CD;&#x5E94;&#x6570;&#x636E;
+
+
+        &quot;&quot;&quot;</span>
+</code></pre>
+<h6 id="&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x51FD;&#x6570;">&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x51FD;&#x6570;:</h6>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wait_for_service</span><span class="hljs-params">(service, timeout=None)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x5904;&#x4E8E;&#x963B;&#x585E;&#x72B6;&#x6001;&#x76F4;&#x5230;&#x670D;&#x52A1;&#x53EF;&#x7528;
+    @param service: &#x88AB;&#x7B49;&#x5F85;&#x7684;&#x670D;&#x52A1;&#x8BDD;&#x9898;&#x540D;&#x79F0;
+    @type  service: str
+    @param timeout: &#x8D85;&#x65F6;&#x65F6;&#x95F4;
+    @type  timeout: double|rospy.Duration
+    &quot;&quot;&quot;</span>
+</code></pre>
+<h3 id="313-&#x56DE;&#x65CB;&#x51FD;&#x6570;">3.1.3 &#x56DE;&#x65CB;&#x51FD;&#x6570;</h3>
+<hr>
+<h4 id="c">C++</h4>
+<p>&#x5728;ROS&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x9891;&#x7E41;&#x7684;&#x4F7F;&#x7528;&#x4E86; ros::spin() &#x548C; ros::spinOnce() &#x4E24;&#x4E2A;&#x56DE;&#x65CB;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<h5 id="1spinonce">1.spinOnce()</h5>
+<pre><code class="lang-cpp"><span class="hljs-comment">/**
+ * \brief &#x5904;&#x7406;&#x4E00;&#x8F6E;&#x56DE;&#x8C03;
+ *
+ * &#x4E00;&#x822C;&#x5E94;&#x7528;&#x573A;&#x666F;:
+ *     &#x5728;&#x5FAA;&#x73AF;&#x4F53;&#x5185;&#xFF0C;&#x5904;&#x7406;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+ * 
+ */</span>
+<span class="hljs-function">ROSCPP_DECL <span class="hljs-keyword">void</span> <span class="hljs-title">spinOnce</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<h5 id="2spin">2.spin()</h5>
+<pre><code class="lang-cpp"><span class="hljs-comment">/** 
+ * \brief &#x8FDB;&#x5165;&#x5FAA;&#x73AF;&#x5904;&#x7406;&#x56DE;&#x8C03; 
+ */</span>
+<span class="hljs-function">ROSCPP_DECL <span class="hljs-keyword">void</span> <span class="hljs-title">spin</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<h5 id="3&#x4E8C;&#x8005;&#x6BD4;&#x8F83;">3.&#x4E8C;&#x8005;&#x6BD4;&#x8F83;</h5>
+<p><strong>&#x76F8;&#x540C;&#x70B9;:</strong>&#x4E8C;&#x8005;&#x90FD;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF1B;</p>
+<p><strong>&#x4E0D;&#x540C;&#x70B9;:</strong>ros::spin() &#x662F;&#x8FDB;&#x5165;&#x4E86;&#x5FAA;&#x73AF;&#x6267;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x800C; ros::spinOnce() &#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x56DE;&#x8C03;&#x51FD;&#x6570;(&#x6CA1;&#x6709;&#x5FAA;&#x73AF;)&#xFF0C;&#x5728; ros::spin() &#x540E;&#x7684;&#x8BED;&#x53E5;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x5230;&#xFF0C;&#x800C; ros::spinOnce() &#x540E;&#x7684;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x3002;</p>
+<hr>
+<h4 id="python">Python</h4>
+<pre><code class="lang-perl">def spin():
+    <span class="hljs-string">&quot;&quot;</span><span class="hljs-string">&quot;
+    &#x8FDB;&#x5165;&#x5FAA;&#x73AF;&#x5904;&#x7406;&#x56DE;&#x8C03; 
+    &quot;</span><span class="hljs-string">&quot;&quot;</span>
+</code></pre>
+<h3 id="314-&#x65F6;&#x95F4;">3.1.4 &#x65F6;&#x95F4;</h3>
+<p>ROS&#x4E2D;&#x65F6;&#x95F4;&#x76F8;&#x5173;&#x7684;API&#x662F;&#x6781;&#x5176;&#x5E38;&#x7528;&#xFF0C;&#x6BD4;&#x5982;:&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x523B;&#x3001;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x7684;&#x8BBE;&#x7F6E;&#x3001;&#x6267;&#x884C;&#x9891;&#x7387;&#x3001;&#x4F11;&#x7720;&#x3001;&#x5B9A;&#x65F6;&#x5668;...&#x90FD;&#x4E0E;&#x65F6;&#x95F4;&#x76F8;&#x5173;&#x3002;</p>
+<hr>
+<h4 id="c">C++</h4>
+<h5 id="1&#x65F6;&#x523B;">1.&#x65F6;&#x523B;</h5>
+<p>&#x83B7;&#x53D6;&#x65F6;&#x523B;&#xFF0C;&#x6216;&#x662F;&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x65F6;&#x523B;:</p>
+<pre><code class="lang-cpp">ros::init(argc,argv,<span class="hljs-string">&quot;hello_time&quot;</span>);
+ros::NodeHandle nh;<span class="hljs-comment">//&#x5FC5;&#x987B;&#x521B;&#x5EFA;&#x53E5;&#x67C4;&#xFF0C;&#x5426;&#x5219;&#x65F6;&#x95F4;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5BFC;&#x81F4;&#x540E;&#x7EED;API&#x8C03;&#x7528;&#x5931;&#x8D25;</span>
+ros::Time right_now = ros::Time::now();<span class="hljs-comment">//&#x5C06;&#x5F53;&#x524D;&#x65F6;&#x523B;&#x5C01;&#x88C5;&#x6210;&#x5BF9;&#x8C61;</span>
+ROS_INFO(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;:%.2f&quot;</span>,right_now.toSec());<span class="hljs-comment">//&#x83B7;&#x53D6;&#x8DDD;&#x79BB; 1970&#x5E74;01&#x6708;01&#x65E5; 00:00:00 &#x7684;&#x79D2;&#x6570;</span>
+ROS_INFO(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;:%d&quot;</span>,right_now.sec);<span class="hljs-comment">//&#x83B7;&#x53D6;&#x8DDD;&#x79BB; 1970&#x5E74;01&#x6708;01&#x65E5; 00:00:00 &#x7684;&#x79D2;&#x6570;</span>
+
+ros::<span class="hljs-function">Time <span class="hljs-title">someTime</span><span class="hljs-params">(<span class="hljs-number">100</span>,<span class="hljs-number">100000000</span>)</span></span>;<span class="hljs-comment">// &#x53C2;&#x6570;1:&#x79D2;&#x6570;  &#x53C2;&#x6570;2:&#x7EB3;&#x79D2;</span>
+ROS_INFO(<span class="hljs-string">&quot;&#x65F6;&#x523B;:%.2f&quot;</span>,someTime.toSec()); <span class="hljs-comment">//100.10</span>
+ros::<span class="hljs-function">Time <span class="hljs-title">someTime2</span><span class="hljs-params">(<span class="hljs-number">100.3</span>)</span></span>;<span class="hljs-comment">//&#x76F4;&#x63A5;&#x4F20;&#x5165; double &#x7C7B;&#x578B;&#x7684;&#x79D2;&#x6570;</span>
+ROS_INFO(<span class="hljs-string">&quot;&#x65F6;&#x523B;:%.2f&quot;</span>,someTime2.toSec()); <span class="hljs-comment">//100.30</span>
+</code></pre>
+<h5 id="2&#x6301;&#x7EED;&#x65F6;&#x95F4;">2.&#x6301;&#x7EED;&#x65F6;&#x95F4;</h5>
+<p>&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x533A;&#x95F4;(&#x95F4;&#x9694;):</p>
+<pre><code class="lang-cpp">ROS_INFO(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;:%.2f&quot;</span>,ros::Time::now().toSec());
+ros::<span class="hljs-function">Duration <span class="hljs-title">du</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span>;<span class="hljs-comment">//&#x6301;&#x7EED;10&#x79D2;&#x949F;,&#x53C2;&#x6570;&#x662F;double&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;</span>
+du.sleep();<span class="hljs-comment">//&#x6309;&#x7167;&#x6307;&#x5B9A;&#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x4F11;&#x7720;</span>
+ROS_INFO(<span class="hljs-string">&quot;&#x6301;&#x7EED;&#x65F6;&#x95F4;:%.2f&quot;</span>,du.toSec());<span class="hljs-comment">//&#x5C06;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x6362;&#x7B97;&#x6210;&#x79D2;</span>
+ROS_INFO(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;:%.2f&quot;</span>,ros::Time::now().toSec());
+</code></pre>
+<h5 id="3&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x4E0E;&#x65F6;&#x523B;&#x8FD0;&#x7B97;">3.&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x4E0E;&#x65F6;&#x523B;&#x8FD0;&#x7B97;</h5>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#xFF0C;ROS&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x65F6;&#x95F4;&#x4E0E;&#x65F6;&#x523B;&#x7684;&#x8FD0;&#x7B97;:</p>
+<pre><code class="lang-cpp">ROS_INFO(<span class="hljs-string">&quot;&#x65F6;&#x95F4;&#x8FD0;&#x7B97;&quot;</span>);
+ros::Time now = ros::Time::now();
+ros::<span class="hljs-function">Duration <span class="hljs-title">du1</span><span class="hljs-params">(<span class="hljs-number">10</span>)</span></span>;
+ros::<span class="hljs-function">Duration <span class="hljs-title">du2</span><span class="hljs-params">(<span class="hljs-number">20</span>)</span></span>;
+ROS_INFO(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;:%.2f&quot;</span>,now.toSec());
+<span class="hljs-comment">//1.time &#x4E0E; duration &#x8FD0;&#x7B97;</span>
+ros::Time after_now = now + du1;
+ros::Time before_now = now - du1;
+ROS_INFO(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;&#x4E4B;&#x540E;:%.2f&quot;</span>,after_now.toSec());
+ROS_INFO(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;&#x4E4B;&#x524D;:%.2f&quot;</span>,before_now.toSec());
+
+<span class="hljs-comment">//2.duration &#x4E4B;&#x95F4;&#x76F8;&#x4E92;&#x8FD0;&#x7B97;</span>
+ros::Duration du3 = du1 + du2;
+ros::Duration du4 = du1 - du2;
+ROS_INFO(<span class="hljs-string">&quot;du3 = %.2f&quot;</span>,du3.toSec());
+ROS_INFO(<span class="hljs-string">&quot;du4 = %.2f&quot;</span>,du4.toSec());
+<span class="hljs-comment">//PS: time &#x4E0E; time &#x4E0D;&#x53EF;&#x4EE5;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// ros::Time nn = now + before_now;//&#x5F02;&#x5E38;</span>
+</code></pre>
+<h5 id="4&#x8BBE;&#x7F6E;&#x8FD0;&#x884C;&#x9891;&#x7387;">4.&#x8BBE;&#x7F6E;&#x8FD0;&#x884C;&#x9891;&#x7387;</h5>
+<pre><code class="lang-cpp">ros::<span class="hljs-function">Rate <span class="hljs-title">rate</span><span class="hljs-params">(<span class="hljs-number">1</span>)</span></span>;<span class="hljs-comment">//&#x6307;&#x5B9A;&#x9891;&#x7387;</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>)
+{
+    ROS_INFO(<span class="hljs-string">&quot;-----------code----------&quot;</span>);
+    rate.sleep();<span class="hljs-comment">//&#x4F11;&#x7720;&#xFF0C;&#x4F11;&#x7720;&#x65F6;&#x95F4; = 1 / &#x9891;&#x7387;&#x3002;</span>
+}
+</code></pre>
+<h5 id="5&#x5B9A;&#x65F6;&#x5668;">5.&#x5B9A;&#x65F6;&#x5668;</h5>
+<p>ROS &#x4E2D;&#x5185;&#x7F6E;&#x4E86;&#x4E13;&#x95E8;&#x7684;&#x5B9A;&#x65F6;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E0E; ros::Rate &#x7C7B;&#x4F3C;&#x7684;&#x6548;&#x679C;:</p>
+<pre><code class="lang-cpp">ros::NodeHandle nh;<span class="hljs-comment">//&#x5FC5;&#x987B;&#x521B;&#x5EFA;&#x53E5;&#x67C4;&#xFF0C;&#x5426;&#x5219;&#x65F6;&#x95F4;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5BFC;&#x81F4;&#x540E;&#x7EED;API&#x8C03;&#x7528;&#x5931;&#x8D25;</span>
+
+ <span class="hljs-comment">// ROS &#x5B9A;&#x65F6;&#x5668;</span>
+ <span class="hljs-comment">/**
+* \brief &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9A;&#x65F6;&#x5668;&#xFF0C;&#x6309;&#x7167;&#x6307;&#x5B9A;&#x9891;&#x7387;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;
+*
+* \param period &#x65F6;&#x95F4;&#x95F4;&#x9694;
+* \param callback &#x56DE;&#x8C03;&#x51FD;&#x6570;
+* \param oneshot &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; true,&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A; false,&#x5C31;&#x5FAA;&#x73AF;&#x6267;&#x884C;&#x3002;
+* \param autostart &#x5982;&#x679C;&#x4E3A;true&#xFF0C;&#x8FD4;&#x56DE;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x7684;&#x5B9A;&#x65F6;&#x5668;,&#x8BBE;&#x7F6E;&#x4E3A; false&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x542F;&#x52A8;&#x3002;
+*/</span>
+ <span class="hljs-comment">//Timer createTimer(Duration period, const TimerCallback&amp; callback, bool oneshot = false,</span>
+ <span class="hljs-comment">//                bool autostart = true) const;</span>
+
+ <span class="hljs-comment">// ros::Timer timer = nh.createTimer(ros::Duration(0.5),doSomeThing);</span>
+ ros::Timer timer = nh.createTimer(ros::Duration(<span class="hljs-number">0.5</span>),doSomeThing,<span class="hljs-literal">true</span>);<span class="hljs-comment">//&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;</span>
+
+ <span class="hljs-comment">// ros::Timer timer = nh.createTimer(ros::Duration(0.5),doSomeThing,false,false);//&#x9700;&#x8981;&#x624B;&#x52A8;&#x542F;&#x52A8;</span>
+ <span class="hljs-comment">// timer.start();</span>
+ ros::spin(); <span class="hljs-comment">//&#x5FC5;&#x987B; spin</span>
+</code></pre>
+<p>&#x5B9A;&#x65F6;&#x5668;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;:</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">doSomeThing</span><span class="hljs-params">(<span class="hljs-keyword">const</span> ros::TimerEvent &amp;event)</span></span>{
+    ROS_INFO(<span class="hljs-string">&quot;-------------&quot;</span>);
+    ROS_INFO(<span class="hljs-string">&quot;event:%s&quot;</span>,<span class="hljs-built_in">std</span>::to_string(event.current_real.toSec()).c_str());
+}
+</code></pre>
+<h5 id=""> </h5>
+<hr>
+<h4 id="python">Python</h4>
+<h5 id="1&#x65F6;&#x523B;">1.&#x65F6;&#x523B;</h5>
+<p>&#x83B7;&#x53D6;&#x65F6;&#x523B;&#xFF0C;&#x6216;&#x662F;&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x65F6;&#x523B;:</p>
+<pre><code class="lang-Python"><span class="hljs-comment"># &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x523B;</span>
+right_now = rospy.Time.now()
+rospy.loginfo(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;:%.2f&quot;</span>,right_now.to_sec())
+rospy.loginfo(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;:%.2f&quot;</span>,right_now.to_nsec())
+<span class="hljs-comment"># &#x81EA;&#x5B9A;&#x4E49;&#x65F6;&#x523B;</span>
+some_time1 = rospy.Time(<span class="hljs-number">1234.567891011</span>)
+some_time2 = rospy.Time(<span class="hljs-number">1234</span>,<span class="hljs-number">567891011</span>)
+rospy.loginfo(<span class="hljs-string">&quot;&#x8BBE;&#x7F6E;&#x65F6;&#x523B;1:%.2f&quot;</span>,some_time1.to_sec())
+rospy.loginfo(<span class="hljs-string">&quot;&#x8BBE;&#x7F6E;&#x65F6;&#x523B;2:%.2f&quot;</span>,some_time2.to_sec())
+
+<span class="hljs-comment"># &#x4ECE;&#x65F6;&#x95F4;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment"># some_time3 = rospy.Time.from_seconds(543.21)</span>
+some_time3 = rospy.Time.from_sec(<span class="hljs-number">543.21</span>) <span class="hljs-comment"># from_sec &#x66FF;&#x6362;&#x4E86; from_seconds</span>
+rospy.loginfo(<span class="hljs-string">&quot;&#x8BBE;&#x7F6E;&#x65F6;&#x523B;3:%.2f&quot;</span>,some_time3.to_sec())
+</code></pre>
+<h5 id="2&#x6301;&#x7EED;&#x65F6;&#x95F4;">2.&#x6301;&#x7EED;&#x65F6;&#x95F4;</h5>
+<p>&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x533A;&#x95F4;(&#x95F4;&#x9694;):</p>
+<pre><code class="lang-Python"><span class="hljs-comment"># &#x6301;&#x7EED;&#x65F6;&#x95F4;&#x76F8;&#x5173;API</span>
+rospy.loginfo(<span class="hljs-string">&quot;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x6D4B;&#x8BD5;&#x5F00;&#x59CB;.....&quot;</span>)
+du = rospy.Duration(<span class="hljs-number">3.3</span>)
+rospy.loginfo(<span class="hljs-string">&quot;du1 &#x6301;&#x7EED;&#x65F6;&#x95F4;:%.2f&quot;</span>,du.to_sec())
+rospy.sleep(du) <span class="hljs-comment">#&#x4F11;&#x7720;&#x51FD;&#x6570;</span>
+rospy.loginfo(<span class="hljs-string">&quot;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x6D4B;&#x8BD5;&#x7ED3;&#x675F;.....&quot;</span>)
+</code></pre>
+<h5 id="3&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x4E0E;&#x65F6;&#x523B;&#x8FD0;&#x7B97;">3.&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x4E0E;&#x65F6;&#x523B;&#x8FD0;&#x7B97;</h5>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#xFF0C;ROS&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x65F6;&#x95F4;&#x4E0E;&#x65F6;&#x523B;&#x7684;&#x8FD0;&#x7B97;:</p>
+<pre><code class="lang-Python">rospy.loginfo(<span class="hljs-string">&quot;&#x65F6;&#x95F4;&#x8FD0;&#x7B97;&quot;</span>)
+now = rospy.Time.now()
+du1 = rospy.Duration(<span class="hljs-number">10</span>)
+du2 = rospy.Duration(<span class="hljs-number">20</span>)
+rospy.loginfo(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;:%.2f&quot;</span>,now.to_sec())
+before_now = now - du1
+after_now = now + du1
+dd = du1 + du2
+<span class="hljs-comment"># now = now + now #&#x975E;&#x6CD5;</span>
+rospy.loginfo(<span class="hljs-string">&quot;&#x4E4B;&#x524D;&#x65F6;&#x523B;:%.2f&quot;</span>,before_now.to_sec())
+rospy.loginfo(<span class="hljs-string">&quot;&#x4E4B;&#x540E;&#x65F6;&#x523B;:%.2f&quot;</span>,after_now.to_sec())
+rospy.loginfo(<span class="hljs-string">&quot;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x76F8;&#x52A0;:%.2f&quot;</span>,dd.to_sec())
+</code></pre>
+<h5 id="4&#x8BBE;&#x7F6E;&#x8FD0;&#x884C;&#x9891;&#x7387;">4.&#x8BBE;&#x7F6E;&#x8FD0;&#x884C;&#x9891;&#x7387;</h5>
+<pre><code class="lang-Python"><span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x6267;&#x884C;&#x9891;&#x7387;</span>
+rate = rospy.Rate(<span class="hljs-number">0.5</span>)
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
+    rate.sleep() <span class="hljs-comment">#&#x4F11;&#x7720;</span>
+    rospy.loginfo(<span class="hljs-string">&quot;+++++++++++++++&quot;</span>)
+</code></pre>
+<h5 id="5&#x5B9A;&#x65F6;&#x5668;">5.&#x5B9A;&#x65F6;&#x5668;</h5>
+<p>ROS &#x4E2D;&#x5185;&#x7F6E;&#x4E86;&#x4E13;&#x95E8;&#x7684;&#x5B9A;&#x65F6;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E0E; ros::Rate &#x7C7B;&#x4F3C;&#x7684;&#x6548;&#x679C;:</p>
+<pre><code class="lang-Python"><span class="hljs-comment">#&#x5B9A;&#x65F6;&#x5668;&#x8BBE;&#x7F6E;</span>
+<span class="hljs-string">&quot;&quot;&quot;    
+def __init__(self, period, callback, oneshot=False, reset=False):
+    Constructor.
+    @param period: &#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;
+    @type  period: rospy.Duration
+    @param callback: &#x56DE;&#x8C03;&#x51FD;&#x6570;
+    @type  callback: function taking rospy.TimerEvent
+    @param oneshot: &#x8BBE;&#x7F6E;&#x4E3A;True&#xFF0C;&#x5C31;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x5426;&#x5219;&#x5FAA;&#x73AF;&#x6267;&#x884C;
+    @type  oneshot: bool
+    @param reset: if True, timer is reset when rostime moved backward. [default: False]
+    @type  reset: bool
+&quot;&quot;&quot;</span>
+rospy.Timer(rospy.Duration(<span class="hljs-number">1</span>),doMsg)
+<span class="hljs-comment"># rospy.Timer(rospy.Duration(1),doMsg,True) # &#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;</span>
+rospy.spin()
+</code></pre>
+<p>&#x56DE;&#x8C03;&#x51FD;&#x6570;:</p>
+<pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">doMsg</span><span class="hljs-params">(event)</span>:</span>
+    rospy.loginfo(<span class="hljs-string">&quot;+++++++++++&quot;</span>)
+    rospy.loginfo(<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x65F6;&#x523B;:%s&quot;</span>,str(event.current_real))
+</code></pre>
+<h3 id="315-&#x5176;&#x4ED6;&#x51FD;&#x6570;">3.1.5 &#x5176;&#x4ED6;&#x51FD;&#x6570;</h3>
+<p>&#x5728;&#x53D1;&#x5E03;&#x5B9E;&#x73B0;&#x65F6;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x5FAA;&#x73AF;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#xFF0C;&#x5FAA;&#x73AF;&#x7684;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x4E00;&#x822C;&#x7531;&#x8282;&#x70B9;&#x72B6;&#x6001;&#x6765;&#x63A7;&#x5236;&#xFF0C;C++&#x4E2D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; ros::ok() &#x6765;&#x5224;&#x65AD;&#x8282;&#x70B9;&#x72B6;&#x6001;&#x662F;&#x5426;&#x6B63;&#x5E38;&#xFF0C;&#x800C; python &#x4E2D;&#x5219;&#x901A;&#x8FC7; rospy.is_shutdown() &#x6765;&#x5B9E;&#x73B0;&#x5224;&#x65AD;&#xFF0C;&#x5BFC;&#x81F4;&#x8282;&#x70B9;&#x9000;&#x51FA;&#x7684;&#x539F;&#x56E0;&#x4E3B;&#x8981;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x79CD;:</p>
+<ul>
+<li>&#x8282;&#x70B9;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x5173;&#x95ED;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#x5E38;&#x7528;&#x7684; ctrl + c &#x5FEB;&#x6377;&#x952E;&#x5C31;&#x662F;&#x5173;&#x95ED;&#x8282;&#x70B9;&#x7684;&#x4FE1;&#x53F7;&#xFF1B;</li>
+<li>&#x540C;&#x540D;&#x8282;&#x70B9;&#x542F;&#x52A8;&#xFF0C;&#x5BFC;&#x81F4;&#x73B0;&#x6709;&#x8282;&#x70B9;&#x9000;&#x51FA;&#xFF1B;</li>
+<li>&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#x8C03;&#x7528;&#x4E86;&#x8282;&#x70B9;&#x5173;&#x95ED;&#x76F8;&#x5173;&#x7684;API(C++&#x4E2D;&#x662F;ros::shutdown()&#xFF0C;python&#x4E2D;&#x662F;rospy.signal_shutdown())</li>
+</ul>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x65E5;&#x5FD7;&#x76F8;&#x5173;&#x7684;&#x51FD;&#x6570;&#x4E5F;&#x662F;&#x6781;&#x5176;&#x5E38;&#x7528;&#x7684;&#xFF0C;&#x5728;ROS&#x4E2D;&#x65E5;&#x5FD7;&#x88AB;&#x5212;&#x5206;&#x6210;&#x5982;&#x4E0B;&#x7EA7;&#x522B;:</p>
+<ul>
+<li>DEBUG(&#x8C03;&#x8BD5;):&#x53EA;&#x5728;&#x8C03;&#x8BD5;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x6B64;&#x7C7B;&#x6D88;&#x606F;&#x4E0D;&#x4F1A;&#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;&#xFF1B;</li>
+<li>INFO(&#x4FE1;&#x606F;):&#x6807;&#x51C6;&#x6D88;&#x606F;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x8BF4;&#x660E;&#x7CFB;&#x7EDF;&#x5185;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF1B;</li>
+<li>WARN(&#x8B66;&#x544A;):&#x63D0;&#x9192;&#x4E00;&#x4E9B;&#x5F02;&#x5E38;&#x60C5;&#x51B5;&#xFF0C;&#x4F46;&#x7A0B;&#x5E8F;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#xFF1B;</li>
+<li>ERROR(&#x9519;&#x8BEF;):&#x63D0;&#x793A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x6B64;&#x7C7B;&#x9519;&#x8BEF;&#x4F1A;&#x5F71;&#x54CD;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#xFF1B;</li>
+<li>FATAL(&#x4E25;&#x91CD;&#x9519;&#x8BEF;):&#x6B64;&#x7C7B;&#x9519;&#x8BEF;&#x5C06;&#x963B;&#x6B62;&#x8282;&#x70B9;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#x3002;</li>
+</ul>
+<hr>
+<h4 id="c">C++</h4>
+<p>1.&#x8282;&#x70B9;&#x72B6;&#x6001;&#x5224;&#x65AD;</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">/** \brief &#x68C0;&#x67E5;&#x8282;&#x70B9;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x9000;&#x51FA;
+ *
+ *  ros::shutdown() &#x88AB;&#x8C03;&#x7528;&#x4E14;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5C06;&#x4F1A;&#x8FD4;&#x56DE; false
+ *
+ * \return true &#x5982;&#x679C;&#x8282;&#x70B9;&#x8FD8;&#x5065;&#x5728;, false &#x5982;&#x679C;&#x8282;&#x70B9;&#x5DF2;&#x7ECF;&#x706B;&#x5316;&#x4E86;&#x3002;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">ok</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>2.&#x8282;&#x70B9;&#x5173;&#x95ED;&#x51FD;&#x6570;</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">/*
+*   &#x5173;&#x95ED;&#x8282;&#x70B9;
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">shutdown</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>3.&#x65E5;&#x5FD7;&#x51FD;&#x6570;</p>
+<p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;</p>
+<pre><code class="lang-cpp">ROS_DEBUG(<span class="hljs-string">&quot;hello,DEBUG&quot;</span>); <span class="hljs-comment">//&#x4E0D;&#x4F1A;&#x8F93;&#x51FA;</span>
+ROS_INFO(<span class="hljs-string">&quot;hello,INFO&quot;</span>); <span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x767D;&#x8272;&#x5B57;&#x4F53;</span>
+ROS_WARN(<span class="hljs-string">&quot;Hello,WARN&quot;</span>); <span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x9EC4;&#x8272;&#x5B57;&#x4F53;</span>
+ROS_ERROR(<span class="hljs-string">&quot;hello,ERROR&quot;</span>);<span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x7EA2;&#x8272;&#x5B57;&#x4F53;</span>
+ROS_FATAL(<span class="hljs-string">&quot;hello,FATAL&quot;</span>);<span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x7EA2;&#x8272;&#x5B57;&#x4F53;</span>
+</code></pre>
+<hr>
+<h4 id="python">Python</h4>
+<p>1.&#x8282;&#x70B9;&#x72B6;&#x6001;&#x5224;&#x65AD;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_shutdown</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    @return: True &#x5982;&#x679C;&#x8282;&#x70B9;&#x5DF2;&#x7ECF;&#x88AB;&#x5173;&#x95ED;
+    @rtype: bool
+    &quot;&quot;&quot;</span>
+</code></pre>
+<p>2.&#x8282;&#x70B9;&#x5173;&#x95ED;&#x51FD;&#x6570;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">signal_shutdown</span><span class="hljs-params">(reason)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5173;&#x95ED;&#x8282;&#x70B9;
+    @param reason: &#x8282;&#x70B9;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;
+    @type  reason: str
+    &quot;&quot;&quot;</span>
+Copy
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_shutdown</span><span class="hljs-params">(h)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8282;&#x70B9;&#x88AB;&#x5173;&#x95ED;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;
+    @param h: &#x5173;&#x95ED;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x6B64;&#x51FD;&#x6570;&#x65E0;&#x53C2;
+    @type  h: fn()
+    &quot;&quot;&quot;</span>
+</code></pre>
+<p>3.&#x65E5;&#x5FD7;&#x51FD;&#x6570;</p>
+<p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;</p>
+<pre><code class="lang-python">rospy.logdebug(<span class="hljs-string">&quot;hello,debug&quot;</span>)  <span class="hljs-comment">#&#x4E0D;&#x4F1A;&#x8F93;&#x51FA;</span>
+rospy.loginfo(<span class="hljs-string">&quot;hello,info&quot;</span>)  <span class="hljs-comment">#&#x9ED8;&#x8BA4;&#x767D;&#x8272;&#x5B57;&#x4F53;</span>
+rospy.logwarn(<span class="hljs-string">&quot;hello,warn&quot;</span>)  <span class="hljs-comment">#&#x9ED8;&#x8BA4;&#x9EC4;&#x8272;&#x5B57;&#x4F53;</span>
+rospy.logerr(<span class="hljs-string">&quot;hello,error&quot;</span>)  <span class="hljs-comment">#&#x9ED8;&#x8BA4;&#x7EA2;&#x8272;&#x5B57;&#x4F53;</span>
+rospy.logfatal(<span class="hljs-string">&quot;hello,fatal&quot;</span>) <span class="hljs-comment">#&#x9ED8;&#x8BA4;&#x7EA2;&#x8272;&#x5B57;&#x4F53;</span>
+</code></pre>
+<h2 id="32-ros&#x4E2D;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x4E0E;&#x6E90;&#x6587;&#x4EF6;">3.2 ROS&#x4E2D;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x4E0E;&#x6E90;&#x6587;&#x4EF6;</h2>
+<p>&#x672C;&#x8282;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;ROS&#x7684;C++&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5934;&#x6587;&#x4EF6;&#x4E0E;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x5C01;&#x88C5;&#x4EE3;&#x7801;&#xFF0C;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<ol>
+<li>&#x8BBE;&#x7F6E;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4F5C;&#x4E3A;&#x6E90;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x5206;&#x522B;&#x8BBE;&#x7F6E;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x6E90;&#x6587;&#x4EF6;&#x4E0E;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</li>
+</ol>
+<p>&#x5728;ROS&#x4E2D;&#x5173;&#x4E8E;&#x5934;&#x6587;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x6838;&#x5FC3;&#x5185;&#x5BB9;&#x5728;&#x4E8E;CMakeLists.txt&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x5C01;&#x88C5;&#x65B9;&#x5F0F;&#xFF0C;&#x914D;&#x7F6E;&#x4E0A;&#x4E5F;&#x6709;&#x5DEE;&#x5F02;&#x3002;</p>
+<h3 id="321-&#x81EA;&#x5B9A;&#x4E49;&#x5934;&#x6587;&#x4EF6;&#x8C03;&#x7528;">3.2.1 &#x81EA;&#x5B9A;&#x4E49;&#x5934;&#x6587;&#x4EF6;&#x8C03;&#x7528;</h3>
+<p><strong>&#x9700;&#x6C42;:</strong>&#x8BBE;&#x8BA1;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x672C;&#x8EAB;&#x4F5C;&#x4E3A;&#x6E90;&#x6587;&#x4EF6;&#x3002;</p>
+<p><strong>&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x7F16;&#x5199;&#x5934;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x5199;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;(&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x6E90;&#x6587;&#x4EF6;)&#xFF1B;</li>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5E76;&#x6267;&#x884C;&#x3002;</li>
+</ol>
+<hr>
+<h4 id="1&#x5934;&#x6587;&#x4EF6;">1.&#x5934;&#x6587;&#x4EF6;</h4>
+<p>&#x5728;&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x7684; include/&#x529F;&#x80FD;&#x5305;&#x540D; &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x5934;&#x6587;&#x4EF6;: hello.h&#xFF0C;&#x793A;&#x4F8B;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> _HELLO_H</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _HELLO_H</span>
+
+<span class="hljs-keyword">namespace</span> hello_ns{
+
+<span class="hljs-keyword">class</span> HelloPub {
+
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span></span>;
+};
+
+}
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;:</strong></p>
+<p>&#x5728; VScode &#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x540E;&#x7EED;&#x5305;&#x542B;&#x5934;&#x6587;&#x4EF6;&#x65F6;&#x4E0D;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x8BF7;&#x914D;&#x7F6E; .vscode &#x4E0B; c_cpp_properties.json &#x7684; includepath&#x5C5E;&#x6027;</p>
+<pre><code>&quot;/home/&#x7528;&#x6237;/&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;/src/&#x529F;&#x80FD;&#x5305;/include/**&quot;
+</code></pre><h4 id="2&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;">2.&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;</h4>
+<p>&#x5728; src &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;:hello.cpp&#xFF0C;&#x793A;&#x4F8B;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;test_head/hello.h&quot;</span></span>
+
+<span class="hljs-keyword">namespace</span> hello_ns {
+
+<span class="hljs-keyword">void</span> HelloPub::run(){
+    ROS_INFO(<span class="hljs-string">&quot;&#x81EA;&#x5B9A;&#x4E49;&#x5934;&#x6587;&#x4EF6;&#x7684;&#x4F7F;&#x7528;....&quot;</span>);
+}
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+    setlocale(LC_ALL,<span class="hljs-string">&quot;&quot;</span>);
+    ros::init(argc,argv,<span class="hljs-string">&quot;test_head_node&quot;</span>);
+    hello_ns::HelloPub helloPub;
+    helloPub.run();
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h4 id="3&#x914D;&#x7F6E;&#x6587;&#x4EF6;">3.&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<p>&#x914D;&#x7F6E;CMakeLists.txt&#x6587;&#x4EF6;&#xFF0C;&#x5934;&#x6587;&#x4EF6;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-makefile">include_directories(
+include
+  ${catkin_INCLUDE_DIRS}
+)
+</code></pre>
+<p>&#x53EF;&#x6267;&#x884C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#x4E0E;&#x4E4B;&#x524D;&#x4E00;&#x81F4;:</p>
+<pre><code class="lang-makefile">add_executable(hello src/hello.cpp)
+
+add_dependencies(hello ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+target_link_libraries(hello
+  ${catkin_LIBRARIES}
+)
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x7F16;&#x8BD1;&#x5E76;&#x6267;&#x884C;&#xFF0C;&#x63A7;&#x5236;&#x53F0;&#x53EF;&#x4EE5;&#x8F93;&#x51FA;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6587;&#x672C;&#x4FE1;&#x606F;</p>
+<h3 id="322-&#x81EA;&#x5B9A;&#x4E49;&#x6E90;&#x6587;&#x4EF6;&#x8C03;&#x7528;">3.2.2 &#x81EA;&#x5B9A;&#x4E49;&#x6E90;&#x6587;&#x4EF6;&#x8C03;&#x7528;</h3>
+<p><strong>&#x9700;&#x6C42;:</strong>&#x8BBE;&#x8BA1;&#x5934;&#x6587;&#x4EF6;&#x4E0E;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;&#x5934;&#x6587;&#x4EF6;&#x3002;</p>
+<p><strong>&#x6D41;&#x7A0B;:</strong></p>
+<ol>
+<li>&#x7F16;&#x5199;&#x5934;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x5199;&#x6E90;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x5199;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1B;</li>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5E76;&#x6267;&#x884C;&#x3002;</li>
+</ol>
+<hr>
+<h4 id="1&#x5934;&#x6587;&#x4EF6;">1.&#x5934;&#x6587;&#x4EF6;</h4>
+<p>&#x5934;&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;&#x4E8E; 3.2.1 &#x7C7B;&#x4F3C;&#xFF0C;&#x5728;&#x529F;&#x80FD;&#x5305;&#x4E0B;&#x7684; include/&#x529F;&#x80FD;&#x5305;&#x540D; &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x5934;&#x6587;&#x4EF6;: haha.h&#xFF0C;&#x793A;&#x4F8B;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> _HAHA_H</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _HAHA_H</span>
+
+<span class="hljs-keyword">namespace</span> hello_ns {
+
+<span class="hljs-keyword">class</span> My {
+
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span></span>;
+
+};
+
+}
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;:</strong></p>
+<p>&#x5728; VScode &#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x540E;&#x7EED;&#x5305;&#x542B;&#x5934;&#x6587;&#x4EF6;&#x65F6;&#x4E0D;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x8BF7;&#x914D;&#x7F6E; .vscode &#x4E0B; c_cpp_properties.json &#x7684; includepath&#x5C5E;&#x6027;</p>
+<pre><code>&quot;/home/&#x7528;&#x6237;/&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;/src/&#x529F;&#x80FD;&#x5305;/include/**&quot;
+</code></pre><h4 id="2&#x6E90;&#x6587;&#x4EF6;">2.&#x6E90;&#x6587;&#x4EF6;</h4>
+<p>&#x5728; src &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;:haha.cpp&#xFF0C;&#x793A;&#x4F8B;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;test_head_src/haha.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+
+<span class="hljs-keyword">namespace</span> hello_ns{
+
+<span class="hljs-keyword">void</span> My::run(){
+    ROS_INFO(<span class="hljs-string">&quot;hello,head and src ...&quot;</span>);
+}
+
+}
+</code></pre>
+<h4 id="3&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;">3.&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;</h4>
+<p>&#x5728; src &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;: use_head.cpp&#xFF0C;&#x793A;&#x4F8B;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;ros/ros.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;test_head_src/haha.h&quot;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+    ros::init(argc,argv,<span class="hljs-string">&quot;hahah&quot;</span>);
+    hello_ns::My my;
+    my.run();
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h4 id="4&#x914D;&#x7F6E;&#x6587;&#x4EF6;">4.&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<p>&#x5934;&#x6587;&#x4EF6;&#x4E0E;&#x6E90;&#x6587;&#x4EF6;&#x76F8;&#x5173;&#x914D;&#x7F6E;:</p>
+<pre><code class="lang-makefile">include_directories(
+include
+  ${catkin_INCLUDE_DIRS}
+)
+
+<span class="hljs-comment">## &#x58F0;&#x660E;C++&#x5E93;</span>
+add_library(head
+  include/test_head_src/haha.h
+  src/haha.cpp
+)
+
+add_dependencies(head ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+target_link_libraries(head
+  ${catkin_LIBRARIES}
+)
+</code></pre>
+<p>&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x914D;&#x7F6E;:</p>
+<pre><code class="lang-makefile">add_executable(use_head src/use_head.cpp)
+
+add_dependencies(use_head ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+<span class="hljs-comment">#&#x6B64;&#x5904;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4E4B;&#x524D;&#x8BBE;&#x7F6E;&#x7684; head &#x5E93;</span>
+target_link_libraries(use_head
+  head
+  ${catkin_LIBRARIES}
+)
+</code></pre>
+<h2 id="33-python&#x6A21;&#x5757;&#x5BFC;&#x5165;">3.3 Python&#x6A21;&#x5757;&#x5BFC;&#x5165;</h2>
+<p>&#x4E0E;C++&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x5728;Python&#x4E2D;&#x5BFC;&#x5165;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#x65F6;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x76F8;&#x5173;&#x5904;&#x7406;&#x3002;</p>
+<p><strong>&#x9700;&#x6C42;:</strong>&#x9996;&#x5148;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;Python&#x6587;&#x4EF6;A&#xFF0C;&#x518D;&#x521B;&#x5EFA;Python&#x6587;&#x4EF6;UseA&#xFF0C;&#x5728;UseA&#x4E2D;&#x5BFC;&#x5165;A&#x5E76;&#x8C03;&#x7528;A&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<p><strong>&#x5B9E;&#x73B0;:</strong></p>
+<ol>
+<li>&#x65B0;&#x5EFA;&#x4E24;&#x4E2A;Python&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528; import &#x5B9E;&#x73B0;&#x5BFC;&#x5165;&#x5173;&#x7CFB;&#xFF1B;</li>
+<li>&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#x3001;&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5E76;&#x6267;&#x884C;UseA&#x3002;</li>
+</ol>
+<hr>
+<h4 id="1&#x65B0;&#x5EFA;&#x4E24;&#x4E2A;python&#x6587;&#x4EF6;&#x5E76;&#x4F7F;&#x7528;import&#x5BFC;&#x5165;">1.&#x65B0;&#x5EFA;&#x4E24;&#x4E2A;Python&#x6587;&#x4EF6;&#x5E76;&#x4F7F;&#x7528;import&#x5BFC;&#x5165;</h4>
+<p>&#x6587;&#x4EF6;A&#x5B9E;&#x73B0;(&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;):</p>
+<pre><code class="lang-python"><span class="hljs-comment">#! /usr/bin/env python</span>
+num = <span class="hljs-number">1000</span>
+</code></pre>
+<p>&#x6587;&#x4EF6;B&#x6838;&#x5FC3;&#x5B9E;&#x73B0;:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> sys
+
+path = os.path.abspath(<span class="hljs-string">&quot;.&quot;</span>)
+<span class="hljs-comment"># &#x6838;&#x5FC3;</span>
+sys.path.insert(<span class="hljs-number">0</span>,path + <span class="hljs-string">&quot;/src/plumbing_pub_sub/scripts&quot;</span>)
+
+<span class="hljs-keyword">import</span> tools
+
+....
+....
+    rospy.loginfo(<span class="hljs-string">&quot;num = %d&quot;</span>,tools.num)
+</code></pre>
+<h4 id="2&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF0C;&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5E76;&#x6267;&#x884C;">2.&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF0C;&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5E76;&#x6267;&#x884C;</h4>
+<p>&#x6B64;&#x8FC7;&#x7A0B;&#x7565;&#x3002;</p>
+<h2 id="34-&#x672C;&#x7AE0;&#x5C0F;&#x7ED3;">3.4 &#x672C;&#x7AE0;&#x5C0F;&#x7ED3;</h2>
+<p>&#x672C;&#x7AE0;&#x5185;&#x5BB9;&#x76F8;&#x5BF9;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x591A;&#x52A0;&#x7EC3;&#x4E60;&#x5373;&#x53EF;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../2.ROS通信机制/ROS通信机制.html" class="navigation navigation-prev " aria-label="Previous page: 2. ROS通信机制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../4.ROS运行管理/ROS运行管理.html" class="navigation navigation-next " aria-label="Next page: 4. ROS运行管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3. ROS通信机制进阶","level":"2.3","depth":1,"next":{"title":"4. ROS运行管理","level":"2.4","depth":1,"path":"4.ROS运行管理/ROS运行管理.md","ref":"4.ROS运行管理/ROS运行管理.md","articles":[]},"previous":{"title":"2. ROS通信机制","level":"2.2","depth":1,"path":"2.ROS通信机制/ROS通信机制.md","ref":"2.ROS通信机制/ROS通信机制.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3.ROS通信机制进阶/ROS通信机制进阶.md","mtime":"2026-06-22T02:23:44.184Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-22T02:30:21.080Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
